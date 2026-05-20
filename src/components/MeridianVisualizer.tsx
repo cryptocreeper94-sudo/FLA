@@ -115,17 +115,17 @@ function ChargingIndicator({ position, startPct, color, label }: { position: [nu
       </mesh>
 
       {/* Label */}
-      <Text position={[0, 0.4, 0]} fontSize={0.22} color="rgba(255,255,255,0.6)" anchorX="center" anchorY="middle" font="/fonts/Inter-Medium.woff">
+      <Text position={[0, 0.4, 0]} fontSize={0.22} color="rgba(255,255,255,0.6)" anchorX="center" anchorY="middle">
         {label}
       </Text>
 
       {/* Battery percentage */}
-      <Text position={[0, -0.05, 0]} fontSize={0.55} color={color} anchorX="center" anchorY="middle" font="/fonts/Inter-Bold.woff" fontWeight={700}>
+      <Text position={[0, -0.05, 0]} fontSize={0.55} color={color} anchorX="center" anchorY="middle" fontWeight={700}>
         {pct}%
       </Text>
 
       {/* Status indicator */}
-      <Text position={[0, -0.5, 0]} fontSize={0.16} color="#22c55e" anchorX="center" anchorY="middle" font="/fonts/Inter-Medium.woff">
+      <Text position={[0, -0.5, 0]} fontSize={0.16} color="#22c55e" anchorX="center" anchorY="middle">
         ● CHARGING
       </Text>
     </group>
