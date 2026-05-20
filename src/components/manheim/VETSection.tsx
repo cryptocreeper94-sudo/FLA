@@ -111,51 +111,8 @@ export default function VETSection() {
           <a href="https://vet.tlid.io" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '14px 32px', background: accent, color: '#0a0c10', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s', boxShadow: `0 4px 20px ${accentDim}` }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(0)'; }}>
             <Shield size={18} /> Verify a Vehicle
           </a>
-          <p className="text-dim" style={{ fontSize: '0.75rem', marginTop: '0.75rem' }}>Public verification — no login required</p>
+          <p className="text-dim" style={{ fontSize: '0.75rem', marginTop: '0.75rem' }}>Public verification portal — no login required</p>
         </motion.div>
-
-        {/* Upcoming Auctions */}
-        <motion.div {...fadeIn} transition={{ delay: 0.4 }} className="panel" style={{ padding: '2rem', marginBottom: '2rem', borderColor: accentBorder }}>
-          <h3 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '10px', color: accent }}>
-            <Globe size={18} /> Upcoming Auctions — Manheim
-          </h3>
-          <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' as any }}>
-          <table className="data-table" style={{ minWidth: '480px', width: '100%' }}>
-            <thead><tr><th>Date</th><th>Location</th><th>Type</th><th>VET Status</th></tr></thead>
-            <tbody>
-              <tr><td>Jun 3, 2026</td><td>Manheim Atlanta</td><td>Open Sale</td><td style={{ color: 'var(--accent-emerald)' }}>● Verified</td></tr>
-              <tr><td>Jun 5, 2026</td><td>Manheim Dallas–Fort Worth</td><td>Dealer Only</td><td style={{ color: 'var(--accent-emerald)' }}>● Verified</td></tr>
-              <tr><td>Jun 10, 2026</td><td>Manheim Nashville</td><td>Open Sale</td><td style={{ color: 'var(--accent-emerald)' }}>● Verified</td></tr>
-              <tr><td>Jun 12, 2026</td><td>Manheim Pennsylvania</td><td>Specialty</td><td style={{ color: 'var(--accent-cyan)' }}>● Pilot</td></tr>
-              <tr><td>Jun 17, 2026</td><td>Manheim Riverside</td><td>Open Sale</td><td style={{ color: 'var(--accent-cyan)' }}>● Pilot</td></tr>
-              <tr><td>Jun 19, 2026</td><td>Manheim Chicago</td><td>Dealer Only</td><td style={{ color: 'var(--text-dim)' }}>○ Scheduled</td></tr>
-            </tbody>
-          </table>
-          </div>
-          <div style={{ display: 'flex', gap: '1rem', marginTop: '1.25rem', flexWrap: 'wrap' as const }}>
-            <a href="https://www.manheim.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.8rem', color: accent, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-              View Full Calendar →
-            </a>
-            <a href="https://www.kbb.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.8rem', color: 'var(--accent-emerald)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-              Compare on KBB →
-            </a>
-          </div>
-        </motion.div>
-
-        {/* Stats bar */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '1px', background: accentBorder, borderRadius: '12px', overflow: 'hidden', border: `1px solid ${accentBorder}` }}>
-          {[
-            { val: '12.4M', label: 'Vehicles Sold Annually' },
-            { val: '76', label: 'US Auction Locations' },
-            { val: '230+', label: 'Partner Dealers' },
-            { val: '99.97%', label: 'Verification Accuracy' },
-          ].map((s, i) => (
-            <div key={i} style={{ background: 'var(--bg-dark)', padding: '20px 16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '1.4rem', fontWeight: 800, fontFamily: 'var(--font-mono)', color: accent }}>{s.val}</div>
-              <div style={{ fontSize: '0.65rem', color: 'var(--text-dim)', textTransform: 'uppercase' as const, letterSpacing: '0.08em', marginTop: '4px' }}>{s.label}</div>
-            </div>
-          ))}
-        </div>
 
       </div>
     </section>
