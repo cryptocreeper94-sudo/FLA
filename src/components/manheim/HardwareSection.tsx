@@ -108,15 +108,17 @@ export default function HardwareSection() {
         {/* Architecture Layers Table */}
         <motion.div {...f} className="panel" style={{ padding: '2rem', marginTop: '2.5rem' }}>
           <h3 style={{ fontSize: '1.2rem', marginBottom: '1.25rem', textAlign: 'center' }}>Architectural Layers</h3>
-          <table className="data-table">
+          <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+          <table className="data-table" style={{ minWidth: '480px', width: '100%' }}>
             <thead><tr><th>Layer</th><th>Device</th><th>Function</th></tr></thead>
             <tbody>
               <tr><td style={{ color: 'var(--text-muted)' }}>Vehicle Layer</td><td>Cox2M Cellular Dongle</td><td>Long-term asset tracking, GPS, compliance</td></tr>
-              <tr><td style={{ color: 'var(--accent-cyan)' }}>Operational Layer</td><td>LumeScan Dongle (BLE)</td><td>Real-time diagnostics, workflow scans, organism scoring</td></tr>
+              <tr><td style={{ color: 'var(--accent-cyan)' }}>Operational Layer</td><td>LumeScan Dongle (BLE)</td><td>Real-time diagnostics, workflow scans, condition scoring</td></tr>
               <tr><td style={{ color: 'var(--accent-emerald)' }}>Coexistence Layer</td><td>Passive OBD-II Splitter</td><td>Enables simultaneous operation — no arbitration, no modification</td></tr>
               <tr><td style={{ color: '#fb923c' }}>Life-Cycle Layer</td><td>LumeScan Onboard Storage</td><td>Autonomous diagnostic logging between technician visits</td></tr>
             </tbody>
           </table>
+          </div>
           <p className="text-dim" style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.8rem' }}>
             No need to replace or modify 500,000+ installed cellular dongles. LumeScan becomes the operational OS instrumentation layer that Cox2M was never designed to be.
           </p>
