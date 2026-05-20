@@ -81,11 +81,11 @@ export default function RollerCoaster() {
     const trackPoints: { x: number; y: number; z: number }[] = [];
     const numPoints = 800;
     for (let i = 0; i < numPoints; i++) {
-      const t = (i / numPoints) * Math.PI * 8;
+      const t = (i / numPoints) * Math.PI * 6;
       trackPoints.push({
-        x: Math.sin(t) * 300 + Math.sin(t * 0.7) * 150 + Math.cos(t * 0.3) * 100,
-        y: -Math.sin(t * 0.5) * 200 - Math.cos(t * 1.3) * 80 - 50 + Math.sin(t * 0.2) * 120,
-        z: i * 8 + Math.cos(t) * 40,
+        x: Math.sin(t) * 250 + Math.sin(t * 0.5) * 120 + Math.cos(t * 0.2) * 80,
+        y: -Math.sin(t * 0.35) * 160 - Math.cos(t * 0.8) * 60 - 50 + Math.sin(t * 0.15) * 90,
+        z: i * 10 + Math.cos(t) * 30,
       });
     }
 
@@ -121,13 +121,13 @@ export default function RollerCoaster() {
     // Trail particles
     const trails: { x: number; y: number; alpha: number; size: number; vx: number; vy: number }[] = [];
 
-    const PHRASE_DURATION = 180;
+    const PHRASE_DURATION = 480;
 
     const draw = () => {
       if (!running) return;
       const w = window.innerWidth;
       const h = window.innerHeight;
-      timeRef.current += 0.4;
+      timeRef.current += 0.25;
       phraseTimerRef.current++;
       if (phraseTimerRef.current >= PHRASE_DURATION) { phraseTimerRef.current = 0; phraseIdxRef.current = (phraseIdxRef.current + 1) % PHRASES.length; }
 
