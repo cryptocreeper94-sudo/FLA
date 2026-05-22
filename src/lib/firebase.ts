@@ -32,7 +32,7 @@ export const auth = getAuth(app);
 
 // ── Domain Whitelist ──
 const ALLOWED_DOMAINS = ['coxautoinc.com', 'darkwavestudios.com'];
-const ALLOWED_EMAILS = ['kathytidwell74@gmail.com', 'rtaron@bellsouth.net', 'cryptocreeper94@gmail.com', 'averymackenna@gmail.com', 'barrycline33@gmail.com'];
+const ALLOWED_EMAILS = ['kathytidwell74@gmail.com', 'rtaron@bellsouth.net', 'cryptocreeper94@gmail.com', 'averymackenna@gmail.com', 'barrycline33@gmail.com', 'pcdirect97@gmail.com'];
 
 function validateEmailDomain(email: string | null): void {
   if (!email) throw new Error('No email address found on this account.');
