@@ -103,7 +103,7 @@ export default function Whitepaper() {
               <li><strong>LUME-V</strong> â€” A deterministic governance wrapper that modernizes legacy behavior without altering source code</li>
               <li><strong>Cox Automotive Ledger (CAL)</strong> â€” A private, permissioned cryptographic ledger for enterprise-grade auditability</li>
               <li><strong>Lot Ops Pro</strong> â€” A real-time operational platform for vehicle custody, driver management, and workflow orchestration</li>
-              <li><strong>LUME-Auto</strong> â€” A full OBD-II diagnostic scanner and governance organism. Reads and clears trouble codes, captures freeze frame data, auto-reads VINs from the ECU, and produces cryptographically verifiable condition reports in 45 seconds. Supports both Bluetooth and WiFi adapters.</li>
+              <li><strong>LUME-Auto</strong> — A full OBD-II diagnostic scanner and governance organism. Reads and clears trouble codes, captures freeze frame data, auto-reads VINs from the ECU, and produces cryptographically verifiable condition reports in 45 seconds. Includes Mode 05 (IMMO key management) and Mode 06 (CAN-bus remote start governance). Supports both Bluetooth and WiFi adapters.</li>
               <li><strong>VET (Verified Enterprise Trust)</strong> â€” A commercial verification system that issues publicly verifiable certificates from internal CAL records</li>
             </ul>
             <p>
@@ -148,7 +148,7 @@ export default function Whitepaper() {
                     ['Governance', 'LUME-V', 'Deterministic wrapper over legacy systems'],
                     ['Trust', 'CAL', 'Private cryptographic ledger for operational records'],
                     ['Operations', 'Lot Ops Pro', 'Workforce, custody, and workflow management'],
-                    ['Diagnostics', 'LUME-Auto', 'OBD-II vehicle intelligence and condition reporting'],
+                    ['Diagnostics', 'LUME-Auto', 'OBD-II vehicle intelligence, key management, and remote start governance'],
                     ['Verification', 'VET', 'Commercial-facing certificate issuance'],
                     ['Runtime', 'Lume Language', 'Deterministic programming substrate'],
                   ].map(([layer, component, fn], i) => (
@@ -310,9 +310,23 @@ export default function Whitepaper() {
               <li><strong>Cold-start and open-loop detection</strong> â€” Flags vehicles still in warm-up phase to prevent false diagnostic readings</li>
               <li><strong>Pending fault detection</strong> â€” Catches faults that haven't triggered a check engine light but will affect auction lane readiness</li>
               <li><strong>Prioritized reconditioning queues</strong> â€” Auto-generated work orders sorted by severity: catalyst failures, emissions faults, fluid anomalies</li>
-              <li><strong>Pre-dispatch health reports</strong> â€” Transport teams see vehicle health before loading, eliminating no-start surprises at delivery</li>
-              <li><strong>Predictive throughput modeling</strong> â€” Population-level analytics that predict lane capacity and reconditioning volume</li>
+              <li><strong>Pre-dispatch health reports</strong> — Transport teams see vehicle health before loading, eliminating no-start surprises at delivery</li>
+              <li><strong>Predictive throughput modeling</strong> — Population-level analytics that predict lane capacity and reconditioning volume</li>
             </ul>
+            <h4>Mode 05 — IMMO Key Management</h4>
+            <p>
+              Mode 05 extends LUME-Auto with immobilizer key management capabilities. Sub-commands 0x05A–0x05D enable reading existing key IDs, programming new transponder keys to the vehicle's IMMO module, and deleting lost or stolen keys. The phone's NFC reads transponder chip types; the dongle handles UDS over CAN. Every key event generates a TLL-verified receipt (consumer) or CAL-anchored record (enterprise). Three authorization levels (A/B/C) gate operations based on user role and context.
+            </p>
+            <h4>Mode 06 — Remote Start Governance</h4>
+            <p>
+              Mode 06 enables CAN-bus-initiated remote start using the dongle's registered IMMO key credential (from Mode 05C). The system replicates the same architecture used by OEM remote start systems (OnStar, FordPass, Uconnect) without requiring the OEM's telematics module or subscription. Sub-commands 0x06A–0x06E cover pre-start readiness checks, IMMO authentication, CAN start/stop sequences, and runtime monitoring.
+            </p>
+            <p>
+              8 hard constraints enforce safety at the firmware level: Ed25519 signed tokens with 30-second expiry, VIN verification, no auto-retry (3 attempts per 10 minutes), no programming session, session isolation, firmware-enforced runtime limits (5–20 minutes), BLE-drop auto-stop (60-second grace), and hood-open auto-stop. Runtime monitoring polls RPM, coolant temp, and battery voltage every 5 seconds.
+            </p>
+            <p>
+              For Manheim/enterprise deployment: supervisor authorization required, geofence enforcement, and every remote start event anchored to CAL. Use cases include vehicle warm-up before inspection, lot staging and positioning, battery maintenance starts for long-residence vehicles, and pre-auction line conditioning.
+            </p>
             <h4>Arbitration Reduction</h4>
             <p>
               Deterministic health scoring complements inspector expertise by adding a sensor-verified, reproducible data layer to every assessment. Buyers receive transparent condition data with cryptographic proof of when and how the scan was conducted. Post-sale disputes gain a new resolution path: deterministic replay of the original scan data provides objective evidence alongside the inspector's professional judgment.

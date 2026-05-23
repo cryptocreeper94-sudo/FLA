@@ -7,7 +7,7 @@ const PHASES = [
     border: 'rgba(16,185,129,0.2)',
     glow: 'rgba(16,185,129,0.06)',
     apps: [
-      { icon: <Search size={20} />, name: 'LumeScan', desc: 'Connects directly to a vehicle\'s OBD-II port and runs a full diagnostic scan in 45 seconds — reading and clearing trouble codes, capturing freeze-frame data, and producing a deterministic condition certificate anchored to the ledger. Replaces subjective visual inspections with verifiable, reproducible results.' },
+      { icon: <Search size={20} />, name: 'LumeScan', desc: 'Connects directly to a vehicle\'s OBD-II port and runs a full diagnostic scan in 45 seconds — reading and clearing trouble codes, capturing freeze-frame data, and producing a deterministic condition certificate anchored to the ledger. Mode 05 adds IMMO key management (read/program/delete transponder keys). Mode 06 adds CAN-bus remote start governance with supervisor authorization, runtime monitoring, and auto-stop safety constraints. Every event is TLL/CAL-verified.' },
       { icon: <ClipboardList size={20} />, name: 'Lot Ops Pro', desc: 'The comprehensive operational platform for lot-level activity. Role-based modules cover the full spectrum of daily operations — vehicle intake, driver assignments, lane routing, and custody transfers. Includes built-in Safety & Compliance (incident reporting, hazard logging, OSHA workflows, speed violation tracking), Employee Portal (digital bulletin board, first responder contacts, recognition, pre-shift safety topics), and Fleet Management (van inspection, equipment checkout, EV charging). Every event is ledger-anchored on the CAL.' },
     ],
   },

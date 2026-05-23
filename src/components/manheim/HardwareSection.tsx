@@ -128,12 +128,13 @@ export default function HardwareSection() {
         <motion.div {...f} style={{ maxWidth: '700px', margin: '2rem auto 0', padding: '1.25rem 1.5rem', borderRadius: '12px', background: 'rgba(16,185,129,0.03)', border: '1px solid rgba(16,185,129,0.15)', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
           <Shield size={20} color="var(--accent-emerald)" style={{ flexShrink: 0, marginTop: 2 }} />
           <div>
-            <p style={{ fontSize: '0.9rem', fontWeight: 700, marginBottom: '0.35rem' }}>Read-Only by Design</p>
+            <p style={{ fontSize: '0.9rem', fontWeight: 700, marginBottom: '0.35rem' }}>Read-Only by Default · Authorized Writes Gated</p>
             <p className="text-muted" style={{ fontSize: '0.82rem', lineHeight: 1.7, margin: 0 }}>
-              The LumeScan dongle <strong>never writes to the vehicle ECU</strong> under any condition. No reprogramming, no calibration changes, no firmware alteration. This constraint is enforced at the firmware level — not the application layer — making ECU write commands architecturally impossible in standard operating modes.
+              In standard diagnostic mode, the LumeScan dongle <strong>never writes to the vehicle ECU</strong>. No reprogramming, no calibration changes, no firmware alteration. Mode 05 (IMMO key management) and Mode 06 (remote start) are <strong>authorized write operations</strong> — gated by Ed25519 signed tokens with 30-second expiry, supervisor authorization (enterprise), and firmware-enforced safety constraints. These operations never enter programming session (UDS 0x10 02) and cannot alter ECU calibration or firmware.
             </p>
           </div>
         </motion.div>
+
 
       </div>
     </section>
