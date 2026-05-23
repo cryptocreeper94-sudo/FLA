@@ -185,7 +185,7 @@ export default function ImplementationPath() {
             </p>
           </div>
           <style>{`
-            .impl-modular-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+            .impl-modular-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; grid-auto-rows: 1fr; }
             @media (max-width: 768px) { .impl-modular-grid { grid-template-columns: 1fr; } }
           `}</style>
           <div className="impl-modular-grid">
@@ -199,7 +199,7 @@ export default function ImplementationPath() {
               { title: 'Unified Platform', desc: 'When deployed together, every component amplifies the others — the whole exceeds the sum of its parts.', color: '#fb923c' },
             ].map((mod, i) => (
               <div key={i} style={{
-                padding: '1.25rem', display: 'flex', flexDirection: 'column',
+                padding: '1.25rem', display: 'flex', flexDirection: 'column', height: '100%',
                 background: 'rgba(255,255,255,0.02)', borderRadius: '16px',
                 border: `1px solid ${mod.color}44`,
               }}>
@@ -207,7 +207,7 @@ export default function ImplementationPath() {
                   <div style={{ width: 8, height: 8, borderRadius: '50%', background: mod.color, flexShrink: 0 }} />
                   <h4 style={{ fontSize: '0.9rem', color: mod.color, margin: 0 }}>{mod.title}</h4>
                 </div>
-                <p className="text-muted" style={{ fontSize: '0.8rem', lineHeight: 1.5 }}>{mod.desc}</p>
+                <p className="text-muted" style={{ fontSize: '0.8rem', lineHeight: 1.5, margin: 0 }}>{mod.desc}</p>
               </div>
             ))}
           </div>
