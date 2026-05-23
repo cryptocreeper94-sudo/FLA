@@ -89,19 +89,30 @@ export default function DownloadPage() {
               Download the APK and install directly on any Android device
             </p>
 
-            <a href={APK_URL} target="_blank" rel="noopener noreferrer" style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
-              padding: '14px 24px', borderRadius: '30px', marginBottom: '1rem',
-              background: 'var(--accent-cyan)', border: 'none',
-              color: '#000', fontSize: '0.85rem', fontWeight: 800,
-              letterSpacing: '0.1em', textDecoration: 'none',
-              transition: 'transform 0.2s',
-            }}>
-              <Download size={18} /> DOWNLOAD APK
-            </a>
+            <div style={{ display: 'flex', gap: '10px', flexDirection: 'column' }}>
+              <a href={APK_URL} target="_blank" rel="noopener noreferrer" style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
+                padding: '14px 24px', borderRadius: '30px',
+                background: 'var(--accent-cyan)', border: 'none',
+                color: '#000', fontSize: '0.85rem', fontWeight: 800,
+                letterSpacing: '0.1em', textDecoration: 'none',
+                transition: 'transform 0.2s',
+              }}>
+                <Download size={18} /> DOWNLOAD APK (ANDROID)
+              </a>
+              <button onClick={() => alert('Apple App Store distribution requires an active $99/year Apple Developer account to verify TestFlight or App Store builds. This button will be live once the account is provisioned!')} style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
+                padding: '14px 24px', borderRadius: '30px',
+                background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
+                color: '#fff', fontSize: '0.85rem', fontWeight: 800,
+                letterSpacing: '0.1em', textDecoration: 'none', transition: 'transform 0.2s', cursor: 'pointer'
+              }}>
+                <Smartphone size={18} /> iOS APP STORE
+              </button>
+            </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '1.5rem' }}>
-              <p style={{ color: 'var(--text-dim)', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em' }}>INSTALL STEPS</p>
+              <p style={{ color: 'var(--text-dim)', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em' }}>ANDROID INSTALL STEPS</p>
               {[
                 'Download the APK file',
                 'Open it — tap "Install" when prompted',
@@ -205,7 +216,7 @@ export default function DownloadPage() {
         {/* Requirements */}
         <div style={{ textAlign: 'center' }}>
           <p style={{ color: 'var(--text-dim)', fontSize: '0.7rem', lineHeight: 1.7 }}>
-            Requires Android 8.0+ · ~25MB · No Play Store account needed<br />
+            Requires Android 8.0+ or iOS 13+ · ~25MB<br />
             WiFi: Any ELM327 WiFi adapter · BLE: Any Bluetooth Low Energy adapter<br />
             US Provisional Patent 64/032,339 · DarkWave Studios LLC
           </p>
