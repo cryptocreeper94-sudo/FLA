@@ -41,7 +41,7 @@ export default function AppShowcase() {
             }}>
               <Activity size={16} /> Try It Live — Demo Mode Available
             </a>
-            <a href="https://expo.dev/artifacts/eas/daERWZBDSVug9YcGoKpvqw.apk" download style={{
+            <a href="https://expo.dev/artifacts/eas/swv6JsxEjzQkSbDjyBJN8e.apk" download style={{
               display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
               padding: '12px 28px', flex: '1 1 0',
               background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)',
