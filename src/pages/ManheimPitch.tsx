@@ -11,11 +11,11 @@ import LumeLanguageSection from '../components/manheim/LumeLanguageSection';
 import VETSection from '../components/manheim/VETSection';
 import AppShowcase from '../components/manheim/AppShowcase';
 import HardwareSection from '../components/manheim/HardwareSection';
-import MeridianTeaser from '../components/manheim/MeridianTeaser';
 import EnterpriseMeshTeaser from '../components/manheim/EnterpriseMeshTeaser';
 import EcosystemCTA from '../components/manheim/EcosystemCTA';
 import PlatformRoadmap from '../components/manheim/PlatformRoadmap';
 import ImplementationPath from '../components/manheim/ImplementationPath';
+import FutureHorizons from '../components/manheim/FutureHorizons';
 
 export default function ManheimPitch() {
   return (
@@ -47,10 +47,12 @@ export default function ManheimPitch() {
       <ImplementationPath />
       <PlatformRoadmap />
 
-      {/* 6. THE FINALE (Future Ecosystem) */}
+      {/* 6. THE ECOSYSTEM (Foundation & Future) */}
       <EcosystemCTA />
-      <MeridianTeaser />
       <EnterpriseMeshTeaser />
+
+      {/* 7. Future R&D — compact footnote, not a feature section */}
+      <FutureHorizons />
     </div>
   );
 }
