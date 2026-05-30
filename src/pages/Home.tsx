@@ -51,7 +51,7 @@ export default function Home() {
         <div className="container flex flex-col gap-8" style={{ position: 'relative', zIndex: 2 }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} style={{ maxWidth: '800px' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 14px', background: 'rgba(6, 182, 212, 0.1)', border: '1px solid rgba(6, 182, 212, 0.2)', borderRadius: '20px', fontSize: '0.75rem', color: 'var(--accent-cyan)', marginBottom: '2rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-              <Activity size={14} /> Deterministic Synthetic Organism · 4/42 Architecture
+              <Activity size={14} /> Deterministic Diagnostic Engine · 4/42 Architecture
             </div>
             <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', marginBottom: '1.5rem', lineHeight: 1.05 }}>
               More MPG From the <span className="text-gradient">Car You Already Have</span>
@@ -64,7 +64,7 @@ export default function Home() {
             </p>
             <div className="flex gap-4 items-center" style={{ flexWrap: 'wrap' }}>
               <Link to="/order" className="btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.05rem' }}>
-                Order Now — $49.99 <ArrowRight size={20} />
+                Order Now — From $9.99 <ArrowRight size={20} />
               </Link>
               <Link to="/enterprise" className="flex items-center gap-2 text-cyan" style={{ fontWeight: 600, fontSize: '0.95rem' }}>
                 Enterprise Solutions <ChevronRight size={18} />
@@ -103,7 +103,7 @@ export default function Home() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
           {[
             { step: '1', title: 'Connect.', desc: 'Plug a standard OBD-II adapter running proprietary Lume firmware into the port under your dashboard. No installation. No wiring. No ECU reprogramming.', img: '/card_step1.png' },
-            { step: '2', title: 'Observe.', desc: 'The organism ingests 42 telemetry signals at 100ms intervals — airflow, fuel flow, combustion timing, engine load, component health, and driver behavioral patterns.', img: '/card_step2.png' },
+            { step: '2', title: 'Observe.', desc: 'The engine ingests 42 telemetry signals at 100ms intervals — airflow, fuel flow, combustion timing, engine load, component health, and driver behavioral patterns.', img: '/card_step2.png' },
             { step: '3', title: 'Govern.', desc: 'Deterministic coaching, predictive maintenance alerts, and quantified MPG scoring — calibrated to your specific vehicle\'s torque curve and degradation profile.', img: '/card_step3.png' }
           ].map((item, i) => (
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }} key={item.step} className="panel flex flex-col" style={{ padding: 0, overflow: 'hidden' }}>
@@ -170,14 +170,14 @@ export default function Home() {
               <Volume2 size={24} color="var(--accent-cyan)" />
             </div>
             <h3 style={{ fontSize: '1.5rem' }}>Passive Audio Coach</h3>
-            <p className="text-muted">Organism-generated coaching calibrated to your vehicle's torque curve. Audio tones through car Bluetooth — a chime for optimal efficiency, a buzz for fuel waste. Pure classical conditioning. No screen required.</p>
+            <p className="text-muted">Engine-generated coaching calibrated to your vehicle's torque curve. Audio tones through car Bluetooth — a chime for optimal efficiency, a buzz for fuel waste. Pure classical conditioning. No screen required.</p>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }} className="panel flex flex-col gap-4">
             <div style={{ display: 'inline-flex', padding: '12px', background: 'rgba(16, 185, 129, 0.1)', borderRadius: '12px', alignSelf: 'flex-start' }}>
               <Wrench size={24} color="var(--accent-emerald)" />
             </div>
             <h3 style={{ fontSize: '1.5rem' }}>Diagnostic Intelligence</h3>
-            <p className="text-muted">Stop paying $150 for a diagnostic read. The organism runs continuous 42-node health scans, translates fault codes to plain English, predicts component failures 1–3% MPG before they trigger a check engine light, and links you to the exact part on Amazon.</p>
+            <p className="text-muted">Stop paying $150 for a diagnostic read. The engine runs continuous 42-node health scans, translates fault codes to plain English, predicts component failures 1–3% MPG before they trigger a check engine light, and links you to the exact part on Amazon.</p>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="panel flex flex-col gap-4">
             <div style={{ display: 'inline-flex', padding: '12px', background: 'rgba(255, 255, 255, 0.05)', borderRadius: '12px', alignSelf: 'flex-start' }}>
@@ -197,7 +197,7 @@ export default function Home() {
           </div>
           <div style={{ flex: '1 1 500px' }} className="flex flex-col gap-6">
             <p className="text-cyan" style={{ fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Deterministic Runtime</p>
-            <h2 style={{ fontSize: '2.5rem', lineHeight: 1.15 }}>42 signals.<br/>One organism.<br/>Continuous governance.</h2>
+            <h2 style={{ fontSize: '2.5rem', lineHeight: 1.15 }}>42 signals.<br/>One engine.<br/>Continuous governance.</h2>
             <p className="text-muted">Built on the native Lume deterministic runtime — not a third-party AI framework. Same inputs, same outputs, every time. No hallucinations. No probabilistic inference. Fully auditable.</p>
             <ul className="flex flex-col gap-4" style={{ listStyle: 'none', marginTop: '0.5rem' }}>
               {[
@@ -248,8 +248,8 @@ export default function Home() {
       <section className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <p className="text-cyan" style={{ fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem' }}>Ecosystem</p>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>First Organism Deployed</h2>
-          <p className="text-muted" style={{ maxWidth: '650px', margin: '0 auto' }}>Lume-Auto validates the deterministic governance substrate at consumer scale. Each subsequent organism inherits the same runtime, the same primitives, and the same enterprise integration pattern.</p>
+          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>First Engine Deployed</h2>
+          <p className="text-muted" style={{ maxWidth: '650px', margin: '0 auto' }}>Lume-Auto validates the deterministic governance substrate at consumer scale. Each subsequent engine inherits the same runtime, the same primitives, and the same enterprise integration pattern.</p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', maxWidth: '900px', margin: '0 auto' }}>
           {[
