@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Zap, MapPin, ShieldCheck, BatteryCharging, AlertTriangle, Activity, Cpu, Radio, ArrowRight } from 'lucide-react';
+import { Zap, ShieldCheck, AlertTriangle, Activity, Radio, ArrowRight } from 'lucide-react';
 import { Suspense } from 'react';
 import ManheimTabs from '../components/ManheimTabs';
 import MeridianScene3D from '../components/MeridianVisualizer';
@@ -132,32 +132,97 @@ export default function MeridianPitch() {
       {/* ═══ ARCHITECTURE ═══ */}
       <section style={{ padding: '6rem 0', borderBottom: '1px solid var(--border-light)' }}>
         <div className="container" style={{ maxWidth: '1100px' }}>
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <p style={{ color: red, fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem' }}>Architecture</p>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>The Overhead Advantage</h2>
             <p className="text-muted" style={{ maxWidth: '650px', margin: '0 auto' }}>
-              Meridian pulls the entire charging infrastructure off the ground and into existing overhead structures. Anchor Nodes mount in staging canopies and route energy deterministically — no cables, no adapters, no wasted lot space. The protocol is not probabilistic. Every energy packet follows a governance chain with cryptographic billing at every step.
+              Meridian pulls the entire charging infrastructure off the ground and into existing overhead structures. Anchor Nodes mount in staging canopies and route energy deterministically — no cables, no adapters, no wasted lot space.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
-            {[
-              { icon: <MapPin size={22} />, title: 'Zero Ground Friction', desc: 'No bollards taking up lot space. Vehicles flow freely through the charging zone without navigating around concrete stations or tangled cords.', color: red },
-              { icon: <BatteryCharging size={22} />, title: 'Adapter-Agnostic Routing', desc: 'Tesla, Ford, or Rivian — Meridian routes energy directly to the vehicle receiver. No hunting for the right J1772 or NACS adapter.', color: cyan },
-              { icon: <Cpu size={22} />, title: 'Deterministic Protocol', desc: 'Not a probabilistic network. Each energy packet is routed via deterministic governance — same inputs, same outputs, every time.', color: emerald },
-              { icon: <ShieldCheck size={22} />, title: 'Cryptographic Ledger', desc: 'Every charge session is cryptographically signed. Immutable receipts for perfect internal accounting and dispute resolution.', color: cyan },
-            ].map((feat, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                className="panel" style={{ padding: '2rem', borderColor: `${feat.color}22`, transition: 'border-color 0.3s, transform 0.3s', display: 'flex', flexDirection: 'column' }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = `${feat.color}44`; (e.currentTarget as HTMLElement).style.transform = 'translateY(-4px)'; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = `${feat.color}22`; (e.currentTarget as HTMLElement).style.transform = 'translateY(0)'; }}
-              >
-                <div style={{ padding: '12px', background: `${feat.color}15`, borderRadius: '12px', display: 'inline-flex', marginBottom: '1rem', color: feat.color }}>{feat.icon}</div>
-                <h4 style={{ fontSize: '1.15rem', marginBottom: '0.5rem' }}>{feat.title}</h4>
-                <p className="text-muted" style={{ fontSize: '0.9rem', lineHeight: 1.6 }}>{feat.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+          {(() => {
+            const features = [
+              { img: '/assets/images/meridian/features/zero-ground-friction.png', title: 'Zero Ground Friction', desc: 'No bollards taking up lot space. Vehicles flow freely through the charging zone without navigating around concrete stations or tangled cords.', color: red },
+              { img: '/assets/images/meridian/features/adapter-agnostic.png', title: 'Adapter-Agnostic Routing', desc: 'Tesla, Ford, or Rivian — Meridian routes energy directly to the vehicle receiver. No hunting for the right J1772 or NACS adapter.', color: cyan },
+              { img: '/assets/images/meridian/features/deterministic-protocol.png', title: 'Deterministic Protocol', desc: 'Not a probabilistic network. Each energy packet is routed via deterministic governance — same inputs, same outputs, every time.', color: emerald },
+              { img: '/assets/images/meridian/features/crypto-ledger.png', title: 'Cryptographic Ledger', desc: 'Every charge session is cryptographically signed. Immutable receipts for perfect internal accounting and dispute resolution.', color: cyan },
+            ];
+            const carouselId = 'meridian-carousel';
+            const scrollTo = (dir: number) => {
+              const el = document.getElementById(carouselId);
+              if (el) {
+                const card = el.querySelector('.meridian-slide') as HTMLElement;
+                const w = card ? card.offsetWidth + 16 : 320;
+                el.scrollBy({ left: dir * w, behavior: 'smooth' });
+              }
+            };
+            return (
+              <div style={{ position: 'relative' }}>
+                {/* Arrow buttons */}
+                <button onClick={() => scrollTo(-1)} aria-label="Previous" style={{
+                  position: 'absolute', left: '-8px', top: '45%', transform: 'translateY(-50%)',
+                  zIndex: 10, width: 40, height: 40, borderRadius: '50%',
+                  background: 'rgba(0,0,0,0.7)', border: '1px solid rgba(255,255,255,0.1)',
+                  color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: '18px', backdropFilter: 'blur(8px)',
+                }}>‹</button>
+                <button onClick={() => scrollTo(1)} aria-label="Next" style={{
+                  position: 'absolute', right: '-8px', top: '45%', transform: 'translateY(-50%)',
+                  zIndex: 10, width: 40, height: 40, borderRadius: '50%',
+                  background: 'rgba(0,0,0,0.7)', border: '1px solid rgba(255,255,255,0.1)',
+                  color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: '18px', backdropFilter: 'blur(8px)',
+                }}>›</button>
+
+                {/* Scrollable carousel */}
+                <div id={carouselId} style={{
+                  display: 'flex', gap: '16px', overflowX: 'auto', scrollSnapType: 'x mandatory',
+                  scrollbarWidth: 'none', padding: '4px 0 20px',
+                  WebkitOverflowScrolling: 'touch',
+                }}>
+                  <style>{`#${carouselId}::-webkit-scrollbar { display: none; }`}</style>
+                  {features.map((feat, i) => (
+                    <motion.div key={i} className="meridian-slide" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                      style={{
+                        minWidth: '280px', maxWidth: '320px', flex: '0 0 auto',
+                        scrollSnapAlign: 'center', borderRadius: '16px', overflow: 'hidden',
+                        border: `1px solid ${feat.color}25`, background: 'rgba(10,10,12,0.9)',
+                        transition: 'border-color 0.3s, transform 0.3s',
+                      }}
+                      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = `${feat.color}55`; (e.currentTarget as HTMLElement).style.transform = 'translateY(-4px)'; }}
+                      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = `${feat.color}25`; (e.currentTarget as HTMLElement).style.transform = 'translateY(0)'; }}
+                    >
+                      <div style={{ width: '100%', height: '180px', overflow: 'hidden' }}>
+                        <img src={feat.img} alt={feat.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
+                      </div>
+                      <div style={{ padding: '20px' }}>
+                        <div style={{ width: 4, height: 20, borderRadius: 2, background: feat.color, marginBottom: '12px' }} />
+                        <h4 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>{feat.title}</h4>
+                        <p className="text-muted" style={{ fontSize: '0.85rem', lineHeight: 1.6 }}>{feat.desc}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Dot indicators */}
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '8px' }}>
+                  {features.map((feat, i) => (
+                    <button key={i} aria-label={`Go to slide ${i + 1}`} onClick={() => {
+                      const el = document.getElementById(carouselId);
+                      const card = el?.querySelector('.meridian-slide') as HTMLElement;
+                      if (el && card) el.scrollTo({ left: i * (card.offsetWidth + 16), behavior: 'smooth' });
+                    }} style={{
+                      width: 8, height: 8, borderRadius: '50%', border: 'none', cursor: 'pointer',
+                      background: feat.color, opacity: 0.4, transition: 'opacity 0.2s',
+                    }}
+                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = '1'}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = '0.4'}
+                    />
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
         </div>
       </section>
 
