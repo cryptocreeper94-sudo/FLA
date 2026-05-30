@@ -42,7 +42,7 @@ export default function MeridianPitch() {
             <p className="text-muted" style={{ fontSize: '1.15rem', lineHeight: 1.7, maxWidth: '700px', marginBottom: '2rem' }}>
               No ground stations. No broken adapters. No physical bottlenecks. Route energy to EVs deterministically from overhead while maintaining a perfect cryptographic billing ledger.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginBottom: '3rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
               {[
                 { label: 'Zero Ground Friction', val: '0', color: red },
                 { label: 'Adapter Types', val: 'ALL', color: cyan },
