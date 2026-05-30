@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Shield, Activity, Cpu } from 'lucide-react';
+import { Shield, Cpu } from 'lucide-react';
 
 export default function ManheimTabs() {
   const { pathname } = useLocation();
