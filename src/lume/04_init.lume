@@ -1,0 +1,5 @@
+/// ─── CLEAN ENERGY PLATFORM BOOT SEQUENCE ────────────────────────────
+/// Entry point — initializes the application
+
+buildShell()
+console.log('[CLEAN ENERGY PLATFORM] Lume application mounted')

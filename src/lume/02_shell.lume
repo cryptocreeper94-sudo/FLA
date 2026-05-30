@@ -1,0 +1,8 @@
+/// ─── CLEAN ENERGY PLATFORM APP SHELL ────────────────────────────────
+/// Deterministic DOM construction via Lume dom primitives
+
+function buildShell() {
+  define root = dom.create('div', { id: 'CEP-root' })
+  root.innerHTML = `<div id="root"></div>`
+  dom.mount(root)
+}
