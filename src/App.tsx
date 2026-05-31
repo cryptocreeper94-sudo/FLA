@@ -195,7 +195,7 @@ function Navigation() {
 /** Detect which subdomain we're on */
 function getSubdomain(): 'manheim' | 'cal' | null {
   const host = window.location.hostname;
-  if (host.includes('cox') || host.includes('manheim')) return 'manheim';
+  if (host.includes('cox') || host.includes('manheim') || host.includes('cep')) return 'manheim';
   if (host.includes('cal')) return 'cal';
   return null;
 }
