@@ -33,7 +33,7 @@ export default function Enterprise() {
             <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto' }}>Three capabilities. One deterministic runtime. 2,358 test cases. Zero AI in the critical path.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
             {[
               {
                 badge: 'Independently Designed',

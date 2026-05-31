@@ -54,7 +54,7 @@ export default function VETSection() {
         </motion.div>
 
         {/* What VET provides */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.25rem', marginBottom: '3rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem', marginBottom: '3rem' }}>
           {[
             { icon: <FileCheck size={22} />, title: 'Verifiable Condition Certificates', desc: 'Every LumeScan diagnostic produces a cryptographically signed certificate. Dealers and buyers can verify authenticity with a hash lookup — no login, no account, no API integration required.' },
             { icon: <Shield size={22} />, title: 'Provenance Without Exposure', desc: 'VET proves a vehicle was scanned, by whom, and when — without revealing internal operational data, facility workflows, or proprietary diagnostics.' },

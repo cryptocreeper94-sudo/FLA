@@ -268,7 +268,7 @@ export default function COPSection() {
         </motion.div>
 
         {/* Architecture Breakdown — Two-Column */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
           <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="panel" style={{ padding: '2.5rem', borderColor: 'rgba(6,182,212,0.15)', background: 'linear-gradient(180deg, rgba(6,182,212,0.02) 0%, transparent 100%)' }}>
             <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--accent-cyan)' }}>Deployment Architecture</h3>
             <p className="text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.6 }}>
