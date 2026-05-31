@@ -32,21 +32,21 @@ export default function LumeVSection() {
         <motion.div {...fadeIn} transition={{ delay: 0.1 }} style={{ marginBottom: '3rem' }}>
           <div className="panel" style={{ padding: '2.5rem', background: 'rgba(56, 189, 248, 0.02)', borderColor: 'rgba(56, 189, 248, 0.15)' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
-              <div style={{ flex: 1, minWidth: '300px' }}>
+              <div style={{ flex: 1, minWidth: '280px', maxWidth: '100%' }}>
                 <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '12px', color: 'var(--accent-cyan)' }}>
                   <Activity size={22} color="var(--accent-cyan)" /> Live Enterprise API Integration
                 </h3>
                 <p className="text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.6 }}>
                   The Lume-V SDK is already actively provisioned with <strong>COG</strong> specific credentials, ready to instantly wrap any legacy pipeline or AI agent without refactoring backend code.
                 </p>
-                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', fontSize: '0.9rem', color: 'var(--text-main)', padding: '10px 16px', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: '8px' }}>
-                  <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981', boxShadow: '0 0 10px #10b981' }} /> 
-                  <span style={{ fontFamily: 'monospace' }}>API: cog_live_manheim_enterprise_xxx</span> 
-                  <span style={{ marginLeft: 8, color: '#10b981', fontWeight: 600 }}>[ ACTIVE ]</span>
+                <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '10px', fontSize: '0.9rem', color: 'var(--text-main)', padding: '10px 16px', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: '8px' }}>
+                  <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981', boxShadow: '0 0 10px #10b981', flexShrink: 0 }} /> 
+                  <span style={{ fontFamily: 'monospace', wordBreak: 'break-all' }}>API: cog_live_manheim_enterprise_xxx</span> 
+                  <span style={{ color: '#10b981', fontWeight: 600, flexShrink: 0 }}>[ ACTIVE ]</span>
                 </div>
               </div>
               
-              <div style={{ flex: 1, minWidth: '350px', background: '#0d1117', borderRadius: '12px', padding: '1.25rem', border: '1px solid rgba(255,255,255,0.05)', fontSize: '0.85rem', fontFamily: 'monospace', overflowX: 'auto' }}>
+              <div style={{ flex: 1, minWidth: '280px', maxWidth: '100%', background: '#0d1117', borderRadius: '12px', padding: '1.25rem', border: '1px solid rgba(255,255,255,0.05)', fontSize: '0.85rem', fontFamily: 'monospace', overflowX: 'auto' }}>
                 <div style={{ color: '#8b949e', marginBottom: '10px' }}>// Initialize Cox Operational Governance Wrapper</div>
                 <div style={{ color: '#c9d1d9' }}><span style={{ color: '#ff7b72' }}>import</span> {'{'} LumeVEnterprise {'}'} <span style={{ color: '#ff7b72' }}>from</span> <span style={{ color: '#a5d6ff' }}>'@darkwave/lume-v-sdk'</span>;</div>
                 <br/>
@@ -90,7 +90,7 @@ export default function LumeVSection() {
         </motion.div>
 
         {/* Two-Column Detail */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
           
           <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="panel" style={{ padding: '2.5rem', borderColor: 'rgba(56,189,248,0.15)', background: 'linear-gradient(180deg, rgba(56,189,248,0.02) 0%, transparent 100%)' }}>
             <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem', color: 'var(--accent-cyan)' }}>What LUME-V Is</h3>
