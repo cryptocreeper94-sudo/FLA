@@ -3,6 +3,7 @@ import { Cpu, FileText, BookOpen, Layers, Activity, Download } from 'lucide-reac
 import ManheimTabs from '../components/ManheimTabs';
 import StackComparison from '../components/engineering/StackComparison';
 import TechDeepDive from '../components/engineering/TechDeepDive';
+import LumeVAPIOnboarding from '../components/engineering/LumeVAPIOnboarding';
 
 export default function EngineeringBrief() {
   return (
@@ -45,6 +46,7 @@ export default function EngineeringBrief() {
 
       <StackComparison />
       <TechDeepDive />
+      <LumeVAPIOnboarding />
 
       {/* Footer */}
       <section style={{ padding: '4rem 0', textAlign: 'center' }}>
