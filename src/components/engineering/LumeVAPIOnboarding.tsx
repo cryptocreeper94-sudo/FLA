@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Terminal, Code, ShieldCheck, Activity, Cpu, Network, CheckCircle2 } from 'lucide-react';
+import { Terminal, Code, ShieldCheck, Activity, Network } from 'lucide-react';
 const f = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
 
 export default function LumeVAPIOnboarding() {
