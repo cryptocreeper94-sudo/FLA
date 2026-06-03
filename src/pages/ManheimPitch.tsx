@@ -9,6 +9,7 @@ import LotOpsProSection from '../components/manheim/LotOpsProSection';
 import ArchitectureSection from '../components/manheim/ArchitectureSection';
 import LumeLanguageSection from '../components/manheim/LumeLanguageSection';
 import VETSection from '../components/manheim/VETSection';
+import FractalLedgerSection from '../components/manheim/FractalLedgerSection';
 import AppShowcase from '../components/manheim/AppShowcase';
 import HardwareSection from '../components/manheim/HardwareSection';
 import EnterpriseMeshTeaser from '../components/manheim/EnterpriseMeshTeaser';
@@ -33,7 +34,8 @@ export default function ManheimPitch() {
       <LumeVSection />
       <LotOpsProSection />
 
-      {/* 3. THE LEDGERS (Data & Trust) */}
+      {/* 3. THE FRACTAL LEDGER ARCHITECTURE — top-down: root first, then divisions */}
+      <FractalLedgerSection />
       <CoxLedgerSection />
       <VETSection />
 
