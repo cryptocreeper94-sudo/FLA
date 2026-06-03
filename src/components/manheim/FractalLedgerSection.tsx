@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Network, Shield, Layers, Lock, Globe, Fingerprint, FileCheck, Server, ExternalLink } from 'lucide-react';
+import { Network, Shield, Layers, Lock, Globe, Fingerprint, Server } from 'lucide-react';
 
 const fadeIn = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
 
