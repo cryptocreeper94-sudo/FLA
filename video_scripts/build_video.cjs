@@ -23,11 +23,18 @@ const TRANSITION = 1.0;
 const TAIL_PAD = 6; // seconds of video AFTER narration ends
 
 const scenes = [
-  { file: 'scene1.png', duration: 16, zStart: 1.15, zEnd: 1.0,  xMode: 'center' },
-  { file: 'scene2.png', duration: 16, zStart: 1.0,  zEnd: 1.15, xMode: 'sweep' },
-  { file: 'scene3.png', duration: 16, zStart: 1.15, zEnd: 1.0,  xMode: 'center' },
-  { file: 'scene4.png', duration: 16, zStart: 1.0,  zEnd: 1.15, xMode: 'sweep' },
-  { file: 'scene5.png', duration: 22, zStart: 1.0,  zEnd: 1.08, xMode: 'center' }, // Extra long — holds after VO
+  { file: 'scene1.png',  duration: 10, zStart: 1.12, zEnd: 1.0,  xMode: 'center' }, // Auction lot aerial
+  { file: 'scene2b.png', duration: 10, zStart: 1.0,  zEnd: 1.10, xMode: 'sweep'  }, // Fleet staging yard
+  { file: 'scene2.png',  duration: 10, zStart: 1.10, zEnd: 1.0,  xMode: 'center' }, // Command center ops
+  { file: 'scene4b.png', duration: 10, zStart: 1.0,  zEnd: 1.10, xMode: 'sweep'  }, // Executive boardroom
+  { file: 'scene3.png',  duration: 10, zStart: 1.10, zEnd: 1.0,  xMode: 'center' }, // OBD scanner diagnostics
+  { file: 'scene4.png',  duration: 10, zStart: 1.0,  zEnd: 1.10, xMode: 'sweep'  }, // CORE ledger architecture
+  { file: 'scene6b.png', duration: 10, zStart: 1.10, zEnd: 1.0,  xMode: 'center' }, // Dual-ledger operations
+  { file: 'scene7.png',  duration: 10, zStart: 1.0,  zEnd: 1.10, xMode: 'sweep'  }, // Vehicle inspection
+  { file: 'scene8.png',  duration: 10, zStart: 1.10, zEnd: 1.0,  xMode: 'center' }, // Enterprise data center
+  { file: 'scene9.png',  duration: 10, zStart: 1.0,  zEnd: 1.10, xMode: 'sweep'  }, // Compliance monitoring
+  { file: 'scene10.png', duration: 10, zStart: 1.10, zEnd: 1.0,  xMode: 'center' }, // Portfolio war room
+  { file: 'scene11.png', duration: 10, zStart: 1.02, zEnd: 1.0,  xMode: 'center' }, // Shield closer — minimal zoom
 ];
 
 function runFFmpeg(args, label) {
