@@ -187,9 +187,8 @@ export default function COPSection() {
             src="/assets/images/photos/cop_command_center.png"
             alt="Cox Operational Platform — Enterprise Command Center"
             style={{
-              width: '100%', height: 'auto', objectFit: 'cover', objectPosition: 'center 30%',
-              borderRadius: '20px', marginBottom: '2.5rem',
-              border: '1px solid rgba(6,182,212,0.2)', opacity: 0.9
+              width: '100%', maxWidth: '800px', margin: '0 auto 2.5rem auto', display: 'block', height: 'auto',
+              borderRadius: '20px', border: '1px solid rgba(6,182,212,0.2)', opacity: 0.9
             }}
           />
         </motion.div>

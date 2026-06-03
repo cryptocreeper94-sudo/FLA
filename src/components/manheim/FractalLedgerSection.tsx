@@ -20,7 +20,7 @@ export default function FractalLedgerSection() {
       <div style={{ position: 'absolute', inset: 0, opacity: 0.02, backgroundImage: `repeating-linear-gradient(135deg, ${accentGold}44 0px, transparent 2px, transparent 24px, ${accentGold}44 26px)`, backgroundSize: '34px 34px' }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1100px' }}>
-        <img src="/assets/images/photos/fractal_ledger.png" alt="Fractal Ledger Architecture — Cox CORE hub-and-spoke topology" style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'center', borderRadius: '20px', marginBottom: '2.5rem', border: `1px solid ${goldBorder}`, opacity: 0.9, boxShadow: `0 8px 32px ${goldDim}` }} />
+        <img src="/assets/images/photos/fractal_ledger.png" alt="Fractal Ledger Architecture — Cox CORE hub-and-spoke topology" style={{ width: '100%', maxWidth: '800px', margin: '0 auto 2.5rem auto', display: 'block', height: 'auto', borderRadius: '20px', border: `1px solid ${goldBorder}`, opacity: 0.9, boxShadow: `0 8px 32px ${goldDim}` }} />
 
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
