@@ -28,7 +28,7 @@ export default function CoxLedgerSection() {
               Cox Automotive Ledger
             </h2>
             <p className="text-muted" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '1rem' }}>
-              The private, tamper-proof operational ledger powering the entire Cox Automotive modernization stack.
+              The division-level private, tamper-proof operational ledger powering the entire Cox Automotive modernization stack.
             </p>
             <p className="text-dim" style={{ maxWidth: '700px', margin: '0 auto', fontSize: '0.9rem', lineHeight: 1.6 }}>
               A dedicated, permissioned Proof-of-Authority ledger built exclusively for Cox Automotive — isolated from public networks, free of tokens and transaction costs, and fully controlled by the enterprise it serves.

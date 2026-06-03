@@ -101,7 +101,7 @@ export default function Whitepaper() {
             <p>The platform consists of five independently operable components:</p>
             <ul>
               <li><strong>LUME-V</strong> â€” A deterministic governance substrate that modernizes legacy behavior without altering source code</li>
-              <li><strong>Cox Automotive Ledger (CAL)</strong> â€” A private, permissioned cryptographic ledger for enterprise-grade auditability</li>
+              <li><strong>Cox Automotive Ledger (CAL)</strong> â€” A division-level private, permissioned cryptographic ledger for enterprise-grade auditability</li>
               <li><strong>Lot Ops Pro</strong> â€” A real-time operational platform for vehicle custody, driver management, and workflow orchestration</li>
               <li><strong>LUME-Auto</strong> — A full OBD-II diagnostic scanner and governance organism. Reads and clears trouble codes, captures freeze frame data, auto-reads VINs from the ECU, and produces cryptographically verifiable condition reports in 45 seconds. Includes Mode 05 (IMMO key management) and Mode 06 (CAN-bus remote start governance). Supports both Bluetooth and WiFi adapters.</li>
               <li><strong>VET (Verified Enterprise Trust)</strong> â€” A commercial verification system that issues publicly verifiable certificates from internal CAL records</li>
@@ -191,7 +191,7 @@ export default function Whitepaper() {
           {/* 5. CAL */}
           <WpSection num={5} title="Cox Automotive Ledger (CAL)">
             <p>
-              The Cox Automotive Ledger is a private, permissioned Proof-of-Authority cryptographic ledger built exclusively for the Cox Automotive ecosystem. It provides the tamper-proof operational truth layer that anchors the entire platform.
+              The Cox Automotive Ledger is a private, permissioned Proof-of-Authority cryptographic ledger built exclusively for the Cox Automotive ecosystem. As part of the fractal ledger architecture, it provides the tamper-proof operational truth layer that anchors the entire platform.
             </p>
             <h4>Why a Private Ledger</h4>
             <p>
@@ -350,7 +350,7 @@ export default function Whitepaper() {
             </p>
             <h4>Architectural Distinction</h4>
             <p>
-              VET is architecturally distinct from CAL. CAL is the private, internal operational ledger that Cox controls â€” it records everything but exposes nothing. VET is the commercial-facing verification ledger that issues publicly confirmable certificates derived from CAL records. This separation ensures that Cox maintains full control over its operational data while still providing commercially useful verification to external parties.
+              VET forms the public half of the division's dual-ledger. CAL is the division's private, internal operational ledger that Cox controls â€” it records everything but exposes nothing. VET is the division's commercial-facing verification ledger that issues publicly confirmable certificates derived from CAL records. This separation ensures that Cox maintains full control over its operational data while still providing commercially useful verification to external parties.
             </p>
           </WpSection>
 

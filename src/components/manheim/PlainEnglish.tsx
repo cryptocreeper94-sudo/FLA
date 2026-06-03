@@ -85,7 +85,7 @@ export default function PlainEnglish() {
               </div>
               <p style={{ fontSize: '0.88rem', lineHeight: 1.75, color: 'var(--text-muted)', margin: 0 }}>
                 When I say "ledger," I mean a private, tamper-proof record book — not cryptocurrency, not tokens, not Bitcoin. 
-                I built a <strong>dual-ledger architecture</strong> to completely isolate your data. The <strong>Cox Automotive Ledger (CAL)</strong> is strictly internal: a notarized logbook on your own servers tracking every lane move and scan. The <strong>Verified Enterprise Trust (VET)</strong> ledger is external: a secure way to cryptographically prove vehicle condition to buyers and financing partners without ever exposing your internal operations. No one can alter the records after the fact. It's simply a better way to keep data that can't be disputed.
+                I built a <strong>fractal dual-ledger architecture</strong> (a dual-ledger per division) to completely isolate your data. The <strong>Cox Automotive Ledger (CAL)</strong> is strictly internal: a notarized logbook on your own servers tracking every lane move and scan. The <strong>Verified Enterprise Trust (VET)</strong> ledger is external: a secure way to cryptographically prove vehicle condition to buyers and financing partners without ever exposing your internal operations. No one can alter the records after the fact. It's simply a better way to keep data that can't be disputed.
               </p>
             </div>
 
