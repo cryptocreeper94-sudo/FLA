@@ -14,7 +14,6 @@ const STATS = [
   { icon: <Link2 size={18}/>, val: '100%', label: 'Tamper-Proof Records', color: '#38bdf8' },
   { icon: <Eye size={18}/>, val: '42', label: 'Validator Nodes', color: '#22d3ee' },
   { icon: <Cpu size={18}/>, val: 'OBD-II', label: 'Deep Diagnostics', color: '#f59e0b' },
-  { icon: <FileText size={18}/>, val: '10+', label: 'Published Papers', color: '#f472b6' },
   { icon: <Activity size={18}/>, val: 'Real-Time', label: 'Fleet Intelligence', color: '#38bdf8' },
 ];
 
@@ -90,41 +89,9 @@ export default function HeroSection() {
             </video>
           </div>
 
-          {/* ═══ STATS: Grid on Desktop, Carousel on Mobile ═══ */}
-          <style>{`
-            .hero-stats-wrapper { margin-bottom: 2.5rem; }
-            .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; }
-            .stat-carousel { display: none; }
-            @media (max-width: 768px) { 
-              .stat-grid { display: none; }
-              .stat-carousel { display: block; max-width: 100%; margin-left: auto; margin-right: auto; } 
-            }
-          `}</style>
-          
-          <div className="hero-stats-wrapper">
-            {/* Desktop Grid */}
-            <div className="stat-grid">
-              {STATS.map((stat, i) => (
-                <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 + i * 0.1 }}
-                  style={{
-                    background: 'rgba(0,0,0,0.35)', backdropFilter: 'blur(16px)',
-                    border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px',
-                    padding: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                    textAlign: 'center'
-                  }}>
-                  <div style={{ fontSize: '1.6rem', fontWeight: 800, color: stat.color, fontFamily: 'var(--font-mono)', lineHeight: 1.2, marginBottom: '4px' }}>
-                    {stat.val}
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.65rem', color: 'var(--text-dim)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                    <span style={{ color: stat.color }}>{stat.icon}</span>
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Mobile Carousel */}
-            <div className="stat-carousel">
+          {/* ═══ STATS: Carousel ═══ */}
+          <div style={{ marginBottom: '3rem', maxWidth: '500px', marginLeft: 'auto', marginRight: 'auto' }}>
+            <div>
               <div style={{
                 position: 'relative',
                 background: 'rgba(0,0,0,0.35)', backdropFilter: 'blur(16px)',
