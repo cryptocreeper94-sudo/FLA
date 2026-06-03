@@ -16,7 +16,7 @@ export default function CoxLedgerSection() {
       <div style={{ position: 'absolute', top: 0, left: '50%', width: '900px', height: '900px', background: `radial-gradient(circle, ${accentDim} 0%, transparent 65%)`, transform: 'translate(-50%, -40%)' }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1100px' }}>
-        <img src="/assets/images/photos/ledger.png" alt="Enterprise operations center" style={{ width: '100%', maxWidth: '800px', margin: '0 auto 2.5rem auto', display: 'block', height: 'auto', borderRadius: '20px', border: `1px solid ${accentDim}`, opacity: 0.8 }} />
+        <img src="/assets/images/photos/ledger.png" alt="Enterprise visual" style={{ width: '100%', maxWidth: '800px', height: 'auto', maxHeight: '360px', objectFit: 'contain', margin: '0 auto 2.5rem auto', display: 'block', borderRadius: '16px', opacity: 0.85 }} />
 
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>

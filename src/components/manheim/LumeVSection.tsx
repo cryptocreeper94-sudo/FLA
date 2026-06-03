@@ -11,7 +11,7 @@ export default function LumeVSection() {
       <div style={{ position: 'absolute', bottom: 0, left: 0, width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(56,189,248,0.04) 0%, transparent 70%)', transform: 'translate(-30%, 30%)' }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1100px' }}>
-        <img src="/assets/images/photos/cep_cog_integration.png" alt="Cox Operational Governance (COG) NOC Architecture" style={{ width: '100%', maxWidth: '800px', margin: '0 auto 2.5rem auto', display: 'block', height: 'auto', borderRadius: '20px', border: '1px solid var(--border-light)', opacity: 0.85 }} />
+        <img src="/assets/images/photos/cep_cog_integration.png" alt="Enterprise visual" style={{ width: '100%', maxWidth: '800px', height: 'auto', maxHeight: '360px', objectFit: 'contain', margin: '0 auto 2.5rem auto', display: 'block', borderRadius: '16px', opacity: 0.85 }} />
         
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>

@@ -183,14 +183,7 @@ export default function COPSection() {
 
         {/* Hero Image */}
         <motion.div {...fadeIn}>
-          <img
-            src="/assets/images/photos/cop_command_center.png"
-            alt="Cox Operational Platform — Enterprise Command Center"
-            style={{
-              width: '100%', maxWidth: '800px', margin: '0 auto 2.5rem auto', display: 'block', height: 'auto',
-              borderRadius: '20px', border: '1px solid rgba(6,182,212,0.2)', opacity: 0.9
-            }}
-          />
+          <img src="/assets/images/photos/cop_command_center.png" alt="Enterprise visual" style={{ width: '100%', maxWidth: '800px', height: 'auto', maxHeight: '360px', objectFit: 'contain', margin: '0 auto 2.5rem auto', display: 'block', borderRadius: '16px', opacity: 0.85 }} />
         </motion.div>
 
         {/* Header Block */}
