@@ -48,11 +48,30 @@ const PHASES = [
   },
 ];
 
+const MODULES = [
+  { title: 'LUME-Auto', desc: 'OBD-II diagnostics and condition reporting — standalone hardware and software.', color: 'var(--accent-cyan)' },
+  { title: 'Lot Ops Pro', desc: 'Operational workforce platform — custody tracking, routing, messaging.', color: '#38bdf8' },
+  { title: 'LUME-V', desc: 'Deterministic governance substrate — operates across any legacy enterprise stack.', color: 'var(--accent-emerald)' },
+  { title: 'CAL', desc: 'Cox Automotive Ledger — private, tamper-evident operational records anchored on-chain.', color: '#38bdf8' },
+  { title: 'VET', desc: 'Verified Enterprise Trust — external verification certificates for buyers, dealers, and financing partners.', color: '#38bdf8' },
+  { title: 'Meridian', desc: 'Wireless energy routing — EV charging, powered signage, and lot infrastructure.', color: '#dc2626' },
+  { title: 'Unified Platform', desc: 'When deployed together, every component amplifies the others — the whole exceeds the sum of its parts.', color: '#fb923c' },
+];
+
 export default function ImplementationPath() {
   const [phaseIdx, setPhaseIdx] = useState(0);
   const prevPhase = useCallback(() => setPhaseIdx(i => (i - 1 + PHASES.length) % PHASES.length), []);
   const nextPhase = useCallback(() => setPhaseIdx(i => (i + 1) % PHASES.length), []);
   const phase = PHASES[phaseIdx];
+
+  const [modIndex, setModIndex] = useState(0);
+  const prevMod = useCallback(() => setModIndex(i => (i - 1 + MODULES.length) % MODULES.length), []);
+  const nextMod = useCallback(() => setModIndex(i => (i + 1) % MODULES.length), []);
+
+  useEffect(() => {
+    const t = setInterval(() => setModIndex(i => (i + 1) % MODULES.length), 4000);
+    return () => clearInterval(t);
+  }, []);
 
   return (
     <section style={{ padding: '6rem 0', position: 'relative', overflow: 'hidden', background: 'var(--bg-dark)', borderBottom: '1px solid var(--border-light)' }}>
@@ -184,32 +203,44 @@ export default function ImplementationPath() {
               The platform is designed so that each layer operates independently. Manheim can begin with the components that address immediate operational needs and integrate additional layers over time.
             </p>
           </div>
-          <style>{`
-            .impl-modular-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; grid-auto-rows: 1fr; }
-            @media (max-width: 768px) { .impl-modular-grid { grid-template-columns: 1fr; } }
-          `}</style>
-          <div className="impl-modular-grid">
-            {[
-              { title: 'LUME-Auto', desc: 'OBD-II diagnostics and condition reporting — standalone hardware and software.', color: 'var(--accent-cyan)' },
-              { title: 'Lot Ops Pro', desc: 'Operational workforce platform — custody tracking, routing, messaging.', color: '#38bdf8' },
-              { title: 'LUME-V', desc: 'Deterministic governance substrate — operates across any legacy enterprise stack.', color: 'var(--accent-emerald)' },
-              { title: 'CAL', desc: 'Cox Automotive Ledger — private, tamper-evident operational records anchored on-chain.', color: '#38bdf8' },
-              { title: 'VET', desc: 'Verified Enterprise Trust — external verification certificates for buyers, dealers, and financing partners.', color: '#38bdf8' },
-              { title: 'Meridian', desc: 'Wireless energy routing — EV charging, powered signage, and lot infrastructure.', color: '#dc2626' },
-              { title: 'Unified Platform', desc: 'When deployed together, every component amplifies the others — the whole exceeds the sum of its parts.', color: '#fb923c' },
-            ].map((mod, i) => (
-              <div key={i} style={{
-                padding: '1.25rem', display: 'flex', flexDirection: 'column', height: '100%',
-                background: 'rgba(255,255,255,0.02)', borderRadius: '16px',
-                border: `1px solid ${mod.color}44`,
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '0.5rem' }}>
-                  <div style={{ width: 8, height: 8, borderRadius: '50%', background: mod.color, flexShrink: 0 }} />
-                  <h4 style={{ fontSize: '0.9rem', color: mod.color, margin: 0 }}>{mod.title}</h4>
-                </div>
-                <p className="text-muted" style={{ fontSize: '0.8rem', lineHeight: 1.5, margin: 0 }}>{mod.desc}</p>
+          <div style={{ position: 'relative', maxWidth: '600px', margin: '0 auto', background: 'rgba(255,255,255,0.02)', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)' }}>
+            <div style={{ position: 'relative', height: '180px' }}>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={modIndex}
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -40 }}
+                  transition={{ duration: 0.3 }}
+                  style={{
+                    position: 'absolute', inset: 0,
+                    display: 'flex', flexDirection: 'column', justifyContent: 'center',
+                    padding: '2rem', border: `1px solid ${MODULES[modIndex].color}44`,
+                    borderRadius: '16px'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
+                    <div style={{ width: 10, height: 10, borderRadius: '50%', background: MODULES[modIndex].color, flexShrink: 0 }} />
+                    <h4 style={{ fontSize: '1.2rem', color: MODULES[modIndex].color, margin: 0 }}>{MODULES[modIndex].title}</h4>
+                  </div>
+                  <p className="text-muted" style={{ fontSize: '0.95rem', lineHeight: 1.6, margin: 0 }}>{MODULES[modIndex].desc}</p>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', padding: '12px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+              <button onClick={prevMod} style={{ width: '28px', height: '28px', borderRadius: '50%', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)', color: 'var(--text-muted)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s' }}>
+                <ChevronLeft size={14} />
+              </button>
+              <div style={{ display: 'flex', gap: '6px' }}>
+                {MODULES.map((_, i) => (
+                  <button key={i} onClick={() => setModIndex(i)} style={{ width: modIndex === i ? '18px' : '6px', height: '6px', borderRadius: '3px', border: 'none', cursor: 'pointer', background: modIndex === i ? MODULES[modIndex].color : 'rgba(255,255,255,0.15)', transition: 'all 0.3s ease' }} />
+                ))}
               </div>
-            ))}
+              <button onClick={nextMod} style={{ width: '28px', height: '28px', borderRadius: '50%', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)', color: 'var(--text-muted)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s' }}>
+                <ChevronRight size={14} />
+              </button>
+            </div>
           </div>
         </motion.div>
 
