@@ -25,3 +25,9 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Video build intermediates (large FFmpeg outputs)
+video_scripts/assets/clip_*.mp4
+video_scripts/assets/merged_video.mp4
+video_scripts/assets/mixed_audio.mp3
+video_scripts/assets/ambient.mp3

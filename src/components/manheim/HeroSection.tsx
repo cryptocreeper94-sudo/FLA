@@ -78,6 +78,18 @@ export default function HeroSection() {
             A deterministic operations platform that delivers verifiable, tamper-proof records of every physical event. Designed as a universal architecture for any high-volume industry or global operator, this specific deployment features the private Cox Automotive Ledger (CAL) and Lume-V governance layer. The immediate application: 45-second vehicle scans, cryptographic condition reports, and a lot operations system built to replace guesswork with mathematical proof.
           </p>
 
+          {/* Enterprise Pitch Video Embed */}
+          <div style={{ maxWidth: '800px', margin: '0 auto 3rem auto', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(16, 185, 129, 0.3)', boxShadow: '0 20px 40px rgba(0,0,0,0.6)', display: 'flex', justifyContent: 'center' }}>
+            <video 
+              controls 
+              playsInline 
+              style={{ width: '100%', maxHeight: '60vh', objectFit: 'contain', display: 'block', backgroundColor: '#000' }}
+              src="/assets/videos/cep_hero.mp4"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
           {/* ═══ STATS: Grid on Desktop, Carousel on Mobile ═══ */}
           <style>{`
             .hero-stats-wrapper { margin-bottom: 2.5rem; }
