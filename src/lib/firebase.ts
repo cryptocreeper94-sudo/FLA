@@ -9,6 +9,7 @@ import { initializeApp, getApps, getApp } from "firebase/app";
 import {
   getAuth,
   GoogleAuthProvider,
+  OAuthProvider,
   signInWithPopup,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
@@ -49,7 +50,20 @@ const googleProvider = new GoogleAuthProvider();
 googleProvider.addScope("email");
 googleProvider.addScope("profile");
 
+const microsoftProvider = new OAuthProvider('microsoft.com');
+microsoftProvider.addScope('email');
+microsoftProvider.addScope('profile');
+microsoftProvider.addScope('openid');
+// Hint the Cox tenant so users land on their familiar Microsoft login
+microsoftProvider.setCustomParameters({ prompt: 'select_account' });
+
 // ── Sign-In Helpers ──
+
+export async function signInWithMicrosoft(): Promise<User> {
+  const result = await signInWithPopup(auth, microsoftProvider);
+  validateEmailDomain(result.user.email);
+  return result.user;
+}
 
 export async function signInWithGoogle(): Promise<User> {
   const result = await signInWithPopup(auth, googleProvider);
