@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Link2, Eye, Cpu, Activity, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Shield, Link2, Eye, Cpu, Activity, ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const HERO_IMAGES = [
   '/assets/images/photos/hero_auction.png',
@@ -10,16 +10,17 @@ const HERO_IMAGES = [
 ];
 
 const STATS = [
-  { icon: <Shield size={18}/>, val: '45s', label: 'Full Vehicle Scan', color: '#10b981' },
-  { icon: <Link2 size={18}/>, val: '100%', label: 'Tamper-Proof Records', color: '#38bdf8' },
-  { icon: <Eye size={18}/>, val: '42', label: 'Validator Nodes', color: '#22d3ee' },
-  { icon: <Cpu size={18}/>, val: 'OBD-II', label: 'Deep Diagnostics', color: '#f59e0b' },
-  { icon: <Activity size={18}/>, val: 'Real-Time', label: 'Fleet Intelligence', color: '#38bdf8' },
+  { icon: <Shield size={18}/>, val: '45s', label: 'Full Vehicle Scan', color: '#10b981', desc: "Instead of manually checking systems, our hardware reads the entire vehicle's diagnostic health in under 45 seconds, instantly identifying hidden issues and maintenance needs before a vehicle goes to the lot." },
+  { icon: <Link2 size={18}/>, val: '100%', label: 'Tamper-Proof Records', color: '#38bdf8', desc: "Every piece of data is cryptographically sealed the moment it is recorded. It cannot be altered, deleted, or manipulated by anyone—not even system administrators. What happens on the lot is exactly what is reported." },
+  { icon: <Eye size={18}/>, val: '42', label: 'Validator Nodes', color: '#22d3ee', desc: "A decentralized network of 42 independent servers constantly double-checks every piece of data. This ensures there is no single point of failure and makes the system mathematically impossible to hack or manipulate." },
+  { icon: <Cpu size={18}/>, val: 'OBD-II', label: 'Deep Diagnostics', color: '#f59e0b', desc: "We plug directly into the vehicle's onboard computer port (OBD-II) to pull raw, unfiltered data straight from the engine, transmission, and internal sensors—bypassing human error entirely." },
+  { icon: <Activity size={18}/>, val: 'Real-Time', label: 'Fleet Intelligence', color: '#38bdf8', desc: "Stop waiting for end-of-day reports. As vehicles are scanned and moved, data flows instantly to the command center, giving managers a live, down-to-the-second view of fleet health and lot operations." },
 ];
 
 export default function HeroSection() {
   const [imgIndex, setImgIndex] = useState(0);
   const [statIndex, setStatIndex] = useState(0);
+  const [selectedStat, setSelectedStat] = useState<number | null>(null);
 
   // Background slideshow
   useEffect(() => {
@@ -106,11 +107,13 @@ export default function HeroSection() {
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -40 }}
                       transition={{ duration: 0.3 }}
+                      onClick={() => setSelectedStat(statIndex)}
                       style={{
                         position: 'absolute', inset: 0,
                         display: 'flex', flexDirection: 'column',
                         alignItems: 'center', justifyContent: 'center',
                         textAlign: 'center', padding: '0.75rem 1rem',
+                        cursor: 'pointer'
                       }}
                     >
                       <div style={{
@@ -178,6 +181,67 @@ export default function HeroSection() {
 
         </motion.div>
       </div>
+
+      {/* Interactive Modal Overlay */}
+      <AnimatePresence>
+        {selectedStat !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedStat(null)}
+            style={{
+              position: 'fixed', inset: 0, zIndex: 9999,
+              background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(8px)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.5rem'
+            }}
+          >
+            <motion.div
+              initial={{ scale: 0.95, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.95, y: 20 }}
+              onClick={e => e.stopPropagation()}
+              style={{
+                background: 'var(--surface-color)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                borderRadius: '16px',
+                padding: '2rem',
+                maxWidth: '450px',
+                width: '100%',
+                position: 'relative',
+                boxShadow: '0 25px 50px rgba(0,0,0,0.5)',
+                display: 'flex', flexDirection: 'column', gap: '1rem'
+              }}
+            >
+              <button 
+                onClick={() => setSelectedStat(null)}
+                style={{
+                  position: 'absolute', top: '1rem', right: '1rem',
+                  background: 'transparent', border: 'none', color: 'var(--text-muted)',
+                  cursor: 'pointer', padding: '4px'
+                }}
+              >
+                <X size={20} />
+              </button>
+              
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: STATS[selectedStat].color }}>
+                {STATS[selectedStat].icon}
+                <span style={{ fontSize: '1.1rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  {STATS[selectedStat].label}
+                </span>
+              </div>
+              
+              <div style={{ fontSize: '2.5rem', fontWeight: 800, color: STATS[selectedStat].color, fontFamily: 'var(--font-mono)', lineHeight: 1.1 }}>
+                {STATS[selectedStat].val}
+              </div>
+              
+              <p style={{ fontSize: '1rem', lineHeight: 1.6, color: 'var(--text-main)', margin: 0 }}>
+                {STATS[selectedStat].desc}
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
