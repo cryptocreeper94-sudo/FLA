@@ -15,7 +15,7 @@ export default function VETSection() {
       <div style={{ position: 'absolute', top: '50%', left: '50%', width: '800px', height: '800px', background: `radial-gradient(circle, ${accentDim} 0%, transparent 65%)`, transform: 'translate(-50%, -50%)' }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1100px' }}>
-        <img src="/assets/images/photos/vet-infrastructure.png" alt="Enterprise visual" style={{ width: '100%', maxWidth: '800px', height: 'auto', maxHeight: '360px', objectFit: 'contain', margin: '0 auto 2.5rem auto', display: 'block', borderRadius: '16px', opacity: 0.85 }} />
+        <img src="/assets/images/photos/vet-infrastructure.png" alt="Enterprise visual" style={{ width: '100%', height: '350px', objectFit: 'cover', objectPosition: 'center 30%', margin: '0 auto 2.5rem auto', display: 'block', borderRadius: '16px', opacity: 0.85 }} />
 
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>

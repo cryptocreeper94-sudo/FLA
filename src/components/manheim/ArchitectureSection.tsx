@@ -8,7 +8,7 @@ export default function ArchitectureSection() {
   return (
     <section style={{ padding: '5rem 0', background: 'linear-gradient(180deg, var(--bg-dark) 0%, rgba(16,185,129,0.02) 100%)', borderBottom: '1px solid var(--border-light)' }}>
       <div className="container" style={{ maxWidth: '1100px' }}>
-        <img src="/assets/images/photos/architecture.png" alt="Enterprise visual" style={{ width: '100%', maxWidth: '800px', height: 'auto', maxHeight: '360px', objectFit: 'contain', margin: '0 auto 2.5rem auto', display: 'block', borderRadius: '16px', opacity: 0.85 }} />
+        <img src="/assets/images/photos/architecture.png" alt="Enterprise visual" style={{ width: '100%', height: '350px', objectFit: 'cover', objectPosition: 'center 30%', margin: '0 auto 2.5rem auto', display: 'block', borderRadius: '16px', opacity: 0.85 }} />
         <div className="responsive-grid" style={{ marginBottom: '4rem' }}>
           <motion.div {...f}>
             <p style={{ color: 'var(--accent-emerald)', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Architecture</p>

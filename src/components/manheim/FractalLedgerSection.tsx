@@ -20,7 +20,7 @@ export default function FractalLedgerSection() {
       <div style={{ position: 'absolute', inset: 0, opacity: 0.02, backgroundImage: `repeating-linear-gradient(135deg, ${accentGold}44 0px, transparent 2px, transparent 24px, ${accentGold}44 26px)`, backgroundSize: '34px 34px' }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1100px' }}>
-        <img src="/assets/images/photos/fractal_ledger.png" alt="Enterprise visual" style={{ width: '100%', maxWidth: '800px', height: 'auto', maxHeight: '360px', objectFit: 'contain', margin: '0 auto 2.5rem auto', display: 'block', borderRadius: '16px', opacity: 0.85 }} />
+        <img src="/assets/images/photos/fractal_ledger.png" alt="Enterprise visual" style={{ width: '100%', height: '350px', objectFit: 'cover', objectPosition: 'center 30%', margin: '0 auto 2.5rem auto', display: 'block', borderRadius: '16px', opacity: 0.85 }} />
 
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>

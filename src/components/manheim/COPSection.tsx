@@ -183,7 +183,7 @@ export default function COPSection() {
 
         {/* Hero Image */}
         <motion.div {...fadeIn}>
-          <img src="/assets/images/photos/cop_command_center.png" alt="Enterprise visual" style={{ width: '100%', maxWidth: '800px', height: 'auto', maxHeight: '360px', objectFit: 'contain', margin: '0 auto 2.5rem auto', display: 'block', borderRadius: '16px', opacity: 0.85 }} />
+          <img src="/assets/images/photos/cop_command_center.png" alt="Enterprise visual" style={{ width: '100%', height: '350px', objectFit: 'cover', objectPosition: 'center 30%', margin: '0 auto 2.5rem auto', display: 'block', borderRadius: '16px', opacity: 0.85 }} />
         </motion.div>
 
         {/* Header Block */}
