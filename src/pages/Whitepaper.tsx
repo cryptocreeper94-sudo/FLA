@@ -71,7 +71,7 @@ export default function Whitepaper() {
                   'The Modernization Challenge',
                   'Platform Architecture Overview',
                   'LUME-V â€” Deterministic Governance Substrate',
-                  'Cox Automotive Ledger (CAL)',
+                  'Fractal Ledger Architecture (CAL & VET)',
                   'Lot Ops Pro â€” Operational Platform',
                   'LUME-Auto â€” Diagnostic Organism',
                   'VET — Verified Enterprise Trust',
@@ -189,7 +189,7 @@ export default function Whitepaper() {
           </WpSection>
 
           {/* 5. CAL */}
-          <WpSection num={5} title="Cox Automotive Ledger (CAL)">
+          <WpSection num={5} title="Fractal Ledger Architecture (CAL & VET)">
             <p>
               The Cox Automotive Ledger is a private, permissioned Proof-of-Authority cryptographic ledger built exclusively for the Cox Automotive ecosystem. As part of the fractal ledger architecture, it provides the tamper-proof operational truth layer that anchors the entire platform.
             </p>
