@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Link2, Eye, Cpu, FileText, Activity, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Shield, Link2, Eye, Cpu, Activity, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const HERO_IMAGES = [
   '/assets/images/photos/hero_auction.png',
