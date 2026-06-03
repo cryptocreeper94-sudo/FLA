@@ -59,6 +59,9 @@ export default function Footer() {
           <Link to="/terms" style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Terms of Service</Link>
           <Link to="/privacy" style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Privacy Policy</Link>
           <p className="text-dim" style={{ fontSize: '0.75rem', marginTop: '0.5rem', lineHeight: 1.5 }}>
+            All third-party trademarks (including logos and icons) referenced remain the property of their respective owners.
+          </p>
+          <p className="text-dim" style={{ fontSize: '0.75rem', lineHeight: 1.5 }}>
             Restricted access. Authorized personnel only.
           </p>
         </div>
