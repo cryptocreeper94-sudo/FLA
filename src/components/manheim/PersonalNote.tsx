@@ -42,8 +42,8 @@ export default function PersonalNote() {
               you don't need to absorb it all at once.
             </p>
             <p style={{ marginBottom: '1rem' }}>
-              The short version: this is an infrastructure modernization platform built specifically for the kind of operation Manheim runs. 
-              Every piece works independently, and every piece works better together. Nothing here requires replacing what you already have.
+              The short version: this is an infrastructure modernization platform built specifically for the massive scale and complexity of the entire Cox Enterprise ecosystem. 
+              While it drops seamlessly into Manheim's current workflows today, the fractal architecture is designed to scale horizontally across every division of Cox Enterprises without replacing what you already have.
             </p>
             <p style={{ marginBottom: '0' }}>
               Take your time with it. There's also a{' '}
