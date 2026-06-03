@@ -10,7 +10,7 @@ const features = [
   { icon: <Shield size={18}/>, title: 'Safety & Speed Monitoring', desc: '15/17/22 MPH tiered alerts. Incident reporting with photo capture. Weather radar with tornado alerts.', color: '#ef4444' },
   { icon: <Users size={18}/>, title: 'Role-Based Dashboards', desc: 'Ops Manager, Supervisor, Van Driver, Inventory Driver — each sees exactly what they need.', color: 'var(--accent-cyan)' },
   { icon: <MessageSquare size={18}/>, title: 'Real-Time Messaging', desc: 'Supervisor ↔ driver communication. Broadcast or individual. 2-second polling. Toast notifications.', color: '#38bdf8' },
-  { icon: <Radio size={18}/>, title: 'AI Voice Assistant (Optional)', desc: 'Hands-free bidirectional voice for drivers. 15+ commands. LLM-agnostic. All AI output governed by LUME-V deterministic wrapper.', color: '#fb923c' },
+  { icon: <Radio size={18}/>, title: 'AI Voice Assistant (Optional)', desc: 'Hands-free bidirectional voice for drivers. 15+ commands. LLM-agnostic. All AI output governed by LUME-V deterministic substrate.', color: '#fb923c' },
   { icon: <Smartphone size={18}/>, title: 'Zero Hardware Cost', desc: 'BYOD or provide a commodity Android device. Runs as a PWA — installable, offline-capable. No specialized equipment.', color: 'var(--accent-emerald)' },
   { icon: <Cloud size={18}/>, title: 'Multi-Tenant Architecture', desc: 'Nashville. Atlanta. Any facility. Isolated data, custom branding, facility-specific configs — one codebase, unlimited sites.', color: 'var(--accent-cyan)' },
 ];

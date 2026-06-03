@@ -70,7 +70,7 @@ export default function Whitepaper() {
                   'Executive Summary',
                   'The Modernization Challenge',
                   'Platform Architecture Overview',
-                  'LUME-V â€” Deterministic Governance Wrapper',
+                  'LUME-V â€” Deterministic Governance Substrate',
                   'Cox Automotive Ledger (CAL)',
                   'Lot Ops Pro â€” Operational Platform',
                   'LUME-Auto â€” Diagnostic Organism',
@@ -100,7 +100,7 @@ export default function Whitepaper() {
             </p>
             <p>The platform consists of five independently operable components:</p>
             <ul>
-              <li><strong>LUME-V</strong> â€” A deterministic governance wrapper that modernizes legacy behavior without altering source code</li>
+              <li><strong>LUME-V</strong> â€” A deterministic governance substrate that modernizes legacy behavior without altering source code</li>
               <li><strong>Cox Automotive Ledger (CAL)</strong> â€” A private, permissioned cryptographic ledger for enterprise-grade auditability</li>
               <li><strong>Lot Ops Pro</strong> â€” A real-time operational platform for vehicle custody, driver management, and workflow orchestration</li>
               <li><strong>LUME-Auto</strong> — A full OBD-II diagnostic scanner and governance organism. Reads and clears trouble codes, captures freeze frame data, auto-reads VINs from the ECU, and produces cryptographically verifiable condition reports in 45 seconds. Includes Mode 05 (IMMO key management) and Mode 06 (CAN-bus remote start governance). Supports both Bluetooth and WiFi adapters.</li>
@@ -145,7 +145,7 @@ export default function Whitepaper() {
                 </thead>
                 <tbody>
                   {[
-                    ['Governance', 'LUME-V', 'Deterministic wrapper over legacy systems'],
+                    ['Governance', 'LUME-V', 'Deterministic substrate beneath legacy systems'],
                     ['Trust', 'CAL', 'Private cryptographic ledger for operational records'],
                     ['Operations', 'Lot Ops Pro', 'Workforce, custody, and workflow management'],
                     ['Diagnostics', 'LUME-Auto', 'OBD-II vehicle intelligence, key management, and remote start governance'],
@@ -167,7 +167,7 @@ export default function Whitepaper() {
           </WpSection>
 
           {/* 4. LUME-V */}
-          <WpSection num={4} title="LUME-V â€” Deterministic Governance Wrapper">
+          <WpSection num={4} title="LUME-V â€” Deterministic Governance Substrate">
             <p>
               LUME-V is the modernization engine that makes the entire platform possible without requiring a rip-and-replace migration. It sits between Manheim's existing systems and the governance layer â€” preserving every database, every workflow, every integration that already works.
             </p>
@@ -398,7 +398,7 @@ export default function Whitepaper() {
 
             <h4>The 4/42 Fractal Architecture</h4>
             <p>
-              All Lume organisms share a structural signature: 4 layers of 42 nodes. This ratio is not arbitrary â€” it emerges from the mathematics of deterministic consensus in bounded systems. The same architecture that governs a vehicle diagnostic organism governs LUME-V's enterprise wrapper, CAL's validator consensus, and Meridian's future energy routing.
+              All Lume organisms share a structural signature: 4 layers of 42 nodes. This ratio is not arbitrary â€” it emerges from the mathematics of deterministic consensus in bounded systems. The same architecture that governs a vehicle diagnostic organism governs LUME-V's enterprise substrate, CAL's validator consensus, and Meridian's future energy routing.
             </p>
             <p>
               This fractal consistency means the platform scales by replicating a proven architecture rather than building new systems from scratch. A Lot Ops Pro deployment uses the same organism structure as a LUME-Auto scan â€” just configured for a different domain.
@@ -456,7 +456,7 @@ export default function Whitepaper() {
             </ul>
             <h4>Platform Integration</h4>
             <p>
-              Meridian is not a separate system. It runs on the same Lume runtime, uses the same 4/42 organism architecture, is governed by the same LUME-V wrapper, and anchors its records to the same CAL ledger. Energy routing is deterministic. Billing is cryptographically verified through VET. Lot Ops Pro coordinates charging schedules with vehicle movement.
+              Meridian is not a separate system. It runs on the same Lume runtime, uses the same 4/42 organism architecture, is governed by the same LUME-V substrate, and anchors its records to the same CAL ledger. Energy routing is deterministic. Billing is cryptographically verified through VET. Lot Ops Pro coordinates charging schedules with vehicle movement.
             </p>
             <p>
               The Meridian architecture is fully documented in published research (DOI: 10.5281/zenodo.20028362) and covered by US Provisional Patent 64/056,378. Meridian is the next deployment phase â€” the governance layer, the ledger, the VET, the runtime, and the diagnostic software are built and operational today.
@@ -472,7 +472,7 @@ export default function Whitepaper() {
               {[
                 { phase: 'Phase 1 â€” Weeks 1-4', title: 'Telemetry Capture & Baseline', desc: 'Deploy commodity ELM327 OBD-II adapters at pilot facility. Capture 42-signal telemetry from 500â€“1,000 vehicles. Generate automated condition reports. Validate scan accuracy against existing inspection reports.' },
                 { phase: 'Phase 2 â€” Weeks 4-8', title: 'Lot Intelligence & Workflow Integration', desc: 'Enable real-time lane readiness dashboards. Activate dead-battery, cold-start, and pending-fault detection. Integrate transport pre-dispatch health reports and reconditioning work orders. Begin arbitration reduction tracking.' },
-                { phase: 'Phase 3 â€” Weeks 8-12', title: 'CAL Integration & Trust Certificates', desc: 'Activate Cox Automotive Ledger validators. Anchor all condition certificates on-ledger with cryptographic proof. Deploy LUME-V governance wrapper. Issue VET certificates for buyer-facing verification.' },
+                { phase: 'Phase 3 â€” Weeks 8-12', title: 'CAL Integration & Trust Certificates', desc: 'Activate Cox Automotive Ledger validators. Anchor all condition certificates on-ledger with cryptographic proof. Deploy LUME-V governance substrate. Issue VET certificates for buyer-facing verification.' },
                 { phase: 'Phase 4 â€” Weeks 12-16', title: 'Network Intelligence & Multi-Facility', desc: 'Full-lot predictive throughput modeling and population health analytics. Cross-facility health scoring and benchmarking. Expand to additional Manheim locations with proven playbook.' },
               ].map((p, i) => (
                 <div key={i} style={{ padding: '1rem 1.25rem', border: '1px solid var(--border-light)', borderRadius: '8px' }}>
@@ -502,7 +502,7 @@ export default function Whitepaper() {
               The platform includes an optional AI voice assistant for hands-free driver commands within Lot Ops Pro. This feature uses a large language model for natural language processing. It is explicitly non-critical â€” the entire platform operates fully without it. The voice layer is LLM-agnostic: it can connect to any provider (OpenAI, Anthropic, a self-hosted model, or Cox's own infrastructure), and it can be disabled entirely at the facility level. No core platform function â€” diagnostics, governance, ledger operations, custody tracking, or condition certification â€” depends on any external AI service. The deterministic stack is the platform. The LLM is a convenience layer.
             </p>
             <p>
-              When the voice assistant is active, all LLM output passes through the same LUME-V deterministic governance wrapper that covers every other system component. The AI agent does not operate outside the safety envelope â€” its responses are validated, bounded, and auditable through the same 10-layer verification architecture documented in Section 2. This means the non-deterministic nature of the language model is contained by the deterministic runtime. The LLM can suggest; LUME-V decides what reaches the driver.
+              When the voice assistant is active, all LLM output passes through the same LUME-V deterministic governance substrate that covers every other system component. The AI agent does not operate outside the safety envelope â€” its responses are validated, bounded, and auditable through the same 10-layer verification architecture documented in Section 2. This means the non-deterministic nature of the language model is contained by the deterministic runtime. The LLM can suggest; LUME-V decides what reaches the driver.
             </p>
           </WpSection>
 
@@ -514,7 +514,7 @@ export default function Whitepaper() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', margin: '1.5rem 0' }}>
               {[
                 { title: 'Lume: A Deterministic Programming Language for Governance-Critical Systems', doi: '10.5281/zenodo.19382282', desc: 'The core language specification â€” deterministic execution, formal verification, organism architecture.' },
-                { title: 'Lume-V: Deterministic Governance Wrapper for Legacy Enterprise Modernization', doi: '10.5281/zenodo.19645097', desc: 'The governance layer â€” wrapping legacy systems without modification.' },
+                { title: 'Lume-V: Deterministic Governance Substrate for Legacy Enterprise Modernization', doi: '10.5281/zenodo.19645097', desc: 'The governance layer â€” substrating legacy systems without modification.' },
                 { title: 'DAIGS: Deterministic AI Governance System', doi: '10.5281/zenodo.19491784', desc: 'AI governance within deterministic constraints â€” organism-level intelligence.' },
                 { title: 'The Routed World: Meridian Architecture for Deterministic Energy Systems', doi: '10.5281/zenodo.20028362', desc: 'Future energy layer â€” wireless power distribution for autonomous facility operations.' },
                 { title: 'The Enterprise Mesh: Sovereign-Chain Architecture and Cross-Enterprise Verification', doi: '10.5281/zenodo.20251916', desc: 'Sovereign-chain network for cross-enterprise verification without data exposure â€” the Verified but Private invariant.' },
@@ -539,7 +539,7 @@ export default function Whitepaper() {
               DarkWave Studios LLC is the research and engineering organization behind the Lume ecosystem. Founded on the principle that enterprise infrastructure should be deterministic, auditable, and mathematically provable, DarkWave develops the languages, runtimes, governance systems, and hardware that make this vision operational.
             </p>
             <p>
-              The technologies described in this document are not concepts or proposals. They are built and validated systems â€” the ledger is live, the governance wrapper is deployed, the verification layer is running, and the diagnostic software is complete. Lot Ops Pro and OBD-II dongle field connectivity are ready for pilot validation.
+              The technologies described in this document are not concepts or proposals. They are built and validated systems â€” the ledger is live, the governance substrate is deployed, the verification layer is running, and the diagnostic software is complete. Lot Ops Pro and OBD-II dongle field connectivity are ready for pilot validation.
             </p>
             <div style={{ marginTop: '2rem', padding: '1.5rem', border: '1px solid var(--border-light)', borderRadius: '8px', textAlign: 'center' }}>
               <p style={{ fontSize: '0.85rem', color: 'var(--text-dim)', margin: 0 }}>

@@ -23,7 +23,7 @@ export default function LumeVSection() {
               COG: <span className="text-gradient" style={{ backgroundImage: 'linear-gradient(to right, #38bdf8, #10b981)' }}>Cox Operational Governance</span>
             </h2>
             <p className="text-muted" style={{ maxWidth: '780px', margin: '0 auto', fontSize: '1.15rem', lineHeight: 1.7 }}>
-              Powered by the Lume-V Engine, the COG wrapper surrounds Manheim's entire legacy stack in deterministic governance—unifying logic and orchestrating workflows without requiring a multi-million dollar rip-and-replace migration.
+              Powered by the Lume-V Engine, the COG substrate underlies Manheim's entire legacy stack in deterministic governance—unifying logic and orchestrating workflows without requiring a multi-million dollar rip-and-replace migration.
             </p>
           </motion.div>
         </div>
@@ -47,7 +47,7 @@ export default function LumeVSection() {
               </div>
               
               <div style={{ flex: 1, minWidth: '280px', maxWidth: '100%', background: '#0d1117', borderRadius: '12px', padding: '1.25rem', border: '1px solid rgba(255,255,255,0.05)', fontSize: '0.85rem', fontFamily: 'monospace', overflowX: 'auto' }}>
-                <div style={{ color: '#8b949e', marginBottom: '10px' }}>// Initialize Cox Operational Governance Wrapper</div>
+                <div style={{ color: '#8b949e', marginBottom: '10px' }}>// Initialize Cox Operational Governance Substrate</div>
                 <div style={{ color: '#c9d1d9' }}><span style={{ color: '#ff7b72' }}>import</span> {'{'} LumeVEnterprise {'}'} <span style={{ color: '#ff7b72' }}>from</span> <span style={{ color: '#a5d6ff' }}>'@darkwave/lume-v-sdk'</span>;</div>
                 <br/>
                 <div style={{ color: '#8b949e' }}>// Connect to the Lume-V Verification Network</div>
@@ -95,7 +95,7 @@ export default function LumeVSection() {
           <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="panel" style={{ padding: '2.5rem', borderColor: 'rgba(56,189,248,0.15)', background: 'linear-gradient(180deg, rgba(56,189,248,0.02) 0%, transparent 100%)' }}>
             <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem', color: 'var(--accent-cyan)' }}>What LUME-V Is</h3>
             <p className="text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.6 }}>
-              A deterministic modernization wrapper. It is not a new database, and it is not a replacement platform. It is an intelligent governance layer that:
+              A deterministic modernization substrate. It is not a new database, and it is not a replacement platform. It is an intelligent governance layer that:
             </p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
               {[
@@ -152,7 +152,7 @@ export default function LumeVSection() {
               <div style={{ padding: '1.25rem', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(245, 158, 11, 0.1)' }}>
                 <h4 style={{ color: '#fbbf24', fontSize: '1rem', marginBottom: '0.5rem' }}>Identity Management</h4>
                 <p className="text-dim" style={{ fontSize: '0.9rem', lineHeight: 1.5 }}>
-                  Full native integration with Cox Automotive's existing Okta and Azure Active Directory. Employees log into the COP wrapper exactly as they do today.
+                  Full native integration with Cox Automotive's existing Okta and Azure Active Directory. Employees log into the COP substrate exactly as they do today.
                 </p>
               </div>
               <div style={{ padding: '1.25rem', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(245, 158, 11, 0.1)' }}>

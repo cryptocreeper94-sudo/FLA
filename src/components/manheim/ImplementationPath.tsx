@@ -32,7 +32,7 @@ const PHASES = [
     items: [
       'Activate Cox Automotive Ledger validators at pilot facility',
       'Anchor all condition certificates on-ledger with cryptographic proof',
-      'Deploy LUME-V governance wrapper over existing operational workflows',
+      'Deploy LUME-V governance substrate over existing operational workflows',
       'Issue VET certificates for buyer-facing vehicle verification',
     ],
   },
@@ -192,7 +192,7 @@ export default function ImplementationPath() {
             {[
               { title: 'LUME-Auto', desc: 'OBD-II diagnostics and condition reporting — standalone hardware and software.', color: 'var(--accent-cyan)' },
               { title: 'Lot Ops Pro', desc: 'Operational workforce platform — custody tracking, routing, messaging.', color: '#38bdf8' },
-              { title: 'LUME-V', desc: 'Deterministic governance wrapper — operates across any legacy enterprise stack.', color: 'var(--accent-emerald)' },
+              { title: 'LUME-V', desc: 'Deterministic governance substrate — operates across any legacy enterprise stack.', color: 'var(--accent-emerald)' },
               { title: 'CAL', desc: 'Cox Automotive Ledger — private, tamper-evident operational records anchored on-chain.', color: '#38bdf8' },
               { title: 'VET', desc: 'Verified Enterprise Trust — external verification certificates for buyers, dealers, and financing partners.', color: '#38bdf8' },
               { title: 'Meridian', desc: 'Wireless energy routing — EV charging, powered signage, and lot infrastructure.', color: '#dc2626' },
@@ -217,7 +217,7 @@ export default function ImplementationPath() {
         <motion.div {...fadeIn} transition={{ delay: 0.4 }} className="panel" style={{ padding: '3rem', textAlign: 'center', borderColor: 'rgba(16,185,129,0.25)', background: 'linear-gradient(180deg, rgba(16,185,129,0.05) 0%, rgba(16,185,129,0.01) 100%)', boxShadow: '0 10px 40px rgba(16,185,129,0.05)' }}>
           <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: accent }}>Built. Validated. Ready to Deploy.</h3>
           <p className="text-muted" style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-            The infrastructure is built. The ledger is live. The governance wrapper is deployed. The verification layer is running. This is not a proposal for future development — it is a deployment schedule for a pilot that validates the operational layer at a live facility.
+            The infrastructure is built. The ledger is live. The governance substrate is deployed. The verification layer is running. This is not a proposal for future development — it is a deployment schedule for a pilot that validates the operational layer at a live facility.
           </p>
           <style>{`
             .impl-cta-buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }

@@ -15,7 +15,7 @@ const modules = [
   { icon: <Database size={28} />, title: 'Enterprise Ledger (CAL)', desc: 'Private Proof-of-Authority blockchain layer providing cryptographic provenance for every vehicle asset passport. Total auditability, tamper-proof by design.', color: '#10b981', border: 'rgba(16,185,129,0.15)', glow: 'rgba(16,185,129,0.1)' },
   { icon: <Hexagon size={28} />, title: 'Meridian Energy Protocol', desc: 'Deterministic overhead wireless charging architecture. Solid-state phased arrays deliver packetized microwave energy directly to vehicle rectennas.', color: '#0ea5e9', border: 'rgba(14,165,233,0.15)', glow: 'rgba(14,165,233,0.1)' },
   { icon: <Shield size={28} />, title: 'TrustShield Layer', desc: 'Guardian Security framework enforcing strict zero-trust boundaries at the hardware level. Enterprise data never leaks to public vectors.', color: '#94a3b8', border: 'rgba(255,255,255,0.08)', glow: 'rgba(255,255,255,0.05)' },
-  { icon: <ServerCog size={28} />, title: 'LUME-V Governance', desc: 'Deterministic governance wrapper that unifies legacy systems into a single source of truth. Zero database migration, zero downtime.', color: '#38bdf8', border: 'rgba(56,189,248,0.15)', glow: 'rgba(56,189,248,0.1)' },
+  { icon: <ServerCog size={28} />, title: 'LUME-V Governance', desc: 'Deterministic governance substrate that unifies legacy systems into a single source of truth. Zero database migration, zero downtime.', color: '#38bdf8', border: 'rgba(56,189,248,0.15)', glow: 'rgba(56,189,248,0.1)' },
   { icon: <Fingerprint size={28} />, title: 'Enterprise SSO', desc: 'Native integration with existing Okta and Azure Active Directory. Employees log in exactly as they do today — zero new credentials required.', color: '#f59e0b', border: 'rgba(245,158,11,0.15)', glow: 'rgba(245,158,11,0.1)' },
   { icon: <ShieldCheck size={28} />, title: 'Verified Enterprise Trust (VET)', desc: 'External verification portal for buyers, dealers, and financial partners. Cryptographically proves asset provenance anchored to the private CAL.', color: '#10b981', border: 'rgba(16,185,129,0.15)', glow: 'rgba(16,185,129,0.1)' },
 ];
@@ -207,7 +207,7 @@ export default function COPSection() {
           
           <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', maxWidth: '700px', margin: '0 auto', lineHeight: 1.6 }}>
             The applications you are about to see do not exist in isolation. They are securely housed within 
-            the <strong style={{ color: '#fff' }}>Cox Operational Platform</strong> — a deterministic, zero-trust meta-operating system wrapper 
+            the <strong style={{ color: '#fff' }}>Cox Operational Platform</strong> — a deterministic, zero-trust meta-operating system substrate 
             deployed directly to your command centers. It is the single pane of glass that governs your entire physical and digital ecosystem.
           </p>
         </motion.div>
