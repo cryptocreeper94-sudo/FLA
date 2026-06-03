@@ -93,7 +93,7 @@ export default function HeroSection() {
           {/* ═══ STATS: Grid on Desktop, Carousel on Mobile ═══ */}
           <style>{`
             .hero-stats-wrapper { margin-bottom: 2.5rem; }
-            .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 800px; }
+            .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; }
             .stat-carousel { display: none; }
             @media (max-width: 768px) { 
               .stat-grid { display: none; }
