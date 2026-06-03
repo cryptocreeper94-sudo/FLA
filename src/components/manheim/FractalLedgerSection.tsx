@@ -101,7 +101,7 @@ export default function FractalLedgerSection() {
                 <div style={{ width: 2, height: 32, background: `linear-gradient(180deg, ${accentGold}60, rgba(255,255,255,0.06))` }} />
               </div>
               {/* Division branches */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
                 {[
                   { name: 'Manheim', desc: 'Auction integrity & vehicle custody', private: 'CAL', public: 'VET', active: true },
                   { name: 'Autotrader', desc: 'Verified listing provenance', private: 'ATL', public: 'ATV', active: false },
@@ -117,6 +117,10 @@ export default function FractalLedgerSection() {
                       borderRadius: '14px',
                       transition: 'border-color 0.3s, transform 0.2s',
                       position: 'relative',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      flex: '1 1 200px',
+                      maxWidth: '300px',
                     }}
                     onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = goldBorderHover}
                     onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = div.active ? goldBorder : 'var(--border-light)'}
@@ -126,7 +130,7 @@ export default function FractalLedgerSection() {
                     )}
                     <div style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.3rem', color: div.active ? '#fff' : 'var(--text-muted)' }}>{div.name}</div>
                     <div className="text-dim" style={{ fontSize: '0.72rem', marginBottom: '0.75rem', lineHeight: 1.4 }}>{div.desc}</div>
-                    <div style={{ display: 'flex', gap: '0.5rem' }}>
+                    <div style={{ display: 'flex', gap: '0.5rem', marginTop: 'auto' }}>
                       <div style={{ flex: 1, padding: '6px 8px', background: 'rgba(56,189,248,0.06)', border: '1px solid rgba(56,189,248,0.15)', borderRadius: '6px', textAlign: 'center' }}>
                         <div style={{ fontSize: '0.6rem', color: 'var(--text-dim)', letterSpacing: '0.05em', marginBottom: '2px' }}>PRIVATE</div>
                         <div style={{ fontSize: '0.75rem', fontWeight: 700, color: accentBlue }}>{div.private}</div>
