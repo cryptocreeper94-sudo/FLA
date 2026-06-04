@@ -59,7 +59,7 @@ export default function Whitepaper() {
               </div>
               <h1 style={{ fontSize: 'clamp(2.2rem, 5vw, 3rem)', lineHeight: 1.1, marginBottom: '1rem', letterSpacing: '-0.03em' }}>
                 Cox Enterprise Platform<br />
-                <span style={{ fontSize: '0.5em', color: 'var(--text-muted)', fontWeight: 400 }}>Fractal Trust Architecture for Cox Automotive & Cox Enterprises</span>
+                <span style={{ fontSize: '0.5em', color: 'var(--text-muted)', fontWeight: 400 }}>Fractal Ledger Architecture (FLA) for Cox Automotive & Cox Enterprises</span>
               </h1>
               <p style={{ color: 'var(--text-muted)', maxWidth: '550px', margin: '0 auto 2rem', fontSize: '1rem', lineHeight: 1.7 }}>
                 A deterministic governance, operational intelligence, and cryptographic trust infrastructure designed exclusively for the Cox enterprise ecosystem.
@@ -85,7 +85,7 @@ export default function Whitepaper() {
             <ol style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
               {[
                 'Executive Summary',
-                'The Fractal Trust Architecture',
+                'The Fractal Ledger Architecture (FLA)',
                 'Cox Automotive Ledger (CAL)',
                 'Verified Enterprise Trust (VET)',
                 'Core Operating Platform (COP)',
@@ -112,7 +112,7 @@ export default function Whitepaper() {
               <h2>1. Executive Summary</h2>
               <p>Cox Enterprises operates one of the most complex multi-division corporate ecosystems in the United States. Cox Automotive alone processes over 8 million vehicles annually through Manheim, provides valuations through Kelley Blue Book, powers dealership operations through Dealer.com, and finances billions in floor plan lending through NextGear Capital.</p>
               <p>Each division runs its own operational systems, its own data infrastructure, and its own compliance workflows. The challenge is not that these systems don't work — they do. The challenge is that there is no unified trust layer connecting them. When a vehicle moves from Manheim auction to NextGear financing to an Autotrader listing, the data about that vehicle exists in three separate silos with no cryptographic linkage.</p>
-              <p>The Cox Enterprise Platform solves this with a <strong>fractal trust architecture</strong> — a system where each division maintains complete operational autonomy while anchoring to a shared cryptographic root. No division sees another division's data. No data crosses boundaries. But every division can <em>verify</em> claims made by any other division, instantly and mathematically.</p>
+              <p>The Cox Enterprise Platform solves this with the <strong>Fractal Ledger Architecture (FLA)</strong> — a system where each division maintains complete operational autonomy while anchoring to a shared cryptographic root. No division sees another division’s data. No data crosses boundaries. But every division can <em>verify</em> claims made by any other division, instantly and mathematically.</p>
               <p>The platform consists of six independently deployable components:</p>
               <ul>
                 <li><strong>CAL</strong> — Cox Automotive Ledger. Division-level private cryptographic ledger for operational records.</li>
@@ -129,7 +129,7 @@ export default function Whitepaper() {
 
             {/* 2 */}
             <motion.div {...f} className="wp-section">
-              <h2>2. The Fractal Trust Architecture</h2>
+              <h2>2. The Fractal Ledger Architecture (FLA)</h2>
               <p>The word "fractal" is precise. The same architectural pattern repeats at every level of the organization:</p>
               <ul>
                 <li><strong>Division level:</strong> Each Cox division (Manheim, Autotrader, KBB, Dealer.com, NextGear Capital) operates its own private Proof-of-Authority ledger. The data model, certificate types, and access controls are configured for that division's specific operations.</li>

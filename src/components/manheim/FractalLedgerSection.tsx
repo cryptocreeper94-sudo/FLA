@@ -29,10 +29,10 @@ export default function FractalLedgerSection() {
               <Network size={14} style={{ marginRight: 6 }} /> Hub & Spoke Topology
             </div>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.25rem', lineHeight: 1.1 }}>
-              Fractal Ledger <span style={{ fontSize: '0.5em', fontWeight: 400, color: 'var(--text-dim)', verticalAlign: 'middle' }}>Architecture</span>
+              Fractal Ledger <span style={{ fontSize: '0.5em', fontWeight: 400, color: 'var(--text-dim)', verticalAlign: 'middle' }}>Architecture (FLA)</span>
             </h2>
             <p className="text-muted" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '1rem' }}>
-              A fractal hub-and-spoke topology designed for maximum security and absolute compartmentalization. At the center is the universal CORE root. Connected to CORE, every division operates its own isolated dual-ledger system.
+              The Fractal Ledger Architecture (FLA) — a hub-and-spoke topology designed for maximum security and absolute compartmentalization. At the center is the universal CORE root. Connected to CORE, every division operates its own isolated dual-ledger system.
             </p>
             <p className="text-dim" style={{ maxWidth: '700px', margin: '0 auto', fontSize: '0.85rem', lineHeight: 1.6 }}>
               The same architectural pattern repeats at every level of scope — self-similar, infinitely scalable, and compartmentalized by design.
@@ -167,7 +167,7 @@ export default function FractalLedgerSection() {
 
         {/* Chain of Trust — Updated for Fractal */}
         <motion.div {...fadeIn} transition={{ delay: 0.3 }} className="panel" style={{ padding: '2.5rem', borderColor: goldBorder, background: `linear-gradient(180deg, ${goldDim} 0%, rgba(251,146,60,0.02) 100%)` }}>
-          <h3 style={{ fontSize: '1.3rem', marginBottom: '2rem', color: accentGold, textAlign: 'center' }}>Fractal Chain of Trust</h3>
+          <h3 style={{ fontSize: '1.3rem', marginBottom: '2rem', color: accentGold, textAlign: 'center' }}>FLA Chain of Trust</h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 0, maxWidth: '450px', margin: '0 auto' }}>
             {[
               { label: 'OBD-II / Edge Scan', sub: 'Raw sensor data captured at the asset', color: accentCyan },

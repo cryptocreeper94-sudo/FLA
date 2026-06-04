@@ -94,7 +94,7 @@ export default function COREExplorer() {
 
       {/* Fractal Architecture Visualization */}
       <motion.div {...fadeIn} style={{ marginBottom: '2.5rem' }}>
-        <h3 style={{ fontSize: '0.8rem', color: '#8b5cf6', fontWeight: 600, letterSpacing: '0.08em', marginBottom: '1.25rem', textAlign: 'center' }}>FRACTAL LEDGER TOPOLOGY</h3>
+        <h3 style={{ fontSize: '0.8rem', color: '#8b5cf6', fontWeight: 600, letterSpacing: '0.08em', marginBottom: '1.25rem', textAlign: 'center' }}>FLA — FRACTAL LEDGER TOPOLOGY</h3>
         
         {/* CORE Hub */}
         <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
@@ -150,7 +150,7 @@ export default function COREExplorer() {
 
       {/* How CORE Works */}
       <motion.div {...fadeIn} style={{ marginBottom: '2rem' }}>
-        <h3 style={{ fontSize: '0.8rem', color: '#8b5cf6', fontWeight: 600, letterSpacing: '0.08em', marginBottom: '1rem' }}>HOW THE FRACTAL ARCHITECTURE WORKS</h3>
+        <h3 style={{ fontSize: '0.8rem', color: '#8b5cf6', fontWeight: 600, letterSpacing: '0.08em', marginBottom: '1rem' }}>HOW THE FLA WORKS</h3>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
           {[
             { icon: <Database size={22} />, title: 'Division Autonomy', desc: 'Each Cox division operates its own private Proof-of-Authority ledger. Manheim\'s CAL records auction events. NextGear\'s NGL records financing events. Data never crosses division boundaries.', color: '#38bdf8' },

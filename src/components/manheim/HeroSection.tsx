@@ -71,11 +71,11 @@ export default function HeroSection() {
             <Shield size={14} style={{ marginRight: 6 }} /> Cox Enterprise Platform
           </div>
           <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.8rem)', lineHeight: 1.08, marginBottom: '1.5rem' }}>
-            Fractal Trust Architecture.<br/>
+            Fractal Ledger Architecture.<br/>
             <span className="text-gradient">Built for the Enterprise.</span>
           </h1>
           <p className="text-muted" style={{ fontSize: '1.1rem', lineHeight: 1.7, maxWidth: '800px', marginBottom: '2rem' }}>
-            A deterministic operations platform that delivers verifiable, tamper-proof records of every physical event. Designed as a universal architecture for global operators, this deployment features a fractal ledger architecture — CAL, VET, and CORE — that structurally isolates data across every division of the Cox ecosystem. Powered by the universal CORE root fabric and Lume-V governance substrate, the system brings cryptographic condition reports, deterministic lot workflows via Lot Ops Pro, and mathematical proof to Manheim and the Cox Enterprise family as a whole.
+            A deterministic operations platform that delivers verifiable, tamper-proof records of every physical event. Designed as a universal architecture for global operators, this deployment features the Fractal Ledger Architecture (FLA) — CAL, VET, and CORE — that structurally isolates data across every division of the Cox ecosystem. Powered by the universal CORE root fabric and Lume-V governance substrate, the system brings cryptographic condition reports, deterministic lot workflows via Lot Ops Pro, and mathematical proof to Manheim and the Cox Enterprise family as a whole.
           </p>
 
           {/* Enterprise Pitch Video Embed */}
