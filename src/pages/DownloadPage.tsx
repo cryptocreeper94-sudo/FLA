@@ -142,7 +142,7 @@ export default function DownloadPage() {
               </div>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1rem' }}>
-              The enterprise desktop client for Cox Automotive. Provides native access to COP Dashboard, CAL Ledger Explorer, VET Verification Portal, CORE Root Fabric, and COG Engine — with keyboard shortcuts for every section.
+              The enterprise desktop client for Cox Automotive. Provides native access to COP Dashboard, CAL Ledger Explorer, VET Verification Portal, CORE Root Fabric, and COG Engine — plus Lot Ops Pro as a built-in native app. Full keyboard shortcuts for every section.
             </p>
 
             {isMobile ? (
