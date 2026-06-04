@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Activity, Menu, X, Shield, LogOut } from 'lucide-react';
+import { Activity, Menu, X, Shield, LogOut, Database, CheckCircle, Layers, Brain, Cpu } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -22,6 +22,11 @@ import Whitepaper from './pages/Whitepaper';
 import OrganismApp from './pages/OrganismApp';
 import DownloadPage from './pages/DownloadPage';
 import Order from './pages/Order';
+import CALExplorer from './pages/CALExplorer';
+import VETVerify from './pages/VETVerify';
+import COPDashboard from './pages/COPDashboard';
+import COREExplorer from './pages/COREExplorer';
+import COGEngine from './pages/COGEngine';
 import Footer from './components/Footer';
 import RollerCoaster from './components/RollerCoaster';
 import AuthGate from './components/AuthGate';
@@ -245,6 +250,24 @@ function App() {
                       <div className="nav-subtitle-desktop" style={{ fontSize: '0.55rem', color: 'var(--text-dim)', letterSpacing: '0.06em' }}>Enterprise Trust Infrastructure · Cox Automotive</div>
                     </div>
                   </div>
+                  {/* Enterprise Nav Links */}
+                  <div className="enterprise-nav-desktop" style={{ display: 'flex', alignItems: 'center', gap: '2px', fontSize: '0.65rem', flexShrink: 0 }}>
+                    {[
+                      { path: '/', label: 'Home', icon: <Shield size={11}/> },
+                      { path: '/cop', label: 'COP', icon: <Layers size={11}/> },
+                      { path: '/cal', label: 'CAL', icon: <Database size={11}/> },
+                      { path: '/vet', label: 'VET', icon: <CheckCircle size={11}/> },
+                      { path: '/core', label: 'CORE', icon: <Cpu size={11}/> },
+                      { path: '/cog', label: 'COG', icon: <Brain size={11}/> },
+                      { path: '/whitepaper', label: 'Whitepaper', icon: null },
+                      { path: '/app', label: 'Scan Demo', icon: null },
+                    ].map(link => (
+                      <Link key={link.path} to={link.path} style={{ padding: '4px 8px', borderRadius: '4px', color: 'var(--text-muted)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '3px', transition: 'all 0.2s', fontWeight: 600 }}
+                        onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(56,189,248,0.1)'; (e.currentTarget as HTMLElement).style.color = '#38bdf8'; }}
+                        onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; (e.currentTarget as HTMLElement).style.color = 'var(--text-muted)'; }}
+                      >{link.icon}{link.label}</Link>
+                    ))}
+                  </div>
                   <div className="flex items-center gap-3" style={{ fontSize: '0.7rem', color: 'var(--text-dim)', flexShrink: 0 }}>
                     <span className="nav-auth-desktop" style={{ color: 'var(--accent-emerald)', whiteSpace: 'nowrap' }}>● Authenticated</span>
                     <button
@@ -267,6 +290,11 @@ function App() {
               <main style={{ paddingTop: '56px', minHeight: 'calc(100vh - 200px)' }}>
                 <Routes>
                   <Route path="/" element={<ManheimPitch />} />
+                  <Route path="/cal" element={<CALExplorer />} />
+                  <Route path="/vet" element={<VETVerify />} />
+                  <Route path="/cop" element={<COPDashboard />} />
+                  <Route path="/core" element={<COREExplorer />} />
+                  <Route path="/cog" element={<COGEngine />} />
                   <Route path="/meridian" element={<MeridianPitch />} />
                   <Route path="/engineering" element={<EngineeringBrief />} />
                   <Route path="/whitepaper" element={<Whitepaper />} />

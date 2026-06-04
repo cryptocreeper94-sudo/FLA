@@ -232,7 +232,7 @@ export default function CoxLedgerSection() {
           <p className="text-muted" style={{ maxWidth: '750px', margin: '0 auto', fontSize: '1rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
             The Cox Automotive Ledger runs on infrastructure Cox owns and governs. Every facility operates as a validator node. Every vehicle event becomes an immutable, enterprise-controlled record. Every dispute resolves against cryptographic proof — not negotiation, not memory, not he-said-she-said.
           </p>
-          <a href="https://cal.tlid.io" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 28px', background: accent, color: '#0a0c10', borderRadius: '10px', fontSize: '0.9rem', fontWeight: 600, textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s', boxShadow: `0 4px 20px ${accentDim}` }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(0)'; }}>
+          <a href="/cal" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 28px', background: accent, color: '#0a0c10', borderRadius: '10px', fontSize: '0.9rem', fontWeight: 600, textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s', boxShadow: `0 4px 20px ${accentDim}` }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(0)'; }}>
             <Link2 size={16} /> Launch Ledger Explorer
           </a>
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem' }}>
