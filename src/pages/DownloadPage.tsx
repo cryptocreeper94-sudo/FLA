@@ -5,7 +5,7 @@ import QRCodeLib from 'qrcode';
 
 // Direct download URLs
 const APK_URL = 'https://expo.dev/artifacts/eas/sRMUe9ZMLhiwpxtV24Efoo.apk';
-const EXE_URL = 'https://firebasestorage.googleapis.com/v0/b/darkwave-auth.firebasestorage.app/o/downloads%2FLot_Ops_Pro_Setup.exe?alt=media&token=36fe7582-07b0-423a-a366-bd1a1e6af6a0';
+const EXE_URL = '/downloads/COP_Setup_1.0.0.exe';
 const DOWNLOAD_URL = 'https://cox.tlid.io/download';
 
 export default function DownloadPage() {
@@ -128,7 +128,69 @@ export default function DownloadPage() {
           </motion.div>
         </div>
 
+        {/* Cox Operational Platform Desktop */}
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} style={{
+            background: 'rgba(255,255,255,0.03)', borderRadius: '16px', padding: '2rem',
+            border: '1px solid var(--border-light)', marginBottom: '3rem',
+            opacity: isMobile ? 0.6 : 1,
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '1rem', flexWrap: 'wrap' }}>
+              <Monitor size={28} style={{ color: '#38bdf8' }} />
+              <h2 style={{ fontSize: '1.4rem', margin: 0 }}>Cox Operational Platform</h2>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '4px 10px', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.2)', borderRadius: '20px', color: '#38bdf8', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.08em' }}>
+                🖥️ DESKTOP
+              </div>
+            </div>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1rem' }}>
+              The enterprise desktop client for Cox Automotive. Provides native access to COP Dashboard, CAL Ledger Explorer, VET Verification Portal, CORE Root Fabric, and COG Engine — with keyboard shortcuts for every section.
+            </p>
 
+            {isMobile ? (
+              <div style={{
+                display: 'flex', alignItems: 'center', gap: '10px', padding: '14px 18px',
+                background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.2)',
+                borderRadius: '12px', marginTop: '1rem',
+              }}>
+                <Monitor size={20} style={{ color: '#f59e0b', flexShrink: 0 }} />
+                <div>
+                  <p style={{ color: '#fbbf24', fontSize: '0.8rem', fontWeight: 700, marginBottom: '2px' }}>Windows Desktop Required</p>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.7rem', lineHeight: 1.5 }}>
+                    This is a Windows .exe installer. Visit this page from your desktop to download.
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <div style={{ display: 'inline-block', padding: '6px 12px', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.2)', borderRadius: '6px', color: '#38bdf8', fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.05em' }}>
+                    COP v1.0.0 · Electron Runtime
+                  </div>
+                  <span style={{ fontSize: '0.65rem', color: 'var(--text-dim)' }}>Ctrl+1 through Ctrl+8 for section navigation</span>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', minWidth: '200px' }}>
+                  <a
+                    href={EXE_URL}
+                    download
+                    style={{
+                      display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
+                      padding: '14px 24px', borderRadius: '30px',
+                      background: 'transparent', border: '2px solid #38bdf8',
+                      color: '#38bdf8', fontSize: '0.85rem', fontWeight: 800,
+                      letterSpacing: '0.1em', cursor: 'pointer', transition: 'all 0.2s',
+                      textDecoration: 'none',
+                    }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(56,189,248,0.1)'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
+                  >
+                    <Download size={18} /> DOWNLOAD COP .EXE
+                  </a>
+                  <p style={{ color: 'var(--text-dim)', fontSize: '0.65rem', textAlign: 'center' }}>
+                    Windows 10/11 (64-bit) · ~73 MB
+                  </p>
+                </div>
+              </div>
+            )}
+          </motion.div>
 
 
         {/* Features */}
