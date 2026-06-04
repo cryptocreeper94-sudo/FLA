@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Shield, ArrowLeft } from 'lucide-react';
+import { Shield, ArrowLeft, FileDown, CheckCircle } from 'lucide-react';
 
 
 const f = { initial: { opacity: 0, y: 10 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
