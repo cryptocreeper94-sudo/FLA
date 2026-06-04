@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Cpu, FileText, BookOpen, Layers, Activity, Download } from 'lucide-react';
+import { Cpu, FileText, Layers, Activity, Download, Monitor } from 'lucide-react';
 import ManheimTabs from '../components/ManheimTabs';
 import StackComparison from '../components/engineering/StackComparison';
 import TechDeepDive from '../components/engineering/TechDeepDive';
@@ -23,14 +23,14 @@ export default function EngineeringBrief() {
               <span style={{ color: 'var(--accent-cyan)' }}>For Engineering Review.</span>
             </h1>
             <p className="text-muted" style={{ fontSize: '1.05rem', lineHeight: 1.7, maxWidth: '700px', margin: '0 auto 2.5rem' }}>
-              This document details the complete system architecture — from OBD-II protocol parsing to governance mesh topology to the native Lume build migration path. Every subsystem, protocol, and integration point is specified for engineering-grade review. The intent is simple: any qualified engineer should be able to read this document, review the published research, and independently verify every claim.
+              This document details the complete system architecture — from OBD-II protocol parsing to governance mesh topology to the native Lume build migration path. It covers every operational subsystem, live platform section, and integration point. The intent is simple: any qualified engineer should be able to read this document, review the published research, and independently verify every claim.
             </p>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.75rem', maxWidth: '360px', margin: '0 auto' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.75rem', maxWidth: '520px', margin: '0 auto' }}>
               {[
                 { icon: <Layers size={14}/>, val: '14', label: 'Subsystems' },
                 { icon: <FileText size={14}/>, val: '42', label: 'OBD-II PIDs' },
-                { icon: <BookOpen size={14}/>, val: '8', label: 'API Endpoints' },
+                { icon: <Monitor size={14}/>, val: '6', label: 'Live Sections' },
                 { icon: <Cpu size={14}/>, val: '2', label: 'Build Targets' },
               ].map((s, i) => (
                 <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 + i * 0.1 }}
@@ -40,6 +40,56 @@ export default function EngineeringBrief() {
                 </motion.div>
               ))}
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Live Platform Sections */}
+      <section style={{ padding: '4rem 0', borderBottom: '1px solid var(--border-light)', background: 'linear-gradient(180deg, rgba(245,158,11,0.02) 0%, var(--bg-dark) 100%)' }}>
+        <div className="container" style={{ maxWidth: '1100px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <p style={{ color: '#f59e0b', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Live Platform Architecture</p>
+            <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>Operational Sections — All Live</h2>
+            <p className="text-muted" style={{ maxWidth: '650px', margin: '0 auto' }}>
+              Every section below is deployed and operational on cox.tlid.io. Each one is powered by the Cox Automotive Ledger backend and anchored to the CORE Root Fabric.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1rem' }}>
+            {[
+              { title: 'COP — Core Operating Platform', desc: 'Enterprise command center with real-time KPIs, facility status, vehicle state grid, and live activity feed. Auto-refreshes every 30 seconds from the CAL backend. 8 operational metrics tracked in real-time.', color: '#f59e0b', link: '/cop' },
+              { title: 'CAL — Cox Automotive Ledger', desc: 'Full on-chain block explorer. Browse blocks, certificates, and vehicles. Search by VIN, certificate ID, agent, or hash. Real-time chain integrity verification with validator node status.', color: '#38bdf8', link: '/cal' },
+              { title: 'VET — Verified Enterprise Trust', desc: 'Public verification portal. Enter any certificate ID to verify cryptographic integrity, or enter a VIN to view the complete vehicle digital passport with custody chain, condition scans, and health scores.', color: '#10b981', link: '/vet' },
+              { title: 'CORE — Root Fabric', desc: 'Fractal ledger topology visualization. Shows all five Cox divisions (Manheim, Autotrader, KBB, Dealer.com, NextGear) and how each operates its own private ledger while anchoring to the CORE root via hash anchoring.', color: '#8b5cf6', link: '/core' },
+              { title: 'COG — Governance Engine', desc: 'Real-time governance health monitoring. Certificate compliance rates, policy violation tracking, governance score computation, and automated policy enforcement across all divisions.', color: '#06b6d4', link: '/cog' },
+              { title: 'Lot Ops Pro — Workforce Platform', desc: 'Full operational workforce management via lotopspro.com. Command Center, Operations Manager, Driver Dashboard, Scanner, Live Map, Analytics, Crew Manager, Lane Config, Smart Lot Planner, and Safety Dashboard.', color: '#ec4899', link: 'https://lotopspro.com' },
+            ].map((section, i) => (
+              <motion.a key={i} href={section.link} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+                style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-light)', borderRadius: '12px', textDecoration: 'none', color: 'inherit', display: 'block', transition: 'border-color 0.3s' }}
+                onMouseEnter={e => (e.currentTarget.style.borderColor = `${section.color}60`)}
+                onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--border-light)')}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '0.75rem' }}>
+                  <div style={{ width: 8, height: 8, borderRadius: '50%', background: section.color, boxShadow: `0 0 8px ${section.color}60` }} />
+                  <h4 style={{ fontSize: '0.95rem', fontWeight: 800, margin: 0, color: section.color }}>{section.title}</h4>
+                </div>
+                <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>{section.desc}</p>
+              </motion.a>
+            ))}
+          </div>
+
+          {/* COP Desktop */}
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ marginTop: '1.5rem', padding: '1.5rem', background: 'rgba(56,189,248,0.03)', border: '1px solid rgba(56,189,248,0.15)', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
+            <Monitor size={28} style={{ color: '#38bdf8' }} />
+            <div style={{ flex: 1, minWidth: '200px' }}>
+              <h4 style={{ fontSize: '0.95rem', fontWeight: 800, margin: '0 0 0.25rem', color: '#38bdf8' }}>COP Desktop — Native Electron Client</h4>
+              <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: 1.5, margin: 0 }}>
+                Windows desktop application wrapping all platform sections + Lot Ops Pro as a native app. Keyboard shortcuts (Ctrl+1–8 for CEP sections, Ctrl+Shift+1–3 for Lot Ops). Branded "Cox Operational Platform" throughout. Downloadable from the Download page.
+              </p>
+            </div>
+            <a href="/download" style={{ padding: '10px 20px', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.2)', borderRadius: '20px', color: '#38bdf8', fontSize: '0.75rem', fontWeight: 700, textDecoration: 'none', whiteSpace: 'nowrap' }}>
+              <Download size={14} style={{ marginRight: 6, verticalAlign: 'middle' }} />Download .EXE
+            </a>
           </motion.div>
         </div>
       </section>
