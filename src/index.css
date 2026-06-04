@@ -396,3 +396,23 @@ html {
 }
 
 .desktop-low-profile { width: 100%; height: auto; max-height: 40vh; object-fit: cover; object-position: center; border-radius: 20px; margin-bottom: 2.5rem; }
+
+/* ── Enterprise Nav & Pages Mobile ── */
+@media (max-width: 768px) {
+  .enterprise-nav-desktop {
+    display: none !important;
+  }
+  .nav-subtitle-desktop {
+    display: none !important;
+  }
+  .nav-auth-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .enterprise-nav-desktop {
+    display: flex !important;
+  }
+}
+
