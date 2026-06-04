@@ -18,7 +18,7 @@ import GetStarted from './pages/GetStarted';
 import ManheimPitch from './pages/ManheimPitch';
 import MeridianPitch from './pages/MeridianPitch';
 import EngineeringBrief from './pages/EngineeringBrief';
-import Whitepaper from './pages/Whitepaper';
+
 import OrganismApp from './pages/OrganismApp';
 import DownloadPage from './pages/DownloadPage';
 import Order from './pages/Order';
@@ -259,7 +259,7 @@ function App() {
                       { path: '/vet', label: 'VET', icon: <CheckCircle size={11}/> },
                       { path: '/core', label: 'CORE', icon: <Cpu size={11}/> },
                       { path: '/cog', label: 'COG', icon: <Brain size={11}/> },
-                      { path: '/whitepaper', label: 'Whitepaper', icon: null },
+
                       { path: '/app', label: 'Scan Demo', icon: null },
                     ].map(link => (
                       <Link key={link.path} to={link.path} style={{ padding: '4px 8px', borderRadius: '4px', color: 'var(--text-muted)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '3px', transition: 'all 0.2s', fontWeight: 600 }}
@@ -297,7 +297,7 @@ function App() {
                   <Route path="/cog" element={<COGEngine />} />
                   <Route path="/meridian" element={<MeridianPitch />} />
                   <Route path="/engineering" element={<EngineeringBrief />} />
-                  <Route path="/whitepaper" element={<Whitepaper />} />
+
                   <Route path="/manheim" element={<ManheimPitch />} />
                   <Route path="/manheim-meridian" element={<MeridianPitch />} />
                   <Route path="/manheim-engineering" element={<EngineeringBrief />} />
