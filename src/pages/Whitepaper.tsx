@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-import { FileDown, Activity, Shield, ArrowLeft, Layers, Database, CheckCircle, Cpu, Brain, Zap, Lock, Truck, Monitor, Wifi } from 'lucide-react';
-import { useState } from 'react';
+import { Shield, ArrowLeft } from 'lucide-react';
+
 
 const f = { initial: { opacity: 0, y: 10 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
 
 export default function Whitepaper() {
-  const [readerMode, setReaderMode] = useState(true);
+
 
   const handleDownload = () => { window.print(); };
 

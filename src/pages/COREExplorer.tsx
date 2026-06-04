@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { Layers, Shield, Database, CheckCircle, Link2, Activity, RefreshCw, Globe, Lock, ArrowRight, Fingerprint } from 'lucide-react';
+import { Layers, Shield, Database, CheckCircle, Link2, RefreshCw, Globe, Lock, ArrowRight } from 'lucide-react';
 
 const API = 'https://cox-automotive-ledger.onrender.com';
 const fadeIn = { initial: { opacity: 0, y: 16 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.4 } };
