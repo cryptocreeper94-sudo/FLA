@@ -41,7 +41,7 @@ export default function AppShowcase() {
             }}>
               <Activity size={16} /> Try It Live — Demo Mode Available
             </a>
-            <a href="https://expo.dev/accounts/cryptocreeper/projects/lume-auto/builds/09bc63ed-0307-4afb-8b73-d7e400c90627" download style={{
+            <a href="https://expo.dev/accounts/cryptocreeper/projects/lume-auto/builds/27117f8a-bf2b-416b-8a92-3a4475295ac8" download style={{
               display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
               padding: '12px 28px', flex: '1 1 0',
               background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)',

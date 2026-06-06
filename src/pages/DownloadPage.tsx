@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import QRCodeLib from 'qrcode';
 
 // Direct download URLs
-const APK_URL = 'https://expo.dev/accounts/cryptocreeper/projects/lume-auto/builds/09bc63ed-0307-4afb-8b73-d7e400c90627';
+const APK_URL = 'https://expo.dev/accounts/cryptocreeper/projects/lume-auto/builds/27117f8a-bf2b-416b-8a92-3a4475295ac8';
 const EXE_URL = '/downloads/COP_Setup_1.0.0.exe';
 const DOWNLOAD_URL = 'https://cox.tlid.io/download';
 
