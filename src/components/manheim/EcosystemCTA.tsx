@@ -46,7 +46,7 @@ export default function EcosystemCTA() {
           {/* Patent bar */}
           <motion.div {...f} className="panel" style={{ padding: '1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
             {[
-              { icon: <FileText size={16}/>, label: 'U.S. Provisional 64/032,339', desc: 'Lume Deterministic Governance' },
+              { icon: <FileText size={16}/>, label: 'U.S. Provisional 64/084,465', desc: 'Lume Deterministic Governance' },
               { icon: <FileText size={16}/>, label: 'U.S. Provisional 64/056,378', desc: 'Meridian Energy Architecture' },
               { icon: <Shield size={16}/>, label: '4 Additional Filings', desc: 'Runtime, Dongle, Organisms, VET' },
             ].map((p, i) => (

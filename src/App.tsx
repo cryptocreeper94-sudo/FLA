@@ -181,7 +181,7 @@ function Navigation() {
                 Lume-Auto reads 42 real-time signals from your vehicle's OBD-II port to passively improve fuel efficiency, predict maintenance failures, and eliminate diagnostic fees — using hardware you already own.
               </p>
               <p style={{ fontSize: '0.7rem', color: 'var(--text-dim)', letterSpacing: '0.05em' }}>
-                US Provisional Patent 64/032,339<br />
+                US Provisional Patent 64/084,465<br />
                 DarkWave Studios LLC / Lume42 Labs
               </p>
             </div>

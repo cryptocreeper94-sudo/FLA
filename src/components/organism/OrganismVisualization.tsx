@@ -371,7 +371,7 @@ export default function OrganismVisualization({ onBack, data }: { onBack: () => 
           marginTop: '16px', letterSpacing: '0.05em',
         }}>
           {bleStatus.isSimulated ? 'Demo Mode' : bleStatus.adapterInfo || 'Connected'} · 42 nodes · 4 primitives · {consensus.toFixed(1)}% consensus
-          <br />Deterministic · Zero AI · US Patent 64/032,339
+          <br />Deterministic · Zero AI · US Patent 64/084,465
         </p>
       </div>
     </div>

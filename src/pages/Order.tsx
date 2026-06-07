@@ -260,7 +260,7 @@ export default function Order() {
               {loading ? 'Redirecting...' : <><ShoppingCart size={20} /> Order Now — ${KIT_PRICE}</>}
             </button>
             <p className="text-dim" style={{ fontSize: '0.75rem', marginTop: '1.5rem' }}>
-              Lume-Auto · DarkWave Studios LLC / Lume42 Labs · US Provisional Patent 64/032,339
+              Lume-Auto · DarkWave Studios LLC / Lume42 Labs · US Provisional Patent 64/084,465
             </p>
           </motion.div>
         </div>

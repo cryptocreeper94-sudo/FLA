@@ -311,7 +311,7 @@ export default function OrganismReport({ onBack }: { onBack: () => void }) {
           <p style={{ color: 'var(--text-main)', fontSize: '0.8rem', lineHeight: 1.6, marginBottom: '16px' }}>{report.summary}</p>
           <p style={{ color: 'var(--text-dim)', fontSize: '0.6rem', lineHeight: 1.6, textAlign: 'center' }}>
             42 nodes scanned · 4 primitives · Zero AI calls<br />
-            US Provisional Patent 64/032,339
+            US Provisional Patent 64/084,465
           </p>
         </div>
 

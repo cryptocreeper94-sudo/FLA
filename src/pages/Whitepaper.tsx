@@ -67,7 +67,7 @@ export default function Whitepaper() {
               <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem', fontSize: '0.78rem', color: 'var(--text-dim)' }}>
                 <span>Version 1.0</span>
                 <span>June 2026</span>
-                <span>US Patent Pending — 64/032,339</span>
+                <span>US Patent Pending — 64/084,465</span>
               </div>
 
               {/* Correction Note */}
@@ -317,7 +317,7 @@ export default function Whitepaper() {
             {/* 12 */}
             <motion.div {...f} className="wp-section">
               <h2>12. About DarkWave Studios LLC</h2>
-              <p>DarkWave Studios LLC is the creator of the Lume deterministic programming language, the Trust Layer verification network, and the complete platform described in this document. The company holds US Provisional Patent 64/032,339 covering the deterministic governance architecture and US Provisional Patent 64/056,378 covering the Meridian wireless energy routing system.</p>
+              <p>DarkWave Studios LLC is the creator of the Lume deterministic programming language, the Trust Layer verification network, and the complete platform described in this document. The company holds US Provisional Patent 64/084,465 covering the deterministic governance architecture and US Provisional Patent 64/056,378 covering the Meridian wireless energy routing system.</p>
               <p>All platform components — the ledger, the governance substrate, the diagnostic organism, the verification chain, the cognitive engine — are built on the Lume runtime. Every capability described in this document is operational and demonstrable today.</p>
               <p style={{ fontStyle: 'italic', color: 'var(--text-dim)', fontSize: '0.82rem' }}>
                 "We didn't build a pitch. We built the system. The pitch is showing you the system working."
@@ -332,7 +332,7 @@ export default function Whitepaper() {
               </div>
               <p style={{ color: 'var(--text-dim)', fontSize: '0.65rem', lineHeight: 1.6 }}>
                 © 2026 DarkWave Studios LLC · CORE.tlid.io<br />
-                US Provisional Patents 64/032,339 & 64/056,378 · All rights reserved<br />
+                US Provisional Patents 64/084,465 & 64/056,378 · All rights reserved<br />
                 This document is confidential and intended for Cox Enterprises authorized recipients only.
               </p>
             </div>

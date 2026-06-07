@@ -269,7 +269,7 @@ export default function OrganismConnection({ onConnect }: { onConnect: () => voi
         <p style={{ fontSize: '0.55rem', color: 'var(--text-dim)', textAlign: 'center', lineHeight: 1.6 }}>
           BLE: Veepeak BLE · OBDLink MX+ · BAFX BLE<br />
           WiFi: Any ELM327 WiFi · OBDLink MX WiFi<br />
-          42 Nodes · 4 Primitives · Zero AI · US Patent 64/032,339
+          42 Nodes · 4 Primitives · Zero AI · US Patent 64/084,465
         </p>
       </motion.div>
     </div>

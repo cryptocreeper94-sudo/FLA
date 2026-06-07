@@ -222,7 +222,7 @@ export default function DownloadPage() {
           <p style={{ color: 'var(--text-dim)', fontSize: '0.7rem', lineHeight: 1.7 }}>
             Requires Android 8.0+ or iOS 13+ · ~25MB<br />
             WiFi: Any ELM327 WiFi adapter · BLE: Any Bluetooth Low Energy adapter<br />
-            US Provisional Patent 64/032,339 · DarkWave Studios LLC
+            US Provisional Patent 64/084,465 · DarkWave Studios LLC
           </p>
         </div>
       </div>

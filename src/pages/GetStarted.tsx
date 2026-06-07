@@ -179,7 +179,7 @@ export default function GetStarted() {
               ))}
             </div>
             <p className="text-dim" style={{ fontSize: '0.75rem', marginTop: '2rem' }}>
-              Lume-Auto · DarkWave Studios LLC / Lume42 Labs · US Provisional Patent 64/032,339
+              Lume-Auto · DarkWave Studios LLC / Lume42 Labs · US Provisional Patent 64/084,465
             </p>
           </motion.div>
         </div>
