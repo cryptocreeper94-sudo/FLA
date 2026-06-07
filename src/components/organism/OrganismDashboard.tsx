@@ -186,7 +186,7 @@ export default function OrganismDashboard({ onReport }: { onReport?: () => void 
             letterSpacing: '0.1em', cursor: 'pointer', transition: 'all 0.2s',
           }}>
             <FileText size={18} />
-            GENERATE CONDITION REPORT
+            GENERATE DETERMINISTIC ENGINE REPORT
           </button>
         )}
 

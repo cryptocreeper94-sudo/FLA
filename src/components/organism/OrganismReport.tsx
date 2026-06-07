@@ -70,7 +70,7 @@ export default function OrganismReport({ onBack }: { onBack: () => void }) {
           <Activity size={48} style={{ color: 'var(--accent-cyan)' }} />
         </motion.div>
         <p style={{ color: 'var(--accent-cyan)', fontSize: '0.95rem', fontWeight: 700, letterSpacing: '0.2em' }}>SCANNING 42 NODES...</p>
-        <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Generating deterministic condition report</p>
+        <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Generating deterministic deterministic Engine report</p>
       </div>
     );
   }
@@ -88,7 +88,7 @@ export default function OrganismReport({ onBack }: { onBack: () => void }) {
           <ArrowLeft size={20} /> Dashboard
         </button>
 
-        <h1 style={{ fontSize: '1.4rem', fontWeight: 800, letterSpacing: '0.2em', marginBottom: '4px' }}>CONDITION REPORT</h1>
+        <h1 style={{ fontSize: '1.4rem', fontWeight: 800, letterSpacing: '0.2em', marginBottom: '4px' }}>DETERMINISTIC ENGINE REPORT</h1>
         <p style={{ color: 'var(--text-dim)', fontSize: '0.7rem', fontFamily: 'var(--font-mono)', marginBottom: '24px' }}>{report.timestamp}</p>
 
         {/* Vehicle */}
