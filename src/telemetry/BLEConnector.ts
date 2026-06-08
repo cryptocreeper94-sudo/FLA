@@ -129,21 +129,16 @@ export async function connectBLE(
   }
 
   try {
+    // Must call requestDevice synchronously to preserve user gesture
+    const devicePromise = (navigator as any).bluetooth.requestDevice({
+      acceptAllDevices: true,
+      optionalServices: KNOWN_SERVICES,
+    });
+
     connectionState = { status: 'scanning', deviceName: null, error: null, isSimulated: false, adapterInfo: null };
     onStatusChange({ ...connectionState });
 
-    // Request device — browser shows native picker dialog
-    device = await (navigator as any).bluetooth.requestDevice({
-      // Accept any device with known OBD-II services, or allow all
-      filters: KNOWN_SERVICES.map(uuid => ({ services: [uuid] })),
-      optionalServices: KNOWN_SERVICES,
-    }).catch(async () => {
-      // If filtered scan fails, try acceptAllDevices
-      return await (navigator as any).bluetooth.requestDevice({
-        acceptAllDevices: true,
-        optionalServices: KNOWN_SERVICES,
-      });
-    });
+    device = await devicePromise;
 
     if (!device) {
       connectionState = { status: 'error', deviceName: null, error: 'No device selected', isSimulated: false, adapterInfo: null };
@@ -354,9 +349,13 @@ export function startBLETelemetryLoop(
     if (txCharacteristic && connectionState.status === 'connected' && !connectionState.isSimulated) {
       await pollAllBLEPIDs();
       onData(buildSnapshot());
-    } else {
-      // Simulated fallback
+    } else if (connectionState.isSimulated) {
+      // ONLY simulate if explicitly in demo mode
       onData(simulatedTick());
+    } else {
+      // If connected but txCharacteristic dropped, we might just be waiting to disconnect or reconnect
+      // Do not silently feed demo data to a real user!
+      onData(buildSnapshot()); 
     }
   }, intervalMs);
 
