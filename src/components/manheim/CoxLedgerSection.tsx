@@ -237,7 +237,7 @@ export default function CoxLedgerSection() {
           </a>
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)', borderRadius: '20px', color: '#f87171', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-              <Lock size={14} /> Accessed securely via Cox Operational Platform (COX-OP) or Authorized Web Gateway
+              <Lock size={14} /> Accessed securely via Cox Operating System (Cox-OS) or Authorized Web Gateway
             </div>
           </div>
         </motion.div>

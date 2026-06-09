@@ -88,7 +88,7 @@ export default function Whitepaper() {
                 'The Fractal Ledger Architecture (FLA)',
                 'COX Private Ledger (COX-PL)',
                 'COX Verification Ledger (COX-VL)',
-                'COX Operational Platform (COX-OP)',
+                'Cox Operating System (Cox-OS)',
                 'CORE — Universal Root Fabric',
                 'Cognitive Lume Governance Substrate (COX-LGS)',
                 'LUME-V — Deterministic Governance Substrate',
@@ -117,7 +117,7 @@ export default function Whitepaper() {
               <ul>
                 <li><strong>COX-PL</strong> — COX Private Ledger. Division-level private cryptographic ledger for operational records.</li>
                 <li><strong>COX-VL</strong> — COX Verification Ledger. Public-facing verification certificates derived from internal ledger records.</li>
-                <li><strong>COX-OP</strong> — COX Operational Platform. Enterprise command center for cross-division visibility.</li>
+                <li><strong>Cox-OS</strong> — Cox Operating System. Enterprise command center for cross-division visibility.</li>
                 <li><strong>CORE</strong> — Universal Root Fabric. The hub that all division ledgers anchor to.</li>
                 <li><strong>COX-LGS</strong> — Cognitive Lume Governance Substrate. 42-node deterministic processing mesh.</li>
                 <li><strong>LUME-V</strong> — Deterministic governance substrate that wraps legacy systems without modification.</li>
@@ -178,8 +178,8 @@ export default function Whitepaper() {
 
             {/* 5 */}
             <motion.div {...f} className="wp-section">
-              <h2>5. COX Operational Platform (COX-OP)</h2>
-              <p>COX-OP is the enterprise command center — the single-pane view across all facilities, divisions, and operational workflows. It aggregates real-time data from COX-PL, COX-LGS, and facility-level systems into actionable dashboards.</p>
+              <h2>5. Cox Operating System (Cox-OS)</h2>
+              <p>Cox-OS is the enterprise command center — the single-pane view across all facilities, divisions, and operational workflows. It aggregates real-time data from COX-PL, COX-LGS, and facility-level systems into actionable dashboards.</p>
               <ul>
                 <li>Facility status monitoring across all Manheim locations</li>
                 <li>Vehicle status grid with custody state, health scores, and fault alerts</li>
@@ -187,7 +187,7 @@ export default function Whitepaper() {
                 <li>Validator node health and chain integrity monitoring</li>
                 <li>Live activity feed with real-time event streaming</li>
               </ul>
-              <p>The COX-OP dashboard is live at <strong>/cop</strong> and auto-refreshes every 30 seconds from the operational chain.</p>
+              <p>The Cox-OS dashboard is live at <strong>/cop</strong> and auto-refreshes every 30 seconds from the operational chain.</p>
             </motion.div>
 
             {hr}

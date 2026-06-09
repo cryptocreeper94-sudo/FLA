@@ -146,13 +146,13 @@ export default function LumeVSection() {
               <ShieldCheck size={22} color="#f59e0b" /> Seamless SSO & Legacy Integration
             </h3>
             <p className="text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.7, fontSize: '1.05rem' }}>
-              Transitioning to the Cox Operational Platform requires <strong>zero new credentials</strong> and <strong>zero database migration</strong>. LUME-V acts as a universal translator for your existing enterprise infrastructure.
+              Transitioning to the Cox Operating System requires <strong>zero new credentials</strong> and <strong>zero database migration</strong>. LUME-V acts as a universal translator for your existing enterprise infrastructure.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
               <div style={{ padding: '1.25rem', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(245, 158, 11, 0.1)' }}>
                 <h4 style={{ color: '#fbbf24', fontSize: '1rem', marginBottom: '0.5rem' }}>Identity Management</h4>
                 <p className="text-dim" style={{ fontSize: '0.9rem', lineHeight: 1.5 }}>
-                  Full native integration with Cox Automotive's existing Okta and Azure Active Directory. Employees log into the COX-OP substrate exactly as they do today.
+                  Full native integration with Cox Automotive's existing Okta and Azure Active Directory. Employees log into the Cox-OS substrate exactly as they do today.
                 </p>
               </div>
               <div style={{ padding: '1.25rem', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(245, 158, 11, 0.1)' }}>

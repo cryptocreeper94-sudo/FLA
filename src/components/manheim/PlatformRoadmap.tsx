@@ -28,7 +28,7 @@ const PHASES = [
     glow: 'rgba(56,189,248,0.06)',
     apps: [
       { icon: <Truck size={20} />, name: 'Fleet OS', desc: 'Enterprise-wide fleet and asset management — maintenance scheduling, service history tracking, asset utilization analytics, and fleet health monitoring across all Cox subsidiaries. Extends the LumeScan diagnostic pipeline beyond auction inventory to operational vehicles, transport equipment, and facility assets.' },
-      { icon: <Fingerprint size={20} />, name: 'Identity OS', desc: 'Enterprise identity, permissions, and role governance. Bridges internal authentication (Okta, Azure AD) with COX-VL\'s external verification system, providing a single identity framework across all COX-OP applications with ledger-anchored access control.' },
+      { icon: <Fingerprint size={20} />, name: 'Identity OS', desc: 'Enterprise identity, permissions, and role governance. Bridges internal authentication (Okta, Azure AD) with COX-VL\'s external verification system, providing a single identity framework across all Cox-OS applications with ledger-anchored access control.' },
       { icon: <Search size={20} />, name: 'COX-PL Explorer', desc: 'A full-featured ledger analytics application — block inspection, validator health, operational audit trails, and cross-system event tracing. Gives compliance teams and operations leadership direct visibility into every recorded event across the enterprise.' },
       { icon: <Zap size={20} />, name: 'Meridian Energy', desc: 'Wireless energy routing and management for lot infrastructure. Overhead anchor nodes deliver metered power to EV charging stations, lighting, and operational equipment. Every watt is tracked, timestamped, and ledger-verified — the same deterministic trust applied to energy that the COX-PL applies to vehicle records.' },
     ],
@@ -50,10 +50,10 @@ export default function PlatformRoadmap() {
               Platform Roadmap
             </div>
             <h2 style={{ fontSize: '2.2rem', marginBottom: '0.75rem', lineHeight: 1.1 }}>
-              Native COX-OP Applications
+              Native Cox-OS Applications
             </h2>
             <p className="text-muted" style={{ maxWidth: '620px', margin: '0 auto', fontSize: '1rem', lineHeight: 1.7 }}>
-              Every app runs natively inside the COX-OP operating environment, writes to the COX Private Ledger, and inherits Lume-V governance. The platform grows — the architecture doesn't change.
+              Every app runs natively inside the Cox-OS operating environment, writes to the COX Private Ledger, and inherits Lume-V governance. The platform grows — the architecture doesn't change.
             </p>
           </div>
         </motion.div>
@@ -133,7 +133,7 @@ export default function PlatformRoadmap() {
             textAlign: 'center',
           }}>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: 1.8, maxWidth: '720px', margin: '0 auto' }}>
-            Every application on this roadmap is built on the same COX-OP architecture — meaning every module is inherently expandable to any Cox Automotive subsidiary. Manheim is the proving ground. From here, the platform extends to Autotrader, Kelley Blue Book, Dealertrack, and beyond as enterprise priorities dictate. I build what you need, when you need it.
+            Every application on this roadmap is built on the same Cox-OS architecture — meaning every module is inherently expandable to any Cox Automotive subsidiary. Manheim is the proving ground. From here, the platform extends to Autotrader, Kelley Blue Book, Dealertrack, and beyond as enterprise priorities dictate. I build what you need, when you need it.
           </p>
           <p style={{ fontSize: '0.7rem', color: 'var(--text-dim)', marginTop: '0.75rem', letterSpacing: '0.05em' }}>
             Architecture scales. Roadmap follows corporate direction.

@@ -128,7 +128,7 @@ export default function DownloadPage() {
           </motion.div>
         </div>
 
-        {/* Cox Operational Platform Desktop */}
+        {/* Cox Operating System Desktop */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} style={{
             background: 'rgba(255,255,255,0.03)', borderRadius: '16px', padding: '2rem',
             border: '1px solid var(--border-light)', marginBottom: '3rem',
@@ -136,13 +136,13 @@ export default function DownloadPage() {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '1rem', flexWrap: 'wrap' }}>
               <Monitor size={28} style={{ color: '#38bdf8' }} />
-              <h2 style={{ fontSize: '1.4rem', margin: 0 }}>Cox Operational Platform</h2>
+              <h2 style={{ fontSize: '1.4rem', margin: 0 }}>Cox Operating System</h2>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '4px 10px', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.2)', borderRadius: '20px', color: '#38bdf8', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.08em' }}>
                 🖥️ DESKTOP
               </div>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1rem' }}>
-              The enterprise desktop client for Cox Automotive. Provides native access to COX-OP Dashboard, COX-PL Ledger Explorer, COX-VL Verification Portal, CORE Root Fabric, and COX-LGS Engine — plus Lot Ops Pro as a built-in native app. Full keyboard shortcuts for every section.
+              The enterprise desktop client for Cox Automotive. Provides native access to Cox-OS Dashboard, COX-PL Ledger Explorer, COX-VL Verification Portal, CORE Root Fabric, and COX-LGS Engine — plus Lot Ops Pro as a built-in native app. Full keyboard shortcuts for every section.
             </p>
 
             {isMobile ? (
@@ -163,7 +163,7 @@ export default function DownloadPage() {
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                   <div style={{ display: 'inline-block', padding: '6px 12px', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.2)', borderRadius: '6px', color: '#38bdf8', fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.05em' }}>
-                    COX-OP v1.0.0 · Electron Runtime
+                    Cox-OS v1.0.0 · Electron Runtime
                   </div>
                   <span style={{ fontSize: '0.65rem', color: 'var(--text-dim)' }}>Ctrl+1 through Ctrl+8 for section navigation</span>
                 </div>
@@ -182,7 +182,7 @@ export default function DownloadPage() {
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(56,189,248,0.1)'; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
                   >
-                    <Download size={18} /> DOWNLOAD COX-OP .EXE
+                    <Download size={18} /> DOWNLOAD Cox-OS .EXE
                   </a>
                   <p style={{ color: 'var(--text-dim)', fontSize: '0.65rem', textAlign: 'center' }}>
                     Windows 10/11 (64-bit) · ~73 MB

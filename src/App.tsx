@@ -254,7 +254,7 @@ function App() {
                   <div className="enterprise-nav-desktop" style={{ display: 'flex', alignItems: 'center', gap: '2px', fontSize: '0.65rem', flexShrink: 0 }}>
                     {[
                       { path: '/', label: 'Home', icon: <Shield size={11}/> },
-                      { path: '/cop', label: 'COX-OP', icon: <Layers size={11}/> },
+                      { path: '/cop', label: 'Cox-OS', icon: <Layers size={11}/> },
                       { path: '/cal', label: 'COX-PL', icon: <Database size={11}/> },
                       { path: '/vet', label: 'COX-VL', icon: <CheckCircle size={11}/> },
                       { path: '/core', label: 'CORE', icon: <Cpu size={11}/> },
