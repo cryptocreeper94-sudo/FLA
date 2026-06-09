@@ -138,23 +138,45 @@ export default function OrganismConnection({ onConnect }: { onConnect: () => voi
         {/* Connection Buttons */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1.5rem' }}>
 
+          {/* Demo Mode — HERO BUTTON */}
+          <button onClick={handleDemoMode} style={{
+            display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px',
+            width: '100%', padding: '1.1rem', borderRadius: '30px',
+            background: 'linear-gradient(135deg, var(--accent-emerald), #059669)',
+            border: 'none',
+            color: '#000', cursor: 'pointer', transition: 'all 0.2s',
+            boxShadow: '0 0 25px rgba(16,185,129,0.25)',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <Zap size={20} />
+              <span style={{ fontSize: '0.85rem', fontWeight: 900, letterSpacing: '0.12em' }}>LAUNCH DEMO</span>
+            </div>
+            <span style={{ fontSize: '0.6rem', color: 'rgba(0,0,0,0.6)', fontWeight: 600 }}>2019 Ford F-150 5.0L V8 · 42 Live Signals · No Hardware Needed</span>
+          </button>
+
+          {/* Divider */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', margin: '0.5rem 0' }}>
+            <div style={{ flex: 1, height: '1px', background: 'var(--border-light)' }} />
+            <span style={{ fontSize: '0.6rem', color: 'var(--text-dim)', fontWeight: 700, letterSpacing: '0.15em' }}>CONNECT HARDWARE</span>
+            <div style={{ flex: 1, height: '1px', background: 'var(--border-light)' }} />
+          </div>
+
           {/* BLE Button */}
           <button
             onClick={handleBLEConnect}
             disabled={scanning}
             style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
-              width: '100%', padding: '0.9rem', borderRadius: '30px',
-              background: bleSupported ? 'var(--accent-cyan)' : 'rgba(255,255,255,0.06)',
-              border: 'none',
-              color: bleSupported ? '#000' : 'var(--text-dim)',
-              fontSize: '0.8rem', fontWeight: 800, letterSpacing: '0.12em',
+              width: '100%', padding: '0.8rem', borderRadius: '30px',
+              background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border-light)',
+              color: bleSupported ? 'var(--text-main)' : 'var(--text-dim)',
+              fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em',
               cursor: scanning ? 'not-allowed' : 'pointer',
               opacity: scanning && mode === 'ble' ? 0.5 : 1,
               transition: 'all 0.2s',
             }}
           >
-            <Bluetooth size={18} />
+            <Bluetooth size={16} style={{ color: 'var(--accent-cyan)' }} />
             {!bleSupported ? 'BLE NOT AVAILABLE' : scanning && mode === 'ble' ? 'CONNECTING...' : 'CONNECT VIA BLUETOOTH'}
           </button>
 
@@ -164,16 +186,16 @@ export default function OrganismConnection({ onConnect }: { onConnect: () => voi
             disabled={scanning}
             style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
-              width: '100%', padding: '0.9rem', borderRadius: '30px',
+              width: '100%', padding: '0.8rem', borderRadius: '30px',
               background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border-light)',
               color: 'var(--text-main)',
-              fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.12em',
+              fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em',
               cursor: scanning ? 'not-allowed' : 'pointer',
               opacity: scanning && mode === 'wifi' ? 0.5 : 1,
               transition: 'all 0.2s',
             }}
           >
-            <Wifi size={18} style={{ color: 'var(--accent-cyan)' }} />
+            <Wifi size={16} style={{ color: 'var(--accent-cyan)' }} />
             {scanning && mode === 'wifi' ? 'SCANNING...' : 'CONNECT VIA WIFI'}
           </button>
 
@@ -198,20 +220,6 @@ export default function OrganismConnection({ onConnect }: { onConnect: () => voi
               }}>GO</button>
             </div>
           )}
-
-          {/* Demo Mode */}
-          <button onClick={handleDemoMode} style={{
-            display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px',
-            width: '100%', padding: '0.9rem', borderRadius: '16px',
-            background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)',
-            color: 'var(--accent-emerald)', cursor: 'pointer', transition: 'border-color 0.2s',
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Zap size={18} />
-              <span style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em' }}>DEMO MODE</span>
-            </div>
-            <span style={{ fontSize: '0.6rem', color: 'var(--text-dim)' }}>Simulated 2019 F-150 5.0L V8 · No hardware needed</span>
-          </button>
         </div>
 
         {/* Info Bubbles */}
