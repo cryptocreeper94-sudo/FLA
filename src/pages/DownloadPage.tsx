@@ -4,9 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import QRCodeLib from 'qrcode';
 
 // Direct download URLs
-const APK_URL = 'https://expo.dev/artifacts/eas/5LhddSw54u3T2bULi4cZH4.apk';
-const EXE_URL = '/downloads/COP_Setup_1.0.0.exe';
-const DOWNLOAD_URL = 'https://cox.tlid.io/download';
+const APK_URL = 'https://expo.dev/artifacts/eas/hNT8JdA6ss5K4LAcHgpbXb.apk';
+const EXE_URL = 'https://firebasestorage.googleapis.com/v0/b/darkwave-auth.firebasestorage.app/o/downloads%2FLot_Ops_Pro_Setup.exe?alt=media&token=36fe7582-07b0-423a-a366-bd1a1e6af6a0';
 
 export default function DownloadPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -20,7 +19,8 @@ export default function DownloadPage() {
 
   useEffect(() => {
     if (canvasRef.current) {
-      QRCodeLib.toCanvas(canvasRef.current, APK_URL, {
+      // @ts-ignore
+      QRCodeLib.toCanvas(canvasRef.current, 'https://cox.tlid.io/download', {
         width: 200,
         margin: 2,
         color: {
