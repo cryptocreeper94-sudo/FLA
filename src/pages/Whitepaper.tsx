@@ -73,7 +73,7 @@ export default function Whitepaper() {
               {/* Correction Note */}
               <div style={{ marginTop: '2rem', padding: '12px 20px', background: 'rgba(56,189,248,0.06)', border: '1px solid rgba(56,189,248,0.15)', borderRadius: '8px', maxWidth: '550px', margin: '2rem auto 0' }}>
                 <p style={{ fontSize: '0.72rem', color: 'var(--text-dim)', lineHeight: 1.6, margin: 0, fontStyle: 'italic' }}>
-                  <strong style={{ color: 'var(--text-muted)' }}>Note:</strong> This document supersedes the general framework paper <em>"A Framework for Deterministic Digital Trust"</em> that was previously accessible from this location. That paper addresses government governance applications and has been relocated to its appropriate context. This document is the Cox-specific technical reference.
+                  <strong style={{ color: 'var(--text-muted)' }}>Note:</strong> This document supersedes the general framework paper <em>"A Framework for Deterministic Digital Trust"</em> that was previously accessible from this location. That paper addresses federal governance applications and has been relocated to its appropriate context. This document is the Cox-specific technical reference.
                 </p>
               </div>
             </motion.div>
