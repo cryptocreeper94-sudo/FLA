@@ -47,9 +47,9 @@ export default function VETVerify() {
         <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 64, height: 64, borderRadius: '16px', background: 'linear-gradient(135deg, #10b981, #059669)', marginBottom: '1rem' }}>
           <Shield size={32} color="#0a0c10" />
         </div>
-        <h1 style={{ fontSize: '2rem', fontWeight: 800, margin: '0 0 0.5rem', letterSpacing: '-0.03em' }}>Verified Enterprise Trust</h1>
+        <h1 style={{ fontSize: '2rem', fontWeight: 800, margin: '0 0 0.5rem', letterSpacing: '-0.03em' }}>COX Verification Ledger</h1>
         <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem', maxWidth: '500px', margin: '0 auto', lineHeight: 1.6 }}>
-          Public verification portal for Cox Automotive Ledger certificates. Enter a certificate ID or VIN to verify provenance and integrity.
+          Public verification portal for COX Private Ledger certificates. Enter a certificate ID or VIN to verify provenance and integrity.
         </p>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '1rem' }}>
           <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981', boxShadow: '0 0 8px #10b981' }} />
@@ -98,7 +98,7 @@ export default function VETVerify() {
           <div style={{ ...panel, borderColor: 'rgba(16,185,129,0.3)', background: 'linear-gradient(180deg, rgba(16,185,129,0.06) 0%, transparent 100%)', textAlign: 'center', marginBottom: '1.5rem' }}>
             <CheckCircle size={48} color="#10b981" style={{ marginBottom: '0.75rem' }} />
             <h2 style={{ color: '#10b981', fontSize: '1.5rem', fontWeight: 800, margin: '0 0 0.25rem' }}>Certificate Verified</h2>
-            <p style={{ color: 'var(--text-dim)', fontSize: '0.8rem', margin: 0 }}>This certificate is cryptographically sealed and untampered on the Cox Automotive Ledger.</p>
+            <p style={{ color: 'var(--text-dim)', fontSize: '0.8rem', margin: 0 }}>This certificate is cryptographically sealed and untampered on the COX Private Ledger.</p>
             <div style={{ marginTop: '1rem', padding: '8px 16px', background: 'rgba(16,185,129,0.1)', borderRadius: '8px', display: 'inline-block' }}>
               <span style={{ fontFamily: 'monospace', fontSize: '0.85rem', fontWeight: 700, color: '#10b981', letterSpacing: '0.05em' }}>{result.serial}</span>
             </div>
@@ -207,7 +207,7 @@ export default function VETVerify() {
             {[
               { icon: <Hash size={20} />, title: 'Hash Verification', desc: 'Every certificate contains a SHA-256 hash of the original data. If a single bit changes, the hash fails.' },
               { icon: <Shield size={20} />, title: 'Chain Anchored', desc: 'Certificates are sealed in Proof-of-Authority blocks. The chain cannot be rewritten without all validators agreeing.' },
-              { icon: <Fingerprint size={20} />, title: 'Zero Data Exposure', desc: 'VET proves provenance without revealing internal operational data. The hash proves integrity — the source stores content.' },
+              { icon: <Fingerprint size={20} />, title: 'Zero Data Exposure', desc: 'COX-VL proves provenance without revealing internal operational data. The hash proves integrity — the source stores content.' },
             ].map((item, i) => (
               <div key={i} style={{ ...panel, textAlign: 'center' }}>
                 <div style={{ color: '#10b981', marginBottom: '0.5rem' }}>{item.icon}</div>

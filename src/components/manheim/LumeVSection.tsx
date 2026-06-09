@@ -20,10 +20,10 @@ export default function LumeVSection() {
               <Network size={14} style={{ marginRight: 6 }} /> The Modernization Engine
             </div>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.25rem', lineHeight: 1.1 }}>
-              COG: <span className="text-gradient" style={{ backgroundImage: 'linear-gradient(to right, #38bdf8, #10b981)' }}>Cox Operational Governance</span>
+              COX-LGS: <span className="text-gradient" style={{ backgroundImage: 'linear-gradient(to right, #38bdf8, #10b981)' }}>COX Lume Governance Substrate</span>
             </h2>
             <p className="text-muted" style={{ maxWidth: '780px', margin: '0 auto', fontSize: '1.15rem', lineHeight: 1.7 }}>
-              Powered by the Lume-V Engine, the COG substrate underlies Manheim's entire legacy stack in deterministic governance—unifying logic and orchestrating workflows without requiring a multi-million dollar rip-and-replace migration.
+              Powered by the Lume-V Engine, the COX-LGS substrate underlies Manheim's entire legacy stack in deterministic governance—unifying logic and orchestrating workflows without requiring a multi-million dollar rip-and-replace migration.
             </p>
           </motion.div>
         </div>
@@ -37,7 +37,7 @@ export default function LumeVSection() {
                   <Activity size={22} color="var(--accent-cyan)" /> Live Enterprise API Integration
                 </h3>
                 <p className="text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.6 }}>
-                  The Lume-V SDK is already actively provisioned with <strong>COG</strong> specific credentials, ready to instantly wrap any legacy pipeline or AI agent without refactoring backend code.
+                  The Lume-V SDK is already actively provisioned with <strong>COX-LGS</strong> specific credentials, ready to instantly wrap any legacy pipeline or AI agent without refactoring backend code.
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '10px', fontSize: '0.9rem', color: 'var(--text-main)', padding: '10px 16px', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: '8px' }}>
                   <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981', boxShadow: '0 0 10px #10b981', flexShrink: 0 }} /> 
@@ -47,7 +47,7 @@ export default function LumeVSection() {
               </div>
               
               <div style={{ flex: 1, minWidth: '280px', maxWidth: '100%', background: '#0d1117', borderRadius: '12px', padding: '1.25rem', border: '1px solid rgba(255,255,255,0.05)', fontSize: '0.85rem', fontFamily: 'monospace', overflowX: 'auto' }}>
-                <div style={{ color: '#8b949e', marginBottom: '10px' }}>// Initialize Cox Operational Governance Substrate</div>
+                <div style={{ color: '#8b949e', marginBottom: '10px' }}>// Initialize COX Lume Governance Substrate Substrate</div>
                 <div style={{ color: '#c9d1d9' }}><span style={{ color: '#ff7b72' }}>import</span> {'{'} LumeVEnterprise {'}'} <span style={{ color: '#ff7b72' }}>from</span> <span style={{ color: '#a5d6ff' }}>'@darkwave/lume-v-sdk'</span>;</div>
                 <br/>
                 <div style={{ color: '#8b949e' }}>// Connect to the Lume-V Verification Network</div>
@@ -123,7 +123,7 @@ export default function LumeVSection() {
               {[
                 { text: 'Modern APIs and unified workflows' },
                 { text: 'Deterministic logic & cross-system automation' },
-                { text: 'VET & LUME-Auto Integration' },
+                { text: 'COX-VL & LUME-Scan Integration' },
                 { text: 'Future Meridian Integration' },
                 { text: 'Modernization without disruption' }
               ].map((item, i) => (
@@ -152,7 +152,7 @@ export default function LumeVSection() {
               <div style={{ padding: '1.25rem', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(245, 158, 11, 0.1)' }}>
                 <h4 style={{ color: '#fbbf24', fontSize: '1rem', marginBottom: '0.5rem' }}>Identity Management</h4>
                 <p className="text-dim" style={{ fontSize: '0.9rem', lineHeight: 1.5 }}>
-                  Full native integration with Cox Automotive's existing Okta and Azure Active Directory. Employees log into the COP substrate exactly as they do today.
+                  Full native integration with Cox Automotive's existing Okta and Azure Active Directory. Employees log into the COX-OP substrate exactly as they do today.
                 </p>
               </div>
               <div style={{ padding: '1.25rem', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(245, 158, 11, 0.1)' }}>

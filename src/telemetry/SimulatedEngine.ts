@@ -1,5 +1,5 @@
 /**
- * Lume-Auto — Simulated OBD-II Telemetry Engine
+ * LumeScan — Simulated OBD-II Telemetry Engine
  * Produces realistic, time-varying vehicle data across all 42 governance nodes.
  * Based on a 2019 Ford F-150 5.0L V8 driving profile.
  */

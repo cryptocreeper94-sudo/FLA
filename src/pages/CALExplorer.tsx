@@ -75,7 +75,7 @@ export default function CALExplorer() {
   if (loading) return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '60vh', flexDirection: 'column', gap: '1rem' }}>
       <motion.div animate={{ rotate: 360 }} transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}><RefreshCw size={32} style={{ color: accent }} /></motion.div>
-      <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem' }}>Connecting to Cox Automotive Ledger...</p>
+      <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem' }}>Connecting to COX Private Ledger...</p>
     </div>
   );
 
@@ -86,7 +86,7 @@ export default function CALExplorer() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '0.5rem' }}>
           <div style={{ width: 40, height: 40, background: `linear-gradient(135deg, ${accent}, #0ea5e9)`, borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Database size={20} color="#0a0c10" /></div>
           <div>
-            <h1 style={{ fontSize: '1.6rem', fontWeight: 800, margin: 0, letterSpacing: '-0.03em' }}>Cox Automotive Ledger</h1>
+            <h1 style={{ fontSize: '1.6rem', fontWeight: 800, margin: 0, letterSpacing: '-0.03em' }}>COX Private Ledger</h1>
             <p style={{ fontSize: '0.7rem', color: 'var(--text-dim)', margin: 0, letterSpacing: '0.08em' }}>MANHEIM DIVISION · PRIVATE PROOF-OF-AUTHORITY CHAIN</p>
           </div>
         </div>

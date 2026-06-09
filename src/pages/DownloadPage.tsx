@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import QRCodeLib from 'qrcode';
 
 // Direct download URLs
-const APK_URL = 'https://expo.dev/accounts/cryptocreeper/projects/lume-auto/builds/27117f8a-bf2b-416b-8a92-3a4475295ac8';
+const APK_URL = 'https://expo.dev/artifacts/eas/5LhddSw54u3T2bULi4cZH4.apk';
 const EXE_URL = '/downloads/COP_Setup_1.0.0.exe';
 const DOWNLOAD_URL = 'https://cox.tlid.io/download';
 
@@ -20,7 +20,7 @@ export default function DownloadPage() {
 
   useEffect(() => {
     if (canvasRef.current) {
-      QRCodeLib.toCanvas(canvasRef.current, DOWNLOAD_URL, {
+      QRCodeLib.toCanvas(canvasRef.current, APK_URL, {
         width: 200,
         margin: 2,
         color: {
@@ -117,7 +117,7 @@ export default function DownloadPage() {
                 'Download the APK file',
                 'Open it — tap "Install" when prompted',
                 'If blocked: Settings → allow from this source',
-                'Open LUME-Auto and connect your adapter',
+                'Open LUME-Scan and connect your adapter',
               ].map((s, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <span style={{ color: 'var(--accent-cyan)', fontSize: '0.7rem', fontWeight: 700, minWidth: '16px' }}>{i + 1}.</span>
@@ -142,7 +142,7 @@ export default function DownloadPage() {
               </div>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1rem' }}>
-              The enterprise desktop client for Cox Automotive. Provides native access to COP Dashboard, CAL Ledger Explorer, VET Verification Portal, CORE Root Fabric, and COG Engine — plus Lot Ops Pro as a built-in native app. Full keyboard shortcuts for every section.
+              The enterprise desktop client for Cox Automotive. Provides native access to COX-OP Dashboard, COX-PL Ledger Explorer, COX-VL Verification Portal, CORE Root Fabric, and COX-LGS Engine — plus Lot Ops Pro as a built-in native app. Full keyboard shortcuts for every section.
             </p>
 
             {isMobile ? (
@@ -163,7 +163,7 @@ export default function DownloadPage() {
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                   <div style={{ display: 'inline-block', padding: '6px 12px', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.2)', borderRadius: '6px', color: '#38bdf8', fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.05em' }}>
-                    COP v1.0.0 · Electron Runtime
+                    COX-OP v1.0.0 · Electron Runtime
                   </div>
                   <span style={{ fontSize: '0.65rem', color: 'var(--text-dim)' }}>Ctrl+1 through Ctrl+8 for section navigation</span>
                 </div>
@@ -182,7 +182,7 @@ export default function DownloadPage() {
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(56,189,248,0.1)'; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
                   >
-                    <Download size={18} /> DOWNLOAD COP .EXE
+                    <Download size={18} /> DOWNLOAD COX-OP .EXE
                   </a>
                   <p style={{ color: 'var(--text-dim)', fontSize: '0.65rem', textAlign: 'center' }}>
                     Windows 10/11 (64-bit) · ~73 MB

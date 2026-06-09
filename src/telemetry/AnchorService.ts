@@ -1,10 +1,10 @@
 /**
- * Lume-Auto — Cryptographic Report Anchoring
+ * LumeScan — Cryptographic Report Anchoring
  * 
  * Computes SHA-256 hash of condition reports and anchors them
  * to the appropriate ledger:
- *   - Enterprise (Manheim): Cox Automotive Ledger (CAL)
- *   - Consumer: VET — Verified Enterprise Trust (public verification)
+ *   - Enterprise (Manheim): COX Private Ledger (COX-PL)
+ *   - Consumer: COX-VL — COX Verification Ledger (public verification)
  * 
  * The hash is computed client-side using the Web Crypto API.
  * The anchoring POST is fire-and-forget — the hash is the proof,
@@ -14,7 +14,7 @@
 export interface AnchorResult {
   hash: string;           // SHA-256 hex digest
   timestamp: string;      // ISO 8601
-  anchoredTo: 'CAL' | 'VET' | 'local';
+  anchoredTo: 'COX-PL' | 'COX-VL' | 'local';
   certificateId: string;  // UUID
   status: 'anchored' | 'pending' | 'local-only';
 }
@@ -26,7 +26,7 @@ const isEnterprise = (): boolean => {
   return host.includes('manheim') || host.includes('coxauto') || host.includes('localhost');
 };
 
-// CAL API (Render deployment or local)
+// COX-PL API (Render deployment or local)
 const CAL_API_URL = 'https://cox-automotive-ledger.onrender.com/api';
 const VET_API_URL = 'https://vet-ledger.onrender.com/api';
 
@@ -60,7 +60,7 @@ function generateCertId(): string {
  * Flow:
  * 1. Serialize the report deterministically
  * 2. Compute SHA-256 hash
- * 3. POST to CAL (enterprise) or VET (external verification)
+ * 3. POST to COX-PL (enterprise) or COX-VL (external verification)
  * 4. Return the anchor result with hash + certificate ID
  * 
  * If the ledger is unreachable, returns local-only status
@@ -91,7 +91,7 @@ export async function anchorReport(report: any, context?: {
   // Determine target
   const enterprise = isEnterprise();
   const targetUrl = enterprise ? CAL_API_URL : VET_API_URL;
-  const anchoredTo = enterprise ? 'CAL' as const : 'VET' as const;
+  const anchoredTo = enterprise ? 'COX-PL' as const : 'COX-VL' as const;
 
   // Attempt to anchor
   try {
@@ -104,7 +104,7 @@ export async function anchorReport(report: any, context?: {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         facilityId: context?.facilityId || 'FIELD-001',
-        agentId: context?.agentId || 'LUME-AUTO',
+        agentId: context?.agentId || 'LUMESCAN',
         vin: context?.vin || report.vin || 'UNKNOWN',
         hash,
         certificateId: certId,

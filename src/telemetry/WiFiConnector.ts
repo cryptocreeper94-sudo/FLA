@@ -1,5 +1,5 @@
 /**
- * Lume-Auto — WiFi OBD-II Protocol Handler
+ * LumeScan — WiFi OBD-II Protocol Handler
  * Connects to WiFi ELM327 adapters via TCP socket.
  * Works in Expo Go — no native modules required.
  * 
@@ -93,7 +93,7 @@ class ELM327Socket {
         this.ws = new WebSocket(url);
         
         this.ws.onopen = () => {
-          console.log('[Lume-Auto] TCP connected');
+          console.log('[LumeScan] TCP connected');
           resolve(true);
         };
         
@@ -114,7 +114,7 @@ class ELM327Socket {
         };
         
         this.ws.onclose = () => {
-          console.log('[Lume-Auto] TCP disconnected');
+          console.log('[LumeScan] TCP disconnected');
         };
 
         setTimeout(() => resolve(false), 3000);
@@ -167,7 +167,7 @@ export async function probeForAdapter(
   const hostsToTry = customHost ? [customHost] : ALT_HOSTS;
 
   for (const host of hostsToTry) {
-    console.log(`[Lume-Auto] Probing ${host}:${DEFAULT_PORT}...`);
+    console.log(`[LumeScan] Probing ${host}:${DEFAULT_PORT}...`);
     
     connectionState = { status: 'connecting', host, error: null, isSimulated: false, adapterInfo: null };
     onStatusChange({ ...connectionState });

@@ -86,13 +86,13 @@ export default function Whitepaper() {
               {[
                 'Executive Summary',
                 'The Fractal Ledger Architecture (FLA)',
-                'Cox Automotive Ledger (CAL)',
-                'Verified Enterprise Trust (VET)',
-                'Core Operating Platform (COP)',
+                'COX Private Ledger (COX-PL)',
+                'COX Verification Ledger (COX-VL)',
+                'COX Operational Platform (COX-OP)',
                 'CORE — Universal Root Fabric',
-                'Cognitive Governance Engine (COG)',
+                'Cognitive Lume Governance Substrate (COX-LGS)',
                 'LUME-V — Deterministic Governance Substrate',
-                'LUME-Auto — Diagnostic Intelligence',
+                'LUME-Scan — Diagnostic Intelligence',
                 'Division Separation & Enterprise Scalability',
                 'Implementation Path',
                 'About DarkWave Studios LLC',
@@ -115,11 +115,11 @@ export default function Whitepaper() {
               <p>The Cox Enterprise Platform solves this with the <strong>Fractal Ledger Architecture (FLA)</strong> — a system where each division maintains complete operational autonomy while anchoring to a shared cryptographic root. No division sees another division’s data. No data crosses boundaries. But every division can <em>verify</em> claims made by any other division, instantly and mathematically.</p>
               <p>The platform consists of six independently deployable components:</p>
               <ul>
-                <li><strong>CAL</strong> — Cox Automotive Ledger. Division-level private cryptographic ledger for operational records.</li>
-                <li><strong>VET</strong> — Verified Enterprise Trust. Public-facing verification certificates derived from internal ledger records.</li>
-                <li><strong>COP</strong> — Core Operating Platform. Enterprise command center for cross-division visibility.</li>
+                <li><strong>COX-PL</strong> — COX Private Ledger. Division-level private cryptographic ledger for operational records.</li>
+                <li><strong>COX-VL</strong> — COX Verification Ledger. Public-facing verification certificates derived from internal ledger records.</li>
+                <li><strong>COX-OP</strong> — COX Operational Platform. Enterprise command center for cross-division visibility.</li>
                 <li><strong>CORE</strong> — Universal Root Fabric. The hub that all division ledgers anchor to.</li>
-                <li><strong>COG</strong> — Cognitive Governance Engine. 42-node deterministic processing mesh.</li>
+                <li><strong>COX-LGS</strong> — Cognitive Lume Governance Substrate. 42-node deterministic processing mesh.</li>
                 <li><strong>LUME-V</strong> — Deterministic governance substrate that wraps legacy systems without modification.</li>
               </ul>
               <p>Each component operates independently and delivers measurable value on its own. Together, they form a unified trust infrastructure that no single vendor has previously offered at enterprise scale.</p>
@@ -134,7 +134,7 @@ export default function Whitepaper() {
               <ul>
                 <li><strong>Division level:</strong> Each Cox division (Manheim, Autotrader, KBB, Dealer.com, NextGear Capital) operates its own private Proof-of-Authority ledger. The data model, certificate types, and access controls are configured for that division's specific operations.</li>
                 <li><strong>Enterprise level:</strong> All division ledgers periodically anchor a Merkle root hash to CORE — the universal root fabric. CORE sees hashes, never content. It proves that each division's chain is intact and unaltered.</li>
-                <li><strong>Verification level:</strong> VET issues publicly verifiable certificates derived from any division's ledger. A buyer can confirm a vehicle's condition report from Manheim without accessing Manheim's internal systems.</li>
+                <li><strong>Verification level:</strong> COX-VL issues publicly verifiable certificates derived from any division's ledger. A buyer can confirm a vehicle's condition report from Manheim without accessing Manheim's internal systems.</li>
               </ul>
               <p>This architecture solves the fundamental tension in enterprise data: <strong>divisions need autonomy, but the enterprise needs assurance.</strong> The fractal model delivers both. Each division retains full control over its data, its access policies, and its operational workflows. The enterprise gains cryptographic proof that every division's records are intact, consistent, and untampered — without ever accessing the underlying data.</p>
             </motion.div>
@@ -143,9 +143,9 @@ export default function Whitepaper() {
 
             {/* 3 */}
             <motion.div {...f} className="wp-section">
-              <h2>3. Cox Automotive Ledger (CAL)</h2>
-              <p>CAL is a private, permissioned Proof-of-Authority cryptographic ledger built for enterprise-grade operational auditability. It is not a public blockchain, not a distributed database, and not a transparency tool. It is a tamper-proof truth layer that anchors operational records with cryptographic proof.</p>
-              <h3>What CAL Records</h3>
+              <h2>3. COX Private Ledger (COX-PL)</h2>
+              <p>COX-PL is a private, permissioned Proof-of-Authority cryptographic ledger built for enterprise-grade operational auditability. It is not a public blockchain, not a distributed database, and not a transparency tool. It is a tamper-proof truth layer that anchors operational records with cryptographic proof.</p>
+              <h3>What COX-PL Records</h3>
               <ul>
                 <li><strong>Vehicle custody transitions</strong> — every handoff from intake to lot to lane to transport</li>
                 <li><strong>Condition certificates</strong> — OBD-II scan results sealed at the moment of diagnosis</li>
@@ -155,31 +155,31 @@ export default function Whitepaper() {
                 <li><strong>Workforce events</strong> — time entries, performance records, and safety incidents</li>
               </ul>
               <h3>Data Privacy</h3>
-              <p>CAL stores cryptographic hashes (SHA-256 fingerprints) and structured metadata pointers — never cleartext operational data. The underlying records remain in Cox-controlled databases behind existing access controls. This means CAL provides <strong>tamper-proof verification without data exposure</strong>: any authorized party can confirm a record hasn't been altered, but cannot read the record itself without proper access.</p>
+              <p>COX-PL stores cryptographic hashes (SHA-256 fingerprints) and structured metadata pointers — never cleartext operational data. The underlying records remain in Cox-controlled databases behind existing access controls. This means COX-PL provides <strong>tamper-proof verification without data exposure</strong>: any authorized party can confirm a record hasn't been altered, but cannot read the record itself without proper access.</p>
               <h3>Live Infrastructure</h3>
-              <p>The CAL explorer is operational at <strong>/cal</strong> within this platform. It connects to a live Proof-of-Authority chain with three validator nodes (Nashville, Atlanta, HQ). Blocks, certificates, vehicle passports, and chain integrity verification are all functional and queryable in real time.</p>
+              <p>The COX-PL explorer is operational at <strong>/cal</strong> within this platform. It connects to a live Proof-of-Authority chain with three validator nodes (Nashville, Atlanta, HQ). Blocks, certificates, vehicle passports, and chain integrity verification are all functional and queryable in real time.</p>
             </motion.div>
 
             {hr}
 
             {/* 4 */}
             <motion.div {...f} className="wp-section">
-              <h2>4. Verified Enterprise Trust (VET)</h2>
-              <p>VET is the outward-facing verification layer. It turns internal CAL records into commercially provable certificates that external parties — buyers, dealers, financing partners, auditors — can verify independently.</p>
+              <h2>4. COX Verification Ledger (COX-VL)</h2>
+              <p>COX-VL is the outward-facing verification layer. It turns internal COX-PL records into commercially provable certificates that external parties — buyers, dealers, financing partners, auditors — can verify independently.</p>
               <ul>
                 <li><strong>Hash-based verification:</strong> Enter a certificate ID or VIN and receive cryptographic proof of provenance, integrity, and timestamp.</li>
-                <li><strong>Zero data exposure:</strong> VET proves <em>that</em> a record exists and is untampered. It never reveals <em>what</em> the record contains beyond what Cox explicitly chooses to make verifiable.</li>
+                <li><strong>Zero data exposure:</strong> COX-VL proves <em>that</em> a record exists and is untampered. It never reveals <em>what</em> the record contains beyond what Cox explicitly chooses to make verifiable.</li>
                 <li><strong>Cross-platform portability:</strong> Certificates travel with the vehicle across Autotrader listings, dealer management systems, and financing workflows.</li>
               </ul>
-              <p>The VET verification portal is live at <strong>/vet</strong> within this platform. Certificate lookups and vehicle passport queries are functional against the live chain.</p>
+              <p>The COX-VL verification portal is live at <strong>/vet</strong> within this platform. Certificate lookups and vehicle passport queries are functional against the live chain.</p>
             </motion.div>
 
             {hr}
 
             {/* 5 */}
             <motion.div {...f} className="wp-section">
-              <h2>5. Core Operating Platform (COP)</h2>
-              <p>COP is the enterprise command center — the single-pane view across all facilities, divisions, and operational workflows. It aggregates real-time data from CAL, COG, and facility-level systems into actionable dashboards.</p>
+              <h2>5. COX Operational Platform (COX-OP)</h2>
+              <p>COX-OP is the enterprise command center — the single-pane view across all facilities, divisions, and operational workflows. It aggregates real-time data from COX-PL, COX-LGS, and facility-level systems into actionable dashboards.</p>
               <ul>
                 <li>Facility status monitoring across all Manheim locations</li>
                 <li>Vehicle status grid with custody state, health scores, and fault alerts</li>
@@ -187,16 +187,17 @@ export default function Whitepaper() {
                 <li>Validator node health and chain integrity monitoring</li>
                 <li>Live activity feed with real-time event streaming</li>
               </ul>
-              <p>The COP dashboard is live at <strong>/cop</strong> and auto-refreshes every 30 seconds from the operational chain.</p>
+              <p>The COX-OP dashboard is live at <strong>/cop</strong> and auto-refreshes every 30 seconds from the operational chain.</p>
             </motion.div>
 
             {hr}
 
             {/* 6 */}
             <motion.div {...f} className="wp-section">
-              <h2>6. CORE — Universal Root Fabric</h2>
-              <p>CORE is the hub in the hub-and-spoke topology. Every division ledger anchors to CORE. CORE never stores operational data — it stores only Merkle root hashes from each division's chain.</p>
-              <p>This design enforces <strong>complete division isolation</strong>. Manheim's data stays in Manheim's ledger. NextGear's data stays in NextGear's ledger. But CORE can prove that both chains are intact, that neither has been tampered with, and that cross-division certificates (like a vehicle sold at Manheim and financed by NextGear) are cryptographically linked.</p>
+              <h2>6. CORE & TLL — The Supreme Court of Truth</h2>
+              <p>At the absolute center of the fractal architecture sits the <strong>Trust Layer Ledger (TLL)</strong>. It acts as the "Supreme Court of Truth" between all connected clients, divisions, and partners. Every division's CORE engine anchors its local hashes upward into the universal TLL.</p>
+              <p>Crucially, the TLL is completely non-intrusive. It does not do anything but record the master metadata record (the cryptographic hash) and a timestamp. <strong>The TLL never touches, sees, or stores your private operational data.</strong> It is the ultimate source of truth that proves an event happened, without ever exposing the contents of the event itself.</p>
+              <p>This design enforces <strong>absolute sovereignty and zero-knowledge privacy</strong>. Only the client entity has access to the actual private information residing on their local COX-PL. Manheim's data stays in Manheim's ledger. NextGear's data stays in NextGear's ledger. But the TLL can mathematically prove to the world that both chains are intact and unaltered.</p>
               <p>The CORE topology visualizer is live at <strong>/core</strong>, showing all five Cox divisions as spokes anchoring to the central root fabric.</p>
             </motion.div>
 
@@ -204,16 +205,16 @@ export default function Whitepaper() {
 
             {/* 7 */}
             <motion.div {...f} className="wp-section">
-              <h2>7. Cognitive Governance Engine (COG)</h2>
-              <p>COG is the 42-node deterministic processing mesh that powers diagnostics, governance enforcement, and autonomous workflow management. It operates in four layers:</p>
+              <h2>7. Cognitive Lume Governance Substrate (COX-LGS)</h2>
+              <p>COX-LGS is the 42-node deterministic processing mesh that powers diagnostics, governance enforcement, and autonomous workflow management. It operates in four layers:</p>
               <ul>
                 <li><strong>Perception (12 nodes):</strong> Raw signal ingestion — OBD-II telemetry, GPS, operator inputs, sensor feeds</li>
                 <li><strong>Analysis (14 nodes):</strong> Cross-validation against known patterns with disagreement-triggered verification</li>
                 <li><strong>Decision (10 nodes):</strong> Deterministic rule application — same inputs always produce the same decision</li>
                 <li><strong>Action (6 nodes):</strong> Certified outputs — reports, certificates, workflow triggers, ledger anchoring</li>
               </ul>
-              <p>The word "deterministic" is critical. COG contains <strong>zero inference, zero probability, zero hallucination surface</strong>. Given the same inputs, every node produces the same output on any hardware, at any time. This is not a feature — it is a mathematical property of the system.</p>
-              <p>The COG mesh visualizer is live at <strong>/cog</strong> with real-time node health, layer breakdown, and engine pulse monitoring.</p>
+              <p>The word "deterministic" is critical. COX-LGS contains <strong>zero inference, zero probability, zero hallucination surface</strong>. Given the same inputs, every node produces the same output on any hardware, at any time. This is not a feature — it is a mathematical property of the system.</p>
+              <p>The COX-LGS mesh visualizer is live at <strong>/cog</strong> with real-time node health, layer breakdown, and engine pulse monitoring.</p>
             </motion.div>
 
             {hr}
@@ -236,8 +237,8 @@ export default function Whitepaper() {
 
             {/* 9 */}
             <motion.div {...f} className="wp-section">
-              <h2>9. LUME-Auto — Diagnostic Intelligence</h2>
-              <p>LUME-Auto is the field-level diagnostic platform. A 42-node synthetic organism processes real-time OBD-II telemetry and produces cryptographically verifiable condition certificates in 45 seconds.</p>
+              <h2>9. LUME-Scan — Diagnostic Intelligence</h2>
+              <p>LUME-Scan is the field-level diagnostic platform. A 42-node synthetic organism processes real-time OBD-II telemetry and produces cryptographically verifiable condition certificates in 45 seconds.</p>
               <h3>Scanner Capabilities</h3>
               <ul>
                 <li>42 real-time signals at 100ms intervals (RPM, MAP, MAF, fuel trims, O2, coolant, intake air, timing, catalyst, battery, and more)</li>
@@ -250,7 +251,7 @@ export default function Whitepaper() {
               <ul>
                 <li>60% of condition reports auto-generated from sensor data before a human inspector touches the vehicle</li>
                 <li>Dead-battery detection, cold-start flagging, pending fault catch — before the vehicle reaches a lane</li>
-                <li>Every scan anchored to CAL. Every dispute resolvable by deterministic replay.</li>
+                <li>Every scan anchored to COX-PL. Every dispute resolvable by deterministic replay.</li>
               </ul>
               <p>The live scan demo is available at <strong>/app</strong> within this platform.</p>
             </motion.div>
@@ -272,7 +273,7 @@ export default function Whitepaper() {
                   </thead>
                   <tbody>
                     {[
-                      ['Manheim', 'CAL', 'Custody, Condition, Arbitration, Performance, Key Events'],
+                      ['Manheim', 'COX-PL', 'Custody, Condition, Arbitration, Performance, Key Events'],
                       ['NextGear Capital', 'NGL', 'Lien Origination, Payoff Records, Audit Events'],
                       ['Autotrader', 'ATL', 'Listing Verification, Price Anchoring'],
                       ['Kelley Blue Book', 'KBL', 'Valuation Anchoring, Market Data'],
@@ -287,7 +288,7 @@ export default function Whitepaper() {
                   </tbody>
                 </table>
               </div>
-              <p>Each division operates its own private chain. All chains anchor to CORE. No division accesses another division's data. Cross-division verification happens through VET — hash-only, zero exposure.</p>
+              <p>Each division operates its own private chain. All chains anchor to CORE. No division accesses another division's data. Cross-division verification happens through COX-VL — hash-only, zero exposure.</p>
             </motion.div>
 
             {hr}
@@ -300,7 +301,7 @@ export default function Whitepaper() {
                 {[
                   { phase: 'Phase 1 — Weeks 1–4', title: 'Pilot Facility Telemetry', desc: 'Deploy OBD-II adapters at one Manheim facility. Capture 42-signal telemetry. Generate condition reports. Validate scan accuracy against existing inspection reports.' },
                   { phase: 'Phase 2 — Weeks 4–8', title: 'Operational Intelligence', desc: 'Enable lane readiness dashboards, dead-battery detection, pending fault screening. Integrate transport pre-dispatch health reports. Begin arbitration reduction tracking.' },
-                  { phase: 'Phase 3 — Weeks 8–12', title: 'Ledger Activation', desc: 'Activate CAL validators. Anchor condition certificates on-ledger. Deploy LUME-V governance substrate. Issue VET certificates for buyer-facing verification.' },
+                  { phase: 'Phase 3 — Weeks 8–12', title: 'Ledger Activation', desc: 'Activate COX-PL validators. Anchor condition certificates on-ledger. Deploy LUME-V governance substrate. Issue COX-VL certificates for buyer-facing verification.' },
                   { phase: 'Phase 4 — Weeks 12–16', title: 'Multi-Facility & Division Expansion', desc: 'Cross-facility benchmarking. NextGear Capital ledger integration. CORE root fabric activation. Expand to additional Manheim locations with proven playbook.' },
                 ].map((p, i) => (
                   <div key={i} style={{ padding: '1rem 1.25rem', border: '1px solid var(--border-light)', borderRadius: '8px' }}>
@@ -317,7 +318,7 @@ export default function Whitepaper() {
             {/* 12 */}
             <motion.div {...f} className="wp-section">
               <h2>12. About DarkWave Studios LLC</h2>
-              <p>DarkWave Studios LLC is the creator of the Lume deterministic programming language, the Trust Layer verification network, and the complete platform described in this document. The company holds US Provisional Patent 64/084,465 covering the deterministic governance architecture and US Provisional Patent 64/056,378 covering the Meridian wireless energy routing system.</p>
+              <p>DarkWave Studios LLC is the creator of the Lume deterministic programming language, the Trust Layer verification network, and the complete platform described in this document. The company holds US Provisional Patent 64/084,465 covering the deterministic governance architecture and US Provisional Patent 64/084,465 covering the Meridian wireless energy routing system.</p>
               <p>All platform components — the ledger, the governance substrate, the diagnostic organism, the verification chain, the cognitive engine — are built on the Lume runtime. Every capability described in this document is operational and demonstrable today.</p>
               <p style={{ fontStyle: 'italic', color: 'var(--text-dim)', fontSize: '0.82rem' }}>
                 "We didn't build a pitch. We built the system. The pitch is showing you the system working."
@@ -332,7 +333,7 @@ export default function Whitepaper() {
               </div>
               <p style={{ color: 'var(--text-dim)', fontSize: '0.65rem', lineHeight: 1.6 }}>
                 © 2026 DarkWave Studios LLC · CORE.tlid.io<br />
-                US Provisional Patents 64/084,465 & 64/056,378 · All rights reserved<br />
+                US Provisional Patents 64/084,465 & 64/084,465 · All rights reserved<br />
                 This document is confidential and intended for Cox Enterprises authorized recipients only.
               </p>
             </div>

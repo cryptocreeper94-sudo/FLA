@@ -9,7 +9,7 @@ export default function Technology() {
         </div>
         <h1 style={{ fontSize: '3rem', lineHeight: 1.1 }}>The 42-Node Organism</h1>
         <p className="text-muted" style={{ fontSize: '1.2rem' }}>
-          Lume-Auto maps 42 governance nodes across four flow primitives. It treats the internal combustion engine (ICE) as a deterministic multi-flow system.
+          LumeScan maps 42 governance nodes across four flow primitives. It treats the internal combustion engine (ICE) as a deterministic multi-flow system.
         </p>
 
         <div className="panel mt-8">

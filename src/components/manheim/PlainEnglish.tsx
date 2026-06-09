@@ -85,7 +85,7 @@ export default function PlainEnglish() {
               </div>
               <p style={{ fontSize: '0.88rem', lineHeight: 1.75, color: 'var(--text-muted)', margin: 0 }}>
                 When I say "ledger," I mean a private, tamper-proof record book — not cryptocurrency, not tokens, not Bitcoin. 
-                I built the <strong>Fractal Ledger Architecture (FLA)</strong> anchored to a universal <strong>CORE</strong> root fabric. Each division operates its own isolated dual-ledger: the <strong>Cox Automotive Ledger (CAL)</strong> is strictly internal — a notarized logbook on your own servers tracking every lane move and scan. The <strong>Verified Enterprise Trust (VET)</strong> ledger is external — a secure way to cryptographically prove vehicle condition to buyers and financing partners without ever exposing your internal operations. Both anchor to CORE, but CORE never sees your data — only cryptographic proof that the data is intact. No one can alter the records after the fact. It's simply a better way to keep data that can't be disputed.
+                I built the <strong>Fractal Ledger Architecture (FLA)</strong> anchored to a universal <strong>CORE</strong> root fabric. Each division operates its own isolated dual-ledger: the <strong>COX Private Ledger (COX-PL)</strong> is strictly internal — a notarized logbook on your own servers tracking every lane move and scan. The <strong>COX Verification Ledger (COX-VL)</strong> ledger is external — a secure way to cryptographically prove vehicle condition to buyers and financing partners without ever exposing your internal operations. Both anchor to CORE, but CORE never sees your data — only cryptographic proof that the data is intact. No one can alter the records after the fact. It's simply a better way to keep data that can't be disputed.
               </p>
             </div>
 
@@ -109,7 +109,7 @@ export default function PlainEnglish() {
               <p style={{ fontSize: '0.88rem', lineHeight: 1.75, color: 'var(--text-muted)', margin: 0 }}>
                 It's an infrastructure layer that sits on top of what Manheim already runs. It doesn't replace your systems — including your existing Cox2M telematics dongles, which stay exactly where they are. 
                 It adds modular capabilities that complement existing operations: deterministic condition reports via <strong>LumeScan</strong>, 
-                the tamper-evident <strong>Cox Automotive Ledger (CAL)</strong> for immutable operational records, the <strong>Verified Enterprise Trust (VET)</strong> ledger for external buyer and dealer verification, and the <strong>CORE Root Fabric</strong> that ties every division's ledger into a single universal trust anchor. Plus <strong>Lot Ops Pro</strong> — a full workforce management platform for drivers, supervisors, and operations managers. Every piece works on its own. You don't have to adopt the whole thing to get value from one part.
+                the tamper-evident <strong>COX Private Ledger (COX-PL)</strong> for immutable operational records, the <strong>COX Verification Ledger (COX-VL)</strong> ledger for external buyer and dealer verification, and the <strong>CORE Root Fabric</strong> that ties every division's ledger into a single universal trust anchor. Plus <strong>Lot Ops Pro</strong> — a full workforce management platform for drivers, supervisors, and operations managers. Every piece works on its own. You don't have to adopt the whole thing to get value from one part.
               </p>
             </div>
 

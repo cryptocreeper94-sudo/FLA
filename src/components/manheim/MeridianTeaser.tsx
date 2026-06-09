@@ -35,7 +35,7 @@ export default function MeridianTeaser() {
           {[
             { icon: <BatteryCharging size={22} />, title: 'Radiative EV Charging', desc: 'Overhead nodes deliver energy to vehicles via directed beamforming — no ground-level chargers, no cables, no physical adapters. Vehicles charge passively while parked or in transit.' },
             { icon: <Lightbulb size={22} />, title: 'Powered Lot Infrastructure', desc: 'Mobile lane signs, night lighting, and lot sensors draw power from the same overhead mesh. Infrastructure can be relocated instantly without trenching or running new electrical lines.' },
-            { icon: <ShieldCheck size={22} />, title: 'Packetized Ledger Metering', desc: 'Energy is routed in discrete, timestamped packets. Every watt delivered is metered and securely signed to the CAL ledger, creating a tamper-proof, auditable history of consumption.' },
+            { icon: <ShieldCheck size={22} />, title: 'Packetized Ledger Metering', desc: 'Energy is routed in discrete, timestamped packets. Every watt delivered is metered and securely signed to the COX-PL ledger, creating a tamper-proof, auditable history of consumption.' },
           ].map((item, i) => (
             <motion.div key={i} {...fadeIn} transition={{ delay: 0.1 + i * 0.08 }}
               style={{ padding: '1.75rem', background: 'rgba(255,255,255,0.02)', border: `1px solid ${accentDim}`, borderRadius: '16px', transition: 'border-color 0.3s' }}
@@ -70,7 +70,7 @@ export default function MeridianTeaser() {
 
               <div style={{ padding: '1rem', background: 'rgba(0,0,0,0.2)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
                 <div style={{ color: 'var(--text-main)', fontWeight: 600, marginBottom: '4px' }}>ENERGY PROTOCOL</div>
-                <div style={{ color: 'var(--text-muted)' }}>Energy is delivered in cryptographically signed micro-bursts. The RX node acknowledges receipt, and the TX node anchors the micro-transaction to the private CAL ledger for deterministic billing.</div>
+                <div style={{ color: 'var(--text-muted)' }}>Energy is delivered in cryptographically signed micro-bursts. The RX node acknowledges receipt, and the TX node anchors the micro-transaction to the private COX-PL ledger for deterministic billing.</div>
               </div>
             </div>
           </div>

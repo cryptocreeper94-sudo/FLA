@@ -27,13 +27,13 @@ const PHASES = [
     ],
   },
   {
-    phase: 'Phase 3', timeline: 'Weeks 8–12', title: 'CAL Integration & Trust Certificates',
+    phase: 'Phase 3', timeline: 'Weeks 8–12', title: 'COX-PL Integration & Trust Certificates',
     icon: <Layers size={20} />, color: '#38bdf8',
     items: [
-      'Activate Cox Automotive Ledger validators at pilot facility',
+      'Activate COX Private Ledger validators at pilot facility',
       'Anchor all condition certificates on-ledger with cryptographic proof',
       'Deploy LUME-V governance substrate over existing operational workflows',
-      'Issue VET certificates for buyer-facing vehicle verification',
+      'Issue COX-VL certificates for buyer-facing vehicle verification',
     ],
   },
   {
@@ -43,17 +43,17 @@ const PHASES = [
       'Full-lot predictive throughput modeling and population health analytics',
       'Cross-facility health scoring and benchmarking',
       'Expand to additional Manheim locations with proven playbook',
-      'Enable cross-facility custody chain continuity via CAL',
+      'Enable cross-facility custody chain continuity via COX-PL',
     ],
   },
 ];
 
 const MODULES = [
-  { title: 'LUME-Auto', desc: 'OBD-II diagnostics and condition reporting — standalone hardware and software.', color: 'var(--accent-cyan)' },
+  { title: 'LUME-Scan', desc: 'OBD-II diagnostics and condition reporting — standalone hardware and software.', color: 'var(--accent-cyan)' },
   { title: 'Lot Ops Pro', desc: 'Operational workforce platform — custody tracking, routing, messaging.', color: '#38bdf8' },
   { title: 'LUME-V', desc: 'Deterministic governance substrate — operates across any legacy enterprise stack.', color: 'var(--accent-emerald)' },
-  { title: 'CAL', desc: 'Cox Automotive Ledger — private, tamper-evident operational records anchored on-chain.', color: '#38bdf8' },
-  { title: 'VET', desc: 'Verified Enterprise Trust — external verification certificates for buyers, dealers, and financing partners.', color: '#38bdf8' },
+  { title: 'COX-PL', desc: 'COX Private Ledger — private, tamper-evident operational records anchored on-chain.', color: '#38bdf8' },
+  { title: 'COX-VL', desc: 'COX Verification Ledger — external verification certificates for buyers, dealers, and financing partners.', color: '#38bdf8' },
   { title: 'Meridian', desc: 'Wireless energy routing — EV charging, powered signage, and lot infrastructure.', color: '#dc2626' },
   { title: 'Unified Platform', desc: 'When deployed together, every component amplifies the others — the whole exceeds the sum of its parts.', color: '#fb923c' },
 ];

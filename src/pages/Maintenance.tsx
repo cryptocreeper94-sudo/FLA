@@ -7,14 +7,14 @@ export default function Maintenance() {
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col gap-6" style={{ maxWidth: '800px', margin: '0 auto', paddingTop: '4rem' }}>
         <h1 style={{ fontSize: '3rem', lineHeight: 1.1 }}>Maintenance Intelligence</h1>
         <p className="text-muted" style={{ fontSize: '1.2rem' }}>
-          Know what's wrong before it costs you. Lume-Auto watches your key components degrade in real time.
+          Know what's wrong before it costs you. LumeScan watches your key components degrade in real time.
         </p>
 
         <div className="flex gap-4 items-start panel mt-8">
           <ShieldCheck className="text-cyan mt-1" size={32} />
           <div>
             <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Most maintenance issues cost 5–15% MPG before they're serious enough to notice.</h3>
-            <p className="text-muted">Lume-Auto finds them in the 1–3% range — early enough to fix cheaply.</p>
+            <p className="text-muted">LumeScan finds them in the 1–3% range — early enough to fix cheaply.</p>
           </div>
         </div>
 

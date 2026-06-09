@@ -19,7 +19,7 @@ export default function Enterprise() {
               Condition scanning at intake. Lot operations and driver management. Arbitration defense by data replay. All on a single deterministic runtime. All sharing one data layer. All auditable to the sensor level.
             </p>
             <p className="text-muted" style={{ fontSize: '1rem', lineHeight: 1.7, marginBottom: '2.5rem' }}>
-              <strong style={{ color: 'var(--text-main)' }}>No other platform offers this integration.</strong> Lume Ops Recon + Lume-Auto + Lume Build = a unified vehicle intelligence layer purpose-built for wholesale automotive.
+              <strong style={{ color: 'var(--text-main)' }}>No other platform offers this integration.</strong> Lume Ops Recon + LumeScan + Lume Build = a unified vehicle intelligence layer purpose-built for wholesale automotive.
             </p>
           </motion.div>
         </div>
@@ -46,10 +46,10 @@ export default function Enterprise() {
               },
               {
                 badge: 'Production · lumeauto.tech',
-                title: 'Lume-Auto',
+                title: 'LumeScan',
                 subtitle: 'Vehicle Intelligence',
                 icon: <Radio size={28} />,
-                features: ['42-node OBD-II telemetry governance', 'WiFi adapter → condition report in 45 sec', 'Mode 05: IMMO key management (read/program/delete)', 'Mode 06: Remote start governance (CAN-bus start/stop)', 'Arbitration defense via scan log replay', 'Battery health flagging at intake (SL3/SL8)', 'Pending fault detection pre-lane', 'Lane readiness scoring', 'TLL/CAL-verified receipts for all events'],
+                features: ['42-node OBD-II telemetry governance', 'WiFi adapter → condition report in 45 sec', 'Mode 05: IMMO key management (read/program/delete)', 'Mode 06: Remote start governance (CAN-bus start/stop)', 'Arbitration defense via scan log replay', 'Battery health flagging at intake (SL3/SL8)', 'Pending fault detection pre-lane', 'Lane readiness scoring', 'TLL/COX-PL-verified receipts for all events'],
                 stat: '42', statLabel: 'Governance nodes per vehicle',
                 color: 'var(--accent-cyan)',
               },
@@ -95,13 +95,13 @@ export default function Enterprise() {
 
           <div className="flex flex-col gap-3">
             {[
-              { step: '01', title: 'Vehicle Arrives', product: 'Lume-Auto', desc: '45-second OBD-II scan at intake. Condition report generated. Battery health flagged. Pending faults identified. Lane readiness scored.', color: 'var(--accent-cyan)' },
-              { step: '02', title: 'Routing & Assignment', product: 'Ops Recon', desc: 'Receives vehicle health data from Lume-Auto. Routes vehicle to correct lane or reconditioning. Driver assigned via GPS. Move tracked in real-time.', color: 'var(--accent-emerald)' },
-              { step: '03', title: 'Remote Start & Staging', product: 'Lume-Auto', desc: 'Mode 06: CAN-bus remote start for vehicle warm-up, lot staging, and battery conditioning. Every start event cryptographically anchored to CAL. Supervisor authorization required. Geofence enforced.', color: '#f59e0b' },
-              { step: '04', title: 'Lot Residence', product: 'Both', desc: 'Lume-Auto monitors for battery drain and fault emergence. Mode 06 scheduled maintenance starts for 7+ day vehicles. Ops Recon tracks lot position, move history, and time-on-lot.', color: '#38bdf8' },
-              { step: '05', title: 'Pre-Sale', product: 'Lume-Auto', desc: 'Updated condition report generated for listing. Lane assignment confirmed. All data flows to the sale record.', color: 'var(--accent-cyan)' },
-              { step: '06', title: 'Arbitration Defense', product: 'Lume-Auto', desc: 'Dispute? Pull the intake scan log. Deterministic replay: same inputs → same condition report. Resolved by data, not opinion.', color: 'var(--accent-emerald)' },
-              { step: '07', title: 'Transport', product: 'Both', desc: 'Lume-Auto flags drivetrain health unsuitable for transport. Ops Recon assigns transport driver and tracks via GPS.', color: 'var(--accent-cyan)' },
+              { step: '01', title: 'Vehicle Arrives', product: 'LumeScan', desc: '45-second OBD-II scan at intake. Condition report generated. Battery health flagged. Pending faults identified. Lane readiness scored.', color: 'var(--accent-cyan)' },
+              { step: '02', title: 'Routing & Assignment', product: 'Ops Recon', desc: 'Receives vehicle health data from LumeScan. Routes vehicle to correct lane or reconditioning. Driver assigned via GPS. Move tracked in real-time.', color: 'var(--accent-emerald)' },
+              { step: '03', title: 'Remote Start & Staging', product: 'LumeScan', desc: 'Mode 06: CAN-bus remote start for vehicle warm-up, lot staging, and battery conditioning. Every start event cryptographically anchored to COX-PL. Supervisor authorization required. Geofence enforced.', color: '#f59e0b' },
+              { step: '04', title: 'Lot Residence', product: 'Both', desc: 'LumeScan monitors for battery drain and fault emergence. Mode 06 scheduled maintenance starts for 7+ day vehicles. Ops Recon tracks lot position, move history, and time-on-lot.', color: '#38bdf8' },
+              { step: '05', title: 'Pre-Sale', product: 'LumeScan', desc: 'Updated condition report generated for listing. Lane assignment confirmed. All data flows to the sale record.', color: 'var(--accent-cyan)' },
+              { step: '06', title: 'Arbitration Defense', product: 'LumeScan', desc: 'Dispute? Pull the intake scan log. Deterministic replay: same inputs → same condition report. Resolved by data, not opinion.', color: 'var(--accent-emerald)' },
+              { step: '07', title: 'Transport', product: 'Both', desc: 'LumeScan flags drivetrain health unsuitable for transport. Ops Recon assigns transport driver and tracks via GPS.', color: 'var(--accent-cyan)' },
             ].map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="panel flex gap-4" style={{ padding: '1.5rem', alignItems: 'flex-start' }}>
                 <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'rgba(255,255,255,0.06)', fontFamily: 'var(--font-mono)', minWidth: '36px' }}>{item.step}</div>
@@ -195,7 +195,7 @@ export default function Enterprise() {
           </div>
 
           <p className="text-dim" style={{ textAlign: 'center', marginTop: '1.5rem', fontSize: '0.8rem' }}>
-            When you own the firmware, the runtime, the governance engine, and the operations platform — you own the full stack from silicon to organism.
+            When you own the firmware, the runtime, the Lume Governance Substrate, and the operations platform — you own the full stack from silicon to organism.
           </p>
         </div>
       </section>
@@ -236,7 +236,7 @@ export default function Enterprise() {
             <table className="data-table">
               <thead><tr><th>Week</th><th>Activity</th></tr></thead>
               <tbody>
-                <tr><td style={{ fontFamily: 'var(--font-mono)', fontWeight: 600 }}>Week 1</td><td>Lume-Auto at intake stations. Condition reports alongside existing process.</td></tr>
+                <tr><td style={{ fontFamily: 'var(--font-mono)', fontWeight: 600 }}>Week 1</td><td>LumeScan at intake stations. Condition reports alongside existing process.</td></tr>
                 <tr><td style={{ fontFamily: 'var(--font-mono)', fontWeight: 600 }}>Week 2</td><td>Lume Ops Recon deployed to 5–10 drivers. Parallel with existing systems.</td></tr>
                 <tr><td style={{ fontFamily: 'var(--font-mono)', fontWeight: 600 }}>Week 3</td><td>Integration: health data feeds routing decisions. Unified dashboard live.</td></tr>
                 <tr><td style={{ fontFamily: 'var(--font-mono)', fontWeight: 600 }}>Week 4</td><td>Full data collection. ROI report preparation. Enterprise discussion.</td></tr>

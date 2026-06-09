@@ -1,5 +1,5 @@
 /**
- * Lume-Auto — Web Bluetooth OBD-II Connector
+ * LumeScan — Web Bluetooth OBD-II Connector
  * Connects to BLE ELM327 adapters via the Web Bluetooth API.
  * Works in Chrome (Android + Desktop) and Edge.
  * iOS Safari does NOT support Web Bluetooth.

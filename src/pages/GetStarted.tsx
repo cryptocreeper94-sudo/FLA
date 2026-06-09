@@ -49,9 +49,9 @@ export default function GetStarted() {
               },
               {
                 step: '02', icon: <Smartphone size={32} />, title: 'Download the App',
-                desc: 'Install Lume-Auto on your phone. Connect to the adapter\'s WiFi hotspot (it creates one automatically). Open the app, tap "Connect via WiFi." That\'s it — no pairing codes, no Bluetooth setup, no app store build required.',
+                desc: 'Install LumeScan on your phone. Connect to the adapter\'s WiFi hotspot (it creates one automatically). Open the app, tap "Connect via WiFi." That\'s it — no pairing codes, no Bluetooth setup, no app store build required.',
                 highlight: 'Free',
-                cta: { text: 'Download Lume-Auto →', url: '#download' }
+                cta: { text: 'Download LumeScan →', url: '#download' }
               },
               {
                 step: '03', icon: <Gauge size={32} />, title: 'Start Driving',
@@ -113,12 +113,12 @@ export default function GetStarted() {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
             <div className="panel" style={{ padding: '2rem', textAlign: 'center' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>Without Lume-Auto</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>Without LumeScan</div>
               <div style={{ fontSize: '2.5rem', fontWeight: 700, color: '#ef4444', fontFamily: 'var(--font-mono)' }}>$2,187</div>
               <div className="text-muted" style={{ fontSize: '0.85rem' }}>per year on gas</div>
             </div>
             <div className="panel" style={{ padding: '2rem', textAlign: 'center', borderColor: 'rgba(16,185,129,0.3)' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>With Lume-Auto</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>With LumeScan</div>
               <div style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--accent-emerald)', fontFamily: 'var(--font-mono)' }}>$1,859</div>
               <div className="text-muted" style={{ fontSize: '0.85rem' }}>per year on gas</div>
             </div>
@@ -162,7 +162,7 @@ export default function GetStarted() {
       <section id="download" style={{ padding: '5rem 0', textAlign: 'center' }}>
         <div className="container">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Download Lume-Auto</h2>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Download LumeScan</h2>
             <p className="text-muted" style={{ maxWidth: '500px', margin: '0 auto 2rem', fontSize: '1.05rem' }}>
               Free to start. Premium features for $9.99/month.<br/>Cancel anytime.
             </p>
@@ -179,7 +179,7 @@ export default function GetStarted() {
               ))}
             </div>
             <p className="text-dim" style={{ fontSize: '0.75rem', marginTop: '2rem' }}>
-              Lume-Auto · DarkWave Studios LLC / Lume42 Labs · US Provisional Patent 64/084,465
+              LumeScan · DarkWave Studios LLC / Lume42 Labs · US Provisional Patent 64/084,465
             </p>
           </motion.div>
         </div>

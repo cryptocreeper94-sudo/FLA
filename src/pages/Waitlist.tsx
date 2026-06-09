@@ -42,7 +42,7 @@ export default function Waitlist() {
                 <ShieldCheck size={48} color="var(--accent-emerald)" />
               </div>
               <h2 style={{ fontSize: '1.5rem', color: 'var(--accent-emerald)' }}>Secured.</h2>
-              <p className="text-muted">You are officially on the Lume-Auto waitlist. We will text you when the dongle drops.</p>
+              <p className="text-muted">You are officially on the LumeScan waitlist. We will text you when the dongle drops.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
@@ -81,7 +81,7 @@ export default function Waitlist() {
                   style={{ marginTop: '4px', transform: 'scale(1.2)' }}
                 />
                 <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: 1.5 }}>
-                  By checking this box, I agree to receive text messages from Lume-Auto regarding product drops, account updates, and telemetry alerts at the number provided. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to cancel or HELP for help. View our Privacy Policy and Terms of Service.
+                  By checking this box, I agree to receive text messages from LumeScan regarding product drops, account updates, and telemetry alerts at the number provided. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to cancel or HELP for help. View our Privacy Policy and Terms of Service.
                 </span>
               </label>
 

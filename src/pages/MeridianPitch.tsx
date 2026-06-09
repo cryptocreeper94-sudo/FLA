@@ -247,7 +247,7 @@ export default function MeridianPitch() {
             {[
               { step: '1', icon: <Activity size={20} />, title: 'Vehicle Sign-In', desc: 'The moment the vehicle enters the Meridian canopy, nodes identify its telemetry signature and establish a secure, authenticated session for energy transfer.', color: red },
               { step: '2', icon: <Zap size={20} />, title: 'Deterministic Routing', desc: 'Energy is routed from the nearest anchor node to the vehicle rectenna plate via targeted beamforming. Micro-bursts of energy are transferred and logged.', color: cyan },
-              { step: '3', icon: <ShieldCheck size={20} />, title: 'Cryptographic Micro-Transactions', desc: 'When the vehicle leaves, the session terminates. The Anchor Node signs an Ed25519 receipt capturing the exact charge state, permanently anchoring the billing event to the private CAL.', color: emerald },
+              { step: '3', icon: <ShieldCheck size={20} />, title: 'Cryptographic Micro-Transactions', desc: 'When the vehicle leaves, the session terminates. The Anchor Node signs an Ed25519 receipt capturing the exact charge state, permanently anchoring the billing event to the private COX-PL.', color: emerald },
             ].map((item, i) => (
               <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.15 }}
                 style={{ display: 'flex', gap: '1.5rem', padding: '2rem 0', position: 'relative' }}>
@@ -281,7 +281,7 @@ export default function MeridianPitch() {
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-muted)' }}>
                 <span>PATENT FILING</span>
-                <span style={{ color: 'var(--text-main)' }}>U.S. Provisional 64/056,378</span>
+                <span style={{ color: 'var(--text-main)' }}>U.S. Provisional 64/084,465</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-muted)' }}>
                 <span>ARCHIVE DOI</span>

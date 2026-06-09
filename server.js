@@ -44,10 +44,10 @@ app.post('/api/opt-in', async (req, res) => {
       status: 'pending',
     });
 
-    console.log(`[Lume-Auto] ✅ Waitlist opt-in secured: ${cleanPhone}`);
-    res.status(200).json({ success: true, message: 'Successfully joined the Lume-Auto waitlist.' });
+    console.log(`[LumeScan] ✅ Waitlist opt-in secured: ${cleanPhone}`);
+    res.status(200).json({ success: true, message: 'Successfully joined the LumeScan waitlist.' });
   } catch (err) {
-    console.error('[Lume-Auto] ❌ Opt-in error:', err);
+    console.error('[LumeScan] ❌ Opt-in error:', err);
     res.status(500).json({ error: 'Internal server error. Please try again.' });
   }
 });
@@ -81,7 +81,7 @@ app.post('/api/checkout', async (req, res) => {
 
     res.status(200).json({ url: session.url });
   } catch (err) {
-    console.error('[Lume-Auto] ❌ Stripe error:', err);
+    console.error('[LumeScan] ❌ Stripe error:', err);
     res.status(500).json({ error: 'Payment initialization failed.' });
   }
 });
@@ -102,8 +102,8 @@ app.post('/api/checkout-kit', async (req, res) => {
         price_data: {
           currency: 'usd',
           product_data: {
-            name: 'Lume-Auto Diagnostic Kit',
-            description: 'Professional OBD-II WiFi adapter + Lume-Auto software license. App download code emailed instantly.',
+            name: 'LumeScan Diagnostic Kit',
+            description: 'Professional OBD-II WiFi adapter + LumeScan software license. App download code emailed instantly.',
             images: [`${process.env.SITE_URL || 'https://lumeauto.tech'}/dongle_product.png`],
           },
           unit_amount: 4999, // $49.99
@@ -113,21 +113,21 @@ app.post('/api/checkout-kit', async (req, res) => {
       success_url: `${process.env.SITE_URL || 'https://lumeauto.tech'}/order?success=true`,
       cancel_url: `${process.env.SITE_URL || 'https://lumeauto.tech'}/order?cancelled=true`,
       metadata: {
-        product: 'lume-auto-kit',
+        product: 'lumescan-kit',
         includes_software_license: 'true',
       },
     });
 
     res.status(200).json({ url: session.url });
   } catch (err) {
-    console.error('[Lume-Auto] ❌ Kit checkout error:', err);
+    console.error('[LumeScan] ❌ Kit checkout error:', err);
     res.status(500).json({ error: 'Payment initialization failed.' });
   }
 });
 
 // ─── API: Health Check ──────────────────────────────────────────────────────
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'operational', organism: 'lume-auto', version: '1.0.0' });
+  res.json({ status: 'operational', organism: 'lumescan', version: '1.0.0' });
 });
 
 // ─── Serve Vite static build ────────────────────────────────────────────────
@@ -138,5 +138,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`[Lume-Auto] 🚀 Web service running on port ${PORT}`);
+  console.log(`[LumeScan] 🚀 Web service running on port ${PORT}`);
 });

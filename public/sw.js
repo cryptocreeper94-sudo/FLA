@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lume-auto-v1';
+const CACHE_NAME = 'lumescan-v1';
 const PRECACHE = ['/'];
 
 self.addEventListener('install', (event) => {

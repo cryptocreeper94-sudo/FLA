@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { Activity, Download, Smartphone, Globe } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Activity, Download, Smartphone, Globe, QrCode } from 'lucide-react';
+import QRCodeLib from 'qrcode';
 import InfoBubble from '../InfoBubble';
 const f = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
 
@@ -20,12 +21,23 @@ const features: Record<number, string[]> = {
 
 export default function AppShowcase() {
   const [active, setActive] = useState(0);
+  const qrRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    if (qrRef.current) {
+      QRCodeLib.toCanvas(qrRef.current, 'https://expo.dev/artifacts/eas/5LhddSw54u3T2bULi4cZH4.apk', {
+        width: 120,
+        margin: 2,
+        color: { dark: '#06b6d4', light: 'rgba(0,0,0,0)' }
+      });
+    }
+  }, []);
 
   return (
     <section style={{ padding: '5rem 0', borderTop: '1px solid var(--border-light)', borderBottom: '1px solid var(--border-light)', background: 'linear-gradient(180deg, rgba(56,189,248,0.03) 0%, var(--bg-dark) 100%)' }}>
       <div className="container" style={{ maxWidth: '1100px' }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <p style={{ color: 'var(--accent-cyan)', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>LUME-Auto Application</p>
+          <p style={{ color: 'var(--accent-cyan)', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>LUME-Scan Application</p>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>LumeScan in Action</h2>
           <p className="text-muted" style={{ maxWidth: '650px', margin: '0 auto', lineHeight: 1.7 }}>
             Four primary interfaces. Every screen is a window into the deterministic mesh — not a static dashboard, but a live view of a self-governing runtime.
@@ -41,7 +53,7 @@ export default function AppShowcase() {
             }}>
               <Activity size={16} /> Try It Live — Demo Mode Available
             </a>
-            <a href="https://expo.dev/accounts/cryptocreeper/projects/lume-auto/builds/27117f8a-bf2b-416b-8a92-3a4475295ac8" download style={{
+            <a href="https://expo.dev/artifacts/eas/5LhddSw54u3T2bULi4cZH4.apk" download style={{
               display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
               padding: '12px 28px', flex: '1 1 0',
               background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)',
@@ -52,12 +64,21 @@ export default function AppShowcase() {
               <Download size={16} /> Download Native App (.apk)
             </a>
           </div>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '2rem', marginBottom: '1rem' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <QrCode size={14} /> Scan to install directly to Android
+            </p>
+            <div style={{ padding: '8px', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', border: '1px solid rgba(6,182,212,0.2)' }}>
+              <canvas ref={qrRef} style={{ display: 'block', width: '120px', height: '120px' }} />
+            </div>
+          </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center', marginTop: '1rem' }}>
             <InfoBubble title="Web vs Native" icon={<Globe size={13} />}>
               <p style={{ fontWeight: 700, color: 'var(--accent-cyan)', marginBottom: '6px' }}>Which should I use?</p>
               <p><strong style={{ color: '#fff' }}>Web App</strong> — instant access from any browser. Supports Bluetooth adapters and Demo Mode. Best for quick demos, stakeholder walkthroughs, and evaluation.</p>
               <p style={{ marginTop: '8px' }}><strong style={{ color: '#fff' }}>Native App (APK)</strong> — full WiFi + Bluetooth support. Install directly on field devices, tablets, or fleet phones. Use this for actual on-lot scanning with WiFi adapters.</p>
-              <p style={{ marginTop: '8px', color: 'var(--text-dim)', fontSize: '0.7rem' }}>Both share the same 42-node governance engine. No data difference — only the transport layer changes.</p>
+              <p style={{ marginTop: '8px', color: 'var(--text-dim)', fontSize: '0.7rem' }}>Both share the same 42-node Lume Governance Substrate. No data difference — only the transport layer changes.</p>
             </InfoBubble>
             <InfoBubble title="Adapter Compatibility" icon={<Smartphone size={13} />} color="var(--accent-emerald)">
               <p style={{ fontWeight: 700, color: 'var(--accent-emerald)', marginBottom: '6px' }}>What hardware works?</p>

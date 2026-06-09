@@ -8,7 +8,7 @@ const KIT_PRICE = 49.99;
 const SAVINGS_PCT = Math.round((1 - KIT_PRICE / RETAIL_VALUE) * 100);
 
 const FEATURES = [
-  { icon: <Activity size={20} />, title: '42-Signal Governance Engine', desc: 'Reads 42 OBD-II signals at 100ms intervals. RPM, fuel flow, combustion timing, air-fuel ratio — everything a $200 scanner shows and more.', color: 'var(--accent-cyan)' },
+  { icon: <Activity size={20} />, title: '42-Signal Lume Governance Substrate', desc: 'Reads 42 OBD-II signals at 100ms intervals. RPM, fuel flow, combustion timing, air-fuel ratio — everything a $200 scanner shows and more.', color: 'var(--accent-cyan)' },
   { icon: <Zap size={20} />, title: 'Passive Audio Coaching', desc: 'Bluetooth audio tones through your car speakers. Chime = efficient. Buzz = wasting fuel. Your brain learns the pattern automatically.', color: 'var(--accent-emerald)' },
   { icon: <Wrench size={20} />, title: 'Skip the $150 Diagnostic', desc: 'Check engine light? Reads the code, translates to English, tells you what\'s wrong, and links the exact part on Amazon.', color: '#f59e0b' },
   { icon: <Shield size={20} />, title: 'Predictive Maintenance', desc: 'Detects component degradation 1–3% MPG before it triggers a check engine light. Fix $30 parts before they become $500 repairs.', color: '#38bdf8' },
@@ -19,10 +19,10 @@ const FEATURES = [
 const FAQS = [
   { q: 'What vehicles does it work on?', a: 'Every car, truck, and SUV sold in the US after 1996 with an OBD-II port. That\'s 1.4 billion vehicles worldwide.' },
   { q: 'How much will I actually save?', a: 'At $3.50/gallon and 15,000 miles/year, most drivers save $180–$320 annually. The kit pays for itself in under 3 weeks.' },
-  { q: 'What\'s in the box?', a: 'A professional-grade WiFi OBD-II diagnostic adapter + your unique license code emailed instantly for the Lume-Auto app (Android APK, PWA, or native iOS coming soon).' },
+  { q: 'What\'s in the box?', a: 'A professional-grade WiFi OBD-II diagnostic adapter + your unique license code emailed instantly for the LumeScan app (Android APK, PWA, or native iOS coming soon).' },
   { q: 'Do I need a mechanic to install it?', a: 'No. You plug the adapter into the OBD-II port under your dashboard (every car has one). Takes 10 seconds. No wiring, no tools, no modifications.' },
-  { q: 'Is there a subscription?', a: 'The core governance engine is included with your kit purchase. Premium features (fleet analytics, family dashboard, priority support) are available for $9.99/month. Cancel anytime.' },
-  { q: 'How is this different from a cheap Amazon scanner?', a: 'Cheap scanners just read codes. Lume-Auto runs a continuous 42-node deterministic organism that actively coaches you, predicts failures before they happen, and quantifies your fuel savings in real-time. It\'s the difference between a thermometer and a doctor.' },
+  { q: 'Is there a subscription?', a: 'The core Lume Governance Substrate is included with your kit purchase. Premium features (fleet analytics, family dashboard, priority support) are available for $9.99/month. Cancel anytime.' },
+  { q: 'How is this different from a cheap Amazon scanner?', a: 'Cheap scanners just read codes. LumeScan runs a continuous 42-node deterministic organism that actively coaches you, predicts failures before they happen, and quantifies your fuel savings in real-time. It\'s the difference between a thermometer and a doctor.' },
 ];
 
 export default function Order() {
@@ -89,7 +89,7 @@ export default function Order() {
                 background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-emerald))',
                 color: '#000', fontWeight: 800, border: 'none', borderRadius: '14px',
               }}>
-                {loading ? 'Redirecting to Checkout...' : <><ShoppingCart size={20} /> Order Lume-Auto Kit</>}
+                {loading ? 'Redirecting to Checkout...' : <><ShoppingCart size={20} /> Order LumeScan Kit</>}
               </button>
 
               <div style={{ display: 'flex', gap: '16px', marginTop: '1rem', flexWrap: 'wrap' }}>
@@ -108,10 +108,10 @@ export default function Order() {
                 background: 'linear-gradient(145deg, rgba(255,255,255,0.03), rgba(0,0,0,0.2))',
                 boxShadow: '0 20px 80px rgba(6,182,212,0.08)',
               }}>
-                <img src="/dongle_product.png" alt="Lume-Auto OBD-II Kit" style={{ width: '100%', display: 'block' }} />
+                <img src="/dongle_product.png" alt="LumeScan OBD-II Kit" style={{ width: '100%', display: 'block' }} />
               </div>
               <p className="text-dim" style={{ fontSize: '0.7rem', textAlign: 'center', marginTop: '0.75rem', letterSpacing: '0.05em' }}>
-                LUME-AUTO DIAGNOSTIC KIT · PROFESSIONAL-GRADE HARDWARE + SOFTWARE
+                LUMESCAN DIAGNOSTIC KIT · PROFESSIONAL-GRADE HARDWARE + SOFTWARE
               </p>
             </motion.div>
           </div>
@@ -138,7 +138,7 @@ export default function Order() {
 
             {/* Lume */}
             <div className="panel" style={{ padding: '2rem', borderColor: 'rgba(16,185,129,0.3)', background: 'rgba(16,185,129,0.03)' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--accent-emerald)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>Lume-Auto Kit</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--accent-emerald)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>LumeScan Kit</div>
               <div style={{ fontSize: '2.5rem', fontWeight: 800, fontFamily: 'var(--font-mono)', color: 'var(--accent-emerald)', marginBottom: '1rem' }}>${KIT_PRICE}</div>
               {['✅ Read diagnostic codes', '✅ Clear check engine light', '✅ 42 live signals at 100ms', '✅ Passive fuel coaching', '✅ Predictive maintenance', '✅ Driver efficiency scoring', '✅ Family & fleet dashboard', '✅ Deterministic organism intelligence'].map((item, i) => (
                 <div key={i} style={{ fontSize: '0.85rem', color: 'var(--text-main)', padding: '4px 0', fontWeight: 500 }}>{item}</div>
@@ -158,8 +158,8 @@ export default function Order() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
             {[
               { icon: <Package size={28} />, title: 'WiFi OBD-II Adapter', desc: 'Professional-grade hardware. Plugs into any vehicle sold after 1996. WiFi connectivity — works with iPhone and Android.', color: 'var(--accent-cyan)' },
-              { icon: <Smartphone size={28} />, title: 'Lume-Auto App', desc: 'Native Android APK + Progressive Web App. Download code emailed instantly. iOS App Store build coming soon.', color: 'var(--accent-emerald)' },
-              { icon: <Activity size={28} />, title: '42-Node Organism License', desc: 'Full deterministic governance engine. Real-time coaching, diagnostics, predictive maintenance. No subscription required to start.', color: '#38bdf8' },
+              { icon: <Smartphone size={28} />, title: 'LumeScan App', desc: 'Native Android APK + Progressive Web App. Download code emailed instantly. iOS App Store build coming soon.', color: 'var(--accent-emerald)' },
+              { icon: <Activity size={28} />, title: '42-Node Organism License', desc: 'Full deterministic Lume Governance Substrate. Real-time coaching, diagnostics, predictive maintenance. No subscription required to start.', color: '#38bdf8' },
             ].map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="panel" style={{ padding: '2rem', textAlign: 'center', minHeight: '220px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -177,7 +177,7 @@ export default function Order() {
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>Everything It Does</h2>
-            <p className="text-muted">A $200 scanner reads codes. Lume-Auto governs your vehicle.</p>
+            <p className="text-muted">A $200 scanner reads codes. LumeScan governs your vehicle.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
             {FEATURES.map((f, i) => (
@@ -203,12 +203,12 @@ export default function Order() {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
             <div className="panel" style={{ padding: '2rem', textAlign: 'center' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>Without Lume-Auto</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>Without LumeScan</div>
               <div style={{ fontSize: '2.5rem', fontWeight: 700, color: '#ef4444', fontFamily: 'var(--font-mono)' }}>$2,187</div>
               <div className="text-muted" style={{ fontSize: '0.85rem' }}>per year on gas</div>
             </div>
             <div className="panel" style={{ padding: '2rem', textAlign: 'center', borderColor: 'rgba(16,185,129,0.3)' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>With Lume-Auto</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>With LumeScan</div>
               <div style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--accent-emerald)', fontFamily: 'var(--font-mono)' }}>$1,859</div>
               <div className="text-muted" style={{ fontSize: '0.85rem' }}>per year on gas</div>
             </div>
@@ -260,7 +260,7 @@ export default function Order() {
               {loading ? 'Redirecting...' : <><ShoppingCart size={20} /> Order Now — ${KIT_PRICE}</>}
             </button>
             <p className="text-dim" style={{ fontSize: '0.75rem', marginTop: '1.5rem' }}>
-              Lume-Auto · DarkWave Studios LLC / Lume42 Labs · US Provisional Patent 64/084,465
+              LumeScan · DarkWave Studios LLC / Lume42 Labs · US Provisional Patent 64/084,465
             </p>
           </motion.div>
         </div>

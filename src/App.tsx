@@ -178,7 +178,7 @@ function Navigation() {
             {/* Executive Summary */}
             <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '1.25rem' }}>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: 1.7, marginBottom: '0.75rem' }}>
-                Lume-Auto reads 42 real-time signals from your vehicle's OBD-II port to passively improve fuel efficiency, predict maintenance failures, and eliminate diagnostic fees — using hardware you already own.
+                LumeScan reads 42 real-time signals from your vehicle's OBD-II port to passively improve fuel efficiency, predict maintenance failures, and eliminate diagnostic fees — using hardware you already own.
               </p>
               <p style={{ fontSize: '0.7rem', color: 'var(--text-dim)', letterSpacing: '0.05em' }}>
                 US Provisional Patent 64/084,465<br />
@@ -254,11 +254,11 @@ function App() {
                   <div className="enterprise-nav-desktop" style={{ display: 'flex', alignItems: 'center', gap: '2px', fontSize: '0.65rem', flexShrink: 0 }}>
                     {[
                       { path: '/', label: 'Home', icon: <Shield size={11}/> },
-                      { path: '/cop', label: 'COP', icon: <Layers size={11}/> },
-                      { path: '/cal', label: 'CAL', icon: <Database size={11}/> },
-                      { path: '/vet', label: 'VET', icon: <CheckCircle size={11}/> },
+                      { path: '/cop', label: 'COX-OP', icon: <Layers size={11}/> },
+                      { path: '/cal', label: 'COX-PL', icon: <Database size={11}/> },
+                      { path: '/vet', label: 'COX-VL', icon: <CheckCircle size={11}/> },
                       { path: '/core', label: 'CORE', icon: <Cpu size={11}/> },
-                      { path: '/cog', label: 'COG', icon: <Brain size={11}/> },
+                      { path: '/cog', label: 'COX-LGS', icon: <Brain size={11}/> },
                       { path: '/whitepaper', label: 'Whitepaper', icon: null },
                       { path: '/app', label: 'Scan Demo', icon: null },
                     ].map(link => (

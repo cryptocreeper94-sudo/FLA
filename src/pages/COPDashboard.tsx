@@ -72,7 +72,7 @@ export default function COPDashboard() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <div style={{ width: 44, height: 44, background: 'linear-gradient(135deg, #f59e0b, #d97706)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Layers size={22} color="#0a0c10" /></div>
           <div>
-            <h1 style={{ fontSize: '1.4rem', fontWeight: 800, margin: 0, letterSpacing: '-0.03em' }}>Core Operating Platform</h1>
+            <h1 style={{ fontSize: '1.4rem', fontWeight: 800, margin: 0, letterSpacing: '-0.03em' }}>COX Operational Platform</h1>
             <p style={{ fontSize: '0.68rem', color: 'var(--text-dim)', margin: 0, letterSpacing: '0.08em' }}>COX AUTOMOTIVE · ENTERPRISE COMMAND CENTER</p>
           </div>
         </div>

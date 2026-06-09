@@ -17,7 +17,7 @@ const brands = {
   },
   cal: {
     icon: <Database size={28} color="#0a0a0c" />,
-    title: 'Cox Automotive Ledger',
+    title: 'COX Private Ledger',
     subtitle: 'Cryptographic vehicle provenance explorer — authorized access only.',
     gradient: 'linear-gradient(135deg, #22d3ee, #38bdf8)',
     accent: '#38bdf8',

@@ -28,7 +28,7 @@ const components = [
     img: '/assets/images/meridian/breakdown/billing-engine.png',
     title: 'Cryptographic Billing Engine',
     desc: 'On-chain metering and receipt generation using Ed25519 signatures. Every kWh is sealed and publicly verifiable.',
-    detail: 'Every energy transfer micro-burst generates a cryptographic receipt anchored to the Cox Automotive Ledger (CAL) via Ed25519 signatures. The receipt contains: kWh delivered, duration, vehicle VIN, anchor node ID, and a SHA-256 hash of the metering data. Billing disputes are resolved by mathematical replay — feed the same inputs, get the same receipt. No human judgment required.',
+    detail: 'Every energy transfer micro-burst generates a cryptographic receipt anchored to the COX Private Ledger (COX-PL) via Ed25519 signatures. The receipt contains: kWh delivered, duration, vehicle VIN, anchor node ID, and a SHA-256 hash of the metering data. Billing disputes are resolved by mathematical replay — feed the same inputs, get the same receipt. No human judgment required.',
     color: 'var(--accent-emerald)',
   },
   {

@@ -60,7 +60,7 @@ export default function FutureHorizons() {
               <p style={{ fontSize: '0.88rem', lineHeight: 1.7, color: 'var(--text-muted)', margin: 0, marginBottom: '1rem' }}>
                 Beyond the operational platform described above, DarkWave Studios is developing a deterministic 
                 wireless energy routing architecture designed for lot-scale EV charging and powered infrastructure. 
-                The research is published, the patent is filed (U.S. Provisional 64/056,378), and the engineering 
+                The research is published, the patent is filed (U.S. Provisional 64/084,465), and the engineering 
                 specifications are documented. This is a future capability layer — not part of the current deployment — 
                 but the governance integration points are already built into the platform architecture.
               </p>

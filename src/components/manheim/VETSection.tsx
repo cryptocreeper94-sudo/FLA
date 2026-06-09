@@ -24,41 +24,41 @@ export default function VETSection() {
               <Shield size={14} style={{ marginRight: 6 }} /> External Verification Ledger
             </div>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.25rem', lineHeight: 1.1 }}>
-              VET <span style={{ fontSize: '0.5em', fontWeight: 400, color: 'var(--text-dim)', verticalAlign: 'middle' }}>Verified Enterprise Trust</span>
+              COX-VL <span style={{ fontSize: '0.5em', fontWeight: 400, color: 'var(--text-dim)', verticalAlign: 'middle' }}>COX Verification Ledger</span>
             </h2>
             <p className="text-muted" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.7 }}>
-              The outward-facing verification ledger that turns internal CAL records into commercially provable certificates — giving buyers, dealers, and financing partners cryptographic confidence in every vehicle's history.
+              The outward-facing verification ledger that turns internal COX-PL records into commercially provable certificates — giving buyers, dealers, and financing partners cryptographic confidence in every vehicle's history.
             </p>
           </motion.div>
         </div>
 
-        {/* CAL vs VET distinction */}
+        {/* COX-PL vs COX-VL distinction */}
         <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="panel" style={{ padding: '2.5rem', marginBottom: '3rem', borderColor: accentBorder, background: `linear-gradient(180deg, ${accentDim} 0%, transparent 100%)` }}>
           <h3 style={{ fontSize: '1.2rem', marginBottom: '1.25rem', color: accent, display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <Layers size={20} /> How It Relates to CAL
+            <Layers size={20} /> How It Relates to COX-PL
           </h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             <div>
-              <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: '#38bdf8' }}>CAL — Internal</h4>
+              <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: '#38bdf8' }}>COX-PL — Internal</h4>
               <p className="text-muted" style={{ fontSize: '0.9rem', lineHeight: 1.6 }}>
                 The private operational ledger that Cox controls. Records every event, scan, and workflow internally. Never exposed to the outside world. The enterprise source of truth.
               </p>
             </div>
             <div>
-              <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: accent }}>VET — External</h4>
+              <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: accent }}>COX-VL — External</h4>
               <p className="text-muted" style={{ fontSize: '0.9rem', lineHeight: 1.6 }}>
-                The commercial verification layer that issues publicly verifiable certificates derived from CAL records. Dealers, buyers, and partners can confirm a vehicle's condition and custody history — without accessing the internal ledger.
+                The commercial verification layer that issues publicly verifiable certificates derived from COX-PL records. Dealers, buyers, and partners can confirm a vehicle's condition and custody history — without accessing the internal ledger.
               </p>
             </div>
           </div>
         </motion.div>
 
-        {/* What VET provides */}
+        {/* What COX-VL provides */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem', marginBottom: '3rem' }}>
           {[
             { icon: <FileCheck size={22} />, title: 'Verifiable Condition Certificates', desc: 'Every LumeScan diagnostic produces a cryptographically signed certificate. Dealers and buyers can verify authenticity with a hash lookup — no login, no account, no API integration required.' },
-            { icon: <Shield size={22} />, title: 'Provenance Without Exposure', desc: 'VET proves a vehicle was scanned, by whom, and when — without revealing internal operational data, facility workflows, or proprietary diagnostics.' },
-            { icon: <Globe size={22} />, title: 'Cross-Platform Portability', desc: 'VET certificates are portable across Autotrader listings, dealer management systems, and financing platforms. The verification travels with the vehicle, not the system.' },
+            { icon: <Shield size={22} />, title: 'Provenance Without Exposure', desc: 'COX-VL proves a vehicle was scanned, by whom, and when — without revealing internal operational data, facility workflows, or proprietary diagnostics.' },
+            { icon: <Globe size={22} />, title: 'Cross-Platform Portability', desc: 'COX-VL certificates are portable across Autotrader listings, dealer management systems, and financing platforms. The verification travels with the vehicle, not the system.' },
           ].map((item, i) => (
             <motion.div key={i} {...fadeIn} transition={{ delay: 0.15 + i * 0.08 }}
               style={{ padding: '1.75rem', background: 'rgba(255,255,255,0.02)', border: `1px solid ${accentDim}`, borderRadius: '16px', transition: 'border-color 0.3s' }}
@@ -78,8 +78,8 @@ export default function VETSection() {
             {[
               { label: 'OBD-II Scan', sub: 'Raw sensor data captured', color: 'var(--accent-cyan)' },
               { label: 'LumeScan Processing', sub: '42-node deterministic analysis', color: 'var(--accent-emerald)' },
-              { label: 'CAL Anchor', sub: 'Tamper-proof record created', color: '#38bdf8' },
-              { label: 'VET Certificate', sub: 'Cryptographic verification issued', color: accent },
+              { label: 'COX-PL Anchor', sub: 'Tamper-proof record created', color: '#38bdf8' },
+              { label: 'COX-VL Certificate', sub: 'Cryptographic verification issued', color: accent },
               { label: 'Public Verification', sub: 'Independently verifiable by any party', color: '#fb923c' },
             ].map((step, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'stretch', gap: '1rem' }}>
@@ -106,7 +106,7 @@ export default function VETSection() {
           </p>
         </motion.div>
 
-        {/* VET CTA + Verify Button */}
+        {/* COX-VL CTA + Verify Button */}
         <motion.div {...fadeIn} transition={{ delay: 0.35 }} style={{ textAlign: 'center', margin: '3rem 0' }}>
           <a href="https://vet.tlid.io" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '14px 32px', background: accent, color: '#0a0c10', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s', boxShadow: `0 4px 20px ${accentDim}` }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(0)'; }}>
             <Shield size={18} /> Verify a Vehicle
