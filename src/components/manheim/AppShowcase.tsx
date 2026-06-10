@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { Activity, Download, Smartphone, Globe, QrCode } from 'lucide-react';
-import QRCodeLib from 'qrcode';
 import InfoBubble from '../InfoBubble';
 const f = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
+
+const COX_BUILD_URL = 'https://expo.dev/accounts/cryptocreeper/projects/lume-auto/builds/cb1d6c67-f612-45e3-a6fe-ab4afe8bbf9d';
+const QR_URL = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(COX_BUILD_URL)}&bgcolor=0a0a0c&color=06b6d4`;
 
 const screens = [
   { src: '/assets/images/app_dashboard.png', title: 'Live Dashboard', shortTitle: 'Dash', desc: 'Real-time MPG recovery, RPM, speed, driver score, and LumeScan throughput at a glance. The control surface for the entire deterministic runtime.' },
@@ -21,17 +23,6 @@ const features: Record<number, string[]> = {
 
 export default function AppShowcase() {
   const [active, setActive] = useState(0);
-  const qrRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    if (qrRef.current) {
-      QRCodeLib.toCanvas(qrRef.current, 'https://expo.dev/accounts/cryptocreeper/projects/lume-auto/builds/cb1d6c67-f612-45e3-a6fe-ab4afe8bbf9d', {
-        width: 120,
-        margin: 2,
-        color: { dark: '#06b6d4', light: 'rgba(0,0,0,0)' }
-      });
-    }
-  }, []);
 
   return (
     <section style={{ padding: '5rem 0', borderTop: '1px solid var(--border-light)', borderBottom: '1px solid var(--border-light)', background: 'linear-gradient(180deg, rgba(56,189,248,0.03) 0%, var(--bg-dark) 100%)' }}>
@@ -53,7 +44,7 @@ export default function AppShowcase() {
             }}>
               <Activity size={16} /> Try It Live — Demo Mode Available
             </a>
-            <a href="https://expo.dev/accounts/cryptocreeper/projects/lume-auto/builds/cb1d6c67-f612-45e3-a6fe-ab4afe8bbf9d" download style={{
+            <a href={COX_BUILD_URL} download style={{
               display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
               padding: '12px 28px', flex: '1 1 0',
               background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)',
@@ -70,7 +61,7 @@ export default function AppShowcase() {
               <QrCode size={14} /> Scan to install directly to Android
             </p>
             <div style={{ padding: '8px', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', border: '1px solid rgba(6,182,212,0.2)' }}>
-              <canvas ref={qrRef} style={{ display: 'block', width: '120px', height: '120px' }} />
+              <img src={QR_URL} alt="QR code to download LumeScan APK" width={120} height={120} style={{ display: 'block', borderRadius: '8px' }} />
             </div>
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center', marginTop: '1rem' }}>
