@@ -25,7 +25,7 @@ export default function AppShowcase() {
 
   useEffect(() => {
     if (qrRef.current) {
-      QRCodeLib.toCanvas(qrRef.current, 'https://expo.dev/artifacts/eas/5LhddSw54u3T2bULi4cZH4.apk', {
+      QRCodeLib.toCanvas(qrRef.current, 'https://expo.dev/accounts/cryptocreeper/projects/lume-auto/builds/cb1d6c67-f612-45e3-a6fe-ab4afe8bbf9d', {
         width: 120,
         margin: 2,
         color: { dark: '#06b6d4', light: 'rgba(0,0,0,0)' }
@@ -53,7 +53,7 @@ export default function AppShowcase() {
             }}>
               <Activity size={16} /> Try It Live — Demo Mode Available
             </a>
-            <a href="https://expo.dev/artifacts/eas/5LhddSw54u3T2bULi4cZH4.apk" download style={{
+            <a href="https://expo.dev/accounts/cryptocreeper/projects/lume-auto/builds/cb1d6c67-f612-45e3-a6fe-ab4afe8bbf9d" download style={{
               display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
               padding: '12px 28px', flex: '1 1 0',
               background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)',
