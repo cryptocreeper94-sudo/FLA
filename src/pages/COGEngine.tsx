@@ -54,7 +54,7 @@ export default function COGEngine() {
   if (loading) return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '60vh', flexDirection: 'column', gap: '1rem' }}>
       <motion.div animate={{ rotate: 360 }} transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}><Brain size={32} style={{ color: '#ec4899' }} /></motion.div>
-      <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem' }}>Initializing Cognitive Lume Governance Substrate...</p>
+      <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem' }}>Initializing Cognitive Legacy Governance Substrate...</p>
     </div>
   );
 
@@ -65,7 +65,7 @@ export default function COGEngine() {
         <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 64, height: 64, borderRadius: '16px', background: 'linear-gradient(135deg, #ec4899, #be185d)', marginBottom: '1rem' }}>
           <Brain size={32} color="#fff" />
         </div>
-        <h1 style={{ fontSize: '2rem', fontWeight: 800, margin: '0 0 0.5rem', letterSpacing: '-0.03em' }}>Cognitive Lume Governance Substrate</h1>
+        <h1 style={{ fontSize: '2rem', fontWeight: 800, margin: '0 0 0.5rem', letterSpacing: '-0.03em' }}>Cognitive Legacy Governance Substrate</h1>
         <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem', maxWidth: '550px', margin: '0 auto', lineHeight: 1.6 }}>
           The 42-node deterministic engine powering AI governance, diagnostics, and autonomous workflow management across Cox operations.
         </p>

@@ -69,7 +69,7 @@ export default function AppShowcase() {
               <p style={{ fontWeight: 700, color: 'var(--accent-cyan)', marginBottom: '6px' }}>Which should I use?</p>
               <p><strong style={{ color: '#fff' }}>Web App</strong> — instant access from any browser. Supports Bluetooth adapters and Demo Mode. Best for quick demos, stakeholder walkthroughs, and evaluation.</p>
               <p style={{ marginTop: '8px' }}><strong style={{ color: '#fff' }}>Native App (APK)</strong> — full WiFi + Bluetooth support. Install directly on field devices, tablets, or fleet phones. Use this for actual on-lot scanning with WiFi adapters.</p>
-              <p style={{ marginTop: '8px', color: 'var(--text-dim)', fontSize: '0.7rem' }}>Both share the same 42-node Lume Governance Substrate. No data difference — only the transport layer changes.</p>
+              <p style={{ marginTop: '8px', color: 'var(--text-dim)', fontSize: '0.7rem' }}>Both share the same 42-node Legacy Governance Substrate. No data difference — only the transport layer changes.</p>
             </InfoBubble>
             <InfoBubble title="Adapter Compatibility" icon={<Smartphone size={13} />} color="var(--accent-emerald)">
               <p style={{ fontWeight: 700, color: 'var(--accent-emerald)', marginBottom: '6px' }}>What hardware works?</p>

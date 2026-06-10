@@ -90,7 +90,7 @@ export default function Whitepaper() {
                 'COX Verification Ledger (COX-VL)',
                 'Cox Operating System (Cox-OS)',
                 'CORE — Universal Root Fabric',
-                'Cognitive Lume Governance Substrate (COX-LGS)',
+                'Cognitive Legacy Governance Substrate (COX-LGS)',
                 'LUME-V — Deterministic Governance Substrate',
                 'LUME-Scan — Diagnostic Intelligence',
                 'Division Separation & Enterprise Scalability',
@@ -119,7 +119,7 @@ export default function Whitepaper() {
                 <li><strong>COX-VL</strong> — COX Verification Ledger. Public-facing verification certificates derived from internal ledger records.</li>
                 <li><strong>Cox-OS</strong> — Cox Operating System. Enterprise command center for cross-division visibility.</li>
                 <li><strong>CORE</strong> — Universal Root Fabric. The hub that all division ledgers anchor to.</li>
-                <li><strong>COX-LGS</strong> — Cognitive Lume Governance Substrate. 42-node deterministic processing mesh.</li>
+                <li><strong>COX-LGS</strong> — Cognitive Legacy Governance Substrate. 42-node deterministic processing mesh.</li>
                 <li><strong>LUME-V</strong> — Deterministic governance substrate that wraps legacy systems without modification.</li>
               </ul>
               <p>Each component operates independently and delivers measurable value on its own. Together, they form a unified trust infrastructure that no single vendor has previously offered at enterprise scale.</p>
@@ -205,7 +205,7 @@ export default function Whitepaper() {
 
             {/* 7 */}
             <motion.div {...f} className="wp-section">
-              <h2>7. Cognitive Lume Governance Substrate (COX-LGS)</h2>
+              <h2>7. Cognitive Legacy Governance Substrate (COX-LGS)</h2>
               <p>COX-LGS is the 42-node deterministic processing mesh that powers diagnostics, governance enforcement, and autonomous workflow management. It operates in four layers:</p>
               <ul>
                 <li><strong>Perception (12 nodes):</strong> Raw signal ingestion — OBD-II telemetry, GPS, operator inputs, sensor feeds</li>
@@ -274,10 +274,10 @@ export default function Whitepaper() {
                   <tbody>
                     {[
                       ['Manheim', 'COX-PL', 'Custody, Condition, Arbitration, Performance, Key Events'],
-                      ['NextGear Capital', 'NGL', 'Lien Origination, Payoff Records, Audit Events'],
-                      ['Autotrader', 'ATL', 'Listing Verification, Price Anchoring'],
-                      ['Kelley Blue Book', 'KBL', 'Valuation Anchoring, Market Data'],
-                      ['Dealer.com', 'DCL', 'Dealer Transactions, Inventory Sync'],
+                      ['NextGear Capital', 'NGC-PL', 'Lien Origination, Payoff Records, Audit Events'],
+                      ['Autotrader', 'ATR-PL', 'Listing Verification, Price Anchoring'],
+                      ['Kelley Blue Book', 'KBB-PL', 'Valuation Anchoring, Market Data'],
+                      ['Dealer.com', 'DLR-PL', 'Dealer Transactions, Inventory Sync'],
                     ].map(([div, ledger, certs], i) => (
                       <tr key={i} style={{ borderBottom: '1px solid var(--border-light)' }}>
                         <td style={{ padding: '8px 12px', fontWeight: 600 }}>{div}</td>

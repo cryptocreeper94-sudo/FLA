@@ -195,7 +195,7 @@ export default function Enterprise() {
           </div>
 
           <p className="text-dim" style={{ textAlign: 'center', marginTop: '1.5rem', fontSize: '0.8rem' }}>
-            When you own the firmware, the runtime, the Lume Governance Substrate, and the operations platform — you own the full stack from silicon to organism.
+            When you own the firmware, the runtime, the Legacy Governance Substrate, and the operations platform — you own the full stack from silicon to organism.
           </p>
         </div>
       </section>

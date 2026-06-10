@@ -8,7 +8,7 @@ const KIT_PRICE = 49.99;
 const SAVINGS_PCT = Math.round((1 - KIT_PRICE / RETAIL_VALUE) * 100);
 
 const FEATURES = [
-  { icon: <Activity size={20} />, title: '42-Signal Lume Governance Substrate', desc: 'Reads 42 OBD-II signals at 100ms intervals. RPM, fuel flow, combustion timing, air-fuel ratio — everything a $200 scanner shows and more.', color: 'var(--accent-cyan)' },
+  { icon: <Activity size={20} />, title: '42-Signal Legacy Governance Substrate', desc: 'Reads 42 OBD-II signals at 100ms intervals. RPM, fuel flow, combustion timing, air-fuel ratio — everything a $200 scanner shows and more.', color: 'var(--accent-cyan)' },
   { icon: <Zap size={20} />, title: 'Passive Audio Coaching', desc: 'Bluetooth audio tones through your car speakers. Chime = efficient. Buzz = wasting fuel. Your brain learns the pattern automatically.', color: 'var(--accent-emerald)' },
   { icon: <Wrench size={20} />, title: 'Skip the $150 Diagnostic', desc: 'Check engine light? Reads the code, translates to English, tells you what\'s wrong, and links the exact part on Amazon.', color: '#f59e0b' },
   { icon: <Shield size={20} />, title: 'Predictive Maintenance', desc: 'Detects component degradation 1–3% MPG before it triggers a check engine light. Fix $30 parts before they become $500 repairs.', color: '#38bdf8' },
@@ -21,7 +21,7 @@ const FAQS = [
   { q: 'How much will I actually save?', a: 'At $3.50/gallon and 15,000 miles/year, most drivers save $180–$320 annually. The kit pays for itself in under 3 weeks.' },
   { q: 'What\'s in the box?', a: 'A professional-grade WiFi OBD-II diagnostic adapter + your unique license code emailed instantly for the LumeScan app (Android APK, PWA, or native iOS coming soon).' },
   { q: 'Do I need a mechanic to install it?', a: 'No. You plug the adapter into the OBD-II port under your dashboard (every car has one). Takes 10 seconds. No wiring, no tools, no modifications.' },
-  { q: 'Is there a subscription?', a: 'The core Lume Governance Substrate is included with your kit purchase. Premium features (fleet analytics, family dashboard, priority support) are available for $9.99/month. Cancel anytime.' },
+  { q: 'Is there a subscription?', a: 'The core Legacy Governance Substrate is included with your kit purchase. Premium features (fleet analytics, family dashboard, priority support) are available for $9.99/month. Cancel anytime.' },
   { q: 'How is this different from a cheap Amazon scanner?', a: 'Cheap scanners just read codes. LumeScan runs a continuous 42-node deterministic organism that actively coaches you, predicts failures before they happen, and quantifies your fuel savings in real-time. It\'s the difference between a thermometer and a doctor.' },
 ];
 
@@ -159,7 +159,7 @@ export default function Order() {
             {[
               { icon: <Package size={28} />, title: 'WiFi OBD-II Adapter', desc: 'Professional-grade hardware. Plugs into any vehicle sold after 1996. WiFi connectivity — works with iPhone and Android.', color: 'var(--accent-cyan)' },
               { icon: <Smartphone size={28} />, title: 'LumeScan App', desc: 'Native Android APK + Progressive Web App. Download code emailed instantly. iOS App Store build coming soon.', color: 'var(--accent-emerald)' },
-              { icon: <Activity size={28} />, title: '42-Node Organism License', desc: 'Full deterministic Lume Governance Substrate. Real-time coaching, diagnostics, predictive maintenance. No subscription required to start.', color: '#38bdf8' },
+              { icon: <Activity size={28} />, title: '42-Node Organism License', desc: 'Full deterministic Legacy Governance Substrate. Real-time coaching, diagnostics, predictive maintenance. No subscription required to start.', color: '#38bdf8' },
             ].map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="panel" style={{ padding: '2rem', textAlign: 'center', minHeight: '220px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>

@@ -20,7 +20,7 @@ export default function LumeVSection() {
               <Network size={14} style={{ marginRight: 6 }} /> The Modernization Engine
             </div>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.25rem', lineHeight: 1.1 }}>
-              COX-LGS: <span className="text-gradient" style={{ backgroundImage: 'linear-gradient(to right, #38bdf8, #10b981)' }}>COX Lume Governance Substrate</span>
+              COX-LGS: <span className="text-gradient" style={{ backgroundImage: 'linear-gradient(to right, #38bdf8, #10b981)' }}>COX Legacy Governance Substrate</span>
             </h2>
             <p className="text-muted" style={{ maxWidth: '780px', margin: '0 auto', fontSize: '1.15rem', lineHeight: 1.7 }}>
               Powered by the Lume-V Engine, the COX-LGS substrate underlies Manheim's entire legacy stack in deterministic governance—unifying logic and orchestrating workflows without requiring a multi-million dollar rip-and-replace migration.
@@ -47,7 +47,7 @@ export default function LumeVSection() {
               </div>
               
               <div style={{ flex: 1, minWidth: '280px', maxWidth: '100%', background: '#0d1117', borderRadius: '12px', padding: '1.25rem', border: '1px solid rgba(255,255,255,0.05)', fontSize: '0.85rem', fontFamily: 'monospace', overflowX: 'auto' }}>
-                <div style={{ color: '#8b949e', marginBottom: '10px' }}>// Initialize COX Lume Governance Substrate Substrate</div>
+                <div style={{ color: '#8b949e', marginBottom: '10px' }}>// Initialize COX Legacy Governance Substrate</div>
                 <div style={{ color: '#c9d1d9' }}><span style={{ color: '#ff7b72' }}>import</span> {'{'} LumeVEnterprise {'}'} <span style={{ color: '#ff7b72' }}>from</span> <span style={{ color: '#a5d6ff' }}>'@darkwave/lume-v-sdk'</span>;</div>
                 <br/>
                 <div style={{ color: '#8b949e' }}>// Connect to the Lume-V Verification Network</div>
