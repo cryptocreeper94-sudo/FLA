@@ -4,7 +4,7 @@ import { Activity, Download, Smartphone, Globe, QrCode } from 'lucide-react';
 import InfoBubble from '../InfoBubble';
 const f = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
 
-const COX_BUILD_URL = 'https://expo.dev/artifacts/eas/KI-6DS7_4gsTqo9RfdBn28bsTkaznl0e4il9i8ikaEI.apk';
+const COX_BUILD_URL = 'https://lumescan.tech/releases/LumeScan_v1.0.0.apk';
 const QR_URL = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(COX_BUILD_URL)}&bgcolor=0a0a0c&color=06b6d4`;
 
 const screens = [
