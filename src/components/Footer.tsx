@@ -25,10 +25,10 @@ export default function Footer() {
             <div style={{ padding: '6px', background: 'rgba(6, 182, 212, 0.1)', borderRadius: '8px' }}>
               <Activity size={20} color="var(--accent-cyan)" />
             </div>
-            Cox Enterprise Platform
+            Fractal Ledger Architecture
           </Link>
           <p className="text-muted" style={{ fontSize: '0.85rem', maxWidth: '250px', lineHeight: 1.6 }}>
-            Deterministic governance, operational intelligence, and enterprise trust infrastructure for Cox Automotive.
+            Deterministic governance, operational intelligence, and enterprise trust infrastructure for Fractal Ledger Architecture.
           </p>
           <p className="text-dim" style={{ fontSize: '0.75rem', lineHeight: 1.5 }}>
             6 U.S. Provisional Patents Pending

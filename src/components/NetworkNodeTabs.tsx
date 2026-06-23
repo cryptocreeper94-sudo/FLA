@@ -1,12 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Shield, Cpu } from 'lucide-react';
 
-export default function ManheimTabs() {
+export default function NetworkNodeTabs() {
   const { pathname } = useLocation();
-  const isSubdomain = window.location.hostname.includes('manheim');
+  const isSubdomain = window.location.hostname.includes('networknode');
   const tabs = [
-    { path: isSubdomain ? '/' : '/manheim', label: 'Platform', fullLabel: 'Platform Overview', icon: <Shield size={14} />, color: 'var(--accent-cyan)' },
-    { path: isSubdomain ? '/engineering' : '/manheim-engineering', label: 'Engineering', fullLabel: 'Engineering Brief', icon: <Cpu size={14} />, color: 'var(--accent-emerald)' },
+    { path: isSubdomain ? '/' : '/networknode', label: 'Platform', fullLabel: 'Platform Overview', icon: <Shield size={14} />, color: 'var(--accent-cyan)' },
+    { path: isSubdomain ? '/engineering' : '/networknode-engineering', label: 'Engineering', fullLabel: 'Engineering Brief', icon: <Cpu size={14} />, color: 'var(--accent-emerald)' },
   ];
 
   return (

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Cpu, FileText, Layers, Activity, Download, Monitor } from 'lucide-react';
-import ManheimTabs from '../components/ManheimTabs';
+import NetworkNodeTabs from '../components/NetworkNodeTabs';
 import StackComparison from '../components/engineering/StackComparison';
 import TechDeepDive from '../components/engineering/TechDeepDive';
 import LumeVAPIOnboarding from '../components/engineering/LumeVAPIOnboarding';
@@ -8,7 +8,7 @@ import LumeVAPIOnboarding from '../components/engineering/LumeVAPIOnboarding';
 export default function EngineeringBrief() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
-      <ManheimTabs />
+      <NetworkNodeTabs />
 
       {/* Hero */}
       <section style={{ padding: '5rem 0 3rem', position: 'relative', overflow: 'hidden', background: 'linear-gradient(165deg, rgba(56,189,248,0.08) 0%, var(--bg-dark) 50%)' }}>
@@ -51,17 +51,17 @@ export default function EngineeringBrief() {
             <p style={{ color: '#f59e0b', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Live Platform Architecture</p>
             <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>Operational Sections — All Live</h2>
             <p className="text-muted" style={{ maxWidth: '650px', margin: '0 auto' }}>
-              Every section below is deployed and operational on cox.tlid.io. Each one is powered by the COX Private Ledger backend and anchored to the CORE Root Fabric.
+              Every section below is deployed and operational on fla.tlid.io. Each one is powered by the FLA Private Ledger backend and anchored to the CORE Root Fabric.
             </p>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1rem' }}>
             {[
-              { title: 'Cox-OS — Cox Operating System', desc: 'Enterprise command center with real-time KPIs, facility status, vehicle state grid, and live activity feed. Auto-refreshes every 30 seconds from the COX-PL backend. 8 operational metrics tracked in real-time.', color: '#f59e0b', link: '/cop' },
-              { title: 'COX-PL — COX Private Ledger', desc: 'Full on-chain block explorer. Browse blocks, certificates, and vehicles. Search by VIN, certificate ID, agent, or hash. Real-time chain integrity verification with validator node status.', color: '#38bdf8', link: '/cal' },
-              { title: 'COX-VL — COX Verification Ledger', desc: 'Public verification portal. Enter any certificate ID to verify cryptographic integrity, or enter a VIN to view the complete vehicle digital passport with custody chain, condition scans, and health scores.', color: '#10b981', link: '/vet' },
-              { title: 'TLL — Trust Layer Ledger', desc: 'Fractal ledger topology visualization. Shows all five Cox divisions (Manheim, Autotrader, KBB, Dealer.com, NextGear) and how each operates its own sovereign private ledger (powered by the CORE engine) while anchoring to the public TLL via hash anchoring.', color: '#8b5cf6', link: '/core' },
-              { title: 'COX-LGS — Legacy Governance Substrate', desc: 'Real-time governance health monitoring. Certificate compliance rates, policy violation tracking, governance score computation, and automated policy enforcement across all divisions.', color: '#06b6d4', link: '/cog' },
+              { title: 'FLA-OS — FLA Operating System', desc: 'Enterprise command center with real-time KPIs, facility status, vehicle state grid, and live activity feed. Auto-refreshes every 30 seconds from the FLA-PL backend. 8 operational metrics tracked in real-time.', color: '#f59e0b', link: '/cop' },
+              { title: 'FLA-PL — FLA Private Ledger', desc: 'Full on-chain block explorer. Browse blocks, certificates, and vehicles. Search by VIN, certificate ID, agent, or hash. Real-time chain integrity verification with validator node status.', color: '#38bdf8', link: '/cal' },
+              { title: 'FLA-VL — FLA Verification Ledger', desc: 'Public verification portal. Enter any certificate ID to verify cryptographic integrity, or enter a VIN to view the complete vehicle digital passport with custody chain, condition scans, and health scores.', color: '#10b981', link: '/vet' },
+              { title: 'TLL — Trust Layer Ledger', desc: 'Fractal ledger topology visualization. Shows all five FLA divisions (NetworkNode, Autotrader, KBB, Dealer.com, NextGear) and how each operates its own sovereign private ledger (powered by the CORE engine) while anchoring to the public TLL via hash anchoring.', color: '#8b5cf6', link: '/core' },
+              { title: 'FLA-LGS — Legacy Governance Substrate', desc: 'Real-time governance health monitoring. Certificate compliance rates, policy violation tracking, governance score computation, and automated policy enforcement across all divisions.', color: '#06b6d4', link: '/cog' },
               { title: 'Lot Ops Pro — Workforce Platform', desc: 'Full operational workforce management via lotopspro.com. Command Center, Operations Manager, Driver Dashboard, Scanner, Live Map, Analytics, Crew Manager, Lane Config, Smart Lot Planner, and Safety Dashboard.', color: '#ec4899', link: 'https://lotopspro.com' },
             ].map((section, i) => (
               <motion.a key={i} href={section.link} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
@@ -78,13 +78,13 @@ export default function EngineeringBrief() {
             ))}
           </div>
 
-          {/* Cox-OS Desktop */}
+          {/* FLA-OS Desktop */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ marginTop: '1.5rem', padding: '1.5rem', background: 'rgba(56,189,248,0.03)', border: '1px solid rgba(56,189,248,0.15)', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
             <Monitor size={28} style={{ color: '#38bdf8' }} />
             <div style={{ flex: 1, minWidth: '200px' }}>
-              <h4 style={{ fontSize: '0.95rem', fontWeight: 800, margin: '0 0 0.25rem', color: '#38bdf8' }}>Cox-OS Desktop — Native Electron Client</h4>
+              <h4 style={{ fontSize: '0.95rem', fontWeight: 800, margin: '0 0 0.25rem', color: '#38bdf8' }}>FLA-OS Desktop — Native Electron Client</h4>
               <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: 1.5, margin: 0 }}>
-                Windows desktop application wrapping all platform sections + Lot Ops Pro as a native app. Keyboard shortcuts (Ctrl+1–8 for COX-DEP sections, Ctrl+Shift+1–3 for Lot Ops). Branded "Cox Operating System" throughout. Downloadable from the Download page.
+                Windows desktop application wrapping all platform sections + Lot Ops Pro as a native app. Keyboard shortcuts (Ctrl+1–8 for FLA-DEP sections, Ctrl+Shift+1–3 for Lot Ops). Branded "FLA Operating System" throughout. Downloadable from the Download page.
               </p>
             </div>
             <a href="/download" style={{ padding: '10px 20px', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.2)', borderRadius: '20px', color: '#38bdf8', fontSize: '0.75rem', fontWeight: 700, textDecoration: 'none', whiteSpace: 'nowrap' }}>

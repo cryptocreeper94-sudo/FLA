@@ -4,8 +4,8 @@ import { Activity, Download, Smartphone, Globe, QrCode } from 'lucide-react';
 import InfoBubble from '../InfoBubble';
 const f = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
 
-const COX_BUILD_URL = 'https://lumescan.tech/releases/LumeScan_v1.0.0.apk';
-const QR_URL = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(COX_BUILD_URL)}&bgcolor=0a0a0c&color=06b6d4`;
+const FLA_BUILD_URL = 'https://lumescan.tech/releases/LumeScan_v1.0.0.apk';
+const QR_URL = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(FLA_BUILD_URL)}&bgcolor=0a0a0c&color=06b6d4`;
 
 const screens = [
   { src: '/assets/images/app_dashboard.png', title: 'Live Dashboard', shortTitle: 'Dash', desc: 'Real-time MPG recovery, RPM, speed, driver score, and LumeScan throughput at a glance. The control surface for the entire deterministic runtime.' },
@@ -44,7 +44,7 @@ export default function AppShowcase() {
             }}>
               <Activity size={16} /> Try It Live — Demo Mode Available
             </a>
-            <a href={COX_BUILD_URL} download style={{
+            <a href={FLA_BUILD_URL} download style={{
               display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
               padding: '12px 28px', flex: '1 1 0',
               background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)',

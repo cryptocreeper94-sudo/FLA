@@ -63,7 +63,7 @@ export default function Home() {
               2,358 deterministic test cases passed · Zero AI calls
             </p>
             <div className="flex gap-4 items-center" style={{ flexWrap: 'wrap' }}>
-              <Link to="/manheim" className="btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.05rem' }}>
+              <Link to="/networknode" className="btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.05rem' }}>
                 Explore the Platform <ArrowRight size={20} />
               </Link>
               <Link to="/engineering" className="flex items-center gap-2 text-cyan" style={{ fontWeight: 600, fontSize: '0.95rem' }}>

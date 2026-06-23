@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Layers, Database, Shield, Hexagon, Download, Lock, Monitor, Cpu, HardDrive, Globe, ServerCog, Fingerprint, ChevronLeft, ChevronRight, ShieldCheck, Pause, Play } from 'lucide-react';
 
 /**
- * COPSection — Introduces the Cox Operating System (Cox-OS)
+ * COPSection — Introduces the FLA Operating System (FLA-OS)
  * Comprehensive enterprise OS section matching the depth of LotOpsPro and LumeV.
  * Mobile: horizontal swipeable carousel. Desktop: 3×2 grid.
  */
@@ -12,12 +12,12 @@ const fadeIn = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0
 
 const modules = [
   { icon: <Layers size={28} />, title: 'Lot Ops Pro', desc: 'Real-time lot operations management. Vehicle routing, driver assignments, OCR scanning, GPS navigation, and reconditioning workflows — all from a single interface.', color: 'var(--accent-cyan)', border: 'rgba(6,182,212,0.15)', glow: 'rgba(6,182,212,0.1)' },
-  { icon: <Database size={28} />, title: 'Enterprise Ledger (COX-PL)', desc: 'Private Proof-of-Authority blockchain layer providing cryptographic provenance for every vehicle asset passport. Total auditability, tamper-proof by design.', color: '#10b981', border: 'rgba(16,185,129,0.15)', glow: 'rgba(16,185,129,0.1)' },
+  { icon: <Database size={28} />, title: 'Enterprise Ledger (FLA-PL)', desc: 'Private Proof-of-Authority blockchain layer providing cryptographic provenance for every vehicle asset passport. Total auditability, tamper-proof by design.', color: '#10b981', border: 'rgba(16,185,129,0.15)', glow: 'rgba(16,185,129,0.1)' },
   { icon: <Hexagon size={28} />, title: 'Meridian Energy Protocol', desc: 'Deterministic overhead wireless charging architecture. Solid-state phased arrays deliver packetized microwave energy directly to vehicle rectennas.', color: '#0ea5e9', border: 'rgba(14,165,233,0.15)', glow: 'rgba(14,165,233,0.1)' },
   { icon: <Shield size={28} />, title: 'TrustShield Layer', desc: 'Guardian Security framework enforcing strict zero-trust boundaries at the hardware level. Enterprise data never leaks to public vectors.', color: '#94a3b8', border: 'rgba(255,255,255,0.08)', glow: 'rgba(255,255,255,0.05)' },
   { icon: <ServerCog size={28} />, title: 'LUME-V Governance', desc: 'Deterministic governance substrate that unifies legacy systems into a single source of truth. Zero database migration, zero downtime.', color: '#38bdf8', border: 'rgba(56,189,248,0.15)', glow: 'rgba(56,189,248,0.1)' },
   { icon: <Fingerprint size={28} />, title: 'Enterprise SSO', desc: 'Native integration with existing Okta and Azure Active Directory. Employees log in exactly as they do today — zero new credentials required.', color: '#f59e0b', border: 'rgba(245,158,11,0.15)', glow: 'rgba(245,158,11,0.1)' },
-  { icon: <ShieldCheck size={28} />, title: 'COX Verification Ledger (COX-VL)', desc: 'External verification portal for buyers, dealers, and financial partners. Cryptographically proves asset provenance anchored to the private COX-PL.', color: '#10b981', border: 'rgba(16,185,129,0.15)', glow: 'rgba(16,185,129,0.1)' },
+  { icon: <ShieldCheck size={28} />, title: 'FLA Verification Ledger (FLA-VL)', desc: 'External verification portal for buyers, dealers, and financial partners. Cryptographically proves asset provenance anchored to the private FLA-PL.', color: '#10b981', border: 'rgba(16,185,129,0.15)', glow: 'rgba(16,185,129,0.1)' },
 ];
 
 function ModuleCard({ mod, style }: { mod: typeof modules[0]; style?: React.CSSProperties }) {
@@ -172,7 +172,7 @@ export default function COPSection() {
         }
       `}</style>
 
-      {/* Background glow specific to Cox-OS */}
+      {/* Background glow specific to FLA-OS */}
       <div style={{
         position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
         width: '80vw', height: '80vh', background: 'radial-gradient(circle, rgba(6,182,212,0.03) 0%, transparent 60%)',
@@ -202,24 +202,24 @@ export default function COPSection() {
           </div>
 
           <h2 style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '1.5rem', lineHeight: 1.1, letterSpacing: '-0.02em' }}>
-            Cox Operating System <span style={{ color: 'var(--accent-cyan)' }}>(Cox-OS)</span>
+            FLA Operating System <span style={{ color: 'var(--accent-cyan)' }}>(FLA-OS)</span>
           </h2>
           
           <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', maxWidth: '700px', margin: '0 auto', lineHeight: 1.6 }}>
             The applications you are about to see do not exist in isolation. They are securely housed within 
-            the <strong style={{ color: '#fff' }}>Cox Operating System</strong> — a deterministic, zero-trust meta-operating system substrate 
+            the <strong style={{ color: '#fff' }}>FLA Operating System</strong> — a deterministic, zero-trust meta-operating system substrate 
             deployed directly to your command centers. It is the single pane of glass that governs your entire physical and digital ecosystem.
           </p>
         </motion.div>
 
-        {/* What Cox-OS Provides — detailed breakdown */}
+        {/* What FLA-OS Provides — detailed breakdown */}
         <motion.div {...fadeIn} transition={{ delay: 0.1 }} style={{ marginBottom: '3rem' }}>
           <div className="panel" style={{ padding: '2.5rem', background: 'rgba(6,182,212,0.02)', borderColor: 'rgba(6,182,212,0.15)' }}>
             <h3 style={{ fontSize: '1.3rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '12px', color: 'var(--accent-cyan)' }}>
-              <Monitor size={22} color="var(--accent-cyan)" /> What Makes Cox-OS Different
+              <Monitor size={22} color="var(--accent-cyan)" /> What Makes FLA-OS Different
             </h3>
             <p style={{ fontSize: '1.05rem', color: 'var(--text-muted)', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-              Unlike cloud dashboards that aggregate data after the fact, Cox-OS is a <strong style={{ color: '#fff' }}>native desktop operating system</strong> that runs directly on your facility's hardware.
+              Unlike cloud dashboards that aggregate data after the fact, FLA-OS is a <strong style={{ color: '#fff' }}>native desktop operating system</strong> that runs directly on your facility's hardware.
               Every process — from vehicle scanning to driver routing to ledger verification — executes locally with zero cloud latency. It is a self-contained command center
               that can operate independently of internet connectivity while syncing to the enterprise mesh when available.
             </p>
@@ -264,7 +264,7 @@ export default function COPSection() {
           <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="panel" style={{ padding: '2.5rem', borderColor: 'rgba(6,182,212,0.15)', background: 'linear-gradient(180deg, rgba(6,182,212,0.02) 0%, transparent 100%)' }}>
             <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--accent-cyan)' }}>Deployment Architecture</h3>
             <p className="text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.6 }}>
-              Cox-OS deploys as a hardened Electron application with enterprise-grade build tooling:
+              FLA-OS deploys as a hardened Electron application with enterprise-grade build tooling:
             </p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
@@ -286,7 +286,7 @@ export default function COPSection() {
           <motion.div {...fadeIn} transition={{ delay: 0.3 }} className="panel" style={{ padding: '2.5rem', borderColor: 'rgba(16,185,129,0.15)', background: 'linear-gradient(180deg, rgba(16,185,129,0.02) 0%, transparent 100%)' }}>
             <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--accent-emerald)' }}>Security Posture</h3>
             <p className="text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.6 }}>
-              Every layer of Cox-OS enforces defense-in-depth security principles:
+              Every layer of FLA-OS enforces defense-in-depth security principles:
             </p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
@@ -345,7 +345,7 @@ export default function COPSection() {
           style={{ textAlign: 'center', marginTop: '2rem' }}
         >
           <a
-            href="https://firebasestorage.googleapis.com/v0/b/darkwave-auth.firebasestorage.app/o/downloads%2FCox_Operational_Platform_Setup.exe?alt=media&token=0d3a6456-04a7-4eb4-8160-7436efccb2fb"
+            href="https://firebasestorage.googleapis.com/v0/b/darkwave-auth.firebasestorage.app/o/downloads%2FFLA_Operational_Platform_Setup.exe?alt=media&token=0d3a6456-04a7-4eb4-8160-7436efccb2fb"
             download
             style={{
               display: 'inline-flex',
@@ -393,7 +393,7 @@ export default function COPSection() {
             letterSpacing: '0.05em'
           }}>
             <Lock size={14} />
-            Restricted Access: Manheim / Cox Automotive Use Only
+            Restricted Access: NetworkNode / Fractal Ledger Architecture Use Only
           </div>
         </motion.div>
       </div>

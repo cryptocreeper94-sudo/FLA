@@ -15,7 +15,7 @@ import Waitlist from './pages/Waitlist';
 import Blog from './pages/Blog';
 import Enterprise from './pages/Enterprise';
 import GetStarted from './pages/GetStarted';
-import ManheimPitch from './pages/ManheimPitch';
+import NetworkNodePitch from './pages/NetworkNodePitch';
 import MeridianPitch from './pages/MeridianPitch';
 import EngineeringBrief from './pages/EngineeringBrief';
 import Whitepaper from './pages/Whitepaper';
@@ -32,8 +32,8 @@ import RollerCoaster from './components/RollerCoaster';
 import AuthGate from './components/AuthGate';
 import { firebaseSignOut } from './lib/firebase';
 
-function LoadingScreen({ subdomain }: { subdomain: 'manheim' | 'cal' | null }) {
-  const isManheim = subdomain === 'manheim' || subdomain === 'cal';
+function LoadingScreen({ subdomain }: { subdomain: 'networknode' | 'cal' | null }) {
+  const isNetworkNode = subdomain === 'networknode' || subdomain === 'cal';
   return (
     <motion.div
       initial={{ opacity: 1 }}
@@ -53,14 +53,14 @@ function LoadingScreen({ subdomain }: { subdomain: 'manheim' | 'cal' | null }) {
         <Shield size={48} className="text-cyan" />
       </motion.div>
       <div style={{ fontSize: '1.2rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', textAlign: 'center', padding: '0 20px' }} className="text-muted">
-        {isManheim ? (
-          <>Cox <span className="text-cyan">Enterprise Platform</span></>
+        {isNetworkNode ? (
+          <>FLA <span className="text-cyan">Enterprise Platform</span></>
         ) : (
           <>Lume<span className="text-cyan">Auto</span></>
         )}
       </div>
       <div style={{ fontSize: '0.8rem', letterSpacing: '0.1em', textAlign: 'center', padding: '0 20px' }} className="text-dim">
-        {isManheim ? 'INITIALIZING ENTERPRISE PLATFORM' : 'INITIALIZING DETERMINISTIC GOVERNANCE'}
+        {isNetworkNode ? 'INITIALIZING ENTERPRISE PLATFORM' : 'INITIALIZING DETERMINISTIC GOVERNANCE'}
       </div>
       <motion.div
         style={{ width: '200px', height: '2px', background: 'var(--border-light)', borderRadius: '1px', marginTop: '1rem', overflow: 'hidden' }}
@@ -198,9 +198,9 @@ function Navigation() {
 }
 
 /** Detect which subdomain we're on */
-function getSubdomain(): 'manheim' | 'cal' | null {
+function getSubdomain(): 'networknode' | 'cal' | null {
   const host = window.location.hostname;
-  if (host.includes('cox') || host.includes('manheim') || host.includes('cep')) return 'manheim';
+  if (host.includes('fla') || host.includes('networknode') || host.includes('cep')) return 'networknode';
   if (host.includes('cal')) return 'cal';
   return null;
 }
@@ -233,7 +233,7 @@ function App() {
           `}</style>
 
           {subdomain ? (
-            /* ── Gated subdomain (manheim / cal) ── */
+            /* ── Gated subdomain (networknode / cal) ── */
             <AuthGate brand={subdomain}>
               <nav style={{
                 position: 'fixed', top: 0, width: '100%', zIndex: 50,
@@ -246,19 +246,19 @@ function App() {
                       <Shield size={16} color="#0a0a0c" />
                     </div>
                     <div style={{ minWidth: 0 }}>
-                      <div style={{ fontWeight: 700, fontSize: '0.9rem', letterSpacing: '-0.02em', lineHeight: 1.2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Cox Enterprise Platform</div>
-                      <div className="nav-subtitle-desktop" style={{ fontSize: '0.55rem', color: 'var(--text-dim)', letterSpacing: '0.06em' }}>Enterprise Trust Infrastructure · Cox Automotive</div>
+                      <div style={{ fontWeight: 700, fontSize: '0.9rem', letterSpacing: '-0.02em', lineHeight: 1.2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Fractal Ledger Architecture</div>
+                      <div className="nav-subtitle-desktop" style={{ fontSize: '0.55rem', color: 'var(--text-dim)', letterSpacing: '0.06em' }}>Enterprise Trust Infrastructure · Fractal Ledger Architecture</div>
                     </div>
                   </div>
                   {/* Enterprise Nav Links */}
                   <div className="enterprise-nav-desktop" style={{ display: 'flex', alignItems: 'center', gap: '2px', fontSize: '0.65rem', flexShrink: 0 }}>
                     {[
                       { path: '/', label: 'Home', icon: <Shield size={11}/> },
-                      { path: '/cop', label: 'Cox-OS', icon: <Layers size={11}/> },
-                      { path: '/cal', label: 'COX-PL', icon: <Database size={11}/> },
-                      { path: '/vet', label: 'COX-VL', icon: <CheckCircle size={11}/> },
+                      { path: '/cop', label: 'FLA-OS', icon: <Layers size={11}/> },
+                      { path: '/cal', label: 'FLA-PL', icon: <Database size={11}/> },
+                      { path: '/vet', label: 'FLA-VL', icon: <CheckCircle size={11}/> },
                       { path: '/core', label: 'CORE', icon: <Cpu size={11}/> },
-                      { path: '/cog', label: 'COX-LGS', icon: <Brain size={11}/> },
+                      { path: '/cog', label: 'FLA-LGS', icon: <Brain size={11}/> },
                       { path: '/whitepaper', label: 'Whitepaper', icon: null },
                       { path: '/app', label: 'Scan Demo', icon: null },
                     ].map(link => (
@@ -289,7 +289,7 @@ function App() {
               </nav>
               <main style={{ paddingTop: '56px', minHeight: 'calc(100vh - 200px)' }}>
                 <Routes>
-                  <Route path="/" element={<ManheimPitch />} />
+                  <Route path="/" element={<NetworkNodePitch />} />
                   <Route path="/cal" element={<CALExplorer />} />
                   <Route path="/vet" element={<VETVerify />} />
                   <Route path="/cop" element={<COPDashboard />} />
@@ -299,9 +299,9 @@ function App() {
                   <Route path="/engineering" element={<EngineeringBrief />} />
                   <Route path="/whitepaper" element={<Whitepaper />} />
 
-                  <Route path="/manheim" element={<ManheimPitch />} />
-                  <Route path="/manheim-meridian" element={<MeridianPitch />} />
-                  <Route path="/manheim-engineering" element={<EngineeringBrief />} />
+                  <Route path="/networknode" element={<NetworkNodePitch />} />
+                  <Route path="/networknode-meridian" element={<MeridianPitch />} />
+                  <Route path="/networknode-engineering" element={<EngineeringBrief />} />
                   <Route path="/app" element={<OrganismApp />} />
                   <Route path="/download" element={<DownloadPage />} />
                 </Routes>
@@ -327,9 +327,9 @@ function App() {
                   <Route path="/enterprise" element={<Enterprise />} />
                   <Route path="/get-started" element={<GetStarted />} />
                   <Route path="/order" element={<Order />} />
-                  <Route path="/manheim" element={<ManheimPitch />} />
-                  <Route path="/manheim-meridian" element={<MeridianPitch />} />
-                  <Route path="/manheim-engineering" element={<EngineeringBrief />} />
+                  <Route path="/networknode" element={<NetworkNodePitch />} />
+                  <Route path="/networknode-meridian" element={<MeridianPitch />} />
+                  <Route path="/networknode-engineering" element={<EngineeringBrief />} />
                   <Route path="/meridian" element={<MeridianPitch />} />
                   <Route path="/engineering" element={<EngineeringBrief />} />
                   <Route path="/app" element={<OrganismApp />} />

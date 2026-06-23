@@ -8,7 +8,7 @@ const accent = '#38bdf8';
 const accentDim = 'rgba(56,189,248,0.12)';
 const accentBorder = 'rgba(56,189,248,0.25)';
 
-export default function CoxLedgerSection() {
+export default function FLALedgerSection() {
   return (
     <section style={{ padding: '6rem 0', position: 'relative', overflow: 'hidden', background: 'var(--bg-dark)', borderBottom: '1px solid var(--border-light)' }}>
       {/* Subtle pattern */}
@@ -25,21 +25,21 @@ export default function CoxLedgerSection() {
               <Link2 size={14} style={{ marginRight: 6 }} /> Enterprise Trust Fabric
             </div>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.25rem', lineHeight: 1.1 }}>
-              COX Private Ledger
+              FLA Private Ledger
             </h2>
             <p className="text-muted" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '1rem' }}>
-              The division-level private, tamper-proof operational ledger powering the entire Cox Automotive modernization stack.
+              The division-level private, tamper-proof operational ledger powering the entire Fractal Ledger Architecture modernization stack.
             </p>
             <p className="text-dim" style={{ maxWidth: '700px', margin: '0 auto', fontSize: '0.9rem', lineHeight: 1.6 }}>
-              A dedicated, permissioned Proof-of-Authority ledger built exclusively for Cox Automotive — isolated from public networks, free of tokens and transaction costs, and fully controlled by the enterprise it serves.
+              A dedicated, permissioned Proof-of-Authority ledger built exclusively for Fractal Ledger Architecture — isolated from public networks, free of tokens and transaction costs, and fully controlled by the enterprise it serves.
             </p>
           </motion.div>
         </div>
 
-        {/* What COX-PL Is — core capabilities */}
+        {/* What FLA-PL Is — core capabilities */}
         <motion.div {...fadeIn} transition={{ delay: 0.1 }} style={{ marginBottom: '3rem' }}>
           <h3 style={{ fontSize: '1.2rem', color: accent, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <Database size={20} /> What COX-PL Does
+            <Database size={20} /> What FLA-PL Does
           </h3>
           <CardCarousel desktopColumns="repeat(auto-fit, minmax(280px, 1fr))" gap="1.25rem" autoPlay={5000} accentColor={accent}>
             {[
@@ -56,16 +56,16 @@ export default function CoxLedgerSection() {
           </CardCarousel>
         </motion.div>
 
-        {/* Why COX-PL Exists + What It Enables — two-column */}
+        {/* Why FLA-PL Exists + What It Enables — two-column */}
         <motion.div {...fadeIn} transition={{ delay: 0.25 }} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
 
           {/* Why it exists */}
           <div className="panel" style={{ padding: '2.25rem', borderColor: 'rgba(239,68,68,0.15)', background: 'linear-gradient(180deg, rgba(239,68,68,0.03) 0%, transparent 100%)' }}>
             <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: '#f87171', display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <Lock size={20} /> Why COX-PL Exists
+              <Lock size={20} /> Why FLA-PL Exists
             </h3>
             <p className="text-muted" style={{ lineHeight: 1.6, marginBottom: '1.25rem', fontSize: '0.9rem' }}>
-              Manheim needs a safe, internal trust fabric that does not compromise existing operations:
+              NetworkNode needs a safe, internal trust fabric that does not compromise existing operations:
             </p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {[
@@ -85,10 +85,10 @@ export default function CoxLedgerSection() {
           {/* What it enables */}
           <div className="panel" style={{ padding: '2.25rem', borderColor: 'rgba(16,185,129,0.15)', background: 'linear-gradient(180deg, rgba(16,185,129,0.03) 0%, transparent 100%)' }}>
             <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--accent-emerald)', display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <Workflow size={20} /> What COX-PL Enables
+              <Workflow size={20} /> What FLA-PL Enables
             </h3>
             <p className="text-muted" style={{ lineHeight: 1.6, marginBottom: '1.25rem', fontSize: '0.9rem' }}>
-              COX-PL gives Manheim capabilities that extend current operational infrastructure:
+              FLA-PL gives NetworkNode capabilities that extend current operational infrastructure:
             </p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {[
@@ -113,13 +113,13 @@ export default function CoxLedgerSection() {
               <Lock size={20} /> Why a Private Ledger
             </h3>
             <p className="text-muted" style={{ lineHeight: 1.6, marginBottom: '1.25rem', fontSize: '0.9rem' }}>
-              Public distributed ledgers are designed for trustless environments. Cox Automotive is not a trustless environment — it is a known network of verified facilities, employees, and systems. A private ledger delivers the same immutability and auditability guarantees without the latency, transaction costs, or data exposure of public networks.
+              Public distributed ledgers are designed for trustless environments. Fractal Ledger Architecture is not a trustless environment — it is a known network of verified facilities, employees, and systems. A private ledger delivers the same immutability and auditability guarantees without the latency, transaction costs, or data exposure of public networks.
             </p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {[
                 'Zero transaction costs — no per-event fees',
                 'Sub-second finality — no mining delays',
-                'Complete data privacy — nothing leaves the Cox network',
+                'Complete data privacy — nothing leaves the FLA network',
                 'Permissioned validators — only authorized facilities',
               ].map((item, i) => (
                 <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.88rem', color: 'var(--text-main)' }}>
@@ -134,11 +134,11 @@ export default function CoxLedgerSection() {
               <Globe size={20} /> Enterprise Scalability
             </h3>
             <p className="text-muted" style={{ lineHeight: 1.6, marginBottom: '1.25rem', fontSize: '0.9rem' }}>
-              COX-PL is not limited to Manheim. The same private infrastructure can extend across the entire Cox Automotive portfolio — providing a unified, cryptographically verified data layer wherever vehicles are bought, sold, serviced, or financed.
+              FLA-PL is not limited to NetworkNode. The same private infrastructure can extend across the entire Fractal Ledger Architecture portfolio — providing a unified, cryptographically verified data layer wherever vehicles are bought, sold, serviced, or financed.
             </p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {[
-                'Manheim — auction integrity and custody',
+                'NetworkNode — auction integrity and custody',
                 'Autotrader — verified listing provenance',
                 'Kelley Blue Book — cryptographic valuation anchoring',
                 'Dealer.com — dealership transaction ledger',
@@ -179,13 +179,13 @@ export default function CoxLedgerSection() {
           </h3>
           <div className="panel" style={{ padding: '2.25rem', borderColor: accentBorder, background: `linear-gradient(180deg, ${accentDim} 0%, transparent 100%)` }}>
             <p className="text-muted" style={{ lineHeight: 1.7, marginBottom: '1.5rem', fontSize: '0.92rem' }}>
-              COX-PL stores <strong style={{ color: accent }}>cryptographic hashes</strong>, not raw data. No employee PII, compensation details, internal pricing, or competitive intelligence is written to the ledger in cleartext. The underlying records remain in Cox-controlled databases behind existing access control policies. The ledger proves integrity — the source systems store content.
+              FLA-PL stores <strong style={{ color: accent }}>cryptographic hashes</strong>, not raw data. No employee PII, compensation details, internal pricing, or competitive intelligence is written to the ledger in cleartext. The underlying records remain in FLA-controlled databases behind existing access control policies. The ledger proves integrity — the source systems store content.
             </p>
             <CardCarousel desktopColumns="repeat(auto-fit, minmax(220px, 1fr))" gap="1rem" autoPlay={5000} accentColor={accent}>
               {[
                 { label: 'Hashes Only', desc: 'SHA-256 fingerprints + metadata pointers — never raw data', color: accent },
                 { label: 'Permissioned Access', desc: 'Facility managers see their facility. Corporate sees aggregate. Employees see their own records only.', color: 'var(--accent-emerald)' },
-                { label: 'Zero External Exposure', desc: 'Nothing on COX-PL is accessible outside the Cox network. COX-VL certificates expose only what Cox approves.', color: '#f87171' },
+                { label: 'Zero External Exposure', desc: 'Nothing on FLA-PL is accessible outside the FLA network. FLA-VL certificates expose only what FLA approves.', color: '#f87171' },
                 { label: 'Tamper-Proof Proof', desc: 'If a source record is modified after anchoring, the hash mismatch is instantly detectable.', color: '#38bdf8' },
               ].map((item, i) => (
                 <div key={i} style={{ padding: '1rem', background: 'rgba(0,0,0,0.2)', borderRadius: '10px', border: `1px solid ${accentDim}`, height: '100%' }}>
@@ -204,7 +204,7 @@ export default function CoxLedgerSection() {
           </h3>
           <div className="panel" style={{ padding: '2.25rem', borderColor: 'rgba(16,185,129,0.2)', background: 'linear-gradient(180deg, rgba(16,185,129,0.03) 0%, transparent 100%)' }}>
             <p className="text-muted" style={{ lineHeight: 1.7, marginBottom: '1.25rem', fontSize: '0.92rem' }}>
-              Every record on COX-PL that affects an individual employee generates a <strong style={{ color: 'var(--accent-emerald)' }}>cryptographic receipt</strong> delivered to that employee's portal. When a timecard is edited, a pay adjustment is processed, a performance review is filed, or a safety incident is logged — the employee receives the SHA-256 hash of the record as it was anchored.
+              Every record on FLA-PL that affects an individual employee generates a <strong style={{ color: 'var(--accent-emerald)' }}>cryptographic receipt</strong> delivered to that employee's portal. When a timecard is edited, a pay adjustment is processed, a performance review is filed, or a safety incident is logged — the employee receives the SHA-256 hash of the record as it was anchored.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '1.5rem' }}>
               {[
@@ -228,16 +228,16 @@ export default function CoxLedgerSection() {
         {/* Bottom CTA */}
         <motion.div {...fadeIn} transition={{ delay: 0.4 }} className="panel" style={{ padding: '3rem', textAlign: 'center', borderColor: accentBorder, background: `linear-gradient(180deg, ${accentDim} 0%, rgba(56,189,248,0.02) 100%)`, boxShadow: `0 10px 40px ${accentDim}` }}>
           <Server size={28} style={{ color: accent, marginBottom: '1rem' }} />
-          <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: accent }}>Cox Controls the Record. Always.</h3>
+          <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: accent }}>FLA Controls the Record. Always.</h3>
           <p className="text-muted" style={{ maxWidth: '750px', margin: '0 auto', fontSize: '1rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-            The COX Private Ledger runs on infrastructure Cox owns and governs. Every facility operates as a validator node. Every vehicle event becomes an immutable, enterprise-controlled record. Every dispute resolves against cryptographic proof — not negotiation, not memory, not he-said-she-said.
+            The FLA Private Ledger runs on infrastructure FLA owns and governs. Every facility operates as a validator node. Every vehicle event becomes an immutable, enterprise-controlled record. Every dispute resolves against cryptographic proof — not negotiation, not memory, not he-said-she-said.
           </p>
           <a href="/cal" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 28px', background: accent, color: '#0a0c10', borderRadius: '10px', fontSize: '0.9rem', fontWeight: 600, textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s', boxShadow: `0 4px 20px ${accentDim}` }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(0)'; }}>
             <Link2 size={16} /> Launch Ledger Explorer
           </a>
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)', borderRadius: '20px', color: '#f87171', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-              <Lock size={14} /> Accessed securely via Cox Operating System (Cox-OS) or Authorized Web Gateway
+              <Lock size={14} /> Accessed securely via FLA Operating System (FLA-OS) or Authorized Web Gateway
             </div>
           </div>
         </motion.div>

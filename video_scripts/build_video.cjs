@@ -1,5 +1,5 @@
 /**
- * Cox Enterprise Platform — Hero Video Builder
+ * Fractal Ledger Architecture — Hero Video Builder
  * 
  * Pipeline: 5 scene PNGs → Ken Burns zoompan → crossfade transitions → narration + ambient → final MP4
  * 
@@ -68,7 +68,7 @@ function getAudioDuration(filePath) {
 }
 
 async function main() {
-  console.log('🎬 Building Cox Enterprise Platform Hero Video');
+  console.log('🎬 Building Fractal Ledger Architecture Hero Video');
   const narr = path.join(assetsDir, 'narration.mp3');
 
   if (!fs.existsSync(narr)) {

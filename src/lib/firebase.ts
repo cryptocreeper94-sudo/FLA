@@ -32,7 +32,7 @@ const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
 // ── Domain Whitelist ──
-const ALLOWED_DOMAINS = ['coxautoinc.com', 'darkwavestudios.com'];
+const ALLOWED_DOMAINS = ['darkwavestudios.com', 'darkwavestudios.com'];
 const ALLOWED_EMAILS = ['kathytidwell74@gmail.com', 'rtaron@bellsouth.net', 'cryptocreeper94@gmail.com', 'averymackenna@gmail.com', 'barrycline33@gmail.com', 'pcdirect97@gmail.com'];
 
 function validateEmailDomain(email: string | null): void {
@@ -54,7 +54,7 @@ const microsoftProvider = new OAuthProvider('microsoft.com');
 microsoftProvider.addScope('email');
 microsoftProvider.addScope('profile');
 microsoftProvider.addScope('openid');
-// Hint the Cox tenant so users land on their familiar Microsoft login
+// Hint the FLA tenant so users land on their familiar Microsoft login
 microsoftProvider.setCustomParameters({ prompt: 'select_account' });
 
 // ── Sign-In Helpers ──

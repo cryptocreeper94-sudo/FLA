@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Database, Shield, Activity, Search, RefreshCw, ChevronDown, ChevronRight, CheckCircle, Clock, Hash, Link2, FileCheck, User, MapPin } from 'lucide-react';
 
-const API = 'https://cox-automotive-ledger.onrender.com';
+const API = 'https://fla-ledger.onrender.com';
 const fadeIn = { initial: { opacity: 0, y: 16 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.4 } };
 const accent = '#38bdf8';
 const accentDim = 'rgba(56,189,248,0.12)';
@@ -75,7 +75,7 @@ export default function CALExplorer() {
   if (loading) return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '60vh', flexDirection: 'column', gap: '1rem' }}>
       <motion.div animate={{ rotate: 360 }} transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}><RefreshCw size={32} style={{ color: accent }} /></motion.div>
-      <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem' }}>Connecting to COX Private Ledger...</p>
+      <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem' }}>Connecting to FLA Private Ledger...</p>
     </div>
   );
 
@@ -86,7 +86,7 @@ export default function CALExplorer() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '0.5rem' }}>
           <div style={{ width: 40, height: 40, background: `linear-gradient(135deg, ${accent}, #0ea5e9)`, borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Database size={20} color="#0a0c10" /></div>
           <div>
-            <h1 style={{ fontSize: '1.6rem', fontWeight: 800, margin: 0, letterSpacing: '-0.03em' }}>COX Private Ledger</h1>
+            <h1 style={{ fontSize: '1.6rem', fontWeight: 800, margin: 0, letterSpacing: '-0.03em' }}>FLA Private Ledger</h1>
             <p style={{ fontSize: '0.7rem', color: 'var(--text-dim)', margin: 0, letterSpacing: '0.08em' }}>MANHEIM DIVISION · PRIVATE PROOF-OF-AUTHORITY CHAIN</p>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function CALExplorer() {
           <span style={{ fontSize: '0.75rem', color: integrity?.valid ? '#10b981' : '#ef4444', fontWeight: 600 }}>
             {integrity?.valid ? 'Chain Integrity Verified' : 'Chain Integrity Failed'}
           </span>
-          <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)', marginLeft: '8px' }}>Node: NASH-001 (Manheim Nashville)</span>
+          <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)', marginLeft: '8px' }}>Node: NASH-001 (NetworkNode Nashville)</span>
           <button onClick={fetchAll} style={{ marginLeft: 'auto', background: 'none', border: `1px solid ${accentDim}`, borderRadius: '6px', padding: '4px 10px', cursor: 'pointer', color: accent, fontSize: '0.7rem', display: 'flex', alignItems: 'center', gap: '4px' }}><RefreshCw size={12} /> Refresh</button>
         </div>
       </motion.div>

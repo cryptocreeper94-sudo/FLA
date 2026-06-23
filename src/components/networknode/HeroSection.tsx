@@ -68,14 +68,14 @@ export default function HeroSection() {
       <div className="container" style={{ maxWidth: '1100px', position: 'relative', zIndex: 2 }}>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', padding: '6px 14px', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.2)', borderRadius: '20px', fontSize: '0.75rem', color: '#38bdf8', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
-            <Shield size={14} style={{ marginRight: 6 }} /> Cox Enterprise Platform
+            <Shield size={14} style={{ marginRight: 6 }} /> Fractal Ledger Architecture
           </div>
           <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.8rem)', lineHeight: 1.08, marginBottom: '1.5rem' }}>
             Fractal Ledger Architecture.<br/>
             <span className="text-gradient">Built for the Enterprise.</span>
           </h1>
           <p className="text-muted" style={{ fontSize: '1.1rem', lineHeight: 1.7, maxWidth: '800px', marginBottom: '2rem' }}>
-            A deterministic operations platform that delivers verifiable, tamper-proof records of every physical event. Designed as a universal architecture for global operators, this deployment features the Fractal Ledger Architecture (FLA) — COX-PL, COX-VL, and CORE — that structurally isolates data across every division of the Cox ecosystem. Powered by the universal CORE root fabric and Lume-V governance substrate, the system brings cryptographic condition reports, deterministic lot workflows via Lot Ops Pro, and mathematical proof to Manheim and the Cox Enterprise family as a whole.
+            A deterministic operations platform that delivers verifiable, tamper-proof records of every physical event. Designed as a universal architecture for global operators, this deployment features the Fractal Ledger Architecture (FLA) — FLA-PL, FLA-VL, and CORE — that structurally isolates data across every division of the FLA ecosystem. Powered by the universal CORE root fabric and Lume-V governance substrate, the system brings cryptographic condition reports, deterministic lot workflows via Lot Ops Pro, and mathematical proof to NetworkNode and the FLA Enterprise family as a whole.
           </p>
 
           {/* Enterprise Pitch Video Embed */}

@@ -49,7 +49,7 @@ export default function Enterprise() {
                 title: 'LumeScan',
                 subtitle: 'Vehicle Intelligence',
                 icon: <Radio size={28} />,
-                features: ['42-node OBD-II telemetry governance', 'WiFi adapter → condition report in 45 sec', 'Mode 05: IMMO key management (read/program/delete)', 'Mode 06: Remote start governance (CAN-bus start/stop)', 'Arbitration defense via scan log replay', 'Battery health flagging at intake (SL3/SL8)', 'Pending fault detection pre-lane', 'Lane readiness scoring', 'TLL/COX-PL-verified receipts for all events'],
+                features: ['42-node OBD-II telemetry governance', 'WiFi adapter → condition report in 45 sec', 'Mode 05: IMMO key management (read/program/delete)', 'Mode 06: Remote start governance (CAN-bus start/stop)', 'Arbitration defense via scan log replay', 'Battery health flagging at intake (SL3/SL8)', 'Pending fault detection pre-lane', 'Lane readiness scoring', 'TLL/FLA-PL-verified receipts for all events'],
                 stat: '42', statLabel: 'Governance nodes per vehicle',
                 color: 'var(--accent-cyan)',
               },
@@ -97,7 +97,7 @@ export default function Enterprise() {
             {[
               { step: '01', title: 'Vehicle Arrives', product: 'LumeScan', desc: '45-second OBD-II scan at intake. Condition report generated. Battery health flagged. Pending faults identified. Lane readiness scored.', color: 'var(--accent-cyan)' },
               { step: '02', title: 'Routing & Assignment', product: 'Ops Recon', desc: 'Receives vehicle health data from LumeScan. Routes vehicle to correct lane or reconditioning. Driver assigned via GPS. Move tracked in real-time.', color: 'var(--accent-emerald)' },
-              { step: '03', title: 'Remote Start & Staging', product: 'LumeScan', desc: 'Mode 06: CAN-bus remote start for vehicle warm-up, lot staging, and battery conditioning. Every start event cryptographically anchored to COX-PL. Supervisor authorization required. Geofence enforced.', color: '#f59e0b' },
+              { step: '03', title: 'Remote Start & Staging', product: 'LumeScan', desc: 'Mode 06: CAN-bus remote start for vehicle warm-up, lot staging, and battery conditioning. Every start event cryptographically anchored to FLA-PL. Supervisor authorization required. Geofence enforced.', color: '#f59e0b' },
               { step: '04', title: 'Lot Residence', product: 'Both', desc: 'LumeScan monitors for battery drain and fault emergence. Mode 06 scheduled maintenance starts for 7+ day vehicles. Ops Recon tracks lot position, move history, and time-on-lot.', color: '#38bdf8' },
               { step: '05', title: 'Pre-Sale', product: 'LumeScan', desc: 'Updated condition report generated for listing. Lane assignment confirmed. All data flows to the sale record.', color: 'var(--accent-cyan)' },
               { step: '06', title: 'Arbitration Defense', product: 'LumeScan', desc: 'Dispute? Pull the intake scan log. Deterministic replay: same inputs → same condition report. Resolved by data, not opinion.', color: 'var(--accent-emerald)' },
@@ -178,7 +178,7 @@ export default function Enterprise() {
           </div>
 
           <div className="panel" style={{ padding: '1.5rem', background: 'rgba(251,146,60,0.03)', borderColor: 'rgba(251,146,60,0.15)' }}>
-            <h4 style={{ fontSize: '0.9rem', marginBottom: '1rem', color: '#fb923c' }}>What This Means for Manheim</h4>
+            <h4 style={{ fontSize: '0.9rem', marginBottom: '1rem', color: '#fb923c' }}>What This Means for NetworkNode</h4>
             <div className="flex flex-col gap-2">
               {[
                 'One device per intake station — connects to any phone, any platform, any protocol.',

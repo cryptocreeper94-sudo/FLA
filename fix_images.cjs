@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const dir = 'D:/CEP/src/components/manheim';
+const dir = 'D:/CEP/src/components/networknode';
 
 const files = fs.readdirSync(dir).filter(f => f.endsWith('.tsx'));
 

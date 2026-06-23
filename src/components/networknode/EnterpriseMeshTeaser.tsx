@@ -50,7 +50,7 @@ export default function EnterpriseMeshTeaser() {
             {
               icon: <ShieldCheck size={22} />,
               title: 'Sovereign Chains',
-              desc: 'Every enterprise in the Cox ecosystem — Manheim, transport vendors, reconditioning partners — operates its own private, permissioned ledger. Completely separate infrastructure. No shared databases, no shared risk, no external visibility. Each company controls their own chain, their own data, and their own access policies.'
+              desc: 'Every enterprise in the FLA ecosystem — NetworkNode, transport vendors, reconditioning partners — operates its own private, permissioned ledger. Completely separate infrastructure. No shared databases, no shared risk, no external visibility. Each company controls their own chain, their own data, and their own access policies.'
             },
             {
               icon: <Link2 size={22} />,
@@ -60,7 +60,7 @@ export default function EnterpriseMeshTeaser() {
             {
               icon: <Globe size={22} />,
               title: 'Industry Standard',
-              desc: 'The same private ledger infrastructure Manheim deploys in this pilot becomes the template for the entire Cox Automotive vendor network. First mover defines the standard. Transport partners, reconditioning vendors, and dealers connect through the mesh — each on their own sovereign system, never on a shared one.'
+              desc: 'The same private ledger infrastructure NetworkNode deploys in this pilot becomes the template for the entire Fractal Ledger Architecture vendor network. First mover defines the standard. Transport partners, reconditioning vendors, and dealers connect through the mesh — each on their own sovereign system, never on a shared one.'
             },
           ].map((item, i) => (
             <motion.div key={i} {...fadeIn} transition={{ delay: 0.1 + i * 0.08 }}
@@ -85,7 +85,7 @@ export default function EnterpriseMeshTeaser() {
             </p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {[
-                'Manheim anchors a condition report to its private ledger',
+                'NetworkNode anchors a condition report to its private ledger',
                 'Transport vendor anchors a pickup event to their private ledger',
                 'Bridge verifies: same asset, same custody chain, matching timestamps',
                 'Both parties confirm — neither sees the other\'s internal data',

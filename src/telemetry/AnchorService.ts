@@ -3,8 +3,8 @@
  * 
  * Computes SHA-256 hash of condition reports and anchors them
  * to the appropriate ledger:
- *   - Enterprise (Manheim): COX Private Ledger (COX-PL)
- *   - Consumer: COX-VL — COX Verification Ledger (public verification)
+ *   - Enterprise (NetworkNode): FLA Private Ledger (FLA-PL)
+ *   - Consumer: FLA-VL — FLA Verification Ledger (public verification)
  * 
  * The hash is computed client-side using the Web Crypto API.
  * The anchoring POST is fire-and-forget — the hash is the proof,
@@ -14,7 +14,7 @@
 export interface AnchorResult {
   hash: string;           // SHA-256 hex digest
   timestamp: string;      // ISO 8601
-  anchoredTo: 'COX-PL' | 'COX-VL' | 'local';
+  anchoredTo: 'FLA-PL' | 'FLA-VL' | 'local';
   certificateId: string;  // UUID
   status: 'anchored' | 'pending' | 'local-only';
 }
@@ -23,11 +23,11 @@ export interface AnchorResult {
 const isEnterprise = (): boolean => {
   if (typeof window === 'undefined') return false;
   const host = window.location.hostname;
-  return host.includes('manheim') || host.includes('coxauto') || host.includes('localhost');
+  return host.includes('networknode') || host.includes('flaauto') || host.includes('localhost');
 };
 
-// COX-PL API (Render deployment or local)
-const CAL_API_URL = 'https://cox-automotive-ledger.onrender.com/api';
+// FLA-PL API (Render deployment or local)
+const CAL_API_URL = 'https://fla-ledger.onrender.com/api';
 const VET_API_URL = 'https://vet-ledger.onrender.com/api';
 
 /**
@@ -60,7 +60,7 @@ function generateCertId(): string {
  * Flow:
  * 1. Serialize the report deterministically
  * 2. Compute SHA-256 hash
- * 3. POST to COX-PL (enterprise) or COX-VL (external verification)
+ * 3. POST to FLA-PL (enterprise) or FLA-VL (external verification)
  * 4. Return the anchor result with hash + certificate ID
  * 
  * If the ledger is unreachable, returns local-only status
@@ -91,7 +91,7 @@ export async function anchorReport(report: any, context?: {
   // Determine target
   const enterprise = isEnterprise();
   const targetUrl = enterprise ? CAL_API_URL : VET_API_URL;
-  const anchoredTo = enterprise ? 'COX-PL' as const : 'COX-VL' as const;
+  const anchoredTo = enterprise ? 'FLA-PL' as const : 'FLA-VL' as const;
 
   // Attempt to anchor
   try {

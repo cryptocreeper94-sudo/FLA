@@ -10,7 +10,7 @@ export default function LumeVAPIOnboarding() {
           <p style={{ color: 'var(--accent-cyan)', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Implementation Guide</p>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Lume-V: Validation-as-a-Service</h2>
           <p className="text-muted" style={{ maxWidth: '750px', margin: '0 auto', lineHeight: 1.7 }}>
-            The Validation-as-a-Service (VaaS) API is the primary modernization bridge for legacy enterprise stacks (e.g., Manheim OS). Instead of rewriting millions of lines of legacy code, engineers can simply wrap critical decisions and outputs, sending them to the Lume-V API. Lume-V acts as a deterministic safety envelope, mathematically guaranteeing that outputs meet strict governance invariants before execution.
+            The Validation-as-a-Service (VaaS) API is the primary modernization bridge for legacy enterprise stacks (e.g., NetworkNode OS). Instead of rewriting millions of lines of legacy code, engineers can simply wrap critical decisions and outputs, sending them to the Lume-V API. Lume-V acts as a deterministic safety envelope, mathematically guaranteeing that outputs meet strict governance invariants before execution.
           </p>
         </div>
 

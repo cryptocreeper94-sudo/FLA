@@ -12,8 +12,8 @@ export default function HardwareSection() {
           <p style={{ color: 'var(--accent-cyan)', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Edge Hardware</p>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', lineHeight: 1.1 }}>Dual-Dongle Coexistence.</h2>
           <p className="text-muted" style={{ maxWidth: '680px', margin: '0 auto', fontSize: '0.95rem', lineHeight: 1.7 }}>
-            LumeScan is designed to work <strong>alongside</strong> your existing Cox2M cellular telematics — not instead of it.
-            No hardware replacement. No infrastructure changes. No modification to Cox servers or data pipelines.
+            LumeScan is designed to work <strong>alongside</strong> your existing FLA2M cellular telematics — not instead of it.
+            No hardware replacement. No infrastructure changes. No modification to FLA servers or data pipelines.
           </p>
         </motion.div>
 
@@ -60,14 +60,14 @@ export default function HardwareSection() {
                 </div>
               </div>
               <p className="text-muted" style={{ fontSize: '0.88rem', lineHeight: 1.7, marginBottom: '1.25rem', flex: 1 }}>
-                Cox2M is the <strong>Vehicle Layer</strong> — long-term cellular asset tracking, GPS pings, and compliance. LumeScan is the <strong>Operational Layer</strong> — real-time diagnostics, workflow-driven scanning, and condition reporting. A passive OBD-II Y-splitter lets both coexist on the same vehicle port with zero interference.
+                FLA2M is the <strong>Vehicle Layer</strong> — long-term cellular asset tracking, GPS pings, and compliance. LumeScan is the <strong>Operational Layer</strong> — real-time diagnostics, workflow-driven scanning, and condition reporting. A passive OBD-II Y-splitter lets both coexist on the same vehicle port with zero interference.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                 {[
-                  'Cox2M stays plugged in — untouched',
+                  'FLA2M stays plugged in — untouched',
                   'LumeScan connects via passive splitter',
                   'CAN bus arbitration handled by protocol',
-                  'No modification to Cox infrastructure',
+                  'No modification to FLA infrastructure',
                 ].map((t, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={14} color="var(--accent-emerald)" /><span style={{ fontSize: '0.8rem' }}>{t}</span></div>
                 ))}
@@ -112,7 +112,7 @@ export default function HardwareSection() {
           <table className="data-table" style={{ minWidth: '480px', width: '100%' }}>
             <thead><tr><th>Layer</th><th>Device</th><th>Function</th></tr></thead>
             <tbody>
-              <tr><td style={{ color: 'var(--text-muted)' }}>Vehicle Layer</td><td>Cox2M Cellular Dongle</td><td>Long-term asset tracking, GPS, compliance</td></tr>
+              <tr><td style={{ color: 'var(--text-muted)' }}>Vehicle Layer</td><td>FLA2M Cellular Dongle</td><td>Long-term asset tracking, GPS, compliance</td></tr>
               <tr><td style={{ color: 'var(--accent-cyan)' }}>Operational Layer</td><td>LumeScan Dongle (BLE)</td><td>Real-time diagnostics, workflow scans, condition scoring</td></tr>
               <tr><td style={{ color: 'var(--accent-emerald)' }}>Coexistence Layer</td><td>Passive OBD-II Splitter</td><td>Enables simultaneous operation — no arbitration, no modification</td></tr>
               <tr><td style={{ color: '#fb923c' }}>Life-Cycle Layer</td><td>LumeScan Onboard Storage</td><td>Autonomous diagnostic logging between technician visits</td></tr>
@@ -120,7 +120,7 @@ export default function HardwareSection() {
           </table>
           </div>
           <p className="text-dim" style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.8rem' }}>
-            No need to replace or modify 500,000+ installed cellular dongles. LumeScan becomes the operational OS instrumentation layer that Cox2M was never designed to be.
+            No need to replace or modify 500,000+ installed cellular dongles. LumeScan becomes the operational OS instrumentation layer that FLA2M was never designed to be.
           </p>
         </motion.div>
 

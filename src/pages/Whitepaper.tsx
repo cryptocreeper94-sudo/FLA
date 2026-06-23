@@ -58,11 +58,11 @@ export default function Whitepaper() {
                 DarkWave Studios LLC — Confidential
               </div>
               <h1 style={{ fontSize: 'clamp(2.2rem, 5vw, 3rem)', lineHeight: 1.1, marginBottom: '1rem', letterSpacing: '-0.03em' }}>
-                Cox Enterprise Platform<br />
-                <span style={{ fontSize: '0.5em', color: 'var(--text-muted)', fontWeight: 400 }}>Fractal Ledger Architecture (FLA) for Cox Automotive & Cox Enterprises</span>
+                Fractal Ledger Architecture<br />
+                <span style={{ fontSize: '0.5em', color: 'var(--text-muted)', fontWeight: 400 }}>Fractal Ledger Architecture (FLA) for Fractal Ledger Architecture & FLA Enterprise</span>
               </h1>
               <p style={{ color: 'var(--text-muted)', maxWidth: '550px', margin: '0 auto 2rem', fontSize: '1rem', lineHeight: 1.7 }}>
-                A deterministic governance, operational intelligence, and cryptographic trust infrastructure designed exclusively for the Cox enterprise ecosystem.
+                A deterministic governance, operational intelligence, and cryptographic trust infrastructure designed exclusively for the FLA enterprise ecosystem.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem', fontSize: '0.78rem', color: 'var(--text-dim)' }}>
                 <span>Version 1.0</span>
@@ -73,7 +73,7 @@ export default function Whitepaper() {
               {/* Correction Note */}
               <div style={{ marginTop: '2rem', padding: '12px 20px', background: 'rgba(56,189,248,0.06)', border: '1px solid rgba(56,189,248,0.15)', borderRadius: '8px', maxWidth: '550px', margin: '2rem auto 0' }}>
                 <p style={{ fontSize: '0.72rem', color: 'var(--text-dim)', lineHeight: 1.6, margin: 0, fontStyle: 'italic' }}>
-                  <strong style={{ color: 'var(--text-muted)' }}>Note:</strong> This document supersedes the general framework paper <em>"A Framework for Deterministic Digital Trust"</em> that was previously accessible from this location. That paper addresses government-sector applications and has been relocated to its appropriate context. This document is the Cox-specific technical reference.
+                  <strong style={{ color: 'var(--text-muted)' }}>Note:</strong> This document supersedes the general framework paper <em>"A Framework for Deterministic Digital Trust"</em> that was previously accessible from this location. That paper addresses government-sector applications and has been relocated to its appropriate context. This document is the FLA-specific technical reference.
                 </p>
               </div>
             </motion.div>
@@ -86,11 +86,11 @@ export default function Whitepaper() {
               {[
                 'Executive Summary',
                 'The Fractal Ledger Architecture (FLA)',
-                'COX Private Ledger (COX-PL)',
-                'COX Verification Ledger (COX-VL)',
-                'Cox Operating System (Cox-OS)',
+                'FLA Private Ledger (FLA-PL)',
+                'FLA Verification Ledger (FLA-VL)',
+                'FLA Operating System (FLA-OS)',
                 'CORE — Universal Root Fabric',
-                'Cognitive Legacy Governance Substrate (COX-LGS)',
+                'Cognitive Legacy Governance Substrate (FLA-LGS)',
                 'LUME-V — Deterministic Governance Substrate',
                 'LUME-Scan — Diagnostic Intelligence',
                 'Division Separation & Enterprise Scalability',
@@ -110,16 +110,16 @@ export default function Whitepaper() {
             {/* 1 */}
             <motion.div {...f} className="wp-section">
               <h2>1. Executive Summary</h2>
-              <p>Cox Enterprises operates one of the most complex multi-division corporate ecosystems in the United States. Cox Automotive alone processes over 8 million vehicles annually through Manheim, provides valuations through Kelley Blue Book, powers dealership operations through Dealer.com, and finances billions in floor plan lending through NextGear Capital.</p>
-              <p>Each division runs its own operational systems, its own data infrastructure, and its own compliance workflows. The challenge is not that these systems don't work — they do. The challenge is that there is no unified trust layer connecting them. When a vehicle moves from Manheim auction to NextGear financing to an Autotrader listing, the data about that vehicle exists in three separate silos with no cryptographic linkage.</p>
-              <p>The Cox Enterprise Platform solves this with the <strong>Fractal Ledger Architecture (FLA)</strong> — a system where each division maintains complete operational autonomy while anchoring to a shared cryptographic root. No division sees another division’s data. No data crosses boundaries. But every division can <em>verify</em> claims made by any other division, instantly and mathematically.</p>
+              <p>FLA Enterprise operates one of the most complex multi-division corporate ecosystems in the United States. Fractal Ledger Architecture alone processes over 8 million vehicles annually through NetworkNode, provides valuations through Kelley Blue Book, powers dealership operations through Dealer.com, and finances billions in floor plan lending through NextGear Capital.</p>
+              <p>Each division runs its own operational systems, its own data infrastructure, and its own compliance workflows. The challenge is not that these systems don't work — they do. The challenge is that there is no unified trust layer connecting them. When a vehicle moves from NetworkNode auction to NextGear financing to an Autotrader listing, the data about that vehicle exists in three separate silos with no cryptographic linkage.</p>
+              <p>The Fractal Ledger Architecture solves this with the <strong>Fractal Ledger Architecture (FLA)</strong> — a system where each division maintains complete operational autonomy while anchoring to a shared cryptographic root. No division sees another division’s data. No data crosses boundaries. But every division can <em>verify</em> claims made by any other division, instantly and mathematically.</p>
               <p>The platform consists of six independently deployable components:</p>
               <ul>
-                <li><strong>COX-PL</strong> — COX Private Ledger. Division-level private cryptographic ledger for operational records.</li>
-                <li><strong>COX-VL</strong> — COX Verification Ledger. Public-facing verification certificates derived from internal ledger records.</li>
-                <li><strong>Cox-OS</strong> — Cox Operating System. Enterprise command center for cross-division visibility.</li>
+                <li><strong>FLA-PL</strong> — FLA Private Ledger. Division-level private cryptographic ledger for operational records.</li>
+                <li><strong>FLA-VL</strong> — FLA Verification Ledger. Public-facing verification certificates derived from internal ledger records.</li>
+                <li><strong>FLA-OS</strong> — FLA Operating System. Enterprise command center for cross-division visibility.</li>
                 <li><strong>CORE</strong> — Universal Root Fabric. The hub that all division ledgers anchor to.</li>
-                <li><strong>COX-LGS</strong> — Cognitive Legacy Governance Substrate. 42-node deterministic processing mesh.</li>
+                <li><strong>FLA-LGS</strong> — Cognitive Legacy Governance Substrate. 42-node deterministic processing mesh.</li>
                 <li><strong>LUME-V</strong> — Deterministic governance substrate that wraps legacy systems without modification.</li>
               </ul>
               <p>Each component operates independently and delivers measurable value on its own. Together, they form a unified trust infrastructure that no single vendor has previously offered at enterprise scale.</p>
@@ -132,9 +132,9 @@ export default function Whitepaper() {
               <h2>2. The Fractal Ledger Architecture (FLA)</h2>
               <p>The word "fractal" is precise. The same architectural pattern repeats at every level of the organization:</p>
               <ul>
-                <li><strong>Division level:</strong> Each Cox division (Manheim, Autotrader, KBB, Dealer.com, NextGear Capital) operates its own private Proof-of-Authority ledger. The data model, certificate types, and access controls are configured for that division's specific operations.</li>
+                <li><strong>Division level:</strong> Each FLA division (NetworkNode, Autotrader, KBB, Dealer.com, NextGear Capital) operates its own private Proof-of-Authority ledger. The data model, certificate types, and access controls are configured for that division's specific operations.</li>
                 <li><strong>Enterprise level:</strong> All division ledgers periodically anchor a Merkle root hash to CORE — the universal root fabric. CORE sees hashes, never content. It proves that each division's chain is intact and unaltered.</li>
-                <li><strong>Verification level:</strong> COX-VL issues publicly verifiable certificates derived from any division's ledger. A buyer can confirm a vehicle's condition report from Manheim without accessing Manheim's internal systems.</li>
+                <li><strong>Verification level:</strong> FLA-VL issues publicly verifiable certificates derived from any division's ledger. A buyer can confirm a vehicle's condition report from NetworkNode without accessing NetworkNode's internal systems.</li>
               </ul>
               <p>This architecture solves the fundamental tension in enterprise data: <strong>divisions need autonomy, but the enterprise needs assurance.</strong> The fractal model delivers both. Each division retains full control over its data, its access policies, and its operational workflows. The enterprise gains cryptographic proof that every division's records are intact, consistent, and untampered — without ever accessing the underlying data.</p>
             </motion.div>
@@ -143,9 +143,9 @@ export default function Whitepaper() {
 
             {/* 3 */}
             <motion.div {...f} className="wp-section">
-              <h2>3. COX Private Ledger (COX-PL)</h2>
-              <p>COX-PL is a private, permissioned Proof-of-Authority cryptographic ledger built for enterprise-grade operational auditability. It is not a public blockchain, not a distributed database, and not a transparency tool. It is a tamper-proof truth layer that anchors operational records with cryptographic proof.</p>
-              <h3>What COX-PL Records</h3>
+              <h2>3. FLA Private Ledger (FLA-PL)</h2>
+              <p>FLA-PL is a private, permissioned Proof-of-Authority cryptographic ledger built for enterprise-grade operational auditability. It is not a public blockchain, not a distributed database, and not a transparency tool. It is a tamper-proof truth layer that anchors operational records with cryptographic proof.</p>
+              <h3>What FLA-PL Records</h3>
               <ul>
                 <li><strong>Vehicle custody transitions</strong> — every handoff from intake to lot to lane to transport</li>
                 <li><strong>Condition certificates</strong> — OBD-II scan results sealed at the moment of diagnosis</li>
@@ -155,39 +155,39 @@ export default function Whitepaper() {
                 <li><strong>Workforce events</strong> — time entries, performance records, and safety incidents</li>
               </ul>
               <h3>Data Privacy</h3>
-              <p>COX-PL stores cryptographic hashes (SHA-256 fingerprints) and structured metadata pointers — never cleartext operational data. The underlying records remain in Cox-controlled databases behind existing access controls. This means COX-PL provides <strong>tamper-proof verification without data exposure</strong>: any authorized party can confirm a record hasn't been altered, but cannot read the record itself without proper access.</p>
+              <p>FLA-PL stores cryptographic hashes (SHA-256 fingerprints) and structured metadata pointers — never cleartext operational data. The underlying records remain in FLA-controlled databases behind existing access controls. This means FLA-PL provides <strong>tamper-proof verification without data exposure</strong>: any authorized party can confirm a record hasn't been altered, but cannot read the record itself without proper access.</p>
               <h3>Live Infrastructure</h3>
-              <p>The COX-PL explorer is operational at <strong>/cal</strong> within this platform. It connects to a live Proof-of-Authority chain with three validator nodes (Nashville, Atlanta, HQ). Blocks, certificates, vehicle passports, and chain integrity verification are all functional and queryable in real time.</p>
+              <p>The FLA-PL explorer is operational at <strong>/cal</strong> within this platform. It connects to a live Proof-of-Authority chain with three validator nodes (Nashville, Atlanta, HQ). Blocks, certificates, vehicle passports, and chain integrity verification are all functional and queryable in real time.</p>
             </motion.div>
 
             {hr}
 
             {/* 4 */}
             <motion.div {...f} className="wp-section">
-              <h2>4. COX Verification Ledger (COX-VL)</h2>
-              <p>COX-VL is the outward-facing verification layer. It turns internal COX-PL records into commercially provable certificates that external parties — buyers, dealers, financing partners, auditors — can verify independently.</p>
+              <h2>4. FLA Verification Ledger (FLA-VL)</h2>
+              <p>FLA-VL is the outward-facing verification layer. It turns internal FLA-PL records into commercially provable certificates that external parties — buyers, dealers, financing partners, auditors — can verify independently.</p>
               <ul>
                 <li><strong>Hash-based verification:</strong> Enter a certificate ID or VIN and receive cryptographic proof of provenance, integrity, and timestamp.</li>
-                <li><strong>Zero data exposure:</strong> COX-VL proves <em>that</em> a record exists and is untampered. It never reveals <em>what</em> the record contains beyond what Cox explicitly chooses to make verifiable.</li>
+                <li><strong>Zero data exposure:</strong> FLA-VL proves <em>that</em> a record exists and is untampered. It never reveals <em>what</em> the record contains beyond what FLA explicitly chooses to make verifiable.</li>
                 <li><strong>Cross-platform portability:</strong> Certificates travel with the vehicle across Autotrader listings, dealer management systems, and financing workflows.</li>
               </ul>
-              <p>The COX-VL verification portal is live at <strong>/vet</strong> within this platform. Certificate lookups and vehicle passport queries are functional against the live chain.</p>
+              <p>The FLA-VL verification portal is live at <strong>/vet</strong> within this platform. Certificate lookups and vehicle passport queries are functional against the live chain.</p>
             </motion.div>
 
             {hr}
 
             {/* 5 */}
             <motion.div {...f} className="wp-section">
-              <h2>5. Cox Operating System (Cox-OS)</h2>
-              <p>Cox-OS is the enterprise command center — the single-pane view across all facilities, divisions, and operational workflows. It aggregates real-time data from COX-PL, COX-LGS, and facility-level systems into actionable dashboards.</p>
+              <h2>5. FLA Operating System (FLA-OS)</h2>
+              <p>FLA-OS is the enterprise command center — the single-pane view across all facilities, divisions, and operational workflows. It aggregates real-time data from FLA-PL, FLA-LGS, and facility-level systems into actionable dashboards.</p>
               <ul>
-                <li>Facility status monitoring across all Manheim locations</li>
+                <li>Facility status monitoring across all NetworkNode locations</li>
                 <li>Vehicle status grid with custody state, health scores, and fault alerts</li>
                 <li>Certificate distribution analytics and throughput metrics</li>
                 <li>Validator node health and chain integrity monitoring</li>
                 <li>Live activity feed with real-time event streaming</li>
               </ul>
-              <p>The Cox-OS dashboard is live at <strong>/cop</strong> and auto-refreshes every 30 seconds from the operational chain.</p>
+              <p>The FLA-OS dashboard is live at <strong>/cop</strong> and auto-refreshes every 30 seconds from the operational chain.</p>
             </motion.div>
 
             {hr}
@@ -197,24 +197,24 @@ export default function Whitepaper() {
               <h2>6. CORE & TLL — The Supreme Court of Truth</h2>
               <p>At the absolute center of the fractal architecture sits the <strong>Trust Layer Ledger (TLL)</strong>. It acts as the "Supreme Court of Truth" between all connected clients, divisions, and partners. Every division's CORE engine anchors its local hashes upward into the universal TLL.</p>
               <p>Crucially, the TLL is completely non-intrusive. It does not do anything but record the master metadata record (the cryptographic hash) and a timestamp. <strong>The TLL never touches, sees, or stores your private operational data.</strong> It is the ultimate source of truth that proves an event happened, without ever exposing the contents of the event itself.</p>
-              <p>This design enforces <strong>absolute sovereignty and zero-knowledge privacy</strong>. Only the client entity has access to the actual private information residing on their local COX-PL. Manheim's data stays in Manheim's ledger. NextGear's data stays in NextGear's ledger. But the TLL can mathematically prove to the world that both chains are intact and unaltered.</p>
-              <p>The CORE topology visualizer is live at <strong>/core</strong>, showing all five Cox divisions as spokes anchoring to the central root fabric.</p>
+              <p>This design enforces <strong>absolute sovereignty and zero-knowledge privacy</strong>. Only the client entity has access to the actual private information residing on their local FLA-PL. NetworkNode's data stays in NetworkNode's ledger. NextGear's data stays in NextGear's ledger. But the TLL can mathematically prove to the world that both chains are intact and unaltered.</p>
+              <p>The CORE topology visualizer is live at <strong>/core</strong>, showing all five FLA divisions as spokes anchoring to the central root fabric.</p>
             </motion.div>
 
             {hr}
 
             {/* 7 */}
             <motion.div {...f} className="wp-section">
-              <h2>7. Cognitive Legacy Governance Substrate (COX-LGS)</h2>
-              <p>COX-LGS is the 42-node deterministic processing mesh that powers diagnostics, governance enforcement, and autonomous workflow management. It operates in four layers:</p>
+              <h2>7. Cognitive Legacy Governance Substrate (FLA-LGS)</h2>
+              <p>FLA-LGS is the 42-node deterministic processing mesh that powers diagnostics, governance enforcement, and autonomous workflow management. It operates in four layers:</p>
               <ul>
                 <li><strong>Perception (12 nodes):</strong> Raw signal ingestion — OBD-II telemetry, GPS, operator inputs, sensor feeds</li>
                 <li><strong>Analysis (14 nodes):</strong> Cross-validation against known patterns with disagreement-triggered verification</li>
                 <li><strong>Decision (10 nodes):</strong> Deterministic rule application — same inputs always produce the same decision</li>
                 <li><strong>Action (6 nodes):</strong> Certified outputs — reports, certificates, workflow triggers, ledger anchoring</li>
               </ul>
-              <p>The word "deterministic" is critical. COX-LGS contains <strong>zero inference, zero probability, zero hallucination surface</strong>. Given the same inputs, every node produces the same output on any hardware, at any time. This is not a feature — it is a mathematical property of the system.</p>
-              <p>The COX-LGS mesh visualizer is live at <strong>/cog</strong> with real-time node health, layer breakdown, and engine pulse monitoring.</p>
+              <p>The word "deterministic" is critical. FLA-LGS contains <strong>zero inference, zero probability, zero hallucination surface</strong>. Given the same inputs, every node produces the same output on any hardware, at any time. This is not a feature — it is a mathematical property of the system.</p>
+              <p>The FLA-LGS mesh visualizer is live at <strong>/cog</strong> with real-time node health, layer breakdown, and engine pulse monitoring.</p>
             </motion.div>
 
             {hr}
@@ -251,7 +251,7 @@ export default function Whitepaper() {
               <ul>
                 <li>60% of condition reports auto-generated from sensor data before a human inspector touches the vehicle</li>
                 <li>Dead-battery detection, cold-start flagging, pending fault catch — before the vehicle reaches a lane</li>
-                <li>Every scan anchored to COX-PL. Every dispute resolvable by deterministic replay.</li>
+                <li>Every scan anchored to FLA-PL. Every dispute resolvable by deterministic replay.</li>
               </ul>
               <p>The live scan demo is available at <strong>/app</strong> within this platform.</p>
             </motion.div>
@@ -261,7 +261,7 @@ export default function Whitepaper() {
             {/* 10 */}
             <motion.div {...f} className="wp-section">
               <h2>10. Division Separation & Enterprise Scalability</h2>
-              <p>The fractal architecture is designed for the full Cox Enterprises ecosystem — not just Cox Automotive. The same infrastructure extends to any division that generates operational records requiring auditability.</p>
+              <p>The fractal architecture is designed for the full FLA Enterprise ecosystem — not just Fractal Ledger Architecture. The same infrastructure extends to any division that generates operational records requiring auditability.</p>
               <div style={{ overflowX: 'auto', margin: '1.5rem 0' }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.85rem' }}>
                   <thead>
@@ -273,7 +273,7 @@ export default function Whitepaper() {
                   </thead>
                   <tbody>
                     {[
-                      ['Manheim', 'COX-PL', 'Custody, Condition, Arbitration, Performance, Key Events'],
+                      ['NetworkNode', 'FLA-PL', 'Custody, Condition, Arbitration, Performance, Key Events'],
                       ['NextGear Capital', 'NGC-PL', 'Lien Origination, Payoff Records, Audit Events'],
                       ['Autotrader', 'ATR-PL', 'Listing Verification, Price Anchoring'],
                       ['Kelley Blue Book', 'KBB-PL', 'Valuation Anchoring, Market Data'],
@@ -288,7 +288,7 @@ export default function Whitepaper() {
                   </tbody>
                 </table>
               </div>
-              <p>Each division operates its own private chain. All chains anchor to CORE. No division accesses another division's data. Cross-division verification happens through COX-VL — hash-only, zero exposure.</p>
+              <p>Each division operates its own private chain. All chains anchor to CORE. No division accesses another division's data. Cross-division verification happens through FLA-VL — hash-only, zero exposure.</p>
             </motion.div>
 
             {hr}
@@ -299,10 +299,10 @@ export default function Whitepaper() {
               <p>Deployment follows a phased approach designed for zero disruption to existing operations.</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', margin: '1.5rem 0' }}>
                 {[
-                  { phase: 'Phase 1 — Weeks 1–4', title: 'Pilot Facility Telemetry', desc: 'Deploy OBD-II adapters at one Manheim facility. Capture 42-signal telemetry. Generate condition reports. Validate scan accuracy against existing inspection reports.' },
+                  { phase: 'Phase 1 — Weeks 1–4', title: 'Pilot Facility Telemetry', desc: 'Deploy OBD-II adapters at one NetworkNode facility. Capture 42-signal telemetry. Generate condition reports. Validate scan accuracy against existing inspection reports.' },
                   { phase: 'Phase 2 — Weeks 4–8', title: 'Operational Intelligence', desc: 'Enable lane readiness dashboards, dead-battery detection, pending fault screening. Integrate transport pre-dispatch health reports. Begin arbitration reduction tracking.' },
-                  { phase: 'Phase 3 — Weeks 8–12', title: 'Ledger Activation', desc: 'Activate COX-PL validators. Anchor condition certificates on-ledger. Deploy LUME-V governance substrate. Issue COX-VL certificates for buyer-facing verification.' },
-                  { phase: 'Phase 4 — Weeks 12–16', title: 'Multi-Facility & Division Expansion', desc: 'Cross-facility benchmarking. NextGear Capital ledger integration. CORE root fabric activation. Expand to additional Manheim locations with proven playbook.' },
+                  { phase: 'Phase 3 — Weeks 8–12', title: 'Ledger Activation', desc: 'Activate FLA-PL validators. Anchor condition certificates on-ledger. Deploy LUME-V governance substrate. Issue FLA-VL certificates for buyer-facing verification.' },
+                  { phase: 'Phase 4 — Weeks 12–16', title: 'Multi-Facility & Division Expansion', desc: 'Cross-facility benchmarking. NextGear Capital ledger integration. CORE root fabric activation. Expand to additional NetworkNode locations with proven playbook.' },
                 ].map((p, i) => (
                   <div key={i} style={{ padding: '1rem 1.25rem', border: '1px solid var(--border-light)', borderRadius: '8px' }}>
                     <div style={{ fontSize: '0.68rem', color: accent, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '4px' }}>{p.phase}</div>
@@ -334,7 +334,7 @@ export default function Whitepaper() {
               <p style={{ color: 'var(--text-dim)', fontSize: '0.65rem', lineHeight: 1.6 }}>
                 © 2026 DarkWave Studios LLC · CORE.tlid.io<br />
                 US Provisional Patents 64/084,465 & 64/084,465 · All rights reserved<br />
-                This document is confidential and intended for Cox Enterprises authorized recipients only.
+                This document is confidential and intended for FLA Enterprise authorized recipients only.
               </p>
             </div>
           </div>

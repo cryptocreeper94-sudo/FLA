@@ -25,7 +25,7 @@ export default function EcosystemCTA() {
               { title: 'DAIGS: Deterministic Autonomous Infrastructure Governance System', sub: 'The multi-vertical governance framework defining LumeScan (vehicle systems), deterministic state models, invariant engines, and certificate fabrics across 23 infrastructure verticals.', doi: '10.5281/zenodo.19491784', version: 'v3 · 2026', color: 'var(--accent-cyan)', relevance: 'Defines the LumeScan vertical used here' },
               { title: 'Self-Healing Synthetic Organisms: Deterministic Autonomous Agents for Infrastructure Governance', sub: 'The architecture behind the 42-node governance mesh. Self-healing synthetic organisms that produce deterministic outputs from natural-language governance contracts — the core execution model powering every diagnostic and workflow.', doi: '10.5281/zenodo.19533627', version: 'v2 · 2026', color: '#f59e0b', relevance: 'Core execution model for all platform agents' },
               { title: 'The Routed World — Meridian and Deterministic Physical Infrastructure', sub: 'Collected edition of the Meridian Canon: deterministic wireless energy routing, anchor node architecture, and the theory of Deterministic Infrastructure.', doi: '10.5281/zenodo.20028362', version: 'First Edition · May 2026', color: '#dc2626', relevance: 'Foundation for the Meridian charging system' },
-              { title: 'The Enterprise Mesh — Sovereign-Chain Architecture and Cross-Enterprise Verification', sub: 'Sovereign-chain network architecture where every enterprise operates its own private proof-of-authority ledger. Cross-enterprise verification via cryptographic proof exchange — no raw data ever leaves the originating chain.', doi: '10.5281/zenodo.20251916', version: 'v1 · May 2026', color: '#0ea5e9', relevance: 'Architecture for COX Private Ledger network expansion' },
+              { title: 'The Enterprise Mesh — Sovereign-Chain Architecture and Cross-Enterprise Verification', sub: 'Sovereign-chain network architecture where every enterprise operates its own private proof-of-authority ledger. Cross-enterprise verification via cryptographic proof exchange — no raw data ever leaves the originating chain.', doi: '10.5281/zenodo.20251916', version: 'v1 · May 2026', color: '#0ea5e9', relevance: 'Architecture for FLA Private Ledger network expansion' },
             ].map((paper, i) => (
               <motion.div key={i} {...f} transition={{ delay: i * 0.08 }} className="panel" style={{ padding: '1.5rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem', marginBottom: '0.5rem', flexWrap: 'wrap' }}>
@@ -48,7 +48,7 @@ export default function EcosystemCTA() {
             {[
               { icon: <FileText size={16}/>, label: 'U.S. Provisional 64/084,465', desc: 'Lume Deterministic Governance' },
               { icon: <FileText size={16}/>, label: 'U.S. Provisional 64/084,465', desc: 'Meridian Energy Architecture' },
-              { icon: <Shield size={16}/>, label: '4 Additional Filings', desc: 'Runtime, Dongle, Organisms, COX-VL' },
+              { icon: <Shield size={16}/>, label: '4 Additional Filings', desc: 'Runtime, Dongle, Organisms, FLA-VL' },
             ].map((p, i) => (
               <div key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
                 <div style={{ color: '#fb923c', flexShrink: 0, marginTop: 2 }}>{p.icon}</div>

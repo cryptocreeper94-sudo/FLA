@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Users, Truck, MapPin, AlertTriangle, CheckCircle, ChevronRight, BarChart3, Layers, Zap, RefreshCw } from 'lucide-react';
 
-const API = 'https://cox-automotive-ledger.onrender.com';
+const API = 'https://fla-ledger.onrender.com';
 const fadeIn = { initial: { opacity: 0, y: 16 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.4 } };
 
 function timeAgo(ts: number) {
@@ -14,9 +14,9 @@ function timeAgo(ts: number) {
 }
 
 const FACILITIES = [
-  { id: 'NASH-001', name: 'Manheim Nashville', city: 'Nashville, TN', lanes: 12, capacity: 8500, status: 'operational' },
-  { id: 'ATL-002', name: 'Manheim Atlanta', city: 'Atlanta, GA', lanes: 16, capacity: 12000, status: 'operational' },
-  { id: 'HQ-003', name: 'Cox Enterprises HQ', city: 'Atlanta, GA', lanes: 0, capacity: 0, status: 'operational' },
+  { id: 'NASH-001', name: 'NetworkNode Nashville', city: 'Nashville, TN', lanes: 12, capacity: 8500, status: 'operational' },
+  { id: 'ATL-002', name: 'NetworkNode Atlanta', city: 'Atlanta, GA', lanes: 16, capacity: 12000, status: 'operational' },
+  { id: 'HQ-003', name: 'FLA Enterprise HQ', city: 'Atlanta, GA', lanes: 0, capacity: 0, status: 'operational' },
 ];
 
 export default function COPDashboard() {
@@ -72,8 +72,8 @@ export default function COPDashboard() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <div style={{ width: 44, height: 44, background: 'linear-gradient(135deg, #f59e0b, #d97706)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Layers size={22} color="#0a0c10" /></div>
           <div>
-            <h1 style={{ fontSize: '1.4rem', fontWeight: 800, margin: 0, letterSpacing: '-0.03em' }}>Cox Operating System</h1>
-            <p style={{ fontSize: '0.68rem', color: 'var(--text-dim)', margin: 0, letterSpacing: '0.08em' }}>COX AUTOMOTIVE · ENTERPRISE COMMAND CENTER</p>
+            <h1 style={{ fontSize: '1.4rem', fontWeight: 800, margin: 0, letterSpacing: '-0.03em' }}>FLA Operating System</h1>
+            <p style={{ fontSize: '0.68rem', color: 'var(--text-dim)', margin: 0, letterSpacing: '0.08em' }}>FLA AUTOMOTIVE · ENTERPRISE COMMAND CENTER</p>
           </div>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>

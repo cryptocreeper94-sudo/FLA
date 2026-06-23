@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Zap, ShieldCheck, AlertTriangle, Activity, Radio, ArrowRight } from 'lucide-react';
 import { Suspense } from 'react';
-import ManheimTabs from '../components/ManheimTabs';
+import NetworkNodeTabs from '../components/NetworkNodeTabs';
 import MeridianScene3D from '../components/MeridianVisualizer';
 import MeridianBreakdown from '../components/MeridianBreakdown';
 
@@ -17,7 +17,7 @@ const cyan    = '#38bdf8';
 export default function MeridianPitch() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
-      <ManheimTabs />
+      <NetworkNodeTabs />
 
       {/* ═══ HERO ═══ */}
       <section style={{
@@ -247,7 +247,7 @@ export default function MeridianPitch() {
             {[
               { step: '1', icon: <Activity size={20} />, title: 'Vehicle Sign-In', desc: 'The moment the vehicle enters the Meridian canopy, nodes identify its telemetry signature and establish a secure, authenticated session for energy transfer.', color: red },
               { step: '2', icon: <Zap size={20} />, title: 'Deterministic Routing', desc: 'Energy is routed from the nearest anchor node to the vehicle rectenna plate via targeted beamforming. Micro-bursts of energy are transferred and logged.', color: cyan },
-              { step: '3', icon: <ShieldCheck size={20} />, title: 'Cryptographic Micro-Transactions', desc: 'When the vehicle leaves, the session terminates. The Anchor Node signs an Ed25519 receipt capturing the exact charge state, permanently anchoring the billing event to the private COX-PL.', color: emerald },
+              { step: '3', icon: <ShieldCheck size={20} />, title: 'Cryptographic Micro-Transactions', desc: 'When the vehicle leaves, the session terminates. The Anchor Node signs an Ed25519 receipt capturing the exact charge state, permanently anchoring the billing event to the private FLA-PL.', color: emerald },
             ].map((item, i) => (
               <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.15 }}
                 style={{ display: 'flex', gap: '1.5rem', padding: '2rem 0', position: 'relative' }}>

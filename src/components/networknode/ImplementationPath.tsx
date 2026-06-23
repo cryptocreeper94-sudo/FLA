@@ -10,7 +10,7 @@ const PHASES = [
     phase: 'Phase 1', timeline: 'Weeks 1–4', title: 'Telemetry Capture & Baseline',
     icon: <Cpu size={20} />, color: 'var(--accent-cyan)',
     items: [
-      'Deploy BLE OBD-II adapters via passive splitter alongside existing Cox2M dongles',
+      'Deploy BLE OBD-II adapters via passive splitter alongside existing FLA2M dongles',
       'Capture 42-signal telemetry from 500–1,000 vehicles — zero disruption to telematics',
       'Generate automated condition reports from sensor data',
       'Validate scan accuracy against existing inspection reports',
@@ -27,13 +27,13 @@ const PHASES = [
     ],
   },
   {
-    phase: 'Phase 3', timeline: 'Weeks 8–12', title: 'COX-PL Integration & Trust Certificates',
+    phase: 'Phase 3', timeline: 'Weeks 8–12', title: 'FLA-PL Integration & Trust Certificates',
     icon: <Layers size={20} />, color: '#38bdf8',
     items: [
-      'Activate COX Private Ledger validators at pilot facility',
+      'Activate FLA Private Ledger validators at pilot facility',
       'Anchor all condition certificates on-ledger with cryptographic proof',
       'Deploy LUME-V governance substrate over existing operational workflows',
-      'Issue COX-VL certificates for buyer-facing vehicle verification',
+      'Issue FLA-VL certificates for buyer-facing vehicle verification',
     ],
   },
   {
@@ -42,8 +42,8 @@ const PHASES = [
     items: [
       'Full-lot predictive throughput modeling and population health analytics',
       'Cross-facility health scoring and benchmarking',
-      'Expand to additional Manheim locations with proven playbook',
-      'Enable cross-facility custody chain continuity via COX-PL',
+      'Expand to additional NetworkNode locations with proven playbook',
+      'Enable cross-facility custody chain continuity via FLA-PL',
     ],
   },
 ];
@@ -52,8 +52,8 @@ const MODULES = [
   { title: 'LUME-Scan', desc: 'OBD-II diagnostics and condition reporting — standalone hardware and software.', color: 'var(--accent-cyan)' },
   { title: 'Lot Ops Pro', desc: 'Operational workforce platform — custody tracking, routing, messaging.', color: '#38bdf8' },
   { title: 'LUME-V', desc: 'Deterministic governance substrate — operates across any legacy enterprise stack.', color: 'var(--accent-emerald)' },
-  { title: 'COX-PL', desc: 'COX Private Ledger — private, tamper-evident operational records anchored on-chain.', color: '#38bdf8' },
-  { title: 'COX-VL', desc: 'COX Verification Ledger — external verification certificates for buyers, dealers, and financing partners.', color: '#38bdf8' },
+  { title: 'FLA-PL', desc: 'FLA Private Ledger — private, tamper-evident operational records anchored on-chain.', color: '#38bdf8' },
+  { title: 'FLA-VL', desc: 'FLA Verification Ledger — external verification certificates for buyers, dealers, and financing partners.', color: '#38bdf8' },
   { title: 'Meridian', desc: 'Wireless energy routing — EV charging, powered signage, and lot infrastructure.', color: '#dc2626' },
   { title: 'Unified Platform', desc: 'When deployed together, every component amplifies the others — the whole exceeds the sum of its parts.', color: '#fb923c' },
 ];
@@ -87,7 +87,7 @@ export default function ImplementationPath() {
               <FileText size={14} style={{ marginRight: 6 }} /> Implementation Path
             </div>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.25rem', lineHeight: 1.1 }}>
-              How Manheim Deploys This
+              How NetworkNode Deploys This
             </h2>
             <p className="text-muted" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.7 }}>
               A phased deployment path designed for zero disruption to existing operations. Every stage is independently valuable — no all-or-nothing commitment required.
@@ -184,7 +184,7 @@ export default function ImplementationPath() {
             { icon: <Building2 size={20} />, title: 'Facility by Facility', desc: 'Start with one pilot location. Prove value. Expand when ready. Each facility is independently operational.' },
             { icon: <Shield size={20} />, title: 'Independently Valuable', desc: 'Each phase delivers measurable ROI on its own. Phase 1 alone reduces diagnostic overhead and strengthens arbitration defense.' },
             { icon: <Shield size={20} />, title: 'Enterprise Identity Ready', desc: 'The platform integrates with your existing SSO — Azure AD, Okta, SAML 2.0, or any corporate identity provider.' },
-            { icon: <Globe size={20} />, title: 'Data Residency & Compliance', desc: 'All data stays on infrastructure Cox controls. Designed for SOC 2, GDPR, and PCI compliance readiness.' },
+            { icon: <Globe size={20} />, title: 'Data Residency & Compliance', desc: 'All data stays on infrastructure FLA controls. Designed for SOC 2, GDPR, and PCI compliance readiness.' },
             { icon: <Layers size={20} />, title: 'Uptime & Disaster Recovery', desc: 'Multi-region failover, automated backups, and deterministic state recovery. SLAs defined during deployment.' },
           ].map((item, i) => (
             <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.05 }} className="panel" style={{ padding: '1.25rem', borderColor: 'rgba(16,185,129,0.15)', background: 'rgba(16,185,129,0.02)', display: 'flex', flexDirection: 'column' }}>
@@ -200,7 +200,7 @@ export default function ImplementationPath() {
           <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
             <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem' }}>Modular Architecture</h3>
             <p className="text-muted" style={{ maxWidth: '700px', margin: '0 auto', fontSize: '0.95rem', lineHeight: 1.6 }}>
-              The platform is designed so that each layer operates independently. Manheim can begin with the components that address immediate operational needs and integrate additional layers over time.
+              The platform is designed so that each layer operates independently. NetworkNode can begin with the components that address immediate operational needs and integrate additional layers over time.
             </p>
           </div>
           <div style={{ position: 'relative', maxWidth: '600px', margin: '0 auto', background: 'rgba(255,255,255,0.02)', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)' }}>

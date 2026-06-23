@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Shield, Activity, Cpu, GitBranch, Zap, CheckCircle, RefreshCw, Hexagon, Eye, Target, Gauge } from 'lucide-react';
 
-const API = 'https://cox-automotive-ledger.onrender.com';
+const API = 'https://fla-ledger.onrender.com';
 const fadeIn = { initial: { opacity: 0, y: 16 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.4 } };
 
 // Simulated 42-node mesh status (deterministic — always same layout)
@@ -67,7 +67,7 @@ export default function COGEngine() {
         </div>
         <h1 style={{ fontSize: '2rem', fontWeight: 800, margin: '0 0 0.5rem', letterSpacing: '-0.03em' }}>Cognitive Legacy Governance Substrate</h1>
         <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem', maxWidth: '550px', margin: '0 auto', lineHeight: 1.6 }}>
-          The 42-node deterministic engine powering AI governance, diagnostics, and autonomous workflow management across Cox operations.
+          The 42-node deterministic engine powering AI governance, diagnostics, and autonomous workflow management across FLA operations.
         </p>
       </motion.div>
 

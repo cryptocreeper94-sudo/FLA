@@ -18,7 +18,7 @@ const features = [
 const threeSystems = [
   { label: 'Lot Ops Pro', role: 'The Operating System', desc: 'Driver management, GPS routing, performance analytics, real-time messaging, OCR ticket scanning, role-based dashboards — the complete platform running daily lot operations from a single mobile app.', color: 'var(--accent-emerald)' },
   { label: 'LumeScan', role: 'The Intelligence Layer', desc: 'Full OBD-II scanner at intake — read and clear DTCs, freeze frame analysis, VIN auto-read from ECU, pending fault detection. Pilot target: 100% of the condition report auto-generated before a human touches the vehicle.', color: 'var(--accent-cyan)' },
-  { label: 'COX Private Ledger', role: 'The Enterprise Ledger', desc: 'Every condition report, custody transfer, and diagnostic result sealed into a tamper-proof private ledger. Arbitration disputes resolved by mathematical replay, not opinion.', color: '#38bdf8' },
+  { label: 'FLA Private Ledger', role: 'The Enterprise Ledger', desc: 'Every condition report, custody transfer, and diagnostic result sealed into a tamper-proof private ledger. Arbitration disputes resolved by mathematical replay, not opinion.', color: '#38bdf8' },
 ];
 
 const whoSeesWhat = [

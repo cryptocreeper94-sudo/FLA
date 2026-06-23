@@ -4,20 +4,20 @@ import { Shield, Database, Mail, Lock, LogIn, AlertCircle, KeyRound, Eye, EyeOff
 import { signInWithEmail, registerWithEmail, signInWithGoogle } from '../lib/firebase';
 
 interface LoginScreenProps {
-  brand: 'manheim' | 'cal';
+  brand: 'networknode' | 'cal';
 }
 
 const brands = {
-  manheim: {
+  networknode: {
     icon: <Shield size={28} color="#0a0a0c" />,
-    title: 'Cox Enterprise Platform',
-    subtitle: 'Sign in with your authorized Cox Automotive email address.',
+    title: 'Fractal Ledger Architecture',
+    subtitle: 'Sign in with your authorized Fractal Ledger Architecture email address.',
     gradient: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-emerald))',
     accent: 'var(--accent-cyan)',
   },
   cal: {
     icon: <Database size={28} color="#0a0a0c" />,
-    title: 'COX Private Ledger',
+    title: 'FLA Private Ledger',
     subtitle: 'Cryptographic vehicle provenance explorer — authorized access only.',
     gradient: 'linear-gradient(135deg, #22d3ee, #38bdf8)',
     accent: '#38bdf8',
@@ -112,7 +112,7 @@ export default function LoginScreen({ brand }: LoginScreenProps) {
       } else if (msg.includes('user-not-found')) {
         setError('No account found. Create one below.');
       } else if (msg.includes('Access restricted')) {
-        setError('Access restricted to authorized @coxautoinc.com email addresses.');
+        setError('Access restricted to authorized @darkwavestudios.com email addresses.');
       } else {
         setError(msg.replace('Firebase: ', '').replace(/\(auth\/.*\)/, '').trim());
       }
@@ -142,7 +142,7 @@ export default function LoginScreen({ brand }: LoginScreenProps) {
       padding: '1.5rem', zIndex: 100,
     }}>
       {/* Background glow */}
-      <div style={{ position: 'fixed', top: '20%', left: '50%', transform: 'translateX(-50%)', width: '600px', height: '600px', background: `radial-gradient(circle, ${brand === 'manheim' ? 'rgba(56,189,248,0.06)' : 'rgba(34,211,238,0.06)'} 0%, transparent 70%)`, pointerEvents: 'none' }} />
+      <div style={{ position: 'fixed', top: '20%', left: '50%', transform: 'translateX(-50%)', width: '600px', height: '600px', background: `radial-gradient(circle, ${brand === 'networknode' ? 'rgba(56,189,248,0.06)' : 'rgba(34,211,238,0.06)'} 0%, transparent 70%)`, pointerEvents: 'none' }} />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -160,7 +160,7 @@ export default function LoginScreen({ brand }: LoginScreenProps) {
             background: b.gradient,
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
             marginBottom: '1.25rem',
-            boxShadow: `0 8px 32px ${brand === 'manheim' ? 'rgba(56,189,248,0.2)' : 'rgba(34,211,238,0.2)'}`,
+            boxShadow: `0 8px 32px ${brand === 'networknode' ? 'rgba(56,189,248,0.2)' : 'rgba(34,211,238,0.2)'}`,
           }}>
             {b.icon}
           </div>
@@ -182,9 +182,9 @@ export default function LoginScreen({ brand }: LoginScreenProps) {
                 const msg = err instanceof Error ? err.message : 'Google sign-in failed';
                 if (msg.includes('popup-closed')) return;
                 if (msg.includes('Access restricted')) {
-                  setError('Access restricted to authorized @coxautoinc.com email addresses.');
+                  setError('Access restricted to authorized @darkwavestudios.com email addresses.');
                 } else {
-                  setError('Google sign-in failed. Use an authorized @coxautoinc.com account.');
+                  setError('Google sign-in failed. Use an authorized @darkwavestudios.com account.');
                 }
               } finally {
                 setGoogleLoading(false);
@@ -206,7 +206,7 @@ export default function LoginScreen({ brand }: LoginScreenProps) {
             {googleLoading ? 'Signing in…' : 'Continue with Google'}
           </button>
           <p style={{ fontSize: '0.65rem', color: 'var(--text-dim)', textAlign: 'center', margin: '0 0 1rem' }}>
-            Use your @coxautoinc.com Google account
+            Use your @darkwavestudios.com Google account
           </p>
 
           {/* Divider */}
@@ -223,7 +223,7 @@ export default function LoginScreen({ brand }: LoginScreenProps) {
             </h2>
             <p style={{ fontSize: '0.75rem', color: 'var(--text-dim)', lineHeight: 1.5, margin: 0 }}>
               {mode === 'register'
-                ? `Enter your @coxautoinc.com email and create a ${authType === 'pin' ? '6-digit PIN' : 'password'}.`
+                ? `Enter your @darkwavestudios.com email and create a ${authType === 'pin' ? '6-digit PIN' : 'password'}.`
                 : `Sign in with your email and ${authType === 'pin' ? '6-digit PIN' : 'password'}.`}
             </p>
           </div>
@@ -265,7 +265,7 @@ export default function LoginScreen({ brand }: LoginScreenProps) {
               <Mail size={16} style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-dim)' }} />
               <input
                 type="email"
-                placeholder={brand === 'manheim' ? 'your.name@coxautoinc.com' : 'Email address'}
+                placeholder={brand === 'networknode' ? 'your.name@darkwavestudios.com' : 'Email address'}
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 required
@@ -352,7 +352,7 @@ export default function LoginScreen({ brand }: LoginScreenProps) {
           <div style={{ textAlign: 'center', marginTop: '1.25rem', padding: '1rem', background: 'rgba(255,255,255,0.02)', borderRadius: '10px', border: '1px solid var(--border-light)' }}>
             <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', margin: '0 0 0.5rem', lineHeight: 1.4 }}>
               {mode === 'login'
-                ? "First time here? Create an account with your Cox email."
+                ? "First time here? Create an account with your FLA email."
                 : "Already registered? Sign in to your existing account."}
             </p>
             <button
@@ -369,8 +369,8 @@ export default function LoginScreen({ brand }: LoginScreenProps) {
         {/* Footer */}
         <div style={{ textAlign: 'center', margin: '2rem 0' }}>
           <p style={{ fontSize: '0.65rem', color: 'var(--text-dim)', lineHeight: 1.6 }}>
-            Cox Enterprise Platform<br />
-            Authentication secured by Firebase · Access restricted to @coxautoinc.com
+            Fractal Ledger Architecture<br />
+            Authentication secured by Firebase · Access restricted to @darkwavestudios.com
           </p>
         </div>
       </motion.div>

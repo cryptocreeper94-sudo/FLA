@@ -47,22 +47,22 @@ export default function FractalLedgerSection() {
           </h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             <div>
-              <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: accentGold }}>1. Cox CORE</h4>
+              <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: accentGold }}>1. FLA CORE</h4>
               <p className="text-dim" style={{ fontSize: '0.7rem', letterSpacing: '0.05em', marginBottom: '0.4rem', textTransform: 'uppercase' as const }}>Certified Operational Root Engine</p>
               <p className="text-muted" style={{ fontSize: '0.9rem', lineHeight: 1.6 }}>
-                The universal master root hub for the entire Cox Automotive enterprise. CORE does not hold division-level data itself — it is the highly secure, immutable central backbone that all division ledgers anchor into.
+                The universal master root hub for the entire Fractal Ledger Architecture enterprise. CORE does not hold division-level data itself — it is the highly secure, immutable central backbone that all division ledgers anchor into.
               </p>
             </div>
             <div>
-              <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: accentBlue }}>2. COX-PL — Division Private Ledger</h4>
-              <p className="text-dim" style={{ fontSize: '0.7rem', letterSpacing: '0.05em', marginBottom: '0.4rem', textTransform: 'uppercase' as const }}>COX Private Ledger</p>
+              <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: accentBlue }}>2. FLA-PL — Division Private Ledger</h4>
+              <p className="text-dim" style={{ fontSize: '0.7rem', letterSpacing: '0.05em', marginBottom: '0.4rem', textTransform: 'uppercase' as const }}>FLA Private Ledger</p>
               <p className="text-muted" style={{ fontSize: '0.9rem', lineHeight: 1.6 }}>
                 The internal, private operational ledger <em>specific to each division</em>. This private half of the division's dual-ledger tracks every vehicle event, scan, and workflow without ever exposing data to other divisions or outside parties.
               </p>
             </div>
             <div>
-              <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: accentCyan }}>3. COX-VL — Division Verification Ledger</h4>
-              <p className="text-dim" style={{ fontSize: '0.7rem', letterSpacing: '0.05em', marginBottom: '0.4rem', textTransform: 'uppercase' as const }}>COX Verification Ledger</p>
+              <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: accentCyan }}>3. FLA-VL — Division Verification Ledger</h4>
+              <p className="text-dim" style={{ fontSize: '0.7rem', letterSpacing: '0.05em', marginBottom: '0.4rem', textTransform: 'uppercase' as const }}>FLA Verification Ledger</p>
               <p className="text-muted" style={{ fontSize: '0.9rem', lineHeight: 1.6 }}>
                 The external, public-facing verification ledger <em>specific to each division</em>. This public half of the dual-ledger issues verifiable certificates to dealers, buyers, and financing partners on demand.
               </p>
@@ -77,7 +77,7 @@ export default function FractalLedgerSection() {
           </h3>
           <div className="panel" style={{ padding: '2.5rem', borderColor: goldBorder, background: `linear-gradient(180deg, ${goldDim} 0%, transparent 100%)` }}>
             <p className="text-muted" style={{ lineHeight: 1.7, marginBottom: '2rem', fontSize: '0.92rem' }}>
-              Every Cox Automotive division operates its own isolated dual-ledger — a private operational ledger (COX-PL) and a public verification ledger (COX-VL). All dual-ledgers securely anchor into the universal <strong style={{ color: accentGold }}>CORE</strong> root fabric. The pattern is self-similar at every level: division, facility, and asset.
+              Every Fractal Ledger Architecture division operates its own isolated dual-ledger — a private operational ledger (FLA-PL) and a public verification ledger (FLA-VL). All dual-ledgers securely anchor into the universal <strong style={{ color: accentGold }}>CORE</strong> root fabric. The pattern is self-similar at every level: division, facility, and asset.
             </p>
             {/* Visual hub-and-spoke */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
@@ -91,7 +91,7 @@ export default function FractalLedgerSection() {
                 }}>
                   <Server size={20} style={{ color: accentGold }} />
                   <div>
-                    <div style={{ fontWeight: 800, fontSize: '1rem', color: accentGold, letterSpacing: '-0.02em' }}>Cox CORE</div>
+                    <div style={{ fontWeight: 800, fontSize: '1rem', color: accentGold, letterSpacing: '-0.02em' }}>FLA CORE</div>
                     <div style={{ fontSize: '0.65rem', color: 'var(--text-dim)', letterSpacing: '0.05em' }}>ENTERPRISE ROOT FABRIC</div>
                   </div>
                 </div>
@@ -103,7 +103,7 @@ export default function FractalLedgerSection() {
               {/* Division branches */}
               <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
                 {[
-                  { name: 'Manheim', desc: 'Auction integrity & vehicle custody', private: 'COX-PL', public: 'COX-VL', active: true },
+                  { name: 'NetworkNode', desc: 'Auction integrity & vehicle custody', private: 'FLA-PL', public: 'FLA-VL', active: true },
                   { name: 'Autotrader', desc: 'Verified listing provenance', private: 'ATR-PL', public: 'ATR-VL', active: false },
                   { name: 'Kelley Blue Book', desc: 'Cryptographic valuation anchoring', private: 'KBB-PL', public: 'KBB-VL', active: false },
                   { name: 'Dealer.com', desc: 'Dealership transaction records', private: 'DLR-PL', public: 'DLR-VL', active: false },
@@ -151,7 +151,7 @@ export default function FractalLedgerSection() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem', marginBottom: '3rem' }}>
           {[
             { icon: <Lock size={22} />, title: 'Absolute Compartmentalization', desc: 'No division ever sees another division\'s operational data. Each dual-ledger is cryptographically isolated. A breach of one division\'s ledger cannot propagate to any other — or to CORE.' },
-            { icon: <Shield size={22} />, title: 'Independent Auditability', desc: 'Each division\'s COX-VL issues its own verification certificates independently. Auditors, dealers, and financing partners verify against the specific division — not a monolithic enterprise ledger.' },
+            { icon: <Shield size={22} />, title: 'Independent Auditability', desc: 'Each division\'s FLA-VL issues its own verification certificates independently. Auditors, dealers, and financing partners verify against the specific division — not a monolithic enterprise ledger.' },
             { icon: <Globe size={22} />, title: 'Infinite Scalability', desc: 'Adding a new division, subsidiary, or partner is architecturally trivial — spin up a new dual-ledger pair, connect it to CORE, and the fractal pattern continues. No re-architecture required.' },
           ].map((item, i) => (
             <motion.div key={i} {...fadeIn} transition={{ delay: 0.15 + i * 0.08 }}
@@ -172,8 +172,8 @@ export default function FractalLedgerSection() {
             {[
               { label: 'OBD-II / Edge Scan', sub: 'Raw sensor data captured at the asset', color: accentCyan },
               { label: 'Deterministic Processing', sub: '42-node organism analysis', color: accentEmerald },
-              { label: 'COX-PL Anchor', sub: 'Division private ledger record sealed', color: accentBlue },
-              { label: 'COX-VL Certificate', sub: 'Division verification certificate issued', color: accentCyan },
+              { label: 'FLA-PL Anchor', sub: 'Division private ledger record sealed', color: accentBlue },
+              { label: 'FLA-VL Certificate', sub: 'Division verification certificate issued', color: accentCyan },
               { label: 'CORE Root Anchor', sub: 'Universal enterprise fabric — final anchoring', color: accentGold },
             ].map((step, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'stretch', gap: '1rem' }}>

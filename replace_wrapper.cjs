@@ -33,33 +33,33 @@ replaceInFile('D:/CEP/src/components/engineering/TechDeepDive.tsx', [
 ]);
 
 // 3. COPSection.tsx
-replaceInFile('D:/CEP/src/components/manheim/COPSection.tsx', [
+replaceInFile('D:/CEP/src/components/networknode/COPSection.tsx', [
     ['governance wrapper', 'governance substrate'],
     ['meta-operating system wrapper', 'meta-operating system substrate']
 ]);
 
 // 4. EcosystemCTA.tsx
-replaceInFile('D:/CEP/src/components/manheim/EcosystemCTA.tsx', [
+replaceInFile('D:/CEP/src/components/networknode/EcosystemCTA.tsx', [
     ['verification wrapper', 'verification substrate']
 ]);
 
 // 5. ImplementationPath.tsx
-replaceInFile('D:/CEP/src/components/manheim/ImplementationPath.tsx', [
+replaceInFile('D:/CEP/src/components/networknode/ImplementationPath.tsx', [
     ['governance wrapper', 'governance substrate']
 ]);
 
 // 6. LotOpsProSection.tsx
-replaceInFile('D:/CEP/src/components/manheim/LotOpsProSection.tsx', [
+replaceInFile('D:/CEP/src/components/networknode/LotOpsProSection.tsx', [
     ['deterministic wrapper', 'deterministic substrate']
 ]);
 
 // 7. PersonalNote.tsx
-replaceInFile('D:/CEP/src/components/manheim/PersonalNote.tsx', [
+replaceInFile('D:/CEP/src/components/networknode/PersonalNote.tsx', [
     ['governance wrapper', 'governance substrate']
 ]);
 
 // 8. LumeVSection.tsx
-replaceInFile('D:/CEP/src/components/manheim/LumeVSection.tsx', [
+replaceInFile('D:/CEP/src/components/networknode/LumeVSection.tsx', [
     ["the COG wrapper surrounds", "the COG substrate underlies"],
     ['Governance Wrapper', 'Governance Substrate'],
     ['modernization wrapper', 'modernization substrate'],

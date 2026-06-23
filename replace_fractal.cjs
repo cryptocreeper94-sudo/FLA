@@ -14,7 +14,7 @@ function replaceInFile(filePath, replacements) {
 }
 
 // 1. PersonalNote.tsx
-replaceInFile('D:/CEP/src/components/manheim/PersonalNote.tsx', [
+replaceInFile('D:/CEP/src/components/networknode/PersonalNote.tsx', [
     ['There are a dozen sections below covering everything from the governance substrate and the private ledger', 'There are more than a dozen sections below covering everything from the governance substrate to the fractal dual-ledger architecture']
 ]);
 
@@ -25,7 +25,7 @@ replaceInFile('D:/CEP/src/components/engineering/TechDeepDive.tsx', [
 ]);
 
 // 3. PlainEnglish.tsx
-replaceInFile('D:/CEP/src/components/manheim/PlainEnglish.tsx', [
+replaceInFile('D:/CEP/src/components/networknode/PlainEnglish.tsx', [
     ['I built a **dual-ledger architecture** to completely isolate your data.', 'I built a **fractal dual-ledger architecture** (a dual-ledger per division) to completely isolate your data.']
 ]);
 
@@ -40,7 +40,7 @@ replaceInFile('D:/CEP/src/pages/Whitepaper.tsx', [
     ['VET is the commercial-facing verification ledger', "VET is the division's commercial-facing verification ledger"]
 ]);
 
-// 5. CoxLedgerSection.tsx
-replaceInFile('D:/CEP/src/components/manheim/CoxLedgerSection.tsx', [
+// 5. FLALedgerSection.tsx
+replaceInFile('D:/CEP/src/components/networknode/FLALedgerSection.tsx', [
     ['The private, tamper-proof operational ledger', 'The division-level private, tamper-proof operational ledger']
 ]);

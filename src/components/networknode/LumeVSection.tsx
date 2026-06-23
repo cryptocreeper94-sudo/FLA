@@ -20,10 +20,10 @@ export default function LumeVSection() {
               <Network size={14} style={{ marginRight: 6 }} /> The Modernization Engine
             </div>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.25rem', lineHeight: 1.1 }}>
-              COX-LGS: <span className="text-gradient" style={{ backgroundImage: 'linear-gradient(to right, #38bdf8, #10b981)' }}>COX Legacy Governance Substrate</span>
+              FLA-LGS: <span className="text-gradient" style={{ backgroundImage: 'linear-gradient(to right, #38bdf8, #10b981)' }}>FLA Legacy Governance Substrate</span>
             </h2>
             <p className="text-muted" style={{ maxWidth: '780px', margin: '0 auto', fontSize: '1.15rem', lineHeight: 1.7 }}>
-              Powered by the Lume-V Engine, the COX-LGS substrate underlies Manheim's entire legacy stack in deterministic governance—unifying logic and orchestrating workflows without requiring a multi-million dollar rip-and-replace migration.
+              Powered by the Lume-V Engine, the FLA-LGS substrate underlies NetworkNode's entire legacy stack in deterministic governance—unifying logic and orchestrating workflows without requiring a multi-million dollar rip-and-replace migration.
             </p>
           </motion.div>
         </div>
@@ -37,22 +37,22 @@ export default function LumeVSection() {
                   <Activity size={22} color="var(--accent-cyan)" /> Live Enterprise API Integration
                 </h3>
                 <p className="text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.6 }}>
-                  The Lume-V SDK is already actively provisioned with <strong>COX-LGS</strong> specific credentials, ready to instantly wrap any legacy pipeline or AI agent without refactoring backend code.
+                  The Lume-V SDK is already actively provisioned with <strong>FLA-LGS</strong> specific credentials, ready to instantly wrap any legacy pipeline or AI agent without refactoring backend code.
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '10px', fontSize: '0.9rem', color: 'var(--text-main)', padding: '10px 16px', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: '8px' }}>
                   <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981', boxShadow: '0 0 10px #10b981', flexShrink: 0 }} /> 
-                  <span style={{ fontFamily: 'monospace', wordBreak: 'break-all' }}>API: cog_live_manheim_enterprise_xxx</span> 
+                  <span style={{ fontFamily: 'monospace', wordBreak: 'break-all' }}>API: cog_live_networknode_enterprise_xxx</span> 
                   <span style={{ color: '#10b981', fontWeight: 600, flexShrink: 0 }}>[ ACTIVE ]</span>
                 </div>
               </div>
               
               <div style={{ flex: 1, minWidth: '280px', maxWidth: '100%', background: '#0d1117', borderRadius: '12px', padding: '1.25rem', border: '1px solid rgba(255,255,255,0.05)', fontSize: '0.85rem', fontFamily: 'monospace', overflowX: 'auto' }}>
-                <div style={{ color: '#8b949e', marginBottom: '10px' }}>// Initialize COX Legacy Governance Substrate</div>
+                <div style={{ color: '#8b949e', marginBottom: '10px' }}>// Initialize FLA Legacy Governance Substrate</div>
                 <div style={{ color: '#c9d1d9' }}><span style={{ color: '#ff7b72' }}>import</span> {'{'} LumeVEnterprise {'}'} <span style={{ color: '#ff7b72' }}>from</span> <span style={{ color: '#a5d6ff' }}>'@darkwave/lume-v-sdk'</span>;</div>
                 <br/>
                 <div style={{ color: '#8b949e' }}>// Connect to the Lume-V Verification Network</div>
                 <div style={{ color: '#c9d1d9' }}><span style={{ color: '#ff7b72' }}>const</span> cog <span style={{ color: '#ff7b72' }}>=</span> <span style={{ color: '#ff7b72' }}>new</span> <span style={{ color: '#d2a8ff' }}>LumeVEnterprise</span>({'{'}</div>
-                <div style={{ color: '#c9d1d9', paddingLeft: '20px' }}>apiKey: <span style={{ color: '#a5d6ff' }}>'cog_live_manheim_enterprise_key'</span></div>
+                <div style={{ color: '#c9d1d9', paddingLeft: '20px' }}>apiKey: <span style={{ color: '#a5d6ff' }}>'cog_live_networknode_enterprise_key'</span></div>
                 <div style={{ color: '#c9d1d9' }}>{'}'});</div>
                 <br/>
                 <div style={{ color: '#8b949e' }}>// Instantly validate legacy pipeline data</div>
@@ -123,7 +123,7 @@ export default function LumeVSection() {
               {[
                 { text: 'Modern APIs and unified workflows' },
                 { text: 'Deterministic logic & cross-system automation' },
-                { text: 'COX-VL & LUME-Scan Integration' },
+                { text: 'FLA-VL & LUME-Scan Integration' },
                 { text: 'Future Meridian Integration' },
                 { text: 'Modernization without disruption' }
               ].map((item, i) => (
@@ -146,13 +146,13 @@ export default function LumeVSection() {
               <ShieldCheck size={22} color="#f59e0b" /> Seamless SSO & Legacy Integration
             </h3>
             <p className="text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.7, fontSize: '1.05rem' }}>
-              Transitioning to the Cox Operating System requires <strong>zero new credentials</strong> and <strong>zero database migration</strong>. LUME-V acts as a universal translator for your existing enterprise infrastructure.
+              Transitioning to the FLA Operating System requires <strong>zero new credentials</strong> and <strong>zero database migration</strong>. LUME-V acts as a universal translator for your existing enterprise infrastructure.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
               <div style={{ padding: '1.25rem', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(245, 158, 11, 0.1)' }}>
                 <h4 style={{ color: '#fbbf24', fontSize: '1rem', marginBottom: '0.5rem' }}>Identity Management</h4>
                 <p className="text-dim" style={{ fontSize: '0.9rem', lineHeight: 1.5 }}>
-                  Full native integration with Cox Automotive's existing Okta and Azure Active Directory. Employees log into the Cox-OS substrate exactly as they do today.
+                  Full native integration with Fractal Ledger Architecture's existing Okta and Azure Active Directory. Employees log into the FLA-OS substrate exactly as they do today.
                 </p>
               </div>
               <div style={{ padding: '1.25rem', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(245, 158, 11, 0.1)' }}>
@@ -168,7 +168,7 @@ export default function LumeVSection() {
         <motion.div {...fadeIn} transition={{ delay: 0.4 }} className="panel" style={{ padding: '3.5rem', textAlign: 'center', borderColor: 'rgba(16,185,129,0.3)', background: 'linear-gradient(180deg, rgba(16,185,129,0.05) 0%, rgba(16,185,129,0.01) 100%)', boxShadow: '0 10px 40px rgba(16,185,129,0.05)' }}>
           <h3 style={{ fontSize: '1.75rem', marginBottom: '1.25rem', color: 'var(--accent-emerald)' }}>Why This Layer Matters</h3>
           <p className="text-muted" style={{ maxWidth: '850px', margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.8 }}>
-            LUME-V is the reason none of this requires a rip-and-replace. It sits between Manheim's existing systems and the deterministic governance layer — preserving every database, every workflow, every integration that already works. Nothing breaks. Nothing migrates. The systems Manheim already operates simply gain a new layer of cryptographic auditability, cross-system intelligence, and deterministic enforcement. The infrastructure Manheim builds on this foundation is theirs — permanently.
+            LUME-V is the reason none of this requires a rip-and-replace. It sits between NetworkNode's existing systems and the deterministic governance layer — preserving every database, every workflow, every integration that already works. Nothing breaks. Nothing migrates. The systems NetworkNode already operates simply gain a new layer of cryptographic auditability, cross-system intelligence, and deterministic enforcement. The infrastructure NetworkNode builds on this foundation is theirs — permanently.
           </p>
         </motion.div>
 
