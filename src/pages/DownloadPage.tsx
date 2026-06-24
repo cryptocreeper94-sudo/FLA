@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import QRCodeLib from 'qrcode';
 
 // Direct download URLs
-const APK_URL = 'https://lumescan.tech/releases/LumeScan_v1.1.0.apk';
+const APK_URL = 'https://lumescan.tech';
 const EXE_URL = 'https://firebasestorage.googleapis.com/v0/b/darkwave-auth.firebasestorage.app/o/downloads%2FLot_Ops_Pro_Setup.exe?alt=media&token=36fe7582-07b0-423a-a366-bd1a1e6af6a0';
 
 export default function DownloadPage() {

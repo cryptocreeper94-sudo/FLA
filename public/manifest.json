@@ -1,6 +1,6 @@
 {
-  "name": "Cox Enterprise Platform",
-  "short_name": "CEP",
+  "name": "FLA Enterprise Platform",
+  "short_name": "FLA",
   "description": "Enterprise Trust Infrastructure",
   "start_url": "/",
   "display": "standalone",

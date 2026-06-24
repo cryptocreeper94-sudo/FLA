@@ -139,10 +139,10 @@ export default function FLALedgerSection() {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {[
                 'NetworkNode — auction integrity and custody',
-                'Autotrader — verified listing provenance',
-                'Kelley Blue Book — cryptographic valuation anchoring',
-                'Dealer.com — dealership transaction ledger',
-                'NextGear Capital — financing audit trail',
+                'TradeVault — verified listing provenance',
+                'PriceAxis — cryptographic valuation anchoring',
+                'DealerGrid — dealership transaction ledger',
+                'LedgerCapital — financing audit trail',
               ].map((item, i) => (
                 <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.88rem', color: 'var(--text-main)' }}>
                   <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--accent-emerald)', flexShrink: 0 }} /> {item}

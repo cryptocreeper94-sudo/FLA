@@ -110,8 +110,8 @@ export default function Whitepaper() {
             {/* 1 */}
             <motion.div {...f} className="wp-section">
               <h2>1. Executive Summary</h2>
-              <p>FLA Enterprise operates one of the most complex multi-division corporate ecosystems in the United States. Fractal Ledger Architecture alone processes over 8 million vehicles annually through NetworkNode, provides valuations through Kelley Blue Book, powers dealership operations through Dealer.com, and finances billions in floor plan lending through NextGear Capital.</p>
-              <p>Each division runs its own operational systems, its own data infrastructure, and its own compliance workflows. The challenge is not that these systems don't work — they do. The challenge is that there is no unified trust layer connecting them. When a vehicle moves from NetworkNode auction to NextGear financing to an Autotrader listing, the data about that vehicle exists in three separate silos with no cryptographic linkage.</p>
+              <p>FLA Enterprise operates one of the most complex multi-division corporate ecosystems in the United States. The Fractal Ledger Architecture is designed to serve any industry that requires deterministic trust infrastructure — from automotive remarketing and fleet logistics to dealership operations and asset-backed financing.</p>
+              <p>Each division runs its own operational systems, its own data infrastructure, and its own compliance workflows. The challenge is not that these systems don't work — they do. The challenge is that there is no unified trust layer connecting them. When an asset moves from one division's operations to another's financing workflow to a third's marketplace listing, the data about that asset exists in separate silos with no cryptographic linkage.</p>
               <p>The Fractal Ledger Architecture solves this with the <strong>Fractal Ledger Architecture (FLA)</strong> — a system where each division maintains complete operational autonomy while anchoring to a shared cryptographic root. No division sees another division’s data. No data crosses boundaries. But every division can <em>verify</em> claims made by any other division, instantly and mathematically.</p>
               <p>The platform consists of six independently deployable components:</p>
               <ul>
@@ -132,7 +132,7 @@ export default function Whitepaper() {
               <h2>2. The Fractal Ledger Architecture (FLA)</h2>
               <p>The word "fractal" is precise. The same architectural pattern repeats at every level of the organization:</p>
               <ul>
-                <li><strong>Division level:</strong> Each FLA division (NetworkNode, Autotrader, KBB, Dealer.com, NextGear Capital) operates its own private Proof-of-Authority ledger. The data model, certificate types, and access controls are configured for that division's specific operations.</li>
+                <li><strong>Division level:</strong> Each FLA tenant division (e.g., NetworkNode, TradeVault, PriceAxis, DealerGrid, LedgerCapital) operates its own private Proof-of-Authority ledger. The data model, certificate types, and access controls are configured for that division's specific operations.</li>
                 <li><strong>Enterprise level:</strong> All division ledgers periodically anchor a Merkle root hash to CORE — the universal root fabric. CORE sees hashes, never content. It proves that each division's chain is intact and unaltered.</li>
                 <li><strong>Verification level:</strong> FLA-VL issues publicly verifiable certificates derived from any division's ledger. A buyer can confirm a vehicle's condition report from NetworkNode without accessing NetworkNode's internal systems.</li>
               </ul>
@@ -169,7 +169,7 @@ export default function Whitepaper() {
               <ul>
                 <li><strong>Hash-based verification:</strong> Enter a certificate ID or VIN and receive cryptographic proof of provenance, integrity, and timestamp.</li>
                 <li><strong>Zero data exposure:</strong> FLA-VL proves <em>that</em> a record exists and is untampered. It never reveals <em>what</em> the record contains beyond what FLA explicitly chooses to make verifiable.</li>
-                <li><strong>Cross-platform portability:</strong> Certificates travel with the vehicle across Autotrader listings, dealer management systems, and financing workflows.</li>
+                <li><strong>Cross-platform portability:</strong> Certificates travel with the asset across marketplace listings, dealer management systems, and financing workflows.</li>
               </ul>
               <p>The FLA-VL verification portal is live at <strong>/vet</strong> within this platform. Certificate lookups and vehicle passport queries are functional against the live chain.</p>
             </motion.div>
@@ -197,7 +197,7 @@ export default function Whitepaper() {
               <h2>6. CORE & TLL — The Supreme Court of Truth</h2>
               <p>At the absolute center of the fractal architecture sits the <strong>Trust Layer Ledger (TLL)</strong>. It acts as the "Supreme Court of Truth" between all connected clients, divisions, and partners. Every division's CORE engine anchors its local hashes upward into the universal TLL.</p>
               <p>Crucially, the TLL is completely non-intrusive. It does not do anything but record the master metadata record (the cryptographic hash) and a timestamp. <strong>The TLL never touches, sees, or stores your private operational data.</strong> It is the ultimate source of truth that proves an event happened, without ever exposing the contents of the event itself.</p>
-              <p>This design enforces <strong>absolute sovereignty and zero-knowledge privacy</strong>. Only the client entity has access to the actual private information residing on their local FLA-PL. NetworkNode's data stays in NetworkNode's ledger. NextGear's data stays in NextGear's ledger. But the TLL can mathematically prove to the world that both chains are intact and unaltered.</p>
+              <p>This design enforces <strong>absolute sovereignty and zero-knowledge privacy</strong>. Only the client entity has access to the actual private information residing on their local FLA-PL. Each tenant's data stays in that tenant's ledger. No division sees another division's records. But the TLL can mathematically prove to the world that all chains are intact and unaltered.</p>
               <p>The CORE topology visualizer is live at <strong>/core</strong>, showing all five FLA divisions as spokes anchoring to the central root fabric.</p>
             </motion.div>
 
@@ -274,10 +274,10 @@ export default function Whitepaper() {
                   <tbody>
                     {[
                       ['NetworkNode', 'FLA-PL', 'Custody, Condition, Arbitration, Performance, Key Events'],
-                      ['NextGear Capital', 'NGC-PL', 'Lien Origination, Payoff Records, Audit Events'],
-                      ['Autotrader', 'ATR-PL', 'Listing Verification, Price Anchoring'],
-                      ['Kelley Blue Book', 'KBB-PL', 'Valuation Anchoring, Market Data'],
-                      ['Dealer.com', 'DLR-PL', 'Dealer Transactions, Inventory Sync'],
+                      ['LedgerCapital', 'LCP-PL', 'Lien Origination, Payoff Records, Audit Events'],
+                      ['TradeVault', 'TVT-PL', 'Listing Verification, Price Anchoring'],
+                      ['PriceAxis', 'PAX-PL', 'Valuation Anchoring, Market Data'],
+                      ['DealerGrid', 'DGR-PL', 'Dealer Transactions, Inventory Sync'],
                     ].map(([div, ledger, certs], i) => (
                       <tr key={i} style={{ borderBottom: '1px solid var(--border-light)' }}>
                         <td style={{ padding: '8px 12px', fontWeight: 600 }}>{div}</td>
@@ -302,7 +302,7 @@ export default function Whitepaper() {
                   { phase: 'Phase 1 — Weeks 1–4', title: 'Pilot Facility Telemetry', desc: 'Deploy OBD-II adapters at one NetworkNode facility. Capture 42-signal telemetry. Generate condition reports. Validate scan accuracy against existing inspection reports.' },
                   { phase: 'Phase 2 — Weeks 4–8', title: 'Operational Intelligence', desc: 'Enable lane readiness dashboards, dead-battery detection, pending fault screening. Integrate transport pre-dispatch health reports. Begin arbitration reduction tracking.' },
                   { phase: 'Phase 3 — Weeks 8–12', title: 'Ledger Activation', desc: 'Activate FLA-PL validators. Anchor condition certificates on-ledger. Deploy LUME-V governance substrate. Issue FLA-VL certificates for buyer-facing verification.' },
-                  { phase: 'Phase 4 — Weeks 12–16', title: 'Multi-Facility & Division Expansion', desc: 'Cross-facility benchmarking. NextGear Capital ledger integration. CORE root fabric activation. Expand to additional NetworkNode locations with proven playbook.' },
+                  { phase: 'Phase 4 — Weeks 12–16', title: 'Multi-Facility & Division Expansion', desc: 'Cross-facility benchmarking. Additional tenant ledger integration. CORE root fabric activation. Expand to additional locations with proven playbook.' },
                 ].map((p, i) => (
                   <div key={i} style={{ padding: '1rem 1.25rem', border: '1px solid var(--border-light)', borderRadius: '8px' }}>
                     <div style={{ fontSize: '0.68rem', color: accent, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '4px' }}>{p.phase}</div>

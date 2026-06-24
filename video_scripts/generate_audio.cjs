@@ -7,7 +7,7 @@ const VOICE_ID = 'EXAVITQu4vr4xnSDxMaL'; // Sarah - sharp, professional female
 
 const SCRIPT = `The greatest challenge in automotive enterprise modernization is not software. It's legacy infrastructure. Billions of dollars are locked in auction systems, dealer networks, and fleet operations that cannot be ripped and replaced. Enter the Fractal Ledger Architecture. A deterministic operations layer that structurally embeds legacy systems in a modern, zero-trust governance fabric, without replacing them.
 
-But governing operations is only half the battle. Fractal Ledger Architecture manages millions of vehicles across NetworkNode, Autotrader, Kelley Blue Book, and dozens of interconnected divisions. Each division needs its own secure operational record, but the enterprise needs unified trust.
+But governing operations is only half the battle. Fractal Ledger Architecture manages millions of vehicles across multiple interconnected divisions. Each division needs its own secure operational record, but the enterprise needs unified trust.
 
 The Fractal Ledger Architecture solves this with a Fractal Ledger Architecture. At the center sits CORE, the Certified Operational Root Engine, the universal enterprise backbone. Connected to CORE, every division operates its own isolated dual-ledger. A private Fractal Ledger Architecture Ledger for internal operations. A public Verified Enterprise Trust layer for external verification. Private but verified.
 

@@ -18,7 +18,7 @@ const PHASES = [
     glow: 'rgba(56,189,248,0.06)',
     apps: [
       { icon: <Wrench size={20} />, name: 'Recon OS', desc: 'Manages the full reconditioning lifecycle — from initial work-order generation (auto-populated by LumeScan diagnostics) through vendor assignment, parts procurement, task completion, and final sign-off. Every recon step is verified and ledger-anchored, eliminating the "he said, she said" between facilities and vendors.' },
-      { icon: <ShieldCheck size={20} />, name: 'Safety OS', desc: 'Enterprise-wide safety compliance for every FLA subsidiary — not just the lot. Lot Ops Pro\'s built-in safety module covers auction facility operations; Safety OS extends that to Autotrader, Kelley Blue Book, Dealertrack, vAuto, Xtime, and corporate offices. Incident reporting, near-miss logging, training certification tracking, OSHA-aligned workflows, and cross-division compliance dashboards — all sealed on the FLA-PL.' },
+      { icon: <ShieldCheck size={20} />, name: 'Safety OS', desc: 'Enterprise-wide safety compliance for every FLA tenant — not just the lot. Lot Ops Pro\'s built-in safety module covers auction facility operations; Safety OS extends that to any connected division or corporate office. Incident reporting, near-miss logging, training certification tracking, OSHA-aligned workflows, and cross-division compliance dashboards — all sealed on the FLA-PL.' },
     ],
   },
   {
@@ -133,7 +133,7 @@ export default function PlatformRoadmap() {
             textAlign: 'center',
           }}>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: 1.8, maxWidth: '720px', margin: '0 auto' }}>
-            Every application on this roadmap is built on the same FLA-OS architecture — meaning every module is inherently expandable to any Fractal Ledger Architecture subsidiary. NetworkNode is the proving ground. From here, the platform extends to Autotrader, Kelley Blue Book, Dealertrack, and beyond as enterprise priorities dictate. I build what you need, when you need it.
+            Every application on this roadmap is built on the same FLA-OS architecture — meaning every module is inherently expandable to any Fractal Ledger Architecture tenant. NetworkNode is the proving ground. From here, the platform extends to any connected division as enterprise priorities dictate. I build what you need, when you need it.
           </p>
           <p style={{ fontSize: '0.7rem', color: 'var(--text-dim)', marginTop: '0.75rem', letterSpacing: '0.05em' }}>
             Architecture scales. Roadmap follows corporate direction.

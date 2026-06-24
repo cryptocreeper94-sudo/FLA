@@ -7,10 +7,10 @@ const fadeIn = { initial: { opacity: 0, y: 16 }, animate: { opacity: 1, y: 0 }, 
 
 const DIVISIONS = [
   { id: 'networknode', name: 'NetworkNode', desc: 'Wholesale Auction & Remarketing', color: '#38bdf8', ledger: 'FLA-PL', certs: ['CUSTODY_TRANSFER', 'CONDITION_REPORT', 'DRIVER_PERFORMANCE', 'ARBITRATION_PROOF'] },
-  { id: 'autotrader', name: 'Autotrader', desc: 'Consumer Vehicle Marketplace', color: '#10b981', ledger: 'ATR-PL', certs: ['LISTING_VERIFICATION', 'PRICE_ANCHOR'] },
-  { id: 'kbb', name: 'Kelley Blue Book', desc: 'Vehicle Valuation & Data', color: '#f59e0b', ledger: 'KBB-PL', certs: ['VALUATION_ANCHOR', 'MARKET_DATA'] },
-  { id: 'dealercom', name: 'Dealer.com', desc: 'Dealership Digital Solutions', color: '#8b5cf6', ledger: 'DLR-PL', certs: ['DEALER_TRANSACTION', 'INVENTORY_SYNC'] },
-  { id: 'nextgear', name: 'NextGear Capital', desc: 'Floor Plan Financing', color: '#ec4899', ledger: 'NGC-PL', certs: ['LIEN_ORIGINATION', 'PAYOFF_RECORD', 'AUDIT_EVENT'] },
+  { id: 'tradevault', name: 'TradeVault', desc: 'Consumer Vehicle Marketplace', color: '#10b981', ledger: 'TVT-PL', certs: ['LISTING_VERIFICATION', 'PRICE_ANCHOR'] },
+  { id: 'priceaxis', name: 'PriceAxis', desc: 'Asset Valuation & Data', color: '#f59e0b', ledger: 'PAX-PL', certs: ['VALUATION_ANCHOR', 'MARKET_DATA'] },
+  { id: 'dealergrid', name: 'DealerGrid', desc: 'Dealer Digital Solutions', color: '#8b5cf6', ledger: 'DGR-PL', certs: ['DEALER_TRANSACTION', 'INVENTORY_SYNC'] },
+  { id: 'ledgercapital', name: 'LedgerCapital', desc: 'Floor Plan Financing', color: '#ec4899', ledger: 'LCP-PL', certs: ['LIEN_ORIGINATION', 'PAYOFF_RECORD', 'AUDIT_EVENT'] },
 ];
 
 export default function COREExplorer() {
@@ -153,9 +153,9 @@ export default function COREExplorer() {
         <h3 style={{ fontSize: '0.8rem', color: '#8b5cf6', fontWeight: 600, letterSpacing: '0.08em', marginBottom: '1rem' }}>HOW THE FLA WORKS</h3>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
           {[
-            { icon: <Database size={22} />, title: 'Division Autonomy', desc: 'Each FLA division operates its own private Proof-of-Authority ledger. NetworkNode\'s FLA-PL records auction events. NextGear\'s NGC-PL records financing events. Data never crosses division boundaries.', color: '#38bdf8' },
+            { icon: <Database size={22} />, title: 'Division Autonomy', desc: 'Each FLA tenant operates its own private Proof-of-Authority ledger. NetworkNode\'s FLA-PL records auction events. LedgerCapital\'s LCP-PL records financing events. Data never crosses division boundaries.', color: '#38bdf8' },
             { icon: <Link2 size={22} />, title: 'Hash Anchoring', desc: 'Every division ledger periodically anchors a Merkle root hash to CORE. This proves the division\'s chain is intact without revealing any operational data. CORE sees hashes — never content.', color: '#8b5cf6' },
-            { icon: <Shield size={22} />, title: 'Cross-Division Verification', desc: 'When NetworkNode sells a vehicle financed by NextGear, FLA-VL issues a cross-division certificate. Both divisions can verify the transaction without accessing each other\'s internal records.', color: '#10b981' },
+            { icon: <Shield size={22} />, title: 'Cross-Division Verification', desc: 'When NetworkNode sells a vehicle financed by LedgerCapital, FLA-VL issues a cross-division certificate. Both divisions can verify the transaction without accessing each other\'s internal records.', color: '#10b981' },
             { icon: <Lock size={22} />, title: 'Zero Data Exposure', desc: 'CORE is a trust anchor, not a data store. It proves that division chains are intact and unaltered. The operational data stays in each division\'s private ledger under their own access controls.', color: '#f59e0b' },
           ].map((item, i) => (
             <div key={i} style={{ ...panel }}>

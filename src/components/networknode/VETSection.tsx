@@ -58,7 +58,7 @@ export default function VETSection() {
           {[
             { icon: <FileCheck size={22} />, title: 'Verifiable Condition Certificates', desc: 'Every LumeScan diagnostic produces a cryptographically signed certificate. Dealers and buyers can verify authenticity with a hash lookup — no login, no account, no API integration required.' },
             { icon: <Shield size={22} />, title: 'Provenance Without Exposure', desc: 'FLA-VL proves a vehicle was scanned, by whom, and when — without revealing internal operational data, facility workflows, or proprietary diagnostics.' },
-            { icon: <Globe size={22} />, title: 'Cross-Platform Portability', desc: 'FLA-VL certificates are portable across Autotrader listings, dealer management systems, and financing platforms. The verification travels with the vehicle, not the system.' },
+            { icon: <Globe size={22} />, title: 'Cross-Platform Portability', desc: 'FLA-VL certificates are portable across marketplace listings, dealer management systems, and financing platforms. The verification travels with the vehicle, not the system.' },
           ].map((item, i) => (
             <motion.div key={i} {...fadeIn} transition={{ delay: 0.15 + i * 0.08 }}
               style={{ padding: '1.75rem', background: 'rgba(255,255,255,0.02)', border: `1px solid ${accentDim}`, borderRadius: '16px', transition: 'border-color 0.3s' }}

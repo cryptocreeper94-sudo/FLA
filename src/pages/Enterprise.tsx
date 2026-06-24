@@ -178,7 +178,7 @@ export default function Enterprise() {
           </div>
 
           <div className="panel" style={{ padding: '1.5rem', background: 'rgba(251,146,60,0.03)', borderColor: 'rgba(251,146,60,0.15)' }}>
-            <h4 style={{ fontSize: '0.9rem', marginBottom: '1rem', color: '#fb923c' }}>What This Means for NetworkNode</h4>
+            <h4 style={{ fontSize: '0.9rem', marginBottom: '1rem', color: '#fb923c' }}>Automotive Use Case</h4>
             <div className="flex flex-col gap-2">
               {[
                 'One device per intake station — connects to any phone, any platform, any protocol.',
@@ -203,7 +203,7 @@ export default function Enterprise() {
       {/* Why Deterministic */}
       <section style={{ padding: '5rem 0', borderBottom: '1px solid var(--border-light)' }}>
         <div className="container" style={{ maxWidth: '800px' }}>
-          <h2 style={{ fontSize: '2rem', marginBottom: '2rem', textAlign: 'center' }}>Why Deterministic Matters for Auction</h2>
+          <h2 style={{ fontSize: '2rem', marginBottom: '2rem', textAlign: 'center' }}>Why Deterministic Matters</h2>
           <div className="panel" style={{ padding: '2rem' }}>
             <table className="data-table">
               <thead><tr><th>AI-Based Systems</th><th>Lume Deterministic Runtime</th></tr></thead>

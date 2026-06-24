@@ -104,10 +104,10 @@ export default function FractalLedgerSection() {
               <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
                 {[
                   { name: 'NetworkNode', desc: 'Auction integrity & vehicle custody', private: 'FLA-PL', public: 'FLA-VL', active: true },
-                  { name: 'Autotrader', desc: 'Verified listing provenance', private: 'ATR-PL', public: 'ATR-VL', active: false },
-                  { name: 'Kelley Blue Book', desc: 'Cryptographic valuation anchoring', private: 'KBB-PL', public: 'KBB-VL', active: false },
-                  { name: 'Dealer.com', desc: 'Dealership transaction records', private: 'DLR-PL', public: 'DLR-VL', active: false },
-                  { name: 'NextGear Capital', desc: 'Financing audit trails', private: 'NGC-PL', public: 'NGC-VL', active: false },
+                  { name: 'TradeVault', desc: 'Verified listing provenance', private: 'TVT-PL', public: 'TVT-VL', active: false },
+                  { name: 'PriceAxis', desc: 'Cryptographic valuation anchoring', private: 'PAX-PL', public: 'PAX-VL', active: false },
+                  { name: 'DealerGrid', desc: 'Dealership transaction records', private: 'DGR-PL', public: 'DGR-VL', active: false },
+                  { name: 'LedgerCapital', desc: 'Financing audit trails', private: 'LCP-PL', public: 'LCP-VL', active: false },
                 ].map((div, i) => (
                   <motion.div key={i} {...fadeIn} transition={{ delay: 0.25 + i * 0.06 }}
                     style={{

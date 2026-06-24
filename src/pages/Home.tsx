@@ -249,8 +249,8 @@ export default function Home() {
       {/* ═══ Enterprise CTA ═══ */}
       <section className="container" style={{ textAlign: 'center', padding: '4rem 0' }}>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Enterprise & Auction Intelligence</h2>
-          <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>Automated condition reports, arbitration reduction, lot-flow intelligence. 30-day pilot. Signed ROI report at close.</p>
+          <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Enterprise Solutions</h2>
+          <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>Deterministic trust infrastructure for enterprise operations. Automated condition reports, operational intelligence, and cryptographic audit trails. 30-day pilot. Signed ROI report at close.</p>
           <Link to="/enterprise" className="btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.05rem' }}>
             Enterprise Solutions <ArrowRight size={20} />
           </Link>

@@ -87,7 +87,7 @@ export default function CALExplorer() {
           <div style={{ width: 40, height: 40, background: `linear-gradient(135deg, ${accent}, #0ea5e9)`, borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Database size={20} color="#0a0c10" /></div>
           <div>
             <h1 style={{ fontSize: '1.6rem', fontWeight: 800, margin: 0, letterSpacing: '-0.03em' }}>FLA Private Ledger</h1>
-            <p style={{ fontSize: '0.7rem', color: 'var(--text-dim)', margin: 0, letterSpacing: '0.08em' }}>MANHEIM DIVISION · PRIVATE PROOF-OF-AUTHORITY CHAIN</p>
+            <p style={{ fontSize: '0.7rem', color: 'var(--text-dim)', margin: 0, letterSpacing: '0.08em' }}>NETWORKNODE DIVISION · PRIVATE PROOF-OF-AUTHORITY CHAIN</p>
           </div>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '0.75rem' }}>
