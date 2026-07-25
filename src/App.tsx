@@ -29,7 +29,7 @@ import COREExplorer from './pages/COREExplorer';
 import COGEngine from './pages/COGEngine';
 import Footer from './components/Footer';
 import RollerCoaster from './components/RollerCoaster';
-import AuthGate from './components/AuthGate';
+
 import { firebaseSignOut } from './lib/firebase';
 
 function LoadingScreen({ subdomain }: { subdomain: 'networknode' | 'cal' | null }) {
