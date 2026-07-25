@@ -234,7 +234,7 @@ function App() {
 
           {subdomain ? (
             /* ── Gated subdomain (networknode / cal) ── */
-            <AuthGate brand={subdomain}>
+            <>
               <nav style={{
                 position: 'fixed', top: 0, width: '100%', zIndex: 50,
                 background: 'rgba(10, 10, 12, 0.85)', backdropFilter: 'blur(16px)',
@@ -308,7 +308,7 @@ function App() {
               </main>
               <Footer />
               <RollerCoaster />
-            </AuthGate>
+            </>
           ) : (
             /* ── Public site (lumeauto.tech) ── */
             <>
