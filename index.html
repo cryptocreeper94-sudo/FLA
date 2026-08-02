@@ -1,69 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#0a0a0c" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="FLA-DEP" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fractal Ledger Architecture | Deterministic Trust Infrastructure</title>
+  <meta name="description" content="The Fractal Ledger Architecture: a universal, deterministic trust infrastructure for cryptographic proof-of-state across any asset class. Patent pending.">
+  <meta name="keywords" content="Fractal Ledger Architecture, FLA, deterministic trust, cryptographic certificates, proof-of-state, enterprise governance, DarkWave Studios">
+  <meta name="author" content="DarkWave Studios LLC — Lume42 Labs">
+  <meta name="robots" content="index, follow">
 
-    <!-- Primary SEO -->
-    <title>FLA-DEP | Enterprise Trust Infrastructure</title>
-    <meta name="description" content="The unified, deterministic operational platform governing Fractal Ledger Architecture infrastructure — LumeScan diagnostics, FLA-PL ledger, FLA-VL verification, and Recon OS." />
-    <meta name="keywords" content="Fractal Ledger Architecture, vehicle diagnostics, fleet management, OBD-II, enterprise platform, LumeScan, deterministic governance, vehicle asset passports" />
-    <meta name="author" content="DarkWave Studios LLC — Lume42 Labs" />
-    <meta name="robots" content="noindex, nofollow" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fla.tlid.io/">
+  <meta property="og:title" content="Fractal Ledger Architecture | Deterministic Trust Infrastructure">
+  <meta property="og:description" content="Universal, deterministic trust infrastructure. Cryptographic proof-of-state for any asset class.">
+  <meta property="og:image" content="https://fla.tlid.io/assets/hero_bg_1.png">
 
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://fla.tlid.io/" />
-    <meta property="og:title" content="FLA-DEP | Enterprise Trust Infrastructure" />
-    <meta property="og:description" content="The unified, deterministic operational platform governing Fractal Ledger Architecture infrastructure and Vehicle Asset Passports." />
-    <meta property="og:image" content="https://fla.tlid.io/hero_dashboard.png" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fractal Ledger Architecture">
+  <meta name="twitter:description" content="Deterministic Trust Infrastructure — Patent Pending">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="FLA-DEP" />
-    <meta name="twitter:description" content="Enterprise Trust Infrastructure" />
-    <meta name="twitter:image" content="https://fla.tlid.io/hero_dashboard.png" />
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050505">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://fla.tlid.io/" />
-  
-  <!-- UNIVERSAL PWA BACK-BUTTON PATCH -->
-  <script>
-    window.addEventListener('load', function() {
-      if (window.history && window.history.pushState) {
-        window.history.pushState({ pwa: true }, '');
-        window.addEventListener('popstate', function(e) {
-          window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', code: 'Escape', keyCode: 27, which: 27 }));
-          const modals = document.querySelectorAll('.modal, [role="dialog"], .overlay, .popup, [data-state="open"]');
-          modals.forEach(m => {
-            const btn = m.querySelector('button.close, [aria-label="Close"], .close-button, [data-dismiss="modal"]');
-            if (btn && typeof btn.click === 'function') btn.click();
-          });
-          window.history.pushState({ pwa: true }, '');
-        });
-      }
-    });
-  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@400;500;700&display=swap');
 
+    :root {
+      --bg-primary: #050505;
+      --bg-secondary: #0a0a0a;
+      --text-primary: #FFFFFF;
+      --text-secondary: #888888;
+      --border: rgba(255, 255, 255, 0.1);
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+    /* Cinematic Noise */
+    .noise { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 9999; opacity: 0.04; background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E'); }
+
+    h1, h2, h3, h4 { font-family: var(--font-heading); text-transform: uppercase; letter-spacing: -0.03em; font-weight: 900; line-height: 1.1; margin-bottom: 0.5em; }
+
+    .title-monolith { font-size: clamp(1.5rem, 5vw, 5rem); line-height: 0.95; color: var(--text-primary); max-width: 1200px; margin: 0 auto; position: relative; z-index: 10; text-shadow: 0 4px 24px rgba(0,0,0,0.5); word-break: break-word; text-align: center; }
+    .text-stark { font-family: var(--font-body); font-size: clamp(1rem, 1.8vw, 1.35rem); color: var(--text-secondary); font-weight: 400; max-width: 800px; line-height: 1.7; }
+    .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 10; }
+    .section { padding: 140px 0; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+    .section-dark { background-color: var(--bg-primary); }
+    .section-light { background-color: #f5f0eb; color: var(--bg-primary); }
+    .section-light h2, .section-light h3 { color: var(--bg-primary); }
+    .section-light .text-stark { color: #444; }
+    .section-light .stat-card { background: #fff; border-color: rgba(0,0,0,0.08); }
+    .section-light .stat-card .stat-value { color: var(--bg-primary); }
+    .section-light .stat-card .stat-label { color: #666; }
+
+    /* Scroll Reveals */
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* Ken Burns Hero */
+    .hero-sec { min-height: 100vh; display: flex; align-items: center; padding-top: 80px; position: relative; overflow: hidden; }
+    .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background-size: cover; background-position: center; opacity: 0; animation: kenburns 24s infinite; }
+    .hero-bg:nth-child(1) { background-image: url('/assets/hero_bg_1.png'); animation-delay: 0s; }
+    .hero-bg:nth-child(2) { background-image: url('/assets/hero_bg_2.png'); animation-delay: 8s; }
+    .hero-bg:nth-child(3) { background-image: url('/assets/hero_bg_3.png'); animation-delay: 16s; }
+    .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(5,5,5,0.4), var(--bg-primary)); z-index: 2; }
+
+    @keyframes kenburns {
+      0% { opacity: 0; transform: scale(1); }
+      10% { opacity: 1; }
+      25% { opacity: 1; }
+      33% { opacity: 0; transform: scale(1.05); }
+      100% { opacity: 0; transform: scale(1.05); }
+    }
+
+    .hero-content { position: relative; z-index: 10; text-align: center; width: 100%; }
+    .hero-eyebrow { font-family: var(--font-body); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 2rem; }
+    .hero-tagline { font-family: var(--font-body); font-size: clamp(1rem, 1.5vw, 1.25rem); color: var(--text-secondary); max-width: 600px; margin: 1.5rem auto 2.5rem; line-height: 1.7; }
+
+    .btn-brutal { display: inline-block; background-color: transparent; color: var(--text-primary); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 16px 48px; font-family: var(--font-heading); font-size: 1.1rem; font-weight: 800; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); position: relative; z-index: 10; border-radius: 2px; }
+    .btn-brutal:hover { background-color: var(--text-primary); color: var(--bg-primary); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,255,255,0.1); }
+
+    /* Stat Cards */
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 3rem; }
+    .stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 4px; padding: 2rem; text-align: center; transition: border-color 0.3s; }
+    .stat-card:hover { border-color: rgba(255,255,255,0.25); }
+    .stat-value { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 900; color: var(--text-primary); }
+    .stat-label { font-family: var(--font-body); font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem; }
+
+    /* Feature Grid */
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 3rem; }
+    .feature-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 4px; padding: 2.5rem; transition: all 0.3s; transform-style: preserve-3d; cursor: default; }
+    .feature-card:hover { border-color: rgba(255,255,255,0.2); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+    .feature-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .feature-title { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .feature-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
+
+    .section-light .feature-card { background: #fff; border-color: rgba(0,0,0,0.08); }
+    .section-light .feature-card:hover { border-color: rgba(0,0,0,0.2); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+    .section-light .feature-title { color: var(--bg-primary); }
+    .section-light .feature-desc { color: #555; }
+
+    /* Use Case Cards */
+    .usecase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 3rem; }
+    .usecase-card { border: 1px solid var(--border); border-radius: 4px; padding: 2rem; transition: all 0.3s; }
+    .usecase-card:hover { border-color: rgba(255,255,255,0.25); }
+    .usecase-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .usecase-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+
+    /* Papers Section */
+    .paper-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 3rem; }
+    .paper-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 4px; padding: 2rem; transition: border-color 0.3s; }
+    .paper-card:hover { border-color: rgba(255,255,255,0.25); }
+    .paper-label { font-family: var(--font-body); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.5rem; }
+    .paper-title { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .paper-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+    .paper-link { display: inline-block; margin-top: 1rem; font-family: var(--font-heading); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
+    .paper-link:hover { color: var(--text-primary); }
+
+    /* Footer spacer */
+    .footer-spacer { height: 32px; }
+
+    /* Two-column layout */
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    @media (max-width: 768px) {
+      .split { grid-template-columns: 1fr; gap: 2rem; }
+      .section { padding: 80px 0; }
+    }
+  </style>
 </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  
+<body>
+  <div class="noise"></div>
 
-<!-- Made with Lume -->
-<a href="https://lume-lang.org" target="_blank" rel="noopener" id="lume-badge" style="position:fixed;bottom:12px;right:24px;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:rgba(2,6,23,0.88);border:1px solid rgba(34,211,238,0.3);border-radius:20px;color:#22d3ee;font-size:11px;font-weight:700;text-decoration:none;z-index:99;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:all 0.3s;font-family:Inter,system-ui,sans-serif;letter-spacing:0.02em;box-shadow:0 2px 12px rgba(0,0,0,0.3);">
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-  Made with Lume
-</a>
-  <script src="https://nexus.tlid.io/beacon.js" defer></script>
+  <!-- ── HERO ── -->
+  <section class="hero-sec">
+    <div class="hero-bg"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">DarkWave Studios LLC — Patent Pending</div>
+      <h1 class="title-monolith">Fractal Ledger<br>Architecture</h1>
+      <p class="hero-tagline">Universal, deterministic trust infrastructure. Cryptographic proof-of-state for any asset class — from supply chains to government compliance.</p>
+      <a href="https://zenodo.org/communities/lume-architecture-papers" target="_blank" class="btn-brutal">Read the Papers →</a>
+    </div>
+  </section>
+
+  <!-- ── WHAT IS FLA ── -->
+  <section class="section section-dark">
+    <div class="container reveal">
+      <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1.5rem;">What is the Fractal Ledger?</h2>
+      <p class="text-stark">The Fractal Ledger Architecture is a deterministic governance framework that provides cryptographic proof-of-state for any asset. Every state transition — every transfer, every inspection, every compliance event — produces a verifiable, tamper-proof certificate anchored to an immutable ledger.</p>
+      <p class="text-stark" style="margin-top: 1rem;">Unlike blockchain, FLA doesn't require consensus. It operates on Proof-of-Authority — deterministic, instantaneous, and verifiable without a network of miners or validators.</p>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value">4</div>
+          <div class="stat-label">Governance Primitives</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">42</div>
+          <div class="stat-label">Governance Nodes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">100Hz</div>
+          <div class="stat-label">Processing Rate</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">∞</div>
+          <div class="stat-label">Audit Trail Depth</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS (CRÈME) ── -->
+  <section class="section section-light">
+    <div class="container reveal">
+      <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1.5rem;">Architecture</h2>
+      <p class="text-stark">FLA operates as a fractal hierarchy — four governance primitives compose into 42 specialized nodes, each responsible for a specific aspect of asset lifecycle management.</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">◇</div>
+          <div class="feature-title">Proof-of-Authority Ledger</div>
+          <div class="feature-desc">Every state change is recorded with cryptographic signatures. No consensus required — authority is deterministic, not democratic.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">◈</div>
+          <div class="feature-title">Trust Certificates</div>
+          <div class="feature-desc">Each transaction produces a verifiable certificate with SHA-256 hash, timestamp, authority chain, and complete provenance data.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⬡</div>
+          <div class="feature-title">Fractal Hierarchy</div>
+          <div class="feature-desc">The 4/42 architecture — four primitive operations compose into 42 governance nodes, creating a self-similar structure at every scale.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">◎</div>
+          <div class="feature-title">Asset Passports</div>
+          <div class="feature-desc">Every asset gets a living document — a complete, tamper-proof history from creation through every state transition to current status.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⊞</div>
+          <div class="feature-title">Multi-Tenant Isolation</div>
+          <div class="feature-desc">Each division operates its own private ledger. Data never crosses tenant boundaries. Full regulatory compliance by design.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⊘</div>
+          <div class="feature-title">Zero-Trust Verification</div>
+          <div class="feature-desc">Any certificate can be independently verified without access to the issuing authority. Trust is mathematical, not institutional.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── USE CASES (DARK) ── -->
+  <section class="section section-dark">
+    <div class="container reveal">
+      <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1rem;">Universal Application</h2>
+      <p class="text-stark">FLA is asset-agnostic. Any industry that requires provable chain-of-custody, regulatory compliance, or tamper-proof record-keeping can deploy the Fractal Ledger.</p>
+      <div class="usecase-grid">
+        <div class="usecase-card">
+          <div class="usecase-title">Supply Chain</div>
+          <div class="usecase-desc">Track any physical asset from manufacturer to end consumer with cryptographic proof at every handoff. Eliminate counterfeiting at the infrastructure level.</div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-title">Government Compliance</div>
+          <div class="usecase-desc">Automated compliance certification for regulatory frameworks. Every action is auditable, every certificate is independently verifiable.</div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-title">Healthcare Records</div>
+          <div class="usecase-desc">Patient data with complete provenance. Every access, every modification, every transfer produces a tamper-proof audit entry.</div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-title">Real Estate</div>
+          <div class="usecase-desc">Property titles, inspections, and transfers with cryptographic proof-of-state. Eliminate title fraud with deterministic verification.</div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-title">Financial Instruments</div>
+          <div class="usecase-desc">Asset-backed securities with verifiable collateral passports. Every underlying asset traceable through its complete lifecycle.</div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-title">Defense & Intelligence</div>
+          <div class="usecase-desc">Classified asset tracking with air-gapped ledger support. Full offline capability with deterministic conflict resolution on reconnect.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRUST ARCHITECTURE (CRÈME) ── -->
+  <section class="section section-light">
+    <div class="container reveal">
+      <div class="split">
+        <div>
+          <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1.5rem;">Built on Trust</h2>
+          <p class="text-stark">The Fractal Ledger doesn't ask you to trust an institution. It gives you the mathematics to verify independently. Every certificate is self-proving. Every chain is auditable. Every state transition is deterministic.</p>
+          <p class="text-stark" style="margin-top: 1rem;">FLA integrates with the broader DarkWave deterministic ecosystem — powered by the same Lume 4/42 architecture that drives Axiom42, HydroCore, Meridian, and every node in the Invariant Foundation.</p>
+        </div>
+        <div>
+          <div class="stat-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="stat-card">
+              <div class="stat-value" style="font-size: 1.8rem;">SHA-256</div>
+              <div class="stat-label">Hash Algorithm</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" style="font-size: 1.8rem;">Ed25519</div>
+              <div class="stat-label">Signatures</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" style="font-size: 1.8rem;">PoA</div>
+              <div class="stat-label">Consensus</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" style="font-size: 1.8rem;">Air-Gap</div>
+              <div class="stat-label">Offline Ready</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PAPERS & PATENTS (DARK) ── -->
+  <section class="section section-dark">
+    <div class="container reveal">
+      <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1rem;">Research & Patents</h2>
+      <p class="text-stark">The Fractal Ledger Architecture is published, peer-reviewed, and patent-protected.</p>
+      <div class="paper-grid">
+        <div class="paper-card">
+          <div class="paper-label">CHI Submission</div>
+          <div class="paper-title">Fractal Ledger Architecture</div>
+          <div class="paper-desc">The complete specification for deterministic trust infrastructure. Covers the 4/42 hierarchy, certificate lifecycle, and multi-tenant isolation.</div>
+          <a href="https://zenodo.org/communities/lume-architecture-papers" target="_blank" class="paper-link">View on Zenodo →</a>
+        </div>
+        <div class="paper-card">
+          <div class="paper-label">U.S. Patent Pending</div>
+          <div class="paper-title">Deterministic AI Agent Protocol</div>
+          <div class="paper-desc">U.S. 64/047,737 — The foundational patent covering the Lume Deterministic Agent Protocol that powers FLA's governance layer.</div>
+          <a href="#" class="paper-link">Patent Portfolio →</a>
+        </div>
+        <div class="paper-card">
+          <div class="paper-label">Zenodo Archive</div>
+          <div class="paper-title">Canon² Academic Archive</div>
+          <div class="paper-desc">Complete archive of all DarkWave research papers, specifications, and formal proofs hosted on CERN infrastructure with DOIs.</div>
+          <a href="https://zenodo.org/communities/lume-architecture-papers" target="_blank" class="paper-link">Browse Archive →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-spacer"></div>
+  <footer id="eco-footer" class="eco-footer"></footer>
+  <script src="https://axiom42.com/footer.js"></script>
+
+  <script>
+    // Scroll Reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    reveals.forEach(r => revealObserver.observe(r));
+    setTimeout(() => {
+      reveals.forEach(r => {
+        const rect = r.getBoundingClientRect();
+        if (rect.top < window.innerHeight) r.classList.add('active');
+      });
+    }, 100);
+  </script>
 </body>
 </html>
