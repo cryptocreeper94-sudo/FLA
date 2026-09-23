@@ -60,6 +60,10 @@
     .section-light .stat-card .stat-value { color: var(--bg-primary); }
     .section-light .stat-card .stat-label { color: #666; }
 
+    /* Section Header Centering */
+    .section-header { text-align: center; margin-bottom: 3rem; }
+    .section-header .text-stark { margin-left: auto; margin-right: auto; }
+
     /* Scroll Reveals */
     .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; }
     .reveal.active { opacity: 1; transform: translateY(0); }
@@ -206,9 +210,11 @@
   <!-- ── WHAT IS FLA ── -->
   <section class="section section-dark">
     <div class="container reveal">
-      <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1.5rem;">What is the Fractal Ledger?</h2>
-      <p class="text-stark">The Fractal Ledger Architecture is a deterministic governance framework that provides cryptographic proof-of-state for any asset. Every state transition — every transfer, every inspection, every compliance event — produces a verifiable, tamper-proof certificate anchored to an immutable ledger. Each division operates a dual-ledger pair: an Enterprise Privacy Ledger (E-PL) for sealed records and an Enterprise Verification Ledger (E-VL) for verifiable certificates — both anchoring to a universal root (CORE) that stores only cryptographic hashes.</p>
-      <p class="text-stark" style="margin-top: 1rem;">Unlike blockchain, FLA doesn't require distributed consensus among untrusted nodes. It operates on Proof-of-Authority — deterministic, instantaneous, and verifiable without miners, tokens, or gas fees.</p>
+      <div class="section-header">
+        <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1.5rem;">What is the Fractal Ledger?</h2>
+        <p class="text-stark">The Fractal Ledger Architecture is a deterministic governance framework that provides cryptographic proof-of-state for any asset. Every state transition — every transfer, every inspection, every compliance event — produces a verifiable, tamper-proof certificate anchored to an immutable ledger. Each division operates a dual-ledger pair: an Enterprise Privacy Ledger (E-PL) for sealed records and an Enterprise Verification Ledger (E-VL) for verifiable certificates — both anchoring to a universal root (CORE) that stores only cryptographic hashes.</p>
+        <p class="text-stark" style="margin-top: 1rem;">Unlike blockchain, FLA doesn't require distributed consensus among untrusted nodes. It operates on Proof-of-Authority — deterministic, instantaneous, and verifiable without miners, tokens, or gas fees.</p>
+      </div>
       <div class="stat-grid">
         <div class="stat-card">
           <div class="stat-value">4</div>
@@ -233,8 +239,10 @@
   <!-- ── HOW IT WORKS (CRÈME) ── -->
   <section class="section section-light">
     <div class="container reveal">
-      <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1.5rem;">Architecture</h2>
-      <p class="text-stark">FLA operates as a fractal hierarchy — four governance primitives compose into 42 specialized nodes, each responsible for a specific aspect of asset lifecycle management.</p>
+      <div class="section-header">
+        <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1.5rem;">Architecture</h2>
+        <p class="text-stark">FLA operates as a fractal hierarchy — four governance primitives compose into 42 specialized nodes, each responsible for a specific aspect of asset lifecycle management.</p>
+      </div>
       <div class="carousel-wrapper">
         <div class="carousel-track">
           <div class="carousel-item feature-card">
@@ -280,8 +288,10 @@
   <!-- ── USE CASES (DARK) ── -->
   <section class="section section-dark">
     <div class="container reveal">
-      <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1rem;">Universal Application</h2>
-      <p class="text-stark">FLA is asset-agnostic. Any industry that requires provable chain-of-custody, regulatory compliance, or tamper-proof record-keeping can deploy the Fractal Ledger.</p>
+      <div class="section-header">
+        <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1rem;">Universal Application</h2>
+        <p class="text-stark">FLA is asset-agnostic. Any industry that requires provable chain-of-custody, regulatory compliance, or tamper-proof record-keeping can deploy the Fractal Ledger.</p>
+      </div>
       <div class="carousel-wrapper">
         <div class="carousel-track">
           <div class="carousel-item usecase-card">
@@ -354,8 +364,10 @@
   <!-- ── PAPERS & PATENTS (DARK) ── -->
   <section class="section section-dark">
     <div class="container reveal">
-      <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1rem;">Research & Patents</h2>
-      <p class="text-stark">The Fractal Ledger Architecture is published, patent-protected, and under active submission to top-tier academic venues.</p>
+      <div class="section-header">
+        <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1rem;">Research & Patents</h2>
+        <p class="text-stark">The Fractal Ledger Architecture is published, patent-protected, and under active submission to top-tier academic venues.</p>
+      </div>
       <div class="carousel-wrapper">
         <div class="carousel-track">
           <div class="carousel-item paper-card">
