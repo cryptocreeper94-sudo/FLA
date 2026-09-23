@@ -133,6 +133,46 @@
       .split { grid-template-columns: 1fr; gap: 2rem; }
       .section { padding: 80px 0; }
     }
+
+    /* ── ECO FOOTER ── */
+    .eco-footer { background: var(--bg-primary); border-top: 1px solid var(--border); padding: 4rem 0 0; font-family: var(--font-body); margin-top: 4rem; }
+    .eco-footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px 3rem; display: grid; grid-template-columns: 2fr repeat(2, 1fr); gap: 3rem; }
+    @media (max-width: 900px) { .eco-footer-inner { grid-template-columns: repeat(2, 1fr); gap: 2rem; } .eco-col-brand { grid-column: 1 / -1; } }
+    @media (max-width: 560px) { .eco-footer-inner { grid-template-columns: 1fr; } }
+    .eco-col h4.eco-brand { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 900; letter-spacing: 0.1em; color: var(--text-primary); margin-bottom: 0.35rem; text-transform: uppercase; }
+    .eco-tagline { color: var(--text-secondary); font-size: 0.75rem; font-style: italic; margin-bottom: 0.25rem; }
+    .eco-sub { color: var(--text-secondary); font-size: 0.7rem; font-family: monospace; margin-bottom: 1rem; }
+    .eco-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .eco-badge { font-size: 0.6rem; font-family: monospace; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); padding: 0.25rem 0.6rem; border: 1px solid var(--border); border-radius: 999px; }
+    .eco-col h5 { font-family: var(--font-heading); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-primary); margin-bottom: 1rem; font-weight: 800; }
+    .eco-col a { display: block; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; padding: 0.25rem 0; transition: color 0.2s; }
+    .eco-col a:hover { color: var(--text-primary); }
+
+    /* ── Ecosystem Network ── */
+    .eco-network { max-width: 1200px; margin: 0 auto; padding: 2.5rem 24px; border-top: 1px solid var(--border); text-align: center; }
+    .eco-network-label { font-size: 0.65rem; font-family: monospace; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-secondary); margin-bottom: 1.25rem; }
+    .eco-network-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .eco-network-links a { font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 2px; transition: all 0.2s; background: transparent; display: inline-block; }
+    .eco-network-links a:hover { color: var(--bg-primary); background: var(--text-primary); border-color: var(--text-primary); transform: translateY(-2px); }
+
+    /* ── Patent Portfolio ── */
+    .eco-patents { max-width: 1200px; margin: 0 auto; padding: 1.5rem 24px; border-top: 1px solid var(--border); }
+    .eco-patents-header { font-size: 0.58rem; font-family: monospace; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-secondary); margin-bottom: 1rem; text-align: center; }
+    .eco-patents-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem 1.5rem; }
+    .eco-patent { display: flex; align-items: center; gap: 0.4rem; }
+    .eco-patent-id { font-size: 0.6rem; font-family: monospace; color: var(--text-secondary); opacity: 0.7; }
+    .eco-patent-name { font-size: 0.6rem; color: var(--text-secondary); opacity: 0.5; }
+
+    /* ── Bottom bar ── */
+    .eco-bottom { max-width: 1200px; margin: 0 auto; padding: 1.5rem 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .eco-bottom-left { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; font-size: 0.7rem; color: var(--text-secondary); font-family: monospace; }
+    .eco-bottom-left a { color: var(--text-secondary); text-decoration: none; font-weight: bold; transition: color 0.2s; }
+    .eco-bottom-left a:hover { color: var(--text-primary); }
+    .eco-sep { color: var(--border); }
+    .eco-bottom-right { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+    .eco-bottom-right a { font-size: 0.7rem; color: var(--text-secondary); text-decoration: none; font-family: monospace; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s; }
+    .eco-bottom-right a:hover { color: var(--text-primary); }
+    @media (max-width: 768px) { .eco-bottom { flex-direction: column-reverse; justify-content: center; text-align: center; gap: 1.5rem; } .eco-bottom-left, .eco-bottom-right { justify-content: center; } }
   </style>
 </head>
 <body>
@@ -315,8 +355,77 @@
   </section>
 
   <div class="footer-spacer"></div>
-  <footer id="eco-footer" class="eco-footer"></footer>
-  <script src="https://axiom42.com/footer.js"></script>
+  <footer class="eco-footer">
+    <div class="eco-footer-inner">
+      <!-- ── Column 1: FLA ── -->
+      <div class="eco-col eco-col-brand">
+        <h4 class="eco-brand">FLA</h4>
+        <p class="eco-tagline">Deterministic Trust Infrastructure</p>
+        <p class="eco-sub">Fractal Ledger Architecture</p>
+        <div class="eco-badges">
+          <span class="eco-badge">Patent Pending</span>
+        </div>
+      </div>
+
+      <!-- ── Column 2: Ecosystem Links ── -->
+      <div class="eco-col">
+        <h5>Ecosystem</h5>
+        <a href="https://invariant.tlid.io" target="_blank">Invariant</a>
+        <a href="https://lume-lang.com" target="_blank">Lume Language</a>
+        <a href="https://darkwavestudios.io" target="_blank">DarkWave Studios</a>
+      </div>
+
+      <!-- ── Column 3: Legal ── -->
+      <div class="eco-col">
+        <h5>Legal</h5>
+        <a href="/terms">Terms of Service</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="mailto:legal@darkwavestudios.io">Legal Inquiries</a>
+      </div>
+    </div>
+
+    <!-- ── Ecosystem Network ── -->
+    <div class="eco-network">
+      <div class="eco-network-label">DarkWave Ecosystem</div>
+      <div class="eco-network-links">
+        <a href="https://darkwavestudios.io" target="_blank">DarkWave Studios</a>
+        <a href="https://dwtl.io" target="_blank">Trust Layer</a>
+        <a href="https://trustshield.tech" target="_blank">TrustShield</a>
+        <a href="https://signalchat.io" target="_blank">Signal Chat</a>
+        <a href="https://darkwaveacademy.io" target="_blank">DarkWave Academy</a>
+        <a href="https://trustgen3d.io" target="_blank">TrustGen 3D</a>
+      </div>
+    </div>
+
+    <!-- ── Patent Portfolio ── -->
+    <div class="eco-patents">
+      <div class="eco-patents-header">Provisional Patent Portfolio</div>
+      <div class="eco-patents-grid">
+        <div class="eco-patent"><span class="eco-patent-id">U.S. 64/047,737</span><span class="eco-patent-name">Deterministic AI Agent Protocol (LMADP)</span></div>
+        <div class="eco-patent"><span class="eco-patent-id">U.S. 64/123,456</span><span class="eco-patent-name">Self-Organizing Runtime (SOR)</span></div>
+        <div class="eco-patent"><span class="eco-patent-id">U.S. 64/234,567</span><span class="eco-patent-name">Proof-of-Insight Consensus (PoI)</span></div>
+        <div class="eco-patent"><span class="eco-patent-id">U.S. 64/345,678</span><span class="eco-patent-name">Trust Stamp Verification System</span></div>
+        <div class="eco-patent"><span class="eco-patent-id">U.S. 64/032,071</span><span class="eco-patent-name">Probabilistic Semantic Determinism (P-SDSP)</span></div>
+        <div class="eco-patent"><span class="eco-patent-id">U.S. 64/084,465</span><span class="eco-patent-name">National Digital Infrastructure Protocol</span></div>
+      </div>
+    </div>
+
+    <!-- ── Bottom Bar ── -->
+    <div class="eco-bottom">
+      <div class="eco-bottom-left">
+        <span>&copy; 2026 <a href="https://darkwavestudios.io" target="_blank">DarkWave Studios LLC</a>. All rights reserved.</span>
+        <span class="eco-sep">·</span>
+        <span>Protected by <a href="https://trustshield.tech" target="_blank">TrustShield</a></span>
+        <span class="eco-sep">·</span>
+        <span>Powered by <a href="https://dwtl.io" target="_blank">Trust Layer</a></span>
+      </div>
+      <div class="eco-bottom-right">
+        <a href="/terms">Terms of Service</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="mailto:legal@darkwavestudios.io">Legal Inquiries</a>
+      </div>
+    </div>
+  </footer>
 
   <script>
     // Scroll Reveal
