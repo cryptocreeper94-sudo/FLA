@@ -136,9 +136,8 @@
 
     /* ── ECO FOOTER ── */
     .eco-footer { background: var(--bg-primary); border-top: 1px solid var(--border); padding: 4rem 0 0; font-family: var(--font-body); margin-top: 4rem; }
-    .eco-footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px 3rem; display: grid; grid-template-columns: 2fr repeat(2, 1fr); gap: 3rem; }
-    @media (max-width: 900px) { .eco-footer-inner { grid-template-columns: repeat(2, 1fr); gap: 2rem; } .eco-col-brand { grid-column: 1 / -1; } }
-    @media (max-width: 560px) { .eco-footer-inner { grid-template-columns: 1fr; } }
+    .eco-footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px 3rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 3rem; }
+    @media (max-width: 560px) { .eco-footer-inner { flex-direction: column; gap: 2rem; } }
     .eco-col h4.eco-brand { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 900; letter-spacing: 0.1em; color: var(--text-primary); margin-bottom: 0.35rem; text-transform: uppercase; }
     .eco-tagline { color: var(--text-secondary); font-size: 0.75rem; font-style: italic; margin-bottom: 0.25rem; }
     .eco-sub { color: var(--text-secondary); font-size: 0.7rem; font-family: monospace; margin-bottom: 1rem; }
@@ -368,13 +367,6 @@
         <a href="https://darkwavestudios.io" target="_blank">DarkWave Studios</a>
       </div>
 
-      <!-- ── Column 3: Legal ── -->
-      <div class="eco-col">
-        <h5>Legal</h5>
-        <a href="/terms">Terms of Service</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="mailto:legal@darkwavestudios.io">Legal Inquiries</a>
-      </div>
     </div>
 
     <!-- ── Patent Portfolio ── -->
