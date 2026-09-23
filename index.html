@@ -48,7 +48,7 @@
 
     h1, h2, h3, h4 { font-family: var(--font-heading); text-transform: uppercase; letter-spacing: -0.03em; font-weight: 900; line-height: 1.1; margin-bottom: 0.5em; }
 
-    .title-monolith { font-size: clamp(1.5rem, 5vw, 5rem); line-height: 0.95; color: var(--text-primary); max-width: 1200px; margin: 0 auto; position: relative; z-index: 10; text-shadow: 0 4px 24px rgba(0,0,0,0.5); word-break: break-word; text-align: center; }
+    .title-monolith { font-size: clamp(1.5rem, 5vw, 5rem); line-height: 0.95; color: var(--text-primary); max-width: 1200px; margin: 0 auto; position: relative; z-index: 10; text-shadow: 0 4px 32px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.9); word-break: break-word; text-align: center; }
     .text-stark { font-family: var(--font-body); font-size: clamp(1rem, 1.8vw, 1.35rem); color: var(--text-secondary); font-weight: 400; max-width: 800px; line-height: 1.7; }
     .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 10; }
     .section { padding: 140px 0; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
@@ -71,7 +71,7 @@
     .hero-bg:nth-child(1) { background-image: url('/assets/hero_bg_1.jpg'); animation-delay: 0s; }
     .hero-bg:nth-child(2) { background-image: url('/assets/hero_bg_2.jpg'); animation-delay: 8s; }
     .hero-bg:nth-child(3) { background-image: url('/assets/hero_bg_3.jpg'); animation-delay: 16s; }
-    .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(5,5,5,0.4), var(--bg-primary)); z-index: 2; pointer-events: none; }
+    .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(5,5,5,0.5) 0%, rgba(5,5,5,0.1) 50%, var(--bg-primary) 100%); z-index: 2; pointer-events: none; }
 
     @keyframes kenburns {
       0% { opacity: 0; transform: scale(1); }
@@ -82,8 +82,8 @@
     }
 
     .hero-content { position: relative; z-index: 10; text-align: center; width: 100%; }
-    .hero-eyebrow { font-family: var(--font-body); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 2rem; }
-    .hero-tagline { font-family: var(--font-body); font-size: clamp(1rem, 1.5vw, 1.25rem); color: var(--text-secondary); max-width: 600px; margin: 1.5rem auto 2.5rem; line-height: 1.7; }
+    .hero-eyebrow { font-family: var(--font-body); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: #fff; margin-bottom: 2rem; text-shadow: 0 2px 12px rgba(0,0,0,0.9); font-weight: 700; }
+    .hero-tagline { font-family: var(--font-body); font-size: clamp(1rem, 1.5vw, 1.25rem); color: #fff; max-width: 600px; margin: 1.5rem auto 2.5rem; line-height: 1.7; text-shadow: 0 2px 16px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.6); }
 
     .btn-brutal { display: inline-block; background-color: transparent; color: var(--text-primary); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 16px 48px; font-family: var(--font-heading); font-size: 1.1rem; font-weight: 800; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); position: relative; z-index: 10; border-radius: 2px; }
     .btn-brutal:hover { background-color: var(--text-primary); color: var(--bg-primary); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,255,255,0.1); }
