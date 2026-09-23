@@ -125,6 +125,24 @@
     .paper-link { display: inline-block; margin-top: 1rem; font-family: var(--font-heading); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
     .paper-link:hover { color: var(--text-primary); }
 
+    /* Carousels */
+    .carousel-wrapper { position: relative; margin-top: 3rem; width: 100%; }
+    .carousel-track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding-bottom: 1.5rem; scrollbar-width: none; }
+    .carousel-track::-webkit-scrollbar { display: none; }
+    .carousel-item { flex: 0 0 calc(33.333% - 16px); scroll-snap-align: start; min-width: 300px; }
+    @media (max-width: 1024px) { .carousel-item { flex: 0 0 calc(50% - 12px); } }
+    @media (max-width: 768px) { .carousel-item { flex: 0 0 100%; min-width: unset; } }
+    .carousel-nav { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 1rem; }
+    .carousel-btn { background: transparent; border: 1px solid var(--border); color: var(--text-primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; font-family: monospace; font-size: 1.2rem; }
+    .carousel-btn:hover { background: var(--text-primary); color: var(--bg-primary); }
+    .carousel-dots { display: flex; gap: 8px; }
+    .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); cursor: pointer; transition: background 0.2s; }
+    .carousel-dot.active { background: var(--text-primary); }
+    .section-light .carousel-btn { border-color: rgba(0,0,0,0.1); color: var(--bg-primary); }
+    .section-light .carousel-btn:hover { background: var(--bg-primary); color: var(--text-primary); }
+    .section-light .carousel-dot { background: rgba(0,0,0,0.1); }
+    .section-light .carousel-dot.active { background: var(--bg-primary); }
+
     /* Footer spacer */
     .footer-spacer { height: 32px; }
 
@@ -217,36 +235,43 @@
     <div class="container reveal">
       <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1.5rem;">Architecture</h2>
       <p class="text-stark">FLA operates as a fractal hierarchy — four governance primitives compose into 42 specialized nodes, each responsible for a specific aspect of asset lifecycle management.</p>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">◇</div>
-          <div class="feature-title">Proof-of-Authority Ledger</div>
-          <div class="feature-desc">Every state change is recorded with cryptographic signatures. No consensus required — authority is deterministic, not democratic.</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <div class="carousel-item feature-card">
+            <div class="feature-icon">◇</div>
+            <div class="feature-title">Proof-of-Authority Ledger</div>
+            <div class="feature-desc">Every state change is recorded with cryptographic signatures. No consensus required — authority is deterministic, not democratic.</div>
+          </div>
+          <div class="carousel-item feature-card">
+            <div class="feature-icon">◈</div>
+            <div class="feature-title">Trust Certificates</div>
+            <div class="feature-desc">Each transaction produces a verifiable certificate with SHA-256 hash, timestamp, authority chain, and complete provenance data.</div>
+          </div>
+          <div class="carousel-item feature-card">
+            <div class="feature-icon">⬡</div>
+            <div class="feature-title">Fractal Hierarchy</div>
+            <div class="feature-desc">The 4/42 architecture — four primitive operations compose into 42 governance nodes, creating a self-similar structure at every scale.</div>
+          </div>
+          <div class="carousel-item feature-card">
+            <div class="feature-icon">◎</div>
+            <div class="feature-title">Asset Passports</div>
+            <div class="feature-desc">Every asset gets a living document — a complete, tamper-proof history from creation through every state transition to current status.</div>
+          </div>
+          <div class="carousel-item feature-card">
+            <div class="feature-icon">⊞</div>
+            <div class="feature-title">Multi-Tenant Isolation</div>
+            <div class="feature-desc">Each division operates its own private ledger. Data never crosses tenant boundaries. Full regulatory compliance by design.</div>
+          </div>
+          <div class="carousel-item feature-card">
+            <div class="feature-icon">⊘</div>
+            <div class="feature-title">Zero-Trust Verification</div>
+            <div class="feature-desc">Any certificate can be independently verified without access to the issuing authority. Trust is mathematical, not institutional.</div>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">◈</div>
-          <div class="feature-title">Trust Certificates</div>
-          <div class="feature-desc">Each transaction produces a verifiable certificate with SHA-256 hash, timestamp, authority chain, and complete provenance data.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⬡</div>
-          <div class="feature-title">Fractal Hierarchy</div>
-          <div class="feature-desc">The 4/42 architecture — four primitive operations compose into 42 governance nodes, creating a self-similar structure at every scale.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">◎</div>
-          <div class="feature-title">Asset Passports</div>
-          <div class="feature-desc">Every asset gets a living document — a complete, tamper-proof history from creation through every state transition to current status.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⊞</div>
-          <div class="feature-title">Multi-Tenant Isolation</div>
-          <div class="feature-desc">Each division operates its own private ledger. Data never crosses tenant boundaries. Full regulatory compliance by design.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⊘</div>
-          <div class="feature-title">Zero-Trust Verification</div>
-          <div class="feature-desc">Any certificate can be independently verified without access to the issuing authority. Trust is mathematical, not institutional.</div>
+        <div class="carousel-nav">
+          <button class="carousel-btn prev">&#8592;</button>
+          <div class="carousel-dots"></div>
+          <button class="carousel-btn next">&#8594;</button>
         </div>
       </div>
     </div>
@@ -257,30 +282,37 @@
     <div class="container reveal">
       <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1rem;">Universal Application</h2>
       <p class="text-stark">FLA is asset-agnostic. Any industry that requires provable chain-of-custody, regulatory compliance, or tamper-proof record-keeping can deploy the Fractal Ledger.</p>
-      <div class="usecase-grid">
-        <div class="usecase-card">
-          <div class="usecase-title">Supply Chain</div>
-          <div class="usecase-desc">Track any physical asset from manufacturer to end consumer with cryptographic proof at every handoff. Eliminate counterfeiting at the infrastructure level.</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <div class="carousel-item usecase-card">
+            <div class="usecase-title">Supply Chain</div>
+            <div class="usecase-desc">Track any physical asset from manufacturer to end consumer with cryptographic proof at every handoff. Eliminate counterfeiting at the infrastructure level.</div>
+          </div>
+          <div class="carousel-item usecase-card">
+            <div class="usecase-title">Government Compliance</div>
+            <div class="usecase-desc">Automated compliance certification for regulatory frameworks. Every action is auditable, every certificate is independently verifiable.</div>
+          </div>
+          <div class="carousel-item usecase-card">
+            <div class="usecase-title">Healthcare Records</div>
+            <div class="usecase-desc">Patient data with complete provenance. Every access, every modification, every transfer produces a tamper-proof audit entry.</div>
+          </div>
+          <div class="carousel-item usecase-card">
+            <div class="usecase-title">Real Estate</div>
+            <div class="usecase-desc">Property titles, inspections, and transfers with cryptographic proof-of-state. Eliminate title fraud with deterministic verification.</div>
+          </div>
+          <div class="carousel-item usecase-card">
+            <div class="usecase-title">Financial Instruments</div>
+            <div class="usecase-desc">Asset-backed securities with verifiable collateral passports. Every underlying asset traceable through its complete lifecycle.</div>
+          </div>
+          <div class="carousel-item usecase-card">
+            <div class="usecase-title">Defense & Intelligence</div>
+            <div class="usecase-desc">Classified asset tracking with air-gapped ledger support. Full offline capability with deterministic conflict resolution on reconnect.</div>
+          </div>
         </div>
-        <div class="usecase-card">
-          <div class="usecase-title">Government Compliance</div>
-          <div class="usecase-desc">Automated compliance certification for regulatory frameworks. Every action is auditable, every certificate is independently verifiable.</div>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-title">Healthcare Records</div>
-          <div class="usecase-desc">Patient data with complete provenance. Every access, every modification, every transfer produces a tamper-proof audit entry.</div>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-title">Real Estate</div>
-          <div class="usecase-desc">Property titles, inspections, and transfers with cryptographic proof-of-state. Eliminate title fraud with deterministic verification.</div>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-title">Financial Instruments</div>
-          <div class="usecase-desc">Asset-backed securities with verifiable collateral passports. Every underlying asset traceable through its complete lifecycle.</div>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-title">Defense & Intelligence</div>
-          <div class="usecase-desc">Classified asset tracking with air-gapped ledger support. Full offline capability with deterministic conflict resolution on reconnect.</div>
+        <div class="carousel-nav">
+          <button class="carousel-btn prev">&#8592;</button>
+          <div class="carousel-dots"></div>
+          <button class="carousel-btn next">&#8594;</button>
         </div>
       </div>
     </div>
@@ -324,24 +356,31 @@
     <div class="container reveal">
       <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1rem;">Research & Patents</h2>
       <p class="text-stark">The Fractal Ledger Architecture is published, patent-protected, and under active submission to top-tier academic venues.</p>
-      <div class="paper-grid">
-        <div class="paper-card">
-          <div class="paper-label">Research Paper</div>
-          <div class="paper-title">Fractal Ledger Architecture</div>
-          <div class="paper-desc">The complete specification: three-layer cryptographic trust topology (E-PL / E-VL / CORE), fractal self-similarity, SHA-256 + Ed25519 implementation, and formal security proofs.</div>
-          <a href="https://zenodo.org/communities/lume-architecture-papers" target="_blank" class="paper-link">View on Zenodo →</a>
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <div class="carousel-item paper-card">
+            <div class="paper-label">Research Paper</div>
+            <div class="paper-title">Fractal Ledger Architecture</div>
+            <div class="paper-desc">The complete specification: three-layer cryptographic trust topology (E-PL / E-VL / CORE), fractal self-similarity, SHA-256 + Ed25519 implementation, and formal security proofs.</div>
+            <a href="https://zenodo.org/communities/lume-architecture-papers" target="_blank" class="paper-link">View on Zenodo →</a>
+          </div>
+          <div class="carousel-item paper-card">
+            <div class="paper-label">U.S. Patent Pending</div>
+            <div class="paper-title">National Digital Infrastructure Protocol</div>
+            <div class="paper-desc">U.S. 64/084,465 — Federal-scope implementation of the Fractal Ledger Architecture for multi-agency governance and digital infrastructure modernization.</div>
+            <a href="https://darkwavestudios.io" target="_blank" class="paper-link">DarkWave Studios →</a>
+          </div>
+          <div class="carousel-item paper-card">
+            <div class="paper-label">Zenodo Archive</div>
+            <div class="paper-title">Canon² Academic Archive</div>
+            <div class="paper-desc">Complete archive of all DarkWave research papers, specifications, and formal proofs hosted on CERN infrastructure with DOIs.</div>
+            <a href="https://zenodo.org/communities/lume-architecture-papers" target="_blank" class="paper-link">Browse Archive →</a>
+          </div>
         </div>
-        <div class="paper-card">
-          <div class="paper-label">U.S. Patent Pending</div>
-          <div class="paper-title">National Digital Infrastructure Protocol</div>
-          <div class="paper-desc">U.S. 64/084,465 — Federal-scope implementation of the Fractal Ledger Architecture for multi-agency governance and digital infrastructure modernization.</div>
-          <a href="https://darkwavestudios.io" target="_blank" class="paper-link">DarkWave Studios →</a>
-        </div>
-        <div class="paper-card">
-          <div class="paper-label">Zenodo Archive</div>
-          <div class="paper-title">Canon² Academic Archive</div>
-          <div class="paper-desc">Complete archive of all DarkWave research papers, specifications, and formal proofs hosted on CERN infrastructure with DOIs.</div>
-          <a href="https://zenodo.org/communities/lume-architecture-papers" target="_blank" class="paper-link">Browse Archive →</a>
+        <div class="carousel-nav">
+          <button class="carousel-btn prev">&#8592;</button>
+          <div class="carousel-dots"></div>
+          <button class="carousel-btn next">&#8594;</button>
         </div>
       </div>
     </div>
@@ -418,6 +457,48 @@
         if (rect.top < window.innerHeight) r.classList.add('active');
       });
     }, 100);
+
+    // Carousel Logic
+    document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+      const track = wrapper.querySelector('.carousel-track');
+      const prevBtn = wrapper.querySelector('.carousel-btn.prev');
+      const nextBtn = wrapper.querySelector('.carousel-btn.next');
+      const dotsContainer = wrapper.querySelector('.carousel-dots');
+      const items = track.querySelectorAll('.carousel-item');
+      
+      items.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.classList.add('carousel-dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+          track.scrollTo({ left: items[i].offsetLeft - track.offsetLeft, behavior: 'smooth' });
+        });
+        dotsContainer.appendChild(dot);
+      });
+      
+      const dots = dotsContainer.querySelectorAll('.carousel-dot');
+      
+      const updateDots = () => {
+        const scrollPos = track.scrollLeft;
+        const itemWidth = items[0].offsetWidth + 24;
+        const activeIndex = Math.round(scrollPos / itemWidth);
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === activeIndex);
+        });
+      };
+      
+      track.addEventListener('scroll', updateDots);
+      
+      prevBtn.addEventListener('click', () => {
+        const itemWidth = items[0].offsetWidth + 24;
+        track.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        const itemWidth = items[0].offsetWidth + 24;
+        track.scrollBy({ left: itemWidth, behavior: 'smooth' });
+      });
+    });
   </script>
 </body>
 </html>
